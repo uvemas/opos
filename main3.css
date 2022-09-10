@@ -1,0 +1,26 @@
+.box {
+  border: dotted 1px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+}
+
+.box div {
+  border: solid 1px;
+  width: 40%;
+}
+.one {
+  flex: 0 1 auto;
+  background-color: #bfa;
+}
+
+.two {
+  flex: 0 1 auto;
+  background-color: #dfc;
+}
+
+.three {
+  background-color: #efc;
+  flex: 0 2 auto;
+}

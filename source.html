@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Layout: positioning and stacking</title>
+    <link rel="stylesheet" href="main2.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div>
+      <b>DIV #1</b><br />position: static;</div>
+    <div>
+      <b>DIV #2</b><br />position: static;</div>
+    <div>
+      <b>DIV #3</b><br />position: static;</div>
+    <div>
+      <b>DIV #4</b><br />position: static;</div>
+    <div>
+      <b>DIV #5</b><br />position: static;</div>
+
+    <div class="separator"></div>
+
+    <div id="abs1" class="static">
+      <b>DIV #1A</b><br />position: static;</div>
+    <div id="rel1" class="relative">
+      <b>DIV #2A</b><br />position: relative;</div>
+    <div id="rel2" class="relative">
+      <b>DIV #3A</b><br />position: relative;</div>
+    <div id="rel3" class="relative">
+      <b>DIV #4A</b><br />position: relative;</div>
+    <div id="sta1" class="static">
+      <b>DIV #5A</b><br />position: static;</div>
+
+    <div class="separator"></div>
+
+    <div id="abs1b" class="absolute">
+      <b>DIV #1B</b>
+      <br />position: absolute;
+      <br />z-index: 5;</div>
+    <div id="rel1b" class="relative">
+      <b>DIV #2B</b>
+      <br />position: relative;
+      <br />z-index: 3;</div>
+    <div id="rel2b" class="relative">
+      <b>DIV #3B</b>
+      <br />position: relative;
+      <br />z-index: 2;</div>
+    <div id="abs2b" class="absolute">
+      <b>DIV #4B</b>
+      <br />position: absolute;
+      <br />z-index: 1;</div>
+    <div id="sta1b" class="static">
+      <b>DIV #5B</b>
+      <br />position: static;
+      <br />z-index: 8;</div>
+
+    <div class="separator"></div>
+<div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Instrument</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th colspan="2">Musicians and... Instruments!</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>John Lennon</td>
+      <td>Rhythm Guitar</td>
+    </tr>
+    <tr>
+      <td>Paul McCartney</td>
+      <td>Bass</td>
+    </tr>
+    <tr>
+      <td>George Harrison</td>
+      <td>Lead Guitar</td>
+    </tr>
+    <tr>
+      <td>Ringo Starr</td>
+      <td>Drums</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+  </body>
+</html>

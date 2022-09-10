@@ -1,0 +1,36 @@
+﻿    1. Sistemas operativos. Windows
+    2. Sistemas operativos. Linux
+    3. Sistemas operativos para dispositivos móviles.Android.iOS
+    4. Sistemas de gestión de bases de datos. Bases de datos relacionales
+    5. Arquitectura SOA. Servicios web. SOAP. JSON. REST
+    6. Software libre. Características y tipos de licencias.
+    7. Redes locales. Conceptos básicos. Características, tipos y protocolos
+    8. Ofimática. LibreOffice Writer
+    9. Ofimática. Libre Office Calc
+    10. Modelo conceptual de datos. Modelos Entidades-Relación. Diagramas de flujo de datos
+    11. Bases de datos relacionales. Fundamentos y reglas de normalización.
+    12. Oracle. SQL. PL/SQL
+    13. Programación orientada a objetos. Clases. Objetos.
+    14. Programación orientada a objetos. Herencia. Polimorfismo
+    15. Análisis y diseño orientado a objetos usando UML.
+    16. El entorno de desarrollo java. Arquitectura J2EE
+    17. Lenguaje de programación java: sintaxis ,tipos de datos, operadores, estructuras de control
+    18. Diseño web. HTML 5  y CSS3
+    19. JSF. Primefaces
+    20. Desarrollo de Informes con JasperReports
+    21. Creación y configuración de plantillas con FreeMarker
+    22. Aqruitectura MVC. Spring Framework.
+    23. Capa de persistencia de datos MyBatis
+    24. Spring Boot. Construcción empaquetado y despliegue de aplicaciones
+    25. Servidores de Aplicaciones Tomcat. Despliegue de aplicaciones.
+    26. PHP
+    27. JSP
+    28. Desarrollo de aplicaciones con Ajax y Jquery
+    29. Metodologías Ágiles de desarrollo. Scrum
+    30. Métodos de prueba del Software. Junit
+    31. Control de versiones. Subversion. GIT
+    32. Gestión integrada del desarrollo. Maven
+
+
+
+

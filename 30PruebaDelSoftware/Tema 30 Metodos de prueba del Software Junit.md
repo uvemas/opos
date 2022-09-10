@@ -1,0 +1,61 @@
+# Tema 30 Métodos de prueba del software. JUnit
+
+## Métodos de prueba
+
+Ver 16. MВtodos de prueba del software. JUnit.odt
+
+En resumen, de nivel bajo a nivel alto:
+
+- unit tests: prueban el correcto funcionamiento de funciones y métodos
+- integration tests: prueban si los diferentes componentes de una aplicación se hablan bien entre ellos. Por ejemplo, si 
+  se tiene acceso a una BBDD o la interfaz de usuario se refresca ante un evento. No verifican que los resultados sean
+  correctos, solo que las acciones se pueden llevar a cabo
+- functional tests: prueban si los requerimientos específicos de negocio se cumplen. O sea, verifican funcionalidades
+  concretas de la aplicación
+- end-to-end tests: verifican interacciones concretas del usuario con la aplicación. Por ejemplo, al hacer clic en un
+  botón se abre una página web o que se recibe una notificación por email
+- regression tests: comprueban que las nuevas versiones de una aplicación no rompen la funcionalidad de las versiones 
+  anteriores
+- smoke testing: con la aplicación ya terminada comprueban que los requerimientos básicos funcionan correctamente (que 
+  la aplicación no hace aguas de manera evidente)
+- acceptance testing: son pruebas formales, ejecutadas para verificar si un sistema satisface sus requerimientos de 
+  negocio. Estas pruebas requieren que el software se encuentre en funcionamiento
+- performance testing: pruebas de rendimiento en condiciones de carga alta
+- exploratory testing: son tests *manuales* que se hacen para intentar descubrir errores no obvios. Un buen ejemplo
+  son las pruebas de gorila de una interfaz de usuario (a veces el usuario ejecuta una secuencia de acciones no esperada
+  por el programador y puede hacer fallar la aplicación)
+
+Cuando se habla de Test Driven Development (desarrollo guiado por pruebas), se hace referencia a unit tests. Es decir, 
+*se usan pruebas de este tipo como especificaciones de lo que nuestro código debe hacer*.
+
+Los testing frameworks permiten la ejecución automatizada de tests.
+
+Los tests automatizados y organizados en suites se pueden ejecutar en el servidor en el que se está desarrollando la
+aplicación (por ejemplo, github) permitiendo así la integración continua (los tests se ejecutan automáticamente cada
+vez que se sube una modificación de código al servidor) y la entrega continua.
+## JUnit
+
+Es un framework para crear unidades de test en Java. Hay dos versiones JUnit4 y JUnit5, que es muy reciente.
+
+En las unidades de test se comprueba el correcto funcionamiento de los métodos de las clases.
+
+En el framework podemos:
+
+- crear unidades de test
+- ejecutar un runner en lugar de ejecutar cada unidad de test individualmente. El runner se encargará de ejecutar las
+  unidades de test que tenga configuradas
+- crear suites. Una suite es un runner especializado, en el que especificamos qué unidades de test queremos ejecutar
+
+Los tests, runners y suites se marcan con las anotaciones `@Test`, `@RunWith` y `@Suite`.
+
+Las unidades de test y los runners se pueden ejecutar por línea de comando o en un IDE. Por ejemplo, el `vscode` tiene
+una extensión para trabajar con JUnit que permite crear esqueletos de JUnits y ejecutar y depurar unidades de test,
+runners y suites.
+
+```{thumbnail} images/JUnit_en_VSCode.png
+```
+
+En el árbol de unidades de test si nos colocamos sobre una unidad de test, podemos ejecutarla/depurarla con el botón
+derecho del ratón. Las carpetas son runners. Si ejecutamos una carpeta se ejecutarán todas las unidades de test que 
+contiene. En el código de `Ejercicio3_1Test.java` podemos ver como se define una suite, que se lanzará al ejecutar
+`Ejercicio3_1Test.java`. La suite ejecutará los tests de `Ejercicio3_1Test.java` y `Ejercicio2_1Test.java`.
