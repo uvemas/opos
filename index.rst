@@ -10,8 +10,8 @@
    16Entorno_de_desarrollo_Java/Tema 16 El entorno de desarrollo java Arquitectura J2EE
    17Lenguaje_Java/Tema 17 Lenguaje de programacion Java
    18DiseñoWeb/Tema 18 Disenyo Web
-   19Primefaces/Tema 19 JSF y 19Primefaces
-   20JasperReports/Tema 20 Jasper 20JasperReports
+   19Primefaces/Tema 19 JSF y Primefaces
+   20JasperReports/Tema 20 Jasper Reports
    21PlantillasFreeMarker/Tema 21 FreeMarker
    22ArquitecturaMVC/Tema 22 Arquitectura MVC
    23PersistenciaConMyBatis/Tema 23 MyBatis
