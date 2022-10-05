@@ -32,9 +32,10 @@ La estructura de un proyecto Maven es:
 ### Arquetipos
 
 Por definición, un arquetipo es un patrón o modelo que se usa para alcanzar un objetivo siempre de la misma 
-manera. En Maven, un arquetipo es una plantilla de proyecto que, combinada con user input, genera un proyecto Maven 
+manera. En Maven, *un arquetipo es una plantilla de proyecto* que, combinada con user input, genera un proyecto Maven 
 adaptado a las necesidades del usuario. El usuario decide, en función de las necesidades que tenga, que arquetipo 
-utilizar (los arquetipos se pueden combinar). La estructura del proyecto generada por los diferentes arquetipos puede
+utilizar (los arquetipos se pueden combinar). *La estructura del proyecto depende del arquetipo que se haya utilizado para generar
+dicho proyecto*. La estructura del proyecto generada por los diferentes arquetipos puede
 verse en [este enlace](https://maven.apache.org/archetypes/index.html)
 
 Los arquetipos de Maven se agrupan en el toolkit Archetype. Cada arquetipo se identifica con un ArtifactID.

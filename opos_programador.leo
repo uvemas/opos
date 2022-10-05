@@ -22,21 +22,40 @@
 <v t="vicent.20220331172223.3"><vh>@clean index.rst</vh></v>
 </v>
 <v t="vicent.20220401181802.1"><vh>Temas</vh>
+<v t="vicent.20220913111203.1"><vh>Notas</vh></v>
 <v t="vicent.20220831110352.1"><vh>TODO</vh></v>
 <v t="vicent.20220528090703.1"><vh>Sistemas Operativos</vh>
 <v t="vicent.20220528085051.1"><vh>Tema 1 Sistemas Operativos Windows</vh></v>
 <v t="vicent.20220528085100.1"><vh>Tema 2 Sistemas Operativos Linux</vh></v>
 <v t="vicent.20220528085120.1"><vh>Tema 3 Sistemas Operativos Android</vh></v>
 </v>
+<v t="vicent.20220528090846.1"><vh>Ofimática</vh>
+<v t="vicent.20220528085448.1"><vh>Tema 8 Ofimática. LibreOffice Writer</vh></v>
+<v t="vicent.20220528085500.1"><vh>Tema 9 Ofimática. LibreOffice Calc</vh></v>
+</v>
+<v t="vicent.20220528092851.1"><vh>Gestión del desarrollo</vh>
+<v t="vicent.20220528090429.1"><vh>Tema 29 Metodologías Ágiles de desarrollo. Scrum</vh></v>
+<v t="vicent.20220528090520.1"><vh>@clean Tema 31 Control de versiones Subversion GIT.md</vh>
+<v t="vicent.20220901104803.1"><vh>GIT: conceptos básicos</vh></v>
+<v t="vicent.20220902132213.1"><vh>Remotos</vh></v>
+<v t="vicent.20220905143536.1"><vh>Fusión de ramas</vh></v>
+<v t="vicent.20220902135651.1"><vh>Tags</vh></v>
+<v t="vicent.20220906183732.1"><vh>Stash y bisect</vh></v>
+<v t="vicent.20221005193256.1"><vh>Worktrees</vh></v>
+</v>
+<v t="vicent.20220528090539.1"><vh>@clean Tema 32 Gestion integrada del desarrollo Maven.md</vh>
+<v t="vicent.20220615181441.1"><vh>Maven</vh>
+<v t="vicent.20220618074740.1"><vh>Arquetipos</vh></v>
+<v t="vicent.20220615191428.1"><vh>Guía rápida</vh></v>
+<v t="vicent.20220615193810.1"><vh>Ciclo de vida del proyecto</vh></v>
+</v>
+</v>
+</v>
 <v t="vicent.20220528090721.1"><vh>Bases de datos</vh>
 <v t="vicent.20220528085316.1"><vh>Tema 4 Sistemas de gestión de bases de datos. Bases de datos relacionales</vh></v>
 <v t="vicent.20220528085607.1"><vh>Tema 10  Modelo conceptual de datos. Modelos Entidades-Relación. Diagramas de flujo de datos</vh></v>
 <v t="vicent.20220528085631.1"><vh>Tema 11 Bases de datos relacionales. Fundamentos y reglas de normalización</vh></v>
 <v t="vicent.20220528085656.1"><vh>Tema 12 Oracle. SQL. PL/SQL</vh></v>
-</v>
-<v t="vicent.20220528090846.1"><vh>Ofimática</vh>
-<v t="vicent.20220528085448.1"><vh>Tema 8 Ofimática. LibreOffice Writer</vh></v>
-<v t="vicent.20220528085500.1"><vh>Tema 9 Ofimática. LibreOffice Calc</vh></v>
 </v>
 <v t="vicent.20220528092009.1"><vh>Programación</vh>
 <v t="vicent.20220507204235.1"><vh>@clean Tema 18 Disenyo Web.md</vh>
@@ -109,30 +128,15 @@
 <v t="vicent.20220528090343.1"><vh>Tema 26 PHP</vh></v>
 <v t="vicent.20220528090410.1"><vh>Tema 28 Desarrollo de aplicaciones con Ajax y Jquery</vh></v>
 </v>
-<v t="vicent.20220528092851.1"><vh>Gestión del desarrollo</vh>
-<v t="vicent.20220528090429.1"><vh>Tema 29 Metodologías Ágiles de desarrollo. Scrum</vh></v>
-<v t="vicent.20220528090520.1"><vh>@clean Tema 31 Control de versiones Subversion GIT.md</vh>
-<v t="vicent.20220901104803.1"><vh>GIT: conceptos básicos</vh></v>
-<v t="vicent.20220902132213.1"><vh>Remotos</vh></v>
-<v t="vicent.20220905143536.1"><vh>Fusión de ramas</vh></v>
-<v t="vicent.20220902135651.1"><vh>Tags</vh></v>
-<v t="vicent.20220906183732.1"><vh>Stash y bisect</vh></v>
-</v>
-<v t="vicent.20220528090539.1"><vh>@clean Tema 32 Gestion integrada del desarrollo Maven.md</vh>
-<v t="vicent.20220615181441.1"><vh>Maven</vh>
-<v t="vicent.20220618074740.1"><vh>Arquetipos</vh></v>
-<v t="vicent.20220615191428.1"><vh>Guía rápida</vh></v>
-<v t="vicent.20220615193810.1"><vh>Ciclo de vida del proyecto</vh></v>
-</v>
-</v>
-</v>
 <v t="vicent.20220910124036.1"><vh>Frameworks</vh>
 <v t="vicent.20220910124547.1"><vh>@clean Tema 22 Arquitectura MVC.md</vh></v>
 <v t="vicent.20220910124056.1"><vh>@clean Tema 24 Spring Boot.md</vh>
 <v t="vicent.20220911110903.1"><vh>SpringBoot</vh></v>
 <v t="vicent.20220911120722.1"><vh>Dependency injection and IoC</vh></v>
+<v t="vicent.20220913164742.1"><vh>Spring Beans</vh></v>
 <v t="vicent.20220910203232.1"><vh>Crear un proyecto SpringBoot con VSCode</vh></v>
 <v t="vicent.20220911103833.1"><vh>Desarrollo del proyecto</vh></v>
+<v t="vicent.20220913111203.1"></v>
 </v>
 <v t="vicent.20220910124231.1"><vh>@clean Tema 23 MyBatis.md</vh></v>
 <v t="vicent.20220910124337.1"><vh>@clean Tema 21 FreeMarker.md</vh></v>
@@ -2558,6 +2562,7 @@ El resultado es
 
 @path ./31ControlDeVersiones
 @language md
+[gitkraken](https://www.gitkraken.com/learn/git)
 @others
 </t>
 <t tx="vicent.20220528090539.1"># Tema 32 Gestión Integrada del Desarrollo. Maven
@@ -2795,9 +2800,10 @@ under `target/site`.</t>
 <t tx="vicent.20220618074740.1">### Arquetipos
 
 Por definición, un arquetipo es un patrón o modelo que se usa para alcanzar un objetivo siempre de la misma 
-manera. En Maven, un arquetipo es una plantilla de proyecto que, combinada con user input, genera un proyecto Maven 
+manera. En Maven, *un arquetipo es una plantilla de proyecto* que, combinada con user input, genera un proyecto Maven 
 adaptado a las necesidades del usuario. El usuario decide, en función de las necesidades que tenga, que arquetipo 
-utilizar (los arquetipos se pueden combinar). La estructura del proyecto generada por los diferentes arquetipos puede
+utilizar (los arquetipos se pueden combinar). *La estructura del proyecto depende del arquetipo que se haya utilizado para generar
+dicho proyecto*. La estructura del proyecto generada por los diferentes arquetipos puede
 verse en [este enlace](https://maven.apache.org/archetypes/index.html)
 
 Los arquetipos de Maven se agrupan en el toolkit Archetype. Cada arquetipo se identifica con un ArtifactID.
@@ -3864,22 +3870,25 @@ Metodología ágiles
 SQL (lenguaje y teoría)
 GIT
 Tomcat
+
+Guías SpringBoot
+
+x Building a RESTful Web Service
+x Consuming a RESTful Web Service
+x Handling Form Submission
+x Validating Form Input
+x Serving Web Content with Spring MVC
+- Consuming a RESTful Web Service with jQuery
+- Creating Asynchronous Methods
+x Accessing JPA Data with REST (also https://www.baeldung.com/spring-boot-bean-validation)
+x Accessing Data with JPA
+- Accessing data with MySQL
+x Producing a SOAP web service
+- Consuming a SOAP web service
 </t>
 <t tx="vicent.20220901104803.1">## GIT. Conceptos básicos
 
 [Tutoriales](https://linuxize.com/tags/git/)
-
-Conceptos importantes:
-
-Un **snapshot** es una copia del repositorio en un momento dado. En Pro Git pág. 82 se explica en detalle como se almacena en el 
-snapshot cada directorio y fichero del repositorio.
-
-Un **commit** es un objeto que apunta a un snapshot del repositorio y a cada uno de los commits padre. El commit contiene metadatos 
-como autor, commiter, email, mensaje... El commit, como todo en git, tiene un checksum para garantizar su integridad.
-
-staging area: a place where people gather before going somewhere or doing something
-
-En git la **staging area** es donde se almacenan los ficheros cuando estan listos para añadirse a un nuevo snapshot.
 
 El ciclo de trabajo básico en git es:
 
@@ -3888,6 +3897,15 @@ El ciclo de trabajo básico en git es:
 - hacer commit del contenido de la staging area i.e., crear un nuevo snapshot
 
 
+Un **snapshot** es una copia del repositorio en un momento dado. En Pro Git pág. 82 se explica en detalle como se almacena en el 
+snapshot cada directorio y fichero del repositorio.
+
+La **staging area** es donde se almacenan los ficheros cuando estan listos para añadirse a un nuevo snapshot.
+
+Un **commit** es un objeto que apunta a un snapshot del repositorio y a cada uno de los commits padre. El commit contiene metadatos 
+como autor, commiter, email, mensaje... El commit, como todo en git, tiene un checksum para garantizar su integridad.
+
+**Hacer commit** es añadir el contenido de la staging area al repositorio en un nuevo commit.
 
 Una **rama** es un puntero movible que apunta *al último commit* de una línea de desarrollo.
 
@@ -3897,10 +3915,8 @@ history for the current branch, which results in a fork in the history of the pr
 
 **HEAD** es un puntero que apunta a la rama en uso.
 
-Hacer un **checkout** es moverse de un commit a otro en el árbol de commits. Como efecto colateral se actualiza el estado de nuestro directorio
-  de trabajo al que tenía en el nuevo commit. La información va desde el repositorio al directorio de trabajo
-
-**Hacer commit** es añadir el contenido de la staging area al repositorio en un nuevo commit.
+Hacer un **checkout** es moverse de un commit a otro en el árbol de commits. Como efecto colateral se actualiza el estado de nuestro 
+directorio de trabajo al que tenía en el nuevo commit. La información va desde el repositorio al directorio de trabajo.
 
 Cuando intercambiamos datos con un repositorio remoto:
 
@@ -3977,7 +3993,7 @@ To fetch the whole remote repository:
     * [nuevo tag]           v6.6.5-devel -&gt; v6.6.5-devel
 
 While the git fetch command will fetch down all the changes on the server
-that you don’t have yet, it will not modify your working directory at all. It will
+that you don't have yet, it will not modify your working directory at all. It will
 simply get the data for you and let you merge it yourself.
 
 Por tanto, no se han añadidos ramas locales nuevas:
@@ -4159,8 +4175,8 @@ Además nos ayuda a entender la diferencia entre groupID y artifactID. Por ejemp
 mismo groupID, org.springframework.boot, cuelgan dos artefactos, spring-boot-starter-web y spring-boot-starter-test. Es una
 especie de estructura jerárquica en la que los componentes tienen funciones más específicas a medida que nos alejamos de la raíz.
 
-El starter spring-boot-starter-web contiene los módulos necesarios para el desarrollo de la aplicación web y también un starter Tomcat
-para que podamos ejecutar la aplicación sin tener que instalar un Tomcat.
+El starter spring-boot-starter-web contiene los módulos necesarios para el desarrollo de la aplicación web MVC y también un starter 
+Tomcat para que podamos ejecutar la aplicación sin tener que instalar un Tomcat.
 
 El esqueleto de la aplicación ya está creado y además funciona. Si vamos a la clase anotada con @SpringBootApplication vemos en la
 terminal como se ejecuta la aplicación:
@@ -4190,7 +4206,16 @@ terminal como se ejecuta la aplicación:
 <t tx="vicent.20220911103833.1">## Desarrollo del proyecto
 
 Ahora tenemos un proyecto SpringBoot creado con Maven, así que tiene la misma estructura que todos los proyectos Maven, incluída una
-clase principal. Pero la aplicación todavía no hace nada. El siguiente paso es crear el fichero de configuración.
+clase principal, que SpringBoot ha anotado con 
+[@SprinBootApplication](https://docs.spring.io/spring-boot/docs/2.0.x/reference/html/using-boot-using-springbootapplication-annotation.html). 
+Pero la aplicación todavía no hace nada. El siguiente paso es crear el fichero de configuración.
+
+Next, for Java-based configuration of Spring beans, we need to create a config class and
+annotate it with @Configuration annotation. This annotation is the main artifact used by the Java-based Spring configuration; it is itself
+meta-annotated with @Component, which makes the annotated classes standard beans and as
+such, also candidates for component-scanning.
+The main purpose of @Configuration classes is to be sources of bean definitions for the Spring
+IoC Container.
 </t>
 <t tx="vicent.20220911110903.1">## SpringBoot
 
@@ -4213,7 +4238,7 @@ easier through three core capabilities:
 These features work together to provide you with a tool that allows you to set up a Spring-based application with minimal configuration 
 and setup.
 
-So the trick with Spring Boot is that many things happen implicitly. For instance, we use the `@SpringBootApplication` annotation, but 
+So the trick with Spring Boot is that many things happen implicitly. For instance, we use the [@SprinBootApplication](https://docs.spring.io/spring-boot/docs/2.0.x/reference/html/using-boot-using-springbootapplication-annotation.html) annotation, but 
 it's a combination of three annotations:
 
 ~~~ java
@@ -4224,14 +4249,209 @@ it's a combination of three annotations:
 </t>
 <t tx="vicent.20220911120722.1">## Dependency injection and IoC
 
-[Beans y IoC](https://www.baeldung.com/spring-bean)
+[IoC y DI](https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring)
 
+**Inversion of Control** is a principle in software engineering which transfers the control of objects or portions of a program to a 
+container or framework. We most often use it in the context of object-oriented programming.
+
+In contrast with traditional programming, in which our custom code makes calls to a library, IoC enables a framework to take control of 
+the flow of a program and make calls to our custom code. To enable this, frameworks use abstractions with additional behavior built in.
+
+- Programación tradicional: el flujo del programa lo controla nuestro código haciendo llamadas a las bibliotecas/framework.
+- IoC: el flujo del programa lo controla el framework haciendo llamadas a nuestro código
+
+En la IoC una parte fundamental es el contenedor IoC. In the Spring framework, the interface 
+`ApplicationContext` represents the IoC container. The Spring container is responsible for instantiating, configuring and assembling 
+objects known as **beans**, as well as managing their life cycles.
+
+In order to assemble beans, the container uses configuration metadata, which can be in the form of XML configuration or annotations.
+
+Para crear los beans solo necesitamos proporcionale al IoC los metadatos necesarios. Esto se puede hacer de tres maneras:
+
+- en un fichero de configuración (Java o XML)
+- anotando las clases con las anotaciones adecuadas (por ejemplo @Component y @Autowired)
+- combinando los dos métodos anteriores
+
+We can achieve Inversion of Control through various mechanisms such as: Strategy design pattern, Service Locator pattern, Factory 
+pattern, and **Dependency Injection (DI)**.
+
+Dependency injection is a pattern we can use to implement IoC, where the control being inverted is setting an object's dependencies.
+
+O sea, en la DI el control que se invierte es el de las dependencias de un objeto. En lugar de ser el objeto el que controla sus
+dependencias cede ese control al contenedor IoC.
+
+Connecting objects with other objects, or **injecting** objects into other objects, is done by an assembler rather than by the objects 
+themselves.
+
+Dependency Injection in Spring can be done through constructors, setters or fields.
+
+En programación tradicional si un objeto A depende de otro B, tenemos que instanciar B y A explícitamente:
+
+~~~ java
+public class ItemImpl1 implement Item {
+    public ItemImpl1() {
+      // do something
+    }
+}
+~~~
+
+~~~ java
+public class Store {
+    private Item item;
+ 
+    public Store(Item item) {
+        this.item = item;    
+    }
+}
+~~~
+
+~~~ java
+Item item1 = new ItemImpl1();
+Store tienda = new Store(item1);
+~~~
+
+If we use constructor-based dependency injection, the container will invoke a constructor with arguments each representing a 
+dependency we want to set. En este ejemplo usamos un fichero de configuración para definir los beans.
+
+~~~ java
+@Configuration
+public class AppConfig {
+
+    @Bean
+    public Item item1() {
+        return new ItemImpl1();  // un bean sin dependencias
+    }
+
+    @Bean
+    public Store store() {
+        return new Store(item1());  // un bean con una dependencia
+    }
+}
+~~~
+
+Ahora ya no tenemos que instanciar en el código las dependencias porque el framework se encarga de crearlas (en el caso de Spring usando
+metadatos para ensamblar los beans en tiempo de ejecución) usando el contexto de la aplicación:
+
+~~~ java
+ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+Store tienda = context.getBean("store", Store.class);  // no hace falta instanciar Store ni Item
+System.out.println(tienda.item);
+~~~
+
+For setter-based DI, the container will call setter methods of our class after invoking a no-argument constructor or no-argument static 
+factory method to instantiate the bean. Let's create this configuration using annotations:
+
+~~~ java
+@Bean
+public Item item1() {
+    return new ItemImpl1();  // un bean sin dependencias
+}
+
+@Bean
+public Store store() {
+    Store store = new Store();
+    store.setItem(item1());
+    return store;
+}
+~~~
+
+Y el código original quedaría:
+
+~~~ java
+public class Store {
+    private Item item;
+    public Store() {
+      // do something
+    }
+
+    public setItem(Item item) {
+      this.item = item;
+    }
+}
+~~~
+
+In case of Field-Based DI, we can inject the dependencies by marking them with an @Autowired annotation. Esto no se hace en el fichero
+de configuración, sino directamente en el código.
+
+~~~ java
+@Component
+public class Store {
+    @Autowired
+    private Item item; 
+}
+~~~
+
+Como ni el bean Item ni el bean Store se han definido en el fichero de configuración the 
+container will use reflection to inject Item into Store, which is costlier than constructor-based or setter-based injection.
+
+Wiring allows the Spring container to automatically resolve dependencies between collaborating beans by inspecting the beans that have 
+been defined.
+
+Summary:
+
+When a class encapsulates other objects, the referenced objects become a dependency for the outer class. In other words, these other 
+objects must be created so the outer class can use it. The container takes a look at our classes and, depending on the method you 
+choose, instantiates beans from the referenced objects (RaceTrack and Driver) before it instantiates a bean from the outer classes 
+(RaceRound). Spring implements a way for the objects needed by another object to be provided as beans for others to reference. This 
+process is known as dependency injection; Our classes no longer have to instantiate their own dependencies. Therefore, we can say the 
+control of dependencies has been inverted back to the container, and this is why we call it an Inversion of Control (IoC) container.</t>
+<t tx="vicent.20220913111203.1">
+## Notas
+
+**Ejecutar una aplicación springboot con argumentos**
+Si queremos usar la terminal:
+
+$ mvn spring-boot:run -Dspring-boot.run.arguments="Hello world"
+
+le pasa a la aplicación dos argumentos. Si no ponemos las comillas dará un error del tipo:
+
+[ERROR] Unknown lifecycle phase "world". You must specify a valid lifecycle phase or a goal in the format &lt;plugin-prefix&gt;:&lt;goal&gt; or 
+&lt;plugin-group-id&gt;:&lt;plugin-artifact-id&gt;[:&lt;plugin-version&gt;]:&lt;goal&gt;. Available lifecycle phases are: validate, initialize, 
+generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, 
+process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, 
+package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, 
+pre-site, site, post-site, site-deploy.
+
+Si queremos usar VSCode:
+- crear en .vscode un fichero launch.json y abrirlo
+- clic en Añadir configuración y seleccionar la que queremos
+
+Ejemplo de configuración "lanzar pidiendo argumentos":
+
+{
+  "configurations": [
+  {
+    "type": "java",
+    "name": "Launch with Arguments Prompt",
+    "request": "launch",
+    "mainClass": "com.opos.sbweb.SBwebApplication",
+    "args": "${command:SpecifyProgramArgs}"
+  }
+  ]
+}
+
+Ahora cuando lanzamos la aplicación en la parte superior de la ventana se abre una caja de texto para introducir los argumentos.
+
+**Como consumir servicios REST proporcionados por un webservice**
+
+- manualmente
+  - desde el navegador
+  - usando curl
+  - usando postman
+- programáticamente
+  - con RestTemplate
+
+</t>
+<t tx="vicent.20220913164742.1">## Spring Beans
+
+[Beans](https://www.baeldung.com/spring-bean)
 Spring Framework offers a dependency injection feature that lets objects define their own dependencies that the Spring container later 
 injects into them. This process is called Inversion of Control (IoC). This enables developers to create modular applications consisting 
 of loosely coupled components that are ideal for microservices and distributed network applications.
 
 Again, Inversion of Control (IoC) is a process in which an object defines its dependencies without creating them. This object 
-delegates the job of constructing and managing such dependencies to an IoC container (in our case to an Spring IoC).
+delegates the job of constructing and managing such dependencies to an IoC container (in our case the Spring environment/context
+where application is executed).
 
 *A Spring bean is every object constructed/instantiated and managed by the IoC container. When working with Spring, we can annotate our 
 classes in order to make them into Spring beans.*
@@ -4331,6 +4551,49 @@ Company company = context.getBean("company", Company.class);
 assertEquals("High Street", company.getAddress().getStreet());
 assertEquals(1000, company.getAddress().getNumber());
 ~~~
+
+La inyección de dependencias también se puede hacer *automáticamente* usando anotaciones, siendo 
+[@Autowired](https://www.baeldung.com/spring-autowire) la más común.  In other words, by declaring all the bean dependencies in a 
+Spring configuration file, Spring container can autowire relationships between collaborating beans. This is called Spring bean 
+autowiring.
+
+Necesitaremos un fichero de configuración que busque automáticamente los beans por toda la aplicación. Lo mejor es que el fichero esté 
+en el paquete principal para asegurarnos de que encuentra todos los beans (porqué se busca en el paquete donde está el fichero y en los 
+subpaquetes). Normalmente como fichero de configuración usaremos la clase principal de la aplicación:
+
+~~~ java
+@SpringBootApplication
+public class App {
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
+    }
+}
+~~~
+
+porque `@SpringBootApplication` equivale a `@Configuration` + `@ComponentScan` + `@EnableAutoConfiguration`. As a result, when we run 
+this Spring Boot application, it will automatically scan the components in the current package and its sub-packages. Thus it will 
+register them in Spring's Application Context, and allow us to inject beans using `@Autowired`.
+
+After enabling annotation injection, we can use autowiring on properties, setters, and constructors.
+</t>
+<t tx="vicent.20221005193256.1">## Worktrees
+
+[Worktrees](https://www.gitkraken.com/learn/git/git-worktree)
+
+Un worktree permite trabajar simultáneamente con dos ramas.
+
+En el flujo normal de trabajo trabajamos solo con una rama a la vez. Si queremos cambiar de rama tenemos que hacer commit en la rama
+actual y luego hacer un checkout a la otra rama.
+
+Pero puede pasar que tengamos que cambiar de rama antes de haber terminado nuestro trabajo en la rama actual, por tanto todavía no
+estamos listos para hacer commit. En este caso tenemos dos opciones:
+
+- hacer un stash de la rama actual y cuando volvamos a ella recuperar el stash
+- crear un worktree donde trabajar con la otra rama
+
+El worktree es mucho más cómodo. Nos permite trabajar con varias ramas simultáneamente. Cuando terminamos de trabajar en una rama
+hacemos commit y borramos su worktree. Los cambios no se pierden porque se han aññadido al repo al hacer el commit.
+
 </t>
 </tnodes>
 </leo_file>

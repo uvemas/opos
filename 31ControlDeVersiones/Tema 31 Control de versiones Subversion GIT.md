@@ -1,20 +1,9 @@
 # Tema 31 Control de versiones. Subversion. GIT.
 
+[gitkraken](https://www.gitkraken.com/learn/git)
 ## GIT. Conceptos básicos
 
 [Tutoriales](https://linuxize.com/tags/git/)
-
-Conceptos importantes:
-
-Un **snapshot** es una copia del repositorio en un momento dado. En Pro Git pág. 82 se explica en detalle como se almacena en el 
-snapshot cada directorio y fichero del repositorio.
-
-Un **commit** es un objeto que apunta a un snapshot del repositorio y a cada uno de los commits padre. El commit contiene metadatos 
-como autor, commiter, email, mensaje... El commit, como todo en git, tiene un checksum para garantizar su integridad.
-
-staging area: a place where people gather before going somewhere or doing something
-
-En git la **staging area** es donde se almacenan los ficheros cuando estan listos para añadirse a un nuevo snapshot.
 
 El ciclo de trabajo básico en git es:
 
@@ -23,6 +12,15 @@ El ciclo de trabajo básico en git es:
 - hacer commit del contenido de la staging area i.e., crear un nuevo snapshot
 
 
+Un **snapshot** es una copia del repositorio en un momento dado. En Pro Git pág. 82 se explica en detalle como se almacena en el 
+snapshot cada directorio y fichero del repositorio.
+
+La **staging area** es donde se almacenan los ficheros cuando estan listos para añadirse a un nuevo snapshot.
+
+Un **commit** es un objeto que apunta a un snapshot del repositorio y a cada uno de los commits padre. El commit contiene metadatos 
+como autor, commiter, email, mensaje... El commit, como todo en git, tiene un checksum para garantizar su integridad.
+
+**Hacer commit** es añadir el contenido de la staging area al repositorio en un nuevo commit.
 
 Una **rama** es un puntero movible que apunta *al último commit* de una línea de desarrollo.
 
@@ -32,10 +30,8 @@ history for the current branch, which results in a fork in the history of the pr
 
 **HEAD** es un puntero que apunta a la rama en uso.
 
-Hacer un **checkout** es moverse de un commit a otro en el árbol de commits. Como efecto colateral se actualiza el estado de nuestro directorio
-  de trabajo al que tenía en el nuevo commit. La información va desde el repositorio al directorio de trabajo
-
-**Hacer commit** es añadir el contenido de la staging area al repositorio en un nuevo commit.
+Hacer un **checkout** es moverse de un commit a otro en el árbol de commits. Como efecto colateral se actualiza el estado de nuestro 
+directorio de trabajo al que tenía en el nuevo commit. La información va desde el repositorio al directorio de trabajo.
 
 Cuando intercambiamos datos con un repositorio remoto:
 
@@ -111,7 +107,7 @@ To fetch the whole remote repository:
     * [nuevo tag]           v6.6.5-devel -> v6.6.5-devel
 
 While the git fetch command will fetch down all the changes on the server
-that you don’t have yet, it will not modify your working directory at all. It will
+that you don't have yet, it will not modify your working directory at all. It will
 simply get the data for you and let you merge it yourself.
 
 Por tanto, no se han añadidos ramas locales nuevas:
@@ -219,3 +215,21 @@ Para encontrar bugs que no sabemos cuando se han introducido es muy útil la her
 Otro comando muy utilizado es `stash`:
 
 [stash](https://www.atlassian.com/es/git/tutorials/saving-changes/git-stash)
+## Worktrees
+
+[Worktrees](https://www.gitkraken.com/learn/git/git-worktree)
+
+Un worktree permite trabajar simultáneamente con dos ramas.
+
+En el flujo normal de trabajo trabajamos solo con una rama a la vez. Si queremos cambiar de rama tenemos que hacer commit en la rama
+actual y luego hacer un checkout a la otra rama.
+
+Pero puede pasar que tengamos que cambiar de rama antes de haber terminado nuestro trabajo en la rama actual, por tanto todavía no
+estamos listos para hacer commit. En este caso tenemos dos opciones:
+
+- hacer un stash de la rama actual y cuando volvamos a ella recuperar el stash
+- crear un worktree donde trabajar con la otra rama
+
+El worktree es mucho más cómodo. Nos permite trabajar con varias ramas simultáneamente. Cuando terminamos de trabajar en una rama
+hacemos commit y borramos su worktree. Los cambios no se pierden porque se han aññadido al repo al hacer el commit.
+
