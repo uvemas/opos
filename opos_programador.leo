@@ -34,7 +34,10 @@
 <v t="vicent.20220528085500.1"><vh>Tema 9 Ofimática. LibreOffice Calc</vh></v>
 </v>
 <v t="vicent.20220528092851.1"><vh>Gestión del desarrollo</vh>
-<v t="vicent.20220528090429.1"><vh>Tema 29 Metodologías Ágiles de desarrollo. Scrum</vh></v>
+<v t="vicent.20220528090429.1"><vh>@clean Tema 29 Metodologías Ágiles de desarrollo. Scrum.md</vh>
+<v t="vicent.20221006191345.1"><vh>Metodologías ágiles</vh></v>
+<v t="vicent.20221006193153.1"><vh>Scrum</vh></v>
+</v>
 <v t="vicent.20220528090520.1"><vh>@clean Tema 31 Control de versiones Subversion GIT.md</vh>
 <v t="vicent.20220901104803.1"><vh>GIT: conceptos básicos</vh></v>
 <v t="vicent.20220902132213.1"><vh>Remotos</vh></v>
@@ -200,6 +203,10 @@
 <v t="vicent.20220426185443.1"><vh>REST</vh></v>
 <v t="vicent.20220426185448.1"><vh>JSON</vh></v>
 </v>
+<v t="vicent.20221006201346.1"><vh>@clean Tema 6 Software Libre.md</vh>
+<v t="vicent.20221006201346.2"><vh>Software Libre</vh></v>
+<v t="vicent.20221006201346.46"><vh>Tipos de Licencia</vh></v>
+</v>
 </v>
 </v>
 <v t="vicent.20220514125127.1"><vh>CSS3 layout samples</vh>
@@ -362,6 +369,7 @@ Algunos de los principales parámetros (y su sintaxis) usados en los mensajes HT
    :caption: Contents:
    
    05ArquitecturaSOA/Tema 5 Arquitectura SOA
+   06SoftwareLibre/Tema 6 Software Libre
    13OOP_Clases_y_Objetos/Tema 13 Programación orientada a objetos: Clases y Objetos
    14OOP_Herencia_y_Polimorfismo/Tema 14 Programación orientada a objetos Herencia Polimorfismo
    16Entorno_de_desarrollo_Java/Tema 16 El entorno de desarrollo java Arquitectura J2EE
@@ -373,19 +381,20 @@ Algunos de los principales parámetros (y su sintaxis) usados en los mensajes HT
    22ArquitecturaMVC/Tema 22 Arquitectura MVC
    23PersistenciaConMyBatis/Tema 23 MyBatis
    24SpringBoot/Tema 24 Spring Boot
+   29Scrum/Tema 29 Metodologías Ágiles de desarrollo. Scrum
    30PruebaDelSoftware/Tema 30 Metodos de prueba del Software Junit
    31ControlDeVersiones/Tema 31 Control de versiones Subversion GIT
    32GestionProyectosMaven/Tema 32 Gestion integrada del desarrollo Maven
 </t>
-<t tx="vicent.20220401181802.1">    1. Sistemas operativos. Windows
-    2. Sistemas operativos. Linux
-    3. Sistemas operativos para dispositivos móviles.Android.iOS
+<t tx="vicent.20220401181802.1">    ✔ 1. Sistemas operativos. Windows
+    ✔ 2. Sistemas operativos. Linux
+    ✔ 3. Sistemas operativos para dispositivos móviles.Android.iOS
     4. Sistemas de gestión de bases de datos. Bases de datos relacionales
     5. Arquitectura SOA. Servicios web. SOAP. JSON. REST
-    6. Software libre. Características y tipos de licencias.
+    ✔ 6. Software libre. Características y tipos de licencias.
     7. Redes locales. Conceptos básicos. Características, tipos y protocolos
-    8. Ofimática. LibreOffice Writer
-    9. Ofimática. Libre Office Calc
+    ✔ 8. Ofimática. LibreOffice Writer
+    ✔ 9. Ofimática. Libre Office Calc
     10. Modelo conceptual de datos. Modelos Entidades-Relación. Diagramas de flujo de datos
     11. Bases de datos relacionales. Fundamentos y reglas de normalización.
     12. Oracle. SQL. PL/SQL
@@ -398,17 +407,17 @@ Algunos de los principales parámetros (y su sintaxis) usados en los mensajes HT
     19. JSF. Primefaces
     20. Desarrollo de Informes con JasperReports
     21. Creación y configuración de plantillas con FreeMarker
-    22. Aqruitectura MVC. Spring Framework.
+    22. Arquitectura MVC. Spring Framework.
     23. Capa de persistencia de datos MyBatis
     24. Spring Boot. Construcción empaquetado y despliegue de aplicaciones
     25. Servidores de Aplicaciones Tomcat. Despliegue de aplicaciones.
     26. PHP
     27. JSP
-    28. Desarrollo de aplicaciones con Ajax y Jquery
-    29. Metodologías Ágiles de desarrollo. Scrum
+    ✔ 28. Desarrollo de aplicaciones con Ajax y Jquery
+    ✔ 29. Metodologías Ágiles de desarrollo. Scrum
     30. Métodos de prueba del Software. Junit
-    31. Control de versiones. Subversion. GIT
-    32. Gestión integrada del desarrollo. Maven</t>
+    ✔ 31. Control de versiones. Subversion. GIT
+    ✔ 32. Gestión integrada del desarrollo. Maven</t>
 <t tx="vicent.20220405191838.1">#### Métodos
 
 Los métodos que pueden aparecer en la primera línea de la petición (request-line) son:
@@ -2551,7 +2560,15 @@ El resultado es
 <t tx="vicent.20220528090343.1"></t>
 <t tx="vicent.20220528090351.1"></t>
 <t tx="vicent.20220528090410.1"></t>
-<t tx="vicent.20220528090429.1"></t>
+<t tx="vicent.20220528090429.1"># Tema 29 Metodologías Ágiles de desarrollo. Scrum
+
+@path ./29Scrum
+@language md
+[Scrum básico](https://www.atlassian.com/es/agile/scrum)
+
+[Scrum](https://www.atlassian.com/es/agile/scrum)
+@others
+</t>
 <t tx="vicent.20220528090458.1"># Tema 30 Métodos de prueba del software. JUnit
 
 @path ./30PruebaDelSoftware
@@ -4594,6 +4611,102 @@ estamos listos para hacer commit. En este caso tenemos dos opciones:
 El worktree es mucho más cómodo. Nos permite trabajar con varias ramas simultáneamente. Cuando terminamos de trabajar en una rama
 hacemos commit y borramos su worktree. Los cambios no se pierden porque se han aññadido al repo al hacer el commit.
 
+</t>
+<t tx="vicent.20221006191345.1">## Metodologías ágiles
+
+La metodología ágil (del inglés, agile methodology) es una forma de gestión de proyectos, basada en principios como la adaptabilidad y 
+la flexibilidad, cuyo objetivo final es ser capaz de responder rápidamente a las necesidades del mercado.
+
+Estas metodologías surgieron al entender que las metodologías tradicionales de desarrollo de software, como el “desarrollo en cascada 
+(waterfall development)”, no funcionaba a la hora de crear software en la actualidad. El enfoque lineal de “Planificar, diseñar, 
+construir, testear, entregar” funciona bien en otras industrias como la automovilística, pero no tan bien en un sector en el que la 
+demanda y la competencia cambian tan rápidamente.
+
+El Agile Manifesto es el fundamento de todas las metodologías ágiles. Consta de cuatro valores y doce principios.
+
+Valores del manifiesto ágil:
+
+- Personas e interacciones por encima de procesos y  herramientas
+- Software funcionando por encima de documentación exhaustiva
+- Colaboración con el cliente por encima de la negociación de contratos
+- Responder al cambio antes que seguir un plan
+
+Principios del manifiesto ágil:
+
+- Satisfacción del cliente mediante la entrega temprana y continua de software
+- Adaptar los requisitos cambiantes a lo largo del proceso de desarrollo, incluso en etapas tardías
+- Entrega de software funcional frecuente, lo más pronto posible
+- Colaboración entre responsables de negocio y desarrolladores a lo largo del proyecto
+- Apoyar, confiar y motivar a las personas implicadas, ofreciendo el entorno que necesitan
+- Permitir las interacciones cara a cara para comunicar información eficientemente
+- El software funcionando es la principal medida de progreso
+- Procesos ágiles para apoyar un ritmo de desarrollo consistente y sostenible
+- La atención a los detalles técnicos y al diseño mejora la agilidad
+- Simplicidad es clave
+- Los equipos autoorganizados fomentan grandes arquitecturas, requisitos y diseños
+- Reflexiones periódicas sobre cómo ser más eficaces
+
+Ejemplos de metodologías ágiles son Scrum, eXtreme Programming y Kanban.
+</t>
+<t tx="vicent.20221006193153.1"># Scrum
+
+Scrum es el marco ágil más utilizado entre las empresas para el desarrollo de software.  Fue creado por Jeff Sutherland y Ken Schwaber 
+(que también formaron parte de las trece personas que definieron el Manifiesto Ágil) y necesita de un equipo compuesto por:
+
+- **Jefe de producto**: Que representa al cliente y sus necesidades
+- **Equipo scrum**: Son los desarrolladores, programadores y diseñadores que entregan el producto
+- **Scrum master**: Es el encargado de que las prácticas scrum se sigan y que el equipo este centrado en el objetivo
+
+¿Cómo funciona la metodología Scrum?
+
+- El encargado de producto elabora una lista de deseos con diferentes prioridades (Product backlog)
+- El equipo scrum toma una pequeña parte de la lista de deseos (Sprint backlog) y planea su implementación
+- El equipo completa sus tareas del sprint backlog en un Sprint (que suele ser un período de 2 a 4 semanas). Se evalúa el progreso en 
+  una reunión diaria (Daily scrum)
+- Cuando acaba el Sprint, se envía o revisa el trabajo completado y tras su revisión se cierra este sprint, para comenzar con el 
+  siguiente.
+</t>
+<t tx="vicent.20221006201346.1"># Tema 6 Software Libre
+
+@path ./06SoftwareLibre
+@language md
+@others
+</t>
+<t tx="vicent.20221006201346.2">## Software Libre
+
+Free software is software that gives you the user the freedom to share, study and modify it. We call this free software because the 
+user is free.
+
+To use free software is to make a political and ethical choice asserting the right to learn, and share what we learn with others. 
+Free software has become the foundation of a learning society where we share our knowledge in a way that others can build upon and 
+enjoy.
+
+Currently, many people use proprietary software that denies users these freedoms and benefits. If we make a copy and give it to a 
+friend, if we try to figure out how the program works, if we put a copy on more than one of our own computers in our own home, we could 
+be caught and fined or put in jail. That's what's in the fine print of the license agreement you accept when using proprietary software.
+
+The corporations behind proprietary software will often spy on your activities and restrict you from sharing with others. And because 
+our computers control much of our personal information and daily activities, proprietary software represents an unacceptable danger to 
+a free society.</t>
+<t tx="vicent.20221006201346.46">## Tipos de Licencia
+
+[Referencia](https://www.legalzoom.com/articles/copyleft-vs-copyright)
+
+Existen tres tipos de licencias libres: robustas (o de copyleft), permisivas y open-source
+
+A copyleft license allows users of the software to read, copy, make changes, and then distribute their adaptation. However, the user is 
+not permitted to copyright their new version, which means they cannot profit from their adapted work by licensing it. O sea, si el 
+software original es copyleft, cualquier adaptación que se redistribuya tiene que ser copyleft. Ejemplos de estas licencias son GPL, 
+LGPL, IBMPL o MPL.
+
+A permissive license allows users to read, copy, modify, and distribute the software. This differs from copyleft licensing in that 
+permissive license allows users to copyright and license their adaptations, whereas copyleft does not. There are usually some minimal 
+requirements placed on use, such as that attribution be given to the original creators. Because of this, some copyright privileges are 
+retained, meaning the software is not in the public domain. Ejemplos de estas licencias son las licencias Apache, MIT o BSD.
+
+The most permissive of software licenses, an open-source license puts software directly into the public domain. No copyright is 
+retained to the work and anyone can use, change, distribute, and copyright their own adaptations—and even profit from their work. 
+`LibreOffice`, a free alternative to `Microsoft Office`, is an example of open-source software.
 </t>
 </tnodes>
 </leo_file>

@@ -1,0 +1,57 @@
+# Tema 29 Metodologías Ágiles de desarrollo. Scrum
+
+[Scrum básico](https://www.atlassian.com/es/agile/scrum)
+
+[Scrum](https://www.atlassian.com/es/agile/scrum)
+## Metodologías ágiles
+
+La metodología ágil (del inglés, agile methodology) es una forma de gestión de proyectos, basada en principios como la adaptabilidad y 
+la flexibilidad, cuyo objetivo final es ser capaz de responder rápidamente a las necesidades del mercado.
+
+Estas metodologías surgieron al entender que las metodologías tradicionales de desarrollo de software, como el “desarrollo en cascada 
+(waterfall development)”, no funcionaba a la hora de crear software en la actualidad. El enfoque lineal de “Planificar, diseñar, 
+construir, testear, entregar” funciona bien en otras industrias como la automovilística, pero no tan bien en un sector en el que la 
+demanda y la competencia cambian tan rápidamente.
+
+El Agile Manifesto es el fundamento de todas las metodologías ágiles. Consta de cuatro valores y doce principios.
+
+Valores del manifiesto ágil:
+
+- Personas e interacciones por encima de procesos y  herramientas
+- Software funcionando por encima de documentación exhaustiva
+- Colaboración con el cliente por encima de la negociación de contratos
+- Responder al cambio antes que seguir un plan
+
+Principios del manifiesto ágil:
+
+- Satisfacción del cliente mediante la entrega temprana y continua de software
+- Adaptar los requisitos cambiantes a lo largo del proceso de desarrollo, incluso en etapas tardías
+- Entrega de software funcional frecuente, lo más pronto posible
+- Colaboración entre responsables de negocio y desarrolladores a lo largo del proyecto
+- Apoyar, confiar y motivar a las personas implicadas, ofreciendo el entorno que necesitan
+- Permitir las interacciones cara a cara para comunicar información eficientemente
+- El software funcionando es la principal medida de progreso
+- Procesos ágiles para apoyar un ritmo de desarrollo consistente y sostenible
+- La atención a los detalles técnicos y al diseño mejora la agilidad
+- Simplicidad es clave
+- Los equipos autoorganizados fomentan grandes arquitecturas, requisitos y diseños
+- Reflexiones periódicas sobre cómo ser más eficaces
+
+Ejemplos de metodologías ágiles son Scrum, eXtreme Programming y Kanban.
+# Scrum
+
+Scrum es el marco ágil más utilizado entre las empresas para el desarrollo de software.  Fue creado por Jeff Sutherland y Ken Schwaber 
+(que también formaron parte de las trece personas que definieron el Manifiesto Ágil) y necesita de un equipo compuesto por:
+
+- **Jefe de producto**: Que representa al cliente y sus necesidades
+- **Equipo scrum**: Son los desarrolladores, programadores y diseñadores que entregan el producto
+- **Scrum master**: Es el encargado de que las prácticas scrum se sigan y que el equipo este centrado en el objetivo
+
+¿Cómo funciona la metodología Scrum?
+
+- El encargado de producto elabora una lista de deseos con diferentes prioridades (Product backlog)
+- El equipo scrum toma una pequeña parte de la lista de deseos (Sprint backlog) y planea su implementación
+- El equipo completa sus tareas del sprint backlog en un Sprint (que suele ser un período de 2 a 4 semanas). Se evalúa el progreso en 
+  una reunión diaria (Daily scrum)
+- Cuando acaba el Sprint, se envía o revisa el trabajo completado y tras su revisión se cierra este sprint, para comenzar con el 
+  siguiente.
