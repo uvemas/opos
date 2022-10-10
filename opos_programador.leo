@@ -55,9 +55,23 @@
 </v>
 </v>
 <v t="vicent.20220528090721.1"><vh>Bases de datos</vh>
-<v t="vicent.20220528085316.1"><vh>Tema 4 Sistemas de gestión de bases de datos. Bases de datos relacionales</vh></v>
-<v t="vicent.20220528085607.1"><vh>Tema 10  Modelo conceptual de datos. Modelos Entidades-Relación. Diagramas de flujo de datos</vh></v>
-<v t="vicent.20220528085631.1"><vh>Tema 11 Bases de datos relacionales. Fundamentos y reglas de normalización</vh></v>
+<v t="vicent.20220528085316.1"><vh>@clean Tema 4 Sistemas de gestión de bases de datos. Bases de datos relacionales.md</vh>
+<v t="vicent.20221009092538.1"><vh>Introducción</vh></v>
+<v t="vicent.20221009113124.1"><vh>APIs</vh>
+<v t="vicent.20221009114839.1"><vh>ODBC</vh></v>
+<v t="vicent.20221009115303.1"><vh>JDBC</vh></v>
+</v>
+<v t="vicent.20221009113328.1"><vh>Languages</vh></v>
+</v>
+<v t="vicent.20220528085607.1"><vh>@clean Tema 10 Modelo conceptual de datos.md</vh>
+<v t="vicent.20221008124658.1"><vh>Introducción</vh></v>
+<v t="vicent.20221008124619.1"><vh>Modelo conceptual de datos</vh></v>
+<v t="vicent.20221008193645.1"><vh>Modelos entidad-relación</vh></v>
+</v>
+<v t="vicent.20220528085631.1"><vh>@clean Tema 11 BBDD relacionales. Normalización.md</vh>
+<v t="vicent.20221010124625.1"><vh>Introducción</vh></v>
+<v t="vicent.20221010123006.1"><vh>Normalización</vh></v>
+</v>
 <v t="vicent.20220528085656.1"><vh>Tema 12 Oracle. SQL. PL/SQL</vh></v>
 </v>
 <v t="vicent.20220528092009.1"><vh>Programación</vh>
@@ -207,6 +221,7 @@
 <v t="vicent.20221006201346.2"><vh>Software Libre</vh></v>
 <v t="vicent.20221006201346.46"><vh>Tipos de Licencia</vh></v>
 </v>
+<v t="vicent.20221007223142.1"><vh>@clean Tema 15 UML.md</vh></v>
 </v>
 </v>
 <v t="vicent.20220514125127.1"><vh>CSS3 layout samples</vh>
@@ -368,10 +383,14 @@ Algunos de los principales parámetros (y su sintaxis) usados en los mensajes HT
    :maxdepth: 2
    :caption: Contents:
    
+   04SGBD/Tema 4 Sistemas de gestión de bases de datos. Bases de datos relacionales
    05ArquitecturaSOA/Tema 5 Arquitectura SOA
    06SoftwareLibre/Tema 6 Software Libre
+   10ModeladoDeDatos/Tema 10 Modelo conceptual de datos
+   11BBDDRelacionales/Tema 11 BBDD relacionales. Normalización
    13OOP_Clases_y_Objetos/Tema 13 Programación orientada a objetos: Clases y Objetos
    14OOP_Herencia_y_Polimorfismo/Tema 14 Programación orientada a objetos Herencia Polimorfismo
+   15UML/Tema 15 UML
    16Entorno_de_desarrollo_Java/Tema 16 El entorno de desarrollo java Arquitectura J2EE
    17Lenguaje_Java/Tema 17 Lenguaje de programacion Java
    18DiseñoWeb/Tema 18 Disenyo Web
@@ -389,18 +408,18 @@ Algunos de los principales parámetros (y su sintaxis) usados en los mensajes HT
 <t tx="vicent.20220401181802.1">    ✔ 1. Sistemas operativos. Windows
     ✔ 2. Sistemas operativos. Linux
     ✔ 3. Sistemas operativos para dispositivos móviles.Android.iOS
-    4. Sistemas de gestión de bases de datos. Bases de datos relacionales
+    ✔ 4. Sistemas de gestión de bases de datos. Bases de datos relacionales
     5. Arquitectura SOA. Servicios web. SOAP. JSON. REST
     ✔ 6. Software libre. Características y tipos de licencias.
     7. Redes locales. Conceptos básicos. Características, tipos y protocolos
     ✔ 8. Ofimática. LibreOffice Writer
     ✔ 9. Ofimática. Libre Office Calc
-    10. Modelo conceptual de datos. Modelos Entidades-Relación. Diagramas de flujo de datos
-    11. Bases de datos relacionales. Fundamentos y reglas de normalización.
+    ✔ 10. Modelo conceptual de datos. Modelos Entidades-Relación. Diagramas de flujo de datos
+    ✔ 11. Bases de datos relacionales. Fundamentos y reglas de normalización.
     12. Oracle. SQL. PL/SQL
     13. Programación orientada a objetos. Clases. Objetos.
     14. Programación orientada a objetos. Herencia. Polimorfismo
-    15. Análisis y diseño orientado a objetos usando UML.
+    ✔ 15. Análisis y diseño orientado a objetos usando UML.
     16. El entorno de desarrollo java. Arquitectura J2EE
     17. Lenguaje de programación java: sintaxis ,tipos de datos, operadores, estructuras de control
     18. Diseño web. HTML 5  y CSS3
@@ -2525,11 +2544,26 @@ El resultado es
 <t tx="vicent.20220528085051.1"></t>
 <t tx="vicent.20220528085100.1"></t>
 <t tx="vicent.20220528085120.1"></t>
-<t tx="vicent.20220528085316.1"></t>
+<t tx="vicent.20220528085316.1"># Tema 04 Sistemas de Gestión de Bases de Datos
+
+@path ./04SGBD
+@language md
+@others
+</t>
 <t tx="vicent.20220528085448.1"></t>
 <t tx="vicent.20220528085500.1"></t>
-<t tx="vicent.20220528085607.1"></t>
-<t tx="vicent.20220528085631.1"></t>
+<t tx="vicent.20220528085607.1"># Tema 10 Modelado de datos
+
+@path ./10ModeladoDeDatos
+@language md
+@others
+</t>
+<t tx="vicent.20220528085631.1"># Tema 11 BBDD relacionales. Fundamentos. Normalización
+
+@path ./11BBDDRelacionales
+@language md
+@others
+</t>
 <t tx="vicent.20220528085656.1"></t>
 <t tx="vicent.20220528085742.1"># Tema 13 OOP: Clases y Objetos 
 
@@ -3883,9 +3917,7 @@ assertEquals("Hello World!", string);
 <t tx="vicent.20220831110352.1">API REST - Spring Boot
 Primefaces
 Junit
-Metodología ágiles
 SQL (lenguaje y teoría)
-GIT
 Tomcat
 
 Guías SpringBoot
@@ -4707,6 +4739,292 @@ retained, meaning the software is not in the public domain. Ejemplos de estas li
 The most permissive of software licenses, an open-source license puts software directly into the public domain. No copyright is 
 retained to the work and anyone can use, change, distribute, and copyright their own adaptations—and even profit from their work. 
 `LibreOffice`, a free alternative to `Microsoft Office`, is an example of open-source software.
+</t>
+<t tx="vicent.20221007223142.1"># Tema 15 UML
+
+@path ./15UML
+@language md
+[Curso completo UML2.0](https://www.youtube.com/playlist?list=PLGLfVvz_LVvQ5G-LdJ8RLqe-ndo7QITYc)
+
+[Diagramas UML](https://www.teatroabadia.com/es/uploads/documentos/iagramas_del_uml.pdf)
+@others
+</t>
+<t tx="vicent.20221008124619.1">## Modelo conceptual de datos
+
+Un modelo conceptual de datos identifica las relaciones de más alto nivel entre las diferentes entidades.
+
+Las características del modelo conceptual de datos incluyen:
+
+- Incluye *solamente* las entidades importantes y las relaciones entre ellas.
+- No se especifica ningún atributo.
+- No se especifica ninguna clave principal.
+
+La siguiente figura es un ejemplo de un modelo conceptual de datos.
+
+```{thumbnail} images/conceptual.jpg
+```
+A diferencia de los modelos de datos lógicos y físicos, los modelos de datos conceptuales son independientes de la tecnología y la 
+aplicación. Esto significa que no están vinculados a la realidad y el contexto de los sistemas y procesos actualmente en vigor.
+
+Los modelos de datos conceptuales se utilizan en las primeras etapas del modelado de datos para organizar y definir conceptos y reglas 
+en función de los requisitos de los casos de uso. Son los menos detallados de los tres tipos de modelos de datos, pero de ninguna 
+manera esto hace que sean menos útiles. De hecho, uno de los beneficios clave de los modelos de datos conceptuales es que se pueden 
+comprender y comunicar rápidamente a las partes interesadas fuera de la burbuja "tecnológica".
+
+Los modelos de datos conceptuales brindan a las empresas un punto de partida que debe evolucionar hacia diagramas más ricos en contexto 
+a medida que avanzan por las etapas de los modelos de datos. A través del análisis de casos de uso, el diseño de casos de uso y el 
+diseño de bases de datos, la complejidad y el nivel de detalle eventualmente alcanzarán su punto máximo con los modelos de datos 
+físicos.
+
+Los pasos para elaborar un modelo conceptual de datos son:
+
+- identificar entidades
+- identificar atributos
+- identificar relaciones
+- identificar entidades externas
+- describir las reglas de negocio (restricciones semánticas)
+</t>
+<t tx="vicent.20221008124658.1">Los modelos de datos son entidades fundamentales para introducir abstracción en una base de datos.
+
+Existen tres tipos diferentes de modelos de datos: conceptual, lógico y físico. Cada modelo de datos tiene un propósito específico, 
+que se define principalmente por el nivel de detalles operativos. 
+
+Los modelos de datos conceptuales se construyen en la primera etapa del proceso de modelado de datos. Proporcionan una perspectiva de 
+nivel de resumen, al omitir detalles más finos a favor de un formato que se pueda entender con más facilidad. Son independientes
+del SGBD.
+
+Los modelos lógicos son más detallados que los conceptuales y dependen del *tipo* de SGBD (relacional, jerárquica, orientada a 
+objectos...). En esta etapa se introduce la normalización (se estructuran los datos y se modelan las restricciones).
+
+Los modelos físicos son los más detallados. Dependen de la *implementación* concreta del SGBD (Oracle, MariaDB, PostgreSQL...). En
+esta etapa se definen las estructuras de almacenamiento y los métodos de acceso a los datos.
+
+Cuando se diseña una BBDD los pasos son:
+
+Diseño conceptual -&gt; Diseño lógico -&gt; Diseño físico
+
+El lenguaje que se utiliza para concretar un diseño se llama modelo (lenguaje de modelado). El resultado de aplicar un lenguaje de
+modelado a un diseño se llama esquema.
+</t>
+<t tx="vicent.20221008193645.1">## Modelos entidad-relación
+ 
+ Ver Tema6.pdf. Importante la diapositiva 11:
+
+ - una relación es una correspondencia (en el sentido matemático) entre *dos o más entidades*.
+ - las relaciones se representan gráficamente por rombos con el nombre de la relación en el interior
+ - la cardinalidad con la que una *entidad* participa en una relación especifica el par (min, max) de correspondencias
+   en las que puede intervenir dicha entidad
+
+
+En la relación `EMPLEADO -- lugar de residencia -- CIUDAD` la cardinalidad de la entidad `EMPLEADO` es (1,n) porque un empleado puede 
+vivir en una o más ciudades, pero la cardinalidad de la entidad `CIUDAD` es (0,n) porque en una ciudad dada pueden vivir entre cero y 
+varios empleados.
+
+En la relación `EMPLEADO -- lugar de nacimiento -- CIUDAD` la cardinalidad de la entidad `EMPLEADO` es (1,1) porque un empleado puede 
+haber nacido solo en una ciudad, pero la cardinalidad de la entidad `CIUDAD` es (0,n) porque en una ciudad dada pueden haber nacido 
+entre cero y varios empleados.
+</t>
+<t tx="vicent.20221009092538.1">Connolly and Begg define database management system (DBMS) as a "software system that enables users to define, create, maintain and 
+control access to the database".[24] Examples of DBMS's include MySQL, PostgreSQL, Microsoft SQL Server, Oracle Database, and 
+Microsoft Access.
+
+The DBMS acronym is sometimes extended to indicate the underlying database model, with RDBMS for the relational, OODBMS for the object 
+(oriented) and ORDBMS for the object-relational model. Other extensions can indicate some other characteristics, such as DDBMS for a 
+distributed database management systems.
+
+The functionality provided by a DBMS can vary enormously. The core functionality is the storage, retrieval and update of data. Codd 
+proposed the following functions and services a fully-fledged general purpose DBMS should provide:[25]
+
+- Data storage, retrieval and update
+- User accessible catalog or data dictionary describing the metadata
+- Support for transactions and concurrency
+- Facilities for recovering the database should it become damaged
+- Support for authorization of access and update of data
+- Access support from remote locations
+- Enforcing constraints to ensure data in the database abides by certain rules
+
+It is also generally to be expected the DBMS will provide a set of utilities for such purposes as may be necessary to administer the 
+database effectively, including import, export, monitoring, defragmentation and analysis utilities.[26] The core part of the DBMS 
+interacting between the database and the application interface sometimes referred to as the database engine.
+
+Often DBMSs will have configuration parameters that can be statically and dynamically tuned, for example the maximum amount of main 
+memory on a server the database can use. The trend is to minimize the amount of manual configuration, and for cases such as embedded 
+databases the need to target zero-administration is paramount.
+
+The large major enterprise DBMSs have tended to increase in size and functionality and can have involved thousands of human years of 
+development effort throughout their lifetime.[a]
+
+Early multi-user DBMS typically only allowed for the application to reside on the same computer with access via terminals or terminal 
+emulation software. The client-server architecture was a development where the application resided on a client desktop and the database 
+on a server allowing the processing to be distributed. This evolved into a multitier architecture incorporating application servers and 
+web servers with the end user interface via a web browser with the database only directly connected to the adjacent tier.[27]
+
+A general-purpose DBMS will provide public application programming interfaces (API) and optionally a processor for database languages 
+such as SQL to allow applications to be written to interact with and manipulate the database. A special purpose DBMS may use a private 
+API and be specifically customized and linked to a single application. For example, an email system performs many of the functions of a 
+general-purpose DBMS such as message insertion, message deletion, attachment handling, blocklist lookup, associating messages an email 
+address and so forth however these functions are limited to what is required to handle email.
+</t>
+<t tx="vicent.20221009113124.1">## APIs
+
+External interaction with the database will be via an application program that interfaces with the DBMS.[28] This can range from a 
+database tool that allows users to execute SQL queries textually or graphically, to a website that happens to use a database to store 
+and search information.
+
+A programmer will code interactions to the database (sometimes referred to as a datasource) via an application program interface (API) 
+or via a database language. The particular API or language chosen will need to be supported by DBMS, possibly indirectly via a 
+preprocessor or a bridging API. Some API's aim to be database independent, ODBC being a commonly known example. Other common API's 
+include JDBC and ADO.NET.
+
+All those APIs are intended for accessing (i.e. connecting) to DBMSs.
+</t>
+<t tx="vicent.20221009113328.1">## Languages
+
+Database languages are *special-purpose languages*, which allow one or more of the following tasks, sometimes distinguished as 
+sublanguages:
+
+- Data control language (DCL): controls access to data;
+- Data definition language (DDL): defines data types such as creating, altering, or dropping tables and the relationships among them;
+- Data manipulation language (DML): performs tasks such as inserting, updating, or deleting data occurrences;
+- Data query language (DQL): allows searching for information and computing derived information.
+
+Database languages are specific to a particular data model. Notable examples include:
+
+- SQL combines the roles of data definition, data manipulation, and query in a single language
+- OQL
+- XQL
+</t>
+<t tx="vicent.20221009114839.1">### ODBC
+
+ODBC is aimed to be independent of the DBMS and OS. An application written using ODBC can be ported to other platforms, both on the 
+client and server side, with few changes to the data access code.
+ 
+ODBC accomplishes DBMS independence by using an ODBC driver as a translation layer between the application and the DBMS. The 
+application uses ODBC functions through an ODBC driver manager with which it is linked, and the driver passes the query to the DBMS. An 
+ODBC driver can be thought of as analogous to a printer driver or other driver, providing a standard set of functions for the 
+application to use, and implementing DBMS-specific functionality. An application that can use ODBC is referred to as "ODBC-compliant". 
+Any ODBC-compliant application can access any DBMS for which a driver is installed. Drivers exist for all major DBMSs, many other data 
+sources like address book systems and Microsoft Excel, and even for text or comma-separated values (CSV) files.
+
+Ejemlo: la aplicación DBeaver utiliza un driver ODBC para conectarse al DBMS MariaDB.</t>
+<t tx="vicent.20221009115303.1">### JDBC
+
+[JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity)
+
+Java Database Connectivity (JDBC) is an application programming interface (API) for the programming language Java, which defines how a 
+client may access a database. It is a Java-based data access technology used for Java database connectivity. It is part of the 
+Java Standard Edition platform, from Oracle Corporation. [In addition to connectivity to the DBMS] It provides methods to query and 
+update data in a database [^1], and is oriented toward relational databases. A JDBC-to-ODBC bridge enables connections to any 
+ODBC-accessible data source in the Java virtual machine (JVM) host environment.
+
+[^1]: Lo que significa que un programa Java que use JDBC puede no solo conectarse a un SGBD sino atacar a la base de datos haciendo 
+queries y otras operaciones con la sintaxis proporcionada por JDBC.</t>
+<t tx="vicent.20221010123006.1">## Normalization
+
+[Referencia](https://www.studytonight.com/dbms/database-normalization.php)
+
+Normalization is the process of organizing the data in the database. It consists of a series of guidelines that helps to guide you in 
+creating a good database structure.
+
+Normalization divides the larger tables into smaller ones and links them using relationships. The normal form is used to eliminate 
+undesirable characteristics like Insertion, Update, and Deletion Anomalies. Failure to eliminate anomalies leads to data redundancy 
+and can cause data integrity and other problems as the database grows.
+
+Data modification anomalies can be categorized into three types:
+
+- Insertion Anomaly: Insertion Anomaly refers to when one cannot insert a new tuple into a relationship due to lack of data.
+- Deletion Anomaly: The delete anomaly refers to the situation where the deletion of data results in the unintended loss of some other 
+  important data.
+- Updatation Anomaly: The update anomaly is when an update of a single data value requires multiple rows of data to be updated.
+
+Normalization works through a series of stages called Normal forms. The normal forms apply to individual tables. The table is 
+said to be in particular normal form if it satisfies constraints.
+
+**First normal form, 1NF**
+
+A table is in 1NF if it contains only atomic (from the user point of view) values. To achieve this goal we must eliminate repeating 
+groups (groups with the same meaning, for instance address1 and address2).
+
+Another way to look at the repeating groups problem is with a one-to-many relationship: do not put the one side and the many side in 
+the same table.
+
+**Second normal form, 2NF**
+
+A table will be in 2NF if it is in 1NF and all non-key values are fully functional dependent on the primary key [^1]. It means that
+all non-key values can be fetched using the full primary key (remember that primary key can be a composite key). 
+
+If the dependency is only partial the 2NF is not fulfiled. It means that there are values that can be fetched using only part of a 
+composite primary key. For instance, if we have a table with fields A, B, C, D where A+B is a composite primary key, but values of D
+only need B to be fetched then D depends partially of the composite primary key A+B and the table is *not in 2FN*.
+
+**Third normal form, 3NF**
+
+A table will be in 3NF if it is in 2NF and no transition dependency exists. It means that all non-key values on the table deppend on 
+**only** primary keys.
+
+
+[^1]: But may depend also on other fields that are not primary keys.</t>
+<t tx="vicent.20221010124625.1">Dr Edgar F. Codd, after his extensive research on the Relational Model of database systems, came up with twelve rules of his own, which 
+according to him, a database must obey in order to be regarded as a true relational database.
+
+These rules can be applied on any database system that manages stored data using only its relational capabilities. This is a foundation 
+rule, which acts as a base for all the other rules.
+
+**Rule 1: Information Rule**
+The data stored in a database, may it be user data or metadata, must be a value of some table cell. Everything in a database must be 
+stored in a table format.
+
+**Rule 2: Guaranteed Access Rule**
+Every single data element (value) is guaranteed to be accessible *logically* with a combination of table-name, primary-key (row value), 
+and attribute-name (column value). No other means, such as pointers, can be used to access data.
+
+**Rule 3: Systematic Treatment of NULL Values**
+The NULL values in a database must be given a systematic and uniform treatment. This is a very important rule because a NULL can be 
+interpreted as one the following - data is missing, data is not known, or data is not applicable. O sea, hay que decidir como se trata
+el valor NULL (elegir una de las tres opciones). Una vez decidido, *todos* los NULL de la BBDD se tratarán de esa manera.
+
+**Rule 4: Active Online Catalog**
+The structure description of the entire database must be stored in an online catalog, known as **data dictionary**, which can be 
+accessed by authorized users. Users can use the same query language to access the catalog which they use to access the database itself.
+
+**Rule 5: Comprehensive Data Sub-Language Rule**
+A database can only be accessed using a language having linear syntax that supports data definition, data manipulation, and transaction
+management operations. This language can be used directly or by means of some application. If the database allows access to data 
+without any help of this language, then it is considered as a violation.
+
+Rule 6: View Updating Rule
+All the views of a database, which can theoretically be updated, must also be updatable by the system.
+
+Rule 7: High-Level Insert, Update, and Delete Rule
+A database must support high-level insertion, updation, and deletion. This must not be limited to a single row, that is, it must also 
+support union, intersection and minus operations to yield sets of data records.
+
+Rule 8: Physical Data Independence
+The data stored in a database must be independent of the applications that access the database. Any change in the physical structure of 
+a database must not have any impact on how the data is being accessed by external applications.
+
+Rule 9: Logical Data Independence
+The logical data in a database must be independent of its user's view (application). Any change in logical data must not affect the 
+applications using it. For example, if two tables are merged or one is split into two different tables, there should be no impact or 
+change on the user application. This is one of the most difficult rule to apply.
+
+Rule 10: Integrity Independence
+A database must be independent of the application that uses it. All its integrity constraints can be independently modified without the 
+need of any change in the application. This rule makes a database independent of the front-end application and its interface.
+
+Rule 11: Distribution Independence
+The end-user must not be able to see that the data is distributed over various locations. Users should always get the impression that 
+the data is located at one site only. This rule has been regarded as the foundation of distributed database systems.
+
+Rule 12: Non-Subversion Rule
+If a system has an interface that provides access to low-level records, then the interface must not be able to subvert the system and 
+bypass security and integrity constraints.
+
+Regarding rule 5, the SQL statements are divided into three categories:
+
+- Data manipulation language (DML): target *data* stored in the DDBB.SELECT, INSERT, UPDATE, DELETE, BEGIN, COMMIT, ROLLBACK
+- Data definition language (DDL): create, modify and destroy *DDBB objects* like schemas, tables, indexes and views. CREATE, ALTER, DROP
+- Data control language (DCL): authorize users to access data and DDBB objects. GRANT, REVOKE
 </t>
 </tnodes>
 </leo_file>

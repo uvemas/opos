@@ -1,0 +1,74 @@
+# Tema 10 Modelado de datos
+
+Los modelos de datos son entidades fundamentales para introducir abstracción en una base de datos.
+
+Existen tres tipos diferentes de modelos de datos: conceptual, lógico y físico. Cada modelo de datos tiene un propósito específico, 
+que se define principalmente por el nivel de detalles operativos. 
+
+Los modelos de datos conceptuales se construyen en la primera etapa del proceso de modelado de datos. Proporcionan una perspectiva de 
+nivel de resumen, al omitir detalles más finos a favor de un formato que se pueda entender con más facilidad. Son independientes
+del SGBD.
+
+Los modelos lógicos son más detallados que los conceptuales y dependen del *tipo* de SGBD (relacional, jerárquica, orientada a 
+objectos...). En esta etapa se introduce la normalización (se estructuran los datos y se modelan las restricciones).
+
+Los modelos físicos son los más detallados. Dependen de la *implementación* concreta del SGBD (Oracle, MariaDB, PostgreSQL...). En
+esta etapa se definen las estructuras de almacenamiento y los métodos de acceso a los datos.
+
+Cuando se diseña una BBDD los pasos son:
+
+Diseño conceptual -> Diseño lógico -> Diseño físico
+
+El lenguaje que se utiliza para concretar un diseño se llama modelo (lenguaje de modelado). El resultado de aplicar un lenguaje de
+modelado a un diseño se llama esquema.
+## Modelo conceptual de datos
+
+Un modelo conceptual de datos identifica las relaciones de más alto nivel entre las diferentes entidades.
+
+Las características del modelo conceptual de datos incluyen:
+
+- Incluye *solamente* las entidades importantes y las relaciones entre ellas.
+- No se especifica ningún atributo.
+- No se especifica ninguna clave principal.
+
+La siguiente figura es un ejemplo de un modelo conceptual de datos.
+
+```{thumbnail} images/conceptual.jpg
+```
+A diferencia de los modelos de datos lógicos y físicos, los modelos de datos conceptuales son independientes de la tecnología y la 
+aplicación. Esto significa que no están vinculados a la realidad y el contexto de los sistemas y procesos actualmente en vigor.
+
+Los modelos de datos conceptuales se utilizan en las primeras etapas del modelado de datos para organizar y definir conceptos y reglas 
+en función de los requisitos de los casos de uso. Son los menos detallados de los tres tipos de modelos de datos, pero de ninguna 
+manera esto hace que sean menos útiles. De hecho, uno de los beneficios clave de los modelos de datos conceptuales es que se pueden 
+comprender y comunicar rápidamente a las partes interesadas fuera de la burbuja "tecnológica".
+
+Los modelos de datos conceptuales brindan a las empresas un punto de partida que debe evolucionar hacia diagramas más ricos en contexto 
+a medida que avanzan por las etapas de los modelos de datos. A través del análisis de casos de uso, el diseño de casos de uso y el 
+diseño de bases de datos, la complejidad y el nivel de detalle eventualmente alcanzarán su punto máximo con los modelos de datos 
+físicos.
+
+Los pasos para elaborar un modelo conceptual de datos son:
+
+- identificar entidades
+- identificar atributos
+- identificar relaciones
+- identificar entidades externas
+- describir las reglas de negocio (restricciones semánticas)
+## Modelos entidad-relación
+ 
+ Ver Tema6.pdf. Importante la diapositiva 11:
+
+ - una relación es una correspondencia (en el sentido matemático) entre *dos o más entidades*.
+ - las relaciones se representan gráficamente por rombos con el nombre de la relación en el interior
+ - la cardinalidad con la que una *entidad* participa en una relación especifica el par (min, max) de correspondencias
+   en las que puede intervenir dicha entidad
+
+
+En la relación `EMPLEADO -- lugar de residencia -- CIUDAD` la cardinalidad de la entidad `EMPLEADO` es (1,n) porque un empleado puede 
+vivir en una o más ciudades, pero la cardinalidad de la entidad `CIUDAD` es (0,n) porque en una ciudad dada pueden vivir entre cero y 
+varios empleados.
+
+En la relación `EMPLEADO -- lugar de nacimiento -- CIUDAD` la cardinalidad de la entidad `EMPLEADO` es (1,1) porque un empleado puede 
+haber nacido solo en una ciudad, pero la cardinalidad de la entidad `CIUDAD` es (0,n) porque en una ciudad dada pueden haber nacido 
+entre cero y varios empleados.
