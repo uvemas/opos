@@ -72,7 +72,10 @@
 <v t="vicent.20221010124625.1"><vh>Introducción</vh></v>
 <v t="vicent.20221010123006.1"><vh>Normalización</vh></v>
 </v>
-<v t="vicent.20220528085656.1"><vh>Tema 12 Oracle. SQL. PL/SQL</vh></v>
+<v t="vicent.20220528085656.1"><vh>@clean Tema 12 SQL y PL-SQL.md</vh>
+<v t="vicent.20221011164300.1"><vh>Introducción</vh></v>
+<v t="vicent.20221011192909.1"><vh>Datatypes</vh></v>
+</v>
 </v>
 <v t="vicent.20220528092009.1"><vh>Programación</vh>
 <v t="vicent.20220507204235.1"><vh>@clean Tema 18 Disenyo Web.md</vh>
@@ -388,6 +391,7 @@ Algunos de los principales parámetros (y su sintaxis) usados en los mensajes HT
    06SoftwareLibre/Tema 6 Software Libre
    10ModeladoDeDatos/Tema 10 Modelo conceptual de datos
    11BBDDRelacionales/Tema 11 BBDD relacionales. Normalización
+   12PL-SQL/Tema 12 SQL y PL-SQL
    13OOP_Clases_y_Objetos/Tema 13 Programación orientada a objetos: Clases y Objetos
    14OOP_Herencia_y_Polimorfismo/Tema 14 Programación orientada a objetos Herencia Polimorfismo
    15UML/Tema 15 UML
@@ -2564,7 +2568,12 @@ El resultado es
 @language md
 @others
 </t>
-<t tx="vicent.20220528085656.1"></t>
+<t tx="vicent.20220528085656.1"># Tema 12 Oracle. SQl. PL/SQL
+
+@path ./12PL-SQL
+@language md
+@others
+</t>
 <t tx="vicent.20220528085742.1"># Tema 13 OOP: Clases y Objetos 
 
 @path ./13OOP_Clases_y_Objetos
@@ -5025,6 +5034,37 @@ Regarding rule 5, the SQL statements are divided into three categories:
 - Data manipulation language (DML): target *data* stored in the DDBB.SELECT, INSERT, UPDATE, DELETE, BEGIN, COMMIT, ROLLBACK
 - Data definition language (DDL): create, modify and destroy *DDBB objects* like schemas, tables, indexes and views. CREATE, ALTER, DROP
 - Data control language (DCL): authorize users to access data and DDBB objects. GRANT, REVOKE
+</t>
+<t tx="vicent.20221011164300.1">[Tutorial](https://www.oracletutorial.com/plsql-tutorial/what-is-plsql/)
+
+[Apex workspace gratuito](https://apex.oracle.com)
+</t>
+<t tx="vicent.20221011192909.1">## Datatypes
+
+PL/SQL has two kinds of data types: scalar and composite.
+
+PL/SQL divides the scalar data types into four families:
+
+- Number
+- Boolean
+- Character
+- Datetime
+
+A scalar data type may have subtypes. A subtype is a data type that is a subset of another data type, which is its base type. 
+
+Note that PL/SQL scalar data types include SQL data types and its own data type such as Boolean:
+
+- Boolean: three valued, TRUE, FALSE, NULL
+- PLS_INTEGER: uses hardware arithmetic. {NULL, natural numbers}
+  - NATURAL: {NULL, enteros no negativos}
+  - NATURALN: {enteros no negativos}
+  - POSITIVE: {NULL, enteros positivos}
+  - POSITIVEN: {enteros positivos}
+  - SIGNTYPE: tree valued, {-1, 0, +1}
+  - SIMPLE_INTEGER: {natural numbers}
+- Character data types: CHAR, VARCHAR2, LONG, RAW, LONG RAW, ROWID, and UROWID
+- Datetime data types: DATE, TIMESTAMP, TIMESTAMP WITH TIME ZONE, TIMESTAMP WITH LOCAL TIME ZONE, INTERVAL YEAR TO MONTH, 
+  and INTERVAL DAY TO SECOND
 </t>
 </tnodes>
 </leo_file>
