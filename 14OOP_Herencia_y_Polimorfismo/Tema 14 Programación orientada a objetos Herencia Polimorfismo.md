@@ -58,6 +58,10 @@ Una interface puede contener:
 Las interfaces son tipos abstractos por definición: al crear una interface no necesitamos añadir el modificador 
 `abstract`, el compilador lo hace por nosotros. Lo mismo ocurre con los métodos abstractos.
 
+On `default` methods: they are automatically implemented in the class that implements the interface. The most common use of interface 
+default methods is to incrementally provide additional functionality to a given type without breaking 
+down the implementing classes.
+
 We can implement an interface in a Java class by using the `implements` keyword.
 
 ~~~ java
@@ -89,8 +93,8 @@ for (Shape shape : shapes) {
 }
 ~~~
 
-```{note} An interface inherits other interfaces by using the keyword `extends`. Classes use the keyword `implements` to
-inherit an interface.
+```{note} An interface inherits other interfaces by using the keyword *extends*. Classes use the keyword *implements* to
+inherit an interface. 
 ```
 ## Clases abstractas vs Interfaces
 
@@ -209,7 +213,61 @@ Employee e1 = new Employee("Shreya", new ArmoredCar());
 Employee e2 = new Employee("Paul", new SpaceCar());
 Employee e3 = new Employee("Pavni", new BMW());
 ~~~
-## Herencia, composición y dependency injection
+## Herencia, composición
 
 [baeldung](https://www.baeldung.com/java-inheritance-composition)
 [wikipedia](https://en.wikipedia.org/wiki/Dependency_injection)
+
+En general se prefiere la composición (has-a relationship) a la herencia (is-a relationship), pero hay casos típicos de uso donde la 
+herencia está recomendada.
+
+La herencia se basa en extender clases. La composición se basa en implementar interfaces.
+
+Usamos herencia con el patrón de capas (layer pattern): la clase base contiene el código común de sus subclases, por ejemplo:
+
+    Empleado
+           |
+           +-- Informatico
+                         |
+                         +-- Administrador
+                         |
+                         +-- Programador
+
+Aquí hemos definido tres capas, y la supercapa de cada subcapa contiene el código común a la supercapa y la subcapa. En cambio las 
+subcapas contienen código específico respecto a las supercapas.
+
+También usamos la herencia con el patrón de plantillas (template pattern): la superclase actúa como una plantilla y las subclases 
+personalizan esa plantilla sobreescribiendo sus métodos, por ejemplo:
+
+    ComputerBuilder
+                  |
+                  +-- StandardComputerBuilder
+                  |
+                  +-- GamingComputerBuilder
+
+In a nutshell, composition allows us to model objects that are made up of other objects, thus defining a “has-a” relationship between 
+them.
+
+Furthermore, the composition is the strongest form of association, which means that the object(s) that compose or are contained by one 
+object are destroyed too when that object is destroyed.
+
+Por ejemplo, un ordenador tiene procesador, memoria y tarjeta de sonido. Si para cada componente creamos una interface, podemos 
+construir diferentes modelos de ordenador si usamos diferentes implementaciones de esas intefaces.
+
+~~~ java
+public class Computer {
+
+    private Processor processor;  // Interface
+    private Memory memory;  // Interface
+    private SoundCard soundCard;  // Interface
+
+    // standard getters/setters/constructors
+    
+    public Optional<SoundCard> getSoundCard() {
+        return Optional.ofNullable(soundCard);
+    }
+}
+~~~
+
+Con tres implementaciones de cada interface (nueve implementaciones en total) puedo crear 27 modelos de ordenador usando la clase 
+`Computer`. Si no uso interfaces tendria que crear nueve clases para los componentes y 27 variantes de la clase `Computer`.

@@ -20,7 +20,7 @@ Cuando se diseña una BBDD los pasos son:
 Diseño conceptual -> Diseño lógico -> Diseño físico
 
 El lenguaje que se utiliza para concretar un diseño se llama modelo (lenguaje de modelado). El resultado de aplicar un lenguaje de
-modelado a un diseño se llama esquema.
+modelado a un diseño es una representación gráfica de la BBDD llamada esquema.
 ## Modelo conceptual de datos
 
 Un modelo conceptual de datos identifica las relaciones de más alto nivel entre las diferentes entidades.
@@ -65,10 +65,55 @@ Los pasos para elaborar un modelo conceptual de datos son:
    en las que puede intervenir dicha entidad
 
 
-En la relación `EMPLEADO -- lugar de residencia -- CIUDAD` la cardinalidad de la entidad `EMPLEADO` es (1,n) porque un empleado puede 
-vivir en una o más ciudades, pero la cardinalidad de la entidad `CIUDAD` es (0,n) porque en una ciudad dada pueden vivir entre cero y 
-varios empleados.
-
-En la relación `EMPLEADO -- lugar de nacimiento -- CIUDAD` la cardinalidad de la entidad `EMPLEADO` es (1,1) porque un empleado puede 
-haber nacido solo en una ciudad, pero la cardinalidad de la entidad `CIUDAD` es (0,n) porque en una ciudad dada pueden haber nacido 
+En la relación `EMPLEADO -- lugar de residencia -- CIUDAD` la cardinalidad de `EMPLEADO` es (1,n) porque un empleado 
+puede vivir en una o más ciudades, pero la cardinalidad de `CIUDAD` es (0,n) porque en una ciudad dada pueden vivir 
 entre cero y varios empleados.
+
+En la relación `EMPLEADO -- lugar de nacimiento -- CIUDAD` la cardinalidad de `EMPLEADO` es (1,1) porque un empleado 
+puede haber nacido solo en una ciudad, pero la cardinalidad de `CIUDAD` es (0,n) porque en una ciudad dada pueden 
+haber nacido entre cero y varios empleados.
+
+```{note} En una relación, la cardinalidad de las entidades participantes indica el par (min, max) de ocurrencias de una instancia[^1] 
+cualquiera de esas entidades.
+```
+[^1]: a veces se llama instancias a las filas de una entidad porque la relación entidad-fila es equivalente a la relación 
+clase-instancia.
+### Jerarquías de generalización
+
+Las generalizaciones proporcionan un mecanismo de abstracción que permite especializar una entidad (que se denominará supertipo) en 
+subtipos, o lo que es lo mismo generalizar los subtipos en el supertipo. *Una generalización se identifica si encontramos una serie de 
+atributos comunes a un conjunto de entidades, y unos atributos específicos que identificarán unas características*.
+
+Los atributos comunes describirán el supertipo y los particulares los subtipos.
+
+Si el supertipo participa en una relación los subtipos también participarán.
+
+La generalización es total si no hay *ocurrencias* en el supertipo que no pertenezcan a ninguno de los subtipos. En caso contrario,
+la generalización es parcial.
+
+La generalización es exclusiva si no hay *ocurrencias* en el supertipo que pertenezcan a más de un subtipo. En caso contrario, la
+generalización es solapada.
+
+Por ejemplo, imaginemos una empresa de construcción. La generalización:
+
+    empleado
+          |
+          +-- fijo
+          |
+          +-- temporal
+
+es total (todas las ocurrencias de empleado pertenecen a alguno de los subtipos) y exclusiva (no hay ninguna ocurrencia de empleado que
+pertenezca a más de un subtipo).
+
+En cambio, la generalización:
+
+    empleado
+          |
+          +-- arquitecto
+          |
+          +-- contable
+
+es parcial (porque hay ocurrencias de empleado que no pertenecen a ninguno de los subtipos) y exclusiva.
+
+
+

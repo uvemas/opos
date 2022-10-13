@@ -1,28 +1,102 @@
 # Tema 16 El entorno de desarrollo Java. Arquitectura JEE
 
-## JVM, JRE y JDK
-
 [baeldung](https://www.baeldung.com/jvm-vs-jre-vs-jdk)
 
 JVM es una máquina virtual capaz de ejecutar programas en Java.
 
 JRE es una implementación de la JVM.
 
-JDK es un entorno completo de desarrollo de aplicaciones Java que incluye:
+JDK es un entorno completo de desarrollo de aplicaciones Java.
+## JVM
+
+Cuando compilamos un programa Java con `javac` el resultado es un fichero `.class` formado por bytecodes que puede ejecutarse en 
+cualquier JVM, o sea que es totalmente portable.
+
+La JVM consta de:
+
+- un class loader: carga, verifica y linka los `.class`
+- run-time data areas: son las diferentes áreas de memoria que usa la JVM en tiempo de ejecución
+  - method area (permanent generation space): es una memoria no contigüa de almacenamiento para código compilado
+  - heap area: almacena objetos y arrays. El Garbage Collector libera memoria heap cuando destruye objetos
+  - stack area: almacena frames (activation records) que constan de tres partes: una para variables locales, una para resultados 
+    intermedios y otra para llamadas a métodos. Hay una de estas áreas para cada hilo de ejecución.
+- PC register: contiene la dirección de las instrucciones en ejecución
+- native method stacks (C stacks): Native methods are those which are written in languages other than Java. JVM provides capabilities 
+  to call these native methods. Whenever the native methods are compiled into machine codes [¹], they usually use a native method stack to
+  keep track of their state.
+- execution engine:
+  - interpreter: once classloaders load and verify bytecode, the interpreter executes the bytecode line by line. This execution is 
+    quite slow. The disadvantage of the interpreter is that when one method is called multiple times, every time new interpretation is 
+    required.
+  - Just-In-Time Compiler: JIT compiler compiles the bytecode of the often-called methods into native code at run-time. Hence it is 
+    *responsible for the optimization of the Java programs*.
+    JVM automatically monitors which methods are being executed. Once a method becomes eligible for JIT compilation, it is scheduled 
+    for compilation into machine code. This method is then known as a hot method. This compilation into machine code happens on a 
+    separate JVM thread. As a result, it does not interrupt the execution of the current program. After compilation into machine code, 
+    it runs faster.
+  - Garbage Collector: It's a process of looking at heap memory, identifying which objects are in use and which are not, and finally 
+  deleting unused objects.
+- Java Native Interface:
+- Native libraries: contain the implementation of native methods. Platform specific.
+
+
+
+
+[¹]: notice that `javac` compiles java programs into bytecodes that can be executed in any JVM. When a native method is compiled the
+result is native machine codes only can be executed in that especific platform.
+## JRE
+
+Core components of the JRE include:
+
+- An implementation of a Java Virtual Machine (JVM)
+- Classes required to run the Java programs
+- Property Files
+## JDK
+
+Java Development Kit (JDK) provides environment and tools for developing, compiling, debugging, and executing a Java program. Consta 
+de:
 
 - un JRE
 - herramientas de desarrollo
 
-  - básicas
-  - de seguridad
+  - básicas: `javac`, `java`, `javadoc`, `jdb`, `jar`...
+  - de seguridad: para manejar keystores
   - de internacionalización
   - RMI
   - IDL
   - de despliegue
-  - Java Plug-in
-  - Java Web Start
-  - monitorización
-  - troubleshooting
+  - Java Plug-in: On the one hand, Java Plug-in establishes a connection between popular browsers and the Java platform. As a result of 
+    this connection, applets on the website can run within a browser. On the other hand, htmlconverter is a utility for converting an 
+    HTML page containing applets to a format for Java Plug-in.
+  - Java Web Start: JDK brings javaws. We can use it in conjunction with the Java Web Start. This tool allows us to download and launch 
+    Java applications with a single click from the browser. Hence, there is no need to run any installation process.
+  - monitorización: `jconsole`, `jstat`...
+  - troubleshooting: experimental
 ## JEE
 
 [baeldung](https://www.baeldung.com/java-enterprise-evolution)
+
+[Referencia](https://www.educba.com/java-ee-interview-questions/)
+
+JSE es para desarrollar aplicaciones standalone, de escritorio. Con JSE se aprende Java básico (objetos, herencia, polimorfismo...)
+JEE es para desarrollar aplicaciones web. Con JEE se aprenden tópicos avanzados como MVC, JSP, EJB...
+
+Ventajas de JEE: disponibilidad, escalabilidad, alto rendimiento, seguridad, manejabilidad, integridad de los datos, interoperabilidad.
+
+**Aplicación multi-tiered**:
+
+A multi-tier application is any application developed and distributed among more than one layer. It *logically* separates the different 
+application-specific, operational layers. A multi-tier application is used to divide an enterprise application into two or more 
+components that may be separately developed and executed. 
+
+A JEE server is a server application that implements the JEE platform APIs and provides the standard JEE services (a.k.a. application 
+components) that correspond to the tiers in a multi-tiered application (web, bussines logic, persistence).
+The services are provided in the form of containers.
+
+Java EE containers are the interface between the component and the lower-level functionality provided by the platform to support that 
+component.
+
+JEE tiene una arquitectura multi-tier:
+
+```{thumbnail} images/arquitecturaJEE.jpg
+```

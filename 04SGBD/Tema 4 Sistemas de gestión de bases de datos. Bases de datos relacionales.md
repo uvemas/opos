@@ -64,7 +64,7 @@ application to use, and implementing DBMS-specific functionality. An application
 Any ODBC-compliant application can access any DBMS for which a driver is installed. Drivers exist for all major DBMSs, many other data 
 sources like address book systems and Microsoft Excel, and even for text or comma-separated values (CSV) files.
 
-Ejemlo: la aplicación DBeaver utiliza un driver ODBC para conectarse al DBMS MariaDB.
+Ejemplo: la aplicación DBeaver utiliza un driver ODBC para conectarse al DBMS MariaDB.
 ### JDBC
 
 [JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity)

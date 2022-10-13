@@ -13,7 +13,7 @@ class como aquella que no está anidada:
 > A nested class is any class whose declaration occurs within the body of another class or interface.
 
 Por lo tanto el término top-level hace referencia a la posición de la clase en el código, *no* en la jerarquía de
-clases.
+clases.#
 ## Modificadores de acceso
 
 [Reference](https://www.baeldung.com/java-access-modifiers)
@@ -57,7 +57,7 @@ En el caso de variables accesible significa que la variable se puede leer y modi
 En el caso de métodos accesible significa que el método se puede invocar.
 ## Modificadores de no-acceso
 
-Proporcionan información a la JVM acerca de una clase, mètodo o variable. Hay siete:
+Proporcionan información a la JVM acerca de una clase, método o variable. Hay siete:
 
 - final: it indicates that the specific class cannot be extended or a method cannot be overridden.
 - static: it means that the entity to which it is applied is available outside any particular instance of the class. 

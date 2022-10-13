@@ -66,7 +66,9 @@
 <v t="vicent.20220528085607.1"><vh>@clean Tema 10 Modelo conceptual de datos.md</vh>
 <v t="vicent.20221008124658.1"><vh>Introducción</vh></v>
 <v t="vicent.20221008124619.1"><vh>Modelo conceptual de datos</vh></v>
-<v t="vicent.20221008193645.1"><vh>Modelos entidad-relación</vh></v>
+<v t="vicent.20221008193645.1"><vh>Modelos entidad-relación</vh>
+<v t="vicent.20221012190834.1"><vh>Jerarquías</vh></v>
+</v>
 </v>
 <v t="vicent.20220528085631.1"><vh>@clean Tema 11 BBDD relacionales. Normalización.md</vh>
 <v t="vicent.20221010124625.1"><vh>Introducción</vh></v>
@@ -109,13 +111,16 @@
 <v t="vicent.20220729110533.1"><vh>Interfaces</vh></v>
 <v t="vicent.20220729085936.1"><vh>Clases abstractas vs Interfaces</vh></v>
 <v t="vicent.20220729124948.1"><vh>Herencia de tipos</vh></v>
-<v t="vicent.20220801184823.1"><vh>Herencia, composición y dependency injection</vh></v>
+<v t="vicent.20220801184823.1"><vh>Herencia y composición</vh></v>
 </v>
 <v t="vicent.20220528085855.1"><vh>Tema 15 Análisis y diseño orientado a objetos usando UML</vh></v>
 </v>
 <v t="vicent.20220528092032.1"><vh>Java</vh>
 <v t="vicent.20220528085918.1"><vh>@clean Tema 16 El entorno de desarrollo java Arquitectura J2EE.md</vh>
-<v t="vicent.20220801204841.1"><vh>JVM, JRE y JDK</vh></v>
+<v t="vicent.20221013165224.1"><vh>Introducción</vh></v>
+<v t="vicent.20220801204841.1"><vh>JVM</vh></v>
+<v t="vicent.20221013172934.1"><vh>JRE</vh></v>
+<v t="vicent.20221013180127.1"><vh>JDK</vh></v>
 <v t="vicent.20220801211535.1"><vh>JEE</vh></v>
 </v>
 <v t="vicent.20220528085937.1"><vh>@clean Tema 17 Lenguaje de programacion Java.md</vh>
@@ -420,11 +425,11 @@ Algunos de los principales parámetros (y su sintaxis) usados en los mensajes HT
     ✔ 9. Ofimática. Libre Office Calc
     ✔ 10. Modelo conceptual de datos. Modelos Entidades-Relación. Diagramas de flujo de datos
     ✔ 11. Bases de datos relacionales. Fundamentos y reglas de normalización.
-    12. Oracle. SQL. PL/SQL
-    13. Programación orientada a objetos. Clases. Objetos.
-    14. Programación orientada a objetos. Herencia. Polimorfismo
+    ✔ 12. Oracle. SQL. PL/SQL
+    ✔ 13. Programación orientada a objetos. Clases. Objetos.
+    ✔ 14. Programación orientada a objetos. Herencia. Polimorfismo
     ✔ 15. Análisis y diseño orientado a objetos usando UML.
-    16. El entorno de desarrollo java. Arquitectura J2EE
+    ✔ 16. El entorno de desarrollo java. Arquitectura J2EE
     17. Lenguaje de programación java: sintaxis ,tipos de datos, operadores, estructuras de control
     18. Diseño web. HTML 5  y CSS3
     19. JSF. Primefaces
@@ -2923,11 +2928,11 @@ class como aquella que no está anidada:
 &gt; A nested class is any class whose declaration occurs within the body of another class or interface.
 
 Por lo tanto el término top-level hace referencia a la posición de la clase en el código, *no* en la jerarquía de
-clases.
+clases.#
 </t>
 <t tx="vicent.20220623201230.1">## Modificadores de no-acceso
 
-Proporcionan información a la JVM acerca de una clase, mètodo o variable. Hay siete:
+Proporcionan información a la JVM acerca de una clase, método o variable. Hay siete:
 
 - final: it indicates that the specific class cannot be extended or a method cannot be overridden.
 - static: it means that the entity to which it is applied is available outside any particular instance of the class. 
@@ -3149,6 +3154,10 @@ Una interface puede contener:
 Las interfaces son tipos abstractos por definición: al crear una interface no necesitamos añadir el modificador 
 `abstract`, el compilador lo hace por nosotros. Lo mismo ocurre con los métodos abstractos.
 
+On `default` methods: they are automatically implemented in the class that implements the interface. The most common use of interface 
+default methods is to incrementally provide additional functionality to a given type without breaking 
+down the implementing classes.
+
 We can implement an interface in a Java class by using the `implements` keyword.
 
 ~~~ java
@@ -3180,8 +3189,8 @@ for (Shape shape : shapes) {
 }
 ~~~
 
-```{note} An interface inherits other interfaces by using the keyword `extends`. Classes use the keyword `implements` to
-inherit an interface.
+```{note} An interface inherits other interfaces by using the keyword *extends*. Classes use the keyword *implements* to
+inherit an interface. 
 ```
 </t>
 <t tx="vicent.20220729124948.1">## Herencia de tipos
@@ -3218,38 +3227,130 @@ Employee e3 = new Employee("Pavni", new BMW());
 
 [baeldung](https://www.baeldung.com/java-classes-objects)
 </t>
-<t tx="vicent.20220801184823.1">## Herencia, composición y dependency injection
+<t tx="vicent.20220801184823.1">## Herencia, composición
 
 [baeldung](https://www.baeldung.com/java-inheritance-composition)
 [wikipedia](https://en.wikipedia.org/wiki/Dependency_injection)
+
+En general se prefiere la composición (has-a relationship) a la herencia (is-a relationship), pero hay casos típicos de uso donde la 
+herencia está recomendada.
+
+La herencia se basa en extender clases. La composición se basa en implementar interfaces.
+
+Usamos herencia con el patrón de capas (layer pattern): la clase base contiene el código común de sus subclases, por ejemplo:
+
+    Empleado
+           |
+           +-- Informatico
+                         |
+                         +-- Administrador
+                         |
+                         +-- Programador
+
+Aquí hemos definido tres capas, y la supercapa de cada subcapa contiene el código común a la supercapa y la subcapa. En cambio las 
+subcapas contienen código específico respecto a las supercapas.
+
+También usamos la herencia con el patrón de plantillas (template pattern): la superclase actúa como una plantilla y las subclases 
+personalizan esa plantilla sobreescribiendo sus métodos, por ejemplo:
+
+    ComputerBuilder
+                  |
+                  +-- StandardComputerBuilder
+                  |
+                  +-- GamingComputerBuilder
+
+In a nutshell, composition allows us to model objects that are made up of other objects, thus defining a “has-a” relationship between 
+them.
+
+Furthermore, the composition is the strongest form of association, which means that the object(s) that compose or are contained by one 
+object are destroyed too when that object is destroyed.
+
+Por ejemplo, un ordenador tiene procesador, memoria y tarjeta de sonido. Si para cada componente creamos una interface, podemos 
+construir diferentes modelos de ordenador si usamos diferentes implementaciones de esas intefaces.
+
+~~~ java
+public class Computer {
+
+    private Processor processor;  // Interface
+    private Memory memory;  // Interface
+    private SoundCard soundCard;  // Interface
+
+    // standard getters/setters/constructors
+    
+    public Optional&lt;SoundCard&gt; getSoundCard() {
+        return Optional.ofNullable(soundCard);
+    }
+}
+~~~
+
+Con tres implementaciones de cada interface (nueve implementaciones en total) puedo crear 27 modelos de ordenador usando la clase 
+`Computer`. Si no uso interfaces tendria que crear nueve clases para los componentes y 27 variantes de la clase `Computer`.
 </t>
-<t tx="vicent.20220801204841.1">## JVM, JRE y JDK
+<t tx="vicent.20220801204841.1">## JVM
 
-[baeldung](https://www.baeldung.com/jvm-vs-jre-vs-jdk)
+Cuando compilamos un programa Java con `javac` el resultado es un fichero `.class` formado por bytecodes que puede ejecutarse en 
+cualquier JVM, o sea que es totalmente portable.
 
-JVM es una máquina virtual capaz de ejecutar programas en Java.
+La JVM consta de:
 
-JRE es una implementación de la JVM.
+- un class loader: carga, verifica y linka los `.class`
+- run-time data areas: son las diferentes áreas de memoria que usa la JVM en tiempo de ejecución
+  - method area (permanent generation space): es una memoria no contigüa de almacenamiento para código compilado
+  - heap area: almacena objetos y arrays. El Garbage Collector libera memoria heap cuando destruye objetos
+  - stack area: almacena frames (activation records) que constan de tres partes: una para variables locales, una para resultados 
+    intermedios y otra para llamadas a métodos. Hay una de estas áreas para cada hilo de ejecución.
+- PC register: contiene la dirección de las instrucciones en ejecución
+- native method stacks (C stacks): Native methods are those which are written in languages other than Java. JVM provides capabilities 
+  to call these native methods. Whenever the native methods are compiled into machine codes [¹], they usually use a native method stack to
+  keep track of their state.
+- execution engine:
+  - interpreter: once classloaders load and verify bytecode, the interpreter executes the bytecode line by line. This execution is 
+    quite slow. The disadvantage of the interpreter is that when one method is called multiple times, every time new interpretation is 
+    required.
+  - Just-In-Time Compiler: JIT compiler compiles the bytecode of the often-called methods into native code at run-time. Hence it is 
+    *responsible for the optimization of the Java programs*.
+    JVM automatically monitors which methods are being executed. Once a method becomes eligible for JIT compilation, it is scheduled 
+    for compilation into machine code. This method is then known as a hot method. This compilation into machine code happens on a 
+    separate JVM thread. As a result, it does not interrupt the execution of the current program. After compilation into machine code, 
+    it runs faster.
+  - Garbage Collector: It's a process of looking at heap memory, identifying which objects are in use and which are not, and finally 
+  deleting unused objects.
+- Java Native Interface:
+- Native libraries: contain the implementation of native methods. Platform specific.
 
-JDK es un entorno completo de desarrollo de aplicaciones Java que incluye:
 
-- un JRE
-- herramientas de desarrollo
 
-  - básicas
-  - de seguridad
-  - de internacionalización
-  - RMI
-  - IDL
-  - de despliegue
-  - Java Plug-in
-  - Java Web Start
-  - monitorización
-  - troubleshooting
-</t>
+
+[¹]: notice that `javac` compiles java programs into bytecodes that can be executed in any JVM. When a native method is compiled the
+result is native machine codes only can be executed in that especific platform.</t>
 <t tx="vicent.20220801211535.1">## JEE
 
 [baeldung](https://www.baeldung.com/java-enterprise-evolution)
+
+[Referencia](https://www.educba.com/java-ee-interview-questions/)
+
+JSE es para desarrollar aplicaciones standalone, de escritorio. Con JSE se aprende Java básico (objetos, herencia, polimorfismo...)
+JEE es para desarrollar aplicaciones web. Con JEE se aprenden tópicos avanzados como MVC, JSP, EJB...
+
+Ventajas de JEE: disponibilidad, escalabilidad, alto rendimiento, seguridad, manejabilidad, integridad de los datos, interoperabilidad.
+
+**Aplicación multi-tiered**:
+
+A multi-tier application is any application developed and distributed among more than one layer. It *logically* separates the different 
+application-specific, operational layers. A multi-tier application is used to divide an enterprise application into two or more 
+components that may be separately developed and executed. 
+
+A JEE server is a server application that implements the JEE platform APIs and provides the standard JEE services (a.k.a. application 
+components) that correspond to the tiers in a multi-tiered application (web, bussines logic, persistence).
+The services are provided in the form of containers.
+
+Java EE containers are the interface between the component and the lower-level functionality provided by the platform to support that 
+component.
+
+JEE tiene una arquitectura multi-tier:
+
+```{thumbnail} images/arquitecturaJEE.jpg
+```
 </t>
 <t tx="vicent.20220806092453.1">## Overloading vs Overriding
 
@@ -4813,7 +4914,7 @@ Cuando se diseña una BBDD los pasos son:
 Diseño conceptual -&gt; Diseño lógico -&gt; Diseño físico
 
 El lenguaje que se utiliza para concretar un diseño se llama modelo (lenguaje de modelado). El resultado de aplicar un lenguaje de
-modelado a un diseño se llama esquema.
+modelado a un diseño es una representación gráfica de la BBDD llamada esquema.
 </t>
 <t tx="vicent.20221008193645.1">## Modelos entidad-relación
  
@@ -4825,14 +4926,19 @@ modelado a un diseño se llama esquema.
    en las que puede intervenir dicha entidad
 
 
-En la relación `EMPLEADO -- lugar de residencia -- CIUDAD` la cardinalidad de la entidad `EMPLEADO` es (1,n) porque un empleado puede 
-vivir en una o más ciudades, pero la cardinalidad de la entidad `CIUDAD` es (0,n) porque en una ciudad dada pueden vivir entre cero y 
-varios empleados.
-
-En la relación `EMPLEADO -- lugar de nacimiento -- CIUDAD` la cardinalidad de la entidad `EMPLEADO` es (1,1) porque un empleado puede 
-haber nacido solo en una ciudad, pero la cardinalidad de la entidad `CIUDAD` es (0,n) porque en una ciudad dada pueden haber nacido 
+En la relación `EMPLEADO -- lugar de residencia -- CIUDAD` la cardinalidad de `EMPLEADO` es (1,n) porque un empleado 
+puede vivir en una o más ciudades, pero la cardinalidad de `CIUDAD` es (0,n) porque en una ciudad dada pueden vivir 
 entre cero y varios empleados.
-</t>
+
+En la relación `EMPLEADO -- lugar de nacimiento -- CIUDAD` la cardinalidad de `EMPLEADO` es (1,1) porque un empleado 
+puede haber nacido solo en una ciudad, pero la cardinalidad de `CIUDAD` es (0,n) porque en una ciudad dada pueden 
+haber nacido entre cero y varios empleados.
+
+```{note} En una relación, la cardinalidad de las entidades participantes indica el par (min, max) de ocurrencias de una instancia[^1] 
+cualquiera de esas entidades.
+```
+[^1]: a veces se llama instancias a las filas de una entidad porque la relación entidad-fila es equivalente a la relación 
+clase-instancia.</t>
 <t tx="vicent.20221009092538.1">Connolly and Begg define database management system (DBMS) as a "software system that enables users to define, create, maintain and 
 control access to the database".[24] Examples of DBMS's include MySQL, PostgreSQL, Microsoft SQL Server, Oracle Database, and 
 Microsoft Access.
@@ -4915,7 +5021,7 @@ application to use, and implementing DBMS-specific functionality. An application
 Any ODBC-compliant application can access any DBMS for which a driver is installed. Drivers exist for all major DBMSs, many other data 
 sources like address book systems and Microsoft Excel, and even for text or comma-separated values (CSV) files.
 
-Ejemlo: la aplicación DBeaver utiliza un driver ODBC para conectarse al DBMS MariaDB.</t>
+Ejemplo: la aplicación DBeaver utiliza un driver ODBC para conectarse al DBMS MariaDB.</t>
 <t tx="vicent.20221009115303.1">### JDBC
 
 [JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity)
@@ -5065,6 +5171,84 @@ Note that PL/SQL scalar data types include SQL data types and its own data type 
 - Character data types: CHAR, VARCHAR2, LONG, RAW, LONG RAW, ROWID, and UROWID
 - Datetime data types: DATE, TIMESTAMP, TIMESTAMP WITH TIME ZONE, TIMESTAMP WITH LOCAL TIME ZONE, INTERVAL YEAR TO MONTH, 
   and INTERVAL DAY TO SECOND
+</t>
+<t tx="vicent.20221012190834.1">### Jerarquías de generalización
+
+Las generalizaciones proporcionan un mecanismo de abstracción que permite especializar una entidad (que se denominará supertipo) en 
+subtipos, o lo que es lo mismo generalizar los subtipos en el supertipo. *Una generalización se identifica si encontramos una serie de 
+atributos comunes a un conjunto de entidades, y unos atributos específicos que identificarán unas características*.
+
+Los atributos comunes describirán el supertipo y los particulares los subtipos.
+
+Si el supertipo participa en una relación los subtipos también participarán.
+
+La generalización es total si no hay *ocurrencias* en el supertipo que no pertenezcan a ninguno de los subtipos. En caso contrario,
+la generalización es parcial.
+
+La generalización es exclusiva si no hay *ocurrencias* en el supertipo que pertenezcan a más de un subtipo. En caso contrario, la
+generalización es solapada.
+
+Por ejemplo, imaginemos una empresa de construcción. La generalización:
+
+    empleado
+          |
+          +-- fijo
+          |
+          +-- temporal
+
+es total (todas las ocurrencias de empleado pertenecen a alguno de los subtipos) y exclusiva (no hay ninguna ocurrencia de empleado que
+pertenezca a más de un subtipo).
+
+En cambio, la generalización:
+
+    empleado
+          |
+          +-- arquitecto
+          |
+          +-- contable
+
+es parcial (porque hay ocurrencias de empleado que no pertenecen a ninguno de los subtipos) y exclusiva.
+
+
+
+</t>
+<t tx="vicent.20221013165224.1">[baeldung](https://www.baeldung.com/jvm-vs-jre-vs-jdk)
+
+JVM es una máquina virtual capaz de ejecutar programas en Java.
+
+JRE es una implementación de la JVM.
+
+JDK es un entorno completo de desarrollo de aplicaciones Java.
+</t>
+<t tx="vicent.20221013172934.1">## JRE
+
+Core components of the JRE include:
+
+- An implementation of a Java Virtual Machine (JVM)
+- Classes required to run the Java programs
+- Property Files
+</t>
+<t tx="vicent.20221013180127.1">## JDK
+
+Java Development Kit (JDK) provides environment and tools for developing, compiling, debugging, and executing a Java program. Consta 
+de:
+
+- un JRE
+- herramientas de desarrollo
+
+  - básicas: `javac`, `java`, `javadoc`, `jdb`, `jar`...
+  - de seguridad: para manejar keystores
+  - de internacionalización
+  - RMI
+  - IDL
+  - de despliegue
+  - Java Plug-in: On the one hand, Java Plug-in establishes a connection between popular browsers and the Java platform. As a result of 
+    this connection, applets on the website can run within a browser. On the other hand, htmlconverter is a utility for converting an 
+    HTML page containing applets to a format for Java Plug-in.
+  - Java Web Start: JDK brings javaws. We can use it in conjunction with the Java Web Start. This tool allows us to download and launch 
+    Java applications with a single click from the browser. Hence, there is no need to run any installation process.
+  - monitorización: `jconsole`, `jstat`...
+  - troubleshooting: experimental
 </t>
 </tnodes>
 </leo_file>
