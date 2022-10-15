@@ -18,6 +18,14 @@ Before diving into when to use an abstract class, let's look at their most relev
 - A subclass class inherits the non-static protected and public members from the superclass class. In addition, the 
   members with default (package-private) access are inherited if the two classes are in the same package.
 - On the other hand, the private and static members of a class are not inherited.
+
+Notas:
+
+- como las clases pueden ser abstractas o no, necesitamos el modificador `abstract` para distinguir unas de otras
+- lo mismo ocurre con los métodos
+- los métodos abstractos tienen que tener la firma completa (tipo de retorno, modificadores, parámetros)
+- cuando se hereda una clase, para saber que métodos se están heredando hay que tener en cuenta los modificadores de acceso de las 
+  clases y de los métodos (por ejemplo ni los métodos estáticos ni los privados se pueden heredar)
 ## Interfaces
 
 [baeldung](https://www.baeldung.com/java-interfaces)
@@ -96,6 +104,15 @@ for (Shape shape : shapes) {
 ```{note} An interface inherits other interfaces by using the keyword *extends*. Classes use the keyword *implements* to
 inherit an interface. 
 ```
+
+Notas:
+
+- las interfaces son abstractas por definición, así que no necesitamos usar el modificador `abstract`
+- los métodos abstractos no tienen firma ni modificadores, solo valor de retorno y nombre
+- todos los métodos de una interface son abstractos, excepto los métodos `static` y los `default`
+- los métodos `static` tienen que estar implementados en la interface y funcionan como en las clases, por tanto
+  no se pueden sobreescribir
+- los métodos `default` tienen que estar implementados en la interface y no se pueden sobreescribir
 ## Clases abstractas vs Interfaces
 
 A veces es difícil decidir si usar una clase abstracta o una interface.
@@ -271,3 +288,21 @@ public class Computer {
 
 Con tres implementaciones de cada interface (nueve implementaciones en total) puedo crear 27 modelos de ordenador usando la clase 
 `Computer`. Si no uso interfaces tendria que crear nueve clases para los componentes y 27 variantes de la clase `Computer`.
+## Polimorfismo
+
+~~~ java
+public class Animal {
+  String name = "animal";
+  public String makeNoise {return "generic noise";}
+}
+
+public class Bird extends Animal {
+  String name = "bird";
+  public String makeNoise {return "sing";}
+}
+A animal = new Bird();
+A.name --> animal
+A.makeNoise() --> sing
+~~~
+
+El polimorfismo solo se aplica a métodos de la instancia pero *no* a variables.

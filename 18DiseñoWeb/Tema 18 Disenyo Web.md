@@ -375,7 +375,7 @@ heredadas de su ancestro.
 
 También es significativo el concepto de **herencia**, que significa que algunas propiedades CSS heredan por defecto los 
 valores establecidos en el elemento padre, pero otras no. Esto también puede causar una respuesta diferente a la que 
-esperas.
+esperas. Por ejemplo, el color y el tamaño de fuente se heredan, pero la anchura, el margen, los bordes y el padding no.
 
 [Referencia](https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 ## El modelo de cajas
@@ -409,7 +409,7 @@ En el layout hay tres aspectos que conviene conocer:
 - como flotar elementos
 
 Por defecto (`position: static`) los elementos de bloque se muestran de arriba a abajo en el orden en el que se crean en 
-el docuemnto HTML:
+el documento HTML:
 
 ~~~ html
 <div>

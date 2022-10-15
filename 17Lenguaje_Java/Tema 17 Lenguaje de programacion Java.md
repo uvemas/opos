@@ -3,6 +3,7 @@
 ## Get Started with Java
 
 [Get started](https://www.baeldung.com/get-started-with-java-series)
+
 [Back to basics](https://www.baeldung.com/java-tutorial)
 
 Muy buena introducción al lenguaje Java.
@@ -20,7 +21,11 @@ number).
 The main difference in representing literal values of char and String is the number of quotes that surrounds the 
 values.
 
-Arrays declaration type[] identifier = new type[length]; array indexes start at zero
+Arrays declaration:
+
+~~~ java
+type[] identifier = new type[length] // array indexes start at zero
+~~~
 
 The basic unit of a Java program is a Class.
 
@@ -31,7 +36,14 @@ Executable means it can be executed via the `java` command.
 
 [Baeldung](https://www.baeldung.com/java-primitives)
 
-The eight primitives defined in Java are int, byte, short, long, float, double, boolean and char. These aren't considered
+The eight primitives defined in Java are:
+
+- integers: byte, short, int, long
+- floating numbers: float, double
+- boolean: boolean
+- character: char
+
+These aren't considered
 objects and represent raw values. They're stored directly on the [stack](https://www.guru99.com/stack-vs-heap.html).
 
 The simplest primitive data type is boolean. It can contain only two values: true or false. It stores its value in a 
@@ -48,8 +60,8 @@ underflow, they return 0.0.
 [baeldung](https://www.baeldung.com/java-string-to-byte-array)
 
 A String is stored as an array of Unicode characters in Java. To convert it to a byte array, we translate the sequence of 
-characters into a sequence of bytes. For this translation, we use an instance of Charset. This class specifies a mapping between a 
-sequence of chars and a sequence of bytes.
+characters into a sequence of bytes. For this translation, we use an instance of Charset. **This class specifies a mapping between a 
+sequence of chars and a sequence of bytes**.
 
 We refer to the above process as encoding.
 

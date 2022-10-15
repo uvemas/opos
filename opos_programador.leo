@@ -112,6 +112,7 @@
 <v t="vicent.20220729085936.1"><vh>Clases abstractas vs Interfaces</vh></v>
 <v t="vicent.20220729124948.1"><vh>Herencia de tipos</vh></v>
 <v t="vicent.20220801184823.1"><vh>Herencia y composición</vh></v>
+<v t="vicent.20221014131932.1"><vh>Polimorfismo</vh></v>
 </v>
 <v t="vicent.20220528085855.1"><vh>Tema 15 Análisis y diseño orientado a objetos usando UML</vh></v>
 </v>
@@ -164,7 +165,12 @@
 <v t="vicent.20220913111203.1"></v>
 </v>
 <v t="vicent.20220910124231.1"><vh>@clean Tema 23 MyBatis.md</vh></v>
-<v t="vicent.20220910124337.1"><vh>@clean Tema 21 FreeMarker.md</vh></v>
+<v t="vicent.20220910124337.1"><vh>@clean Tema 21 FreeMarker.md</vh>
+<v t="vicent.20221015122045.1"><vh>Introducción</vh></v>
+<v t="vicent.20221015122756.1"><vh>Conceptos básicos</vh></v>
+<v t="vicent.20221015125237.1"><vh>Directivas</vh></v>
+<v t="vicent.20221015182858.1"><vh>Built-ins</vh></v>
+</v>
 <v t="vicent.20220910124126.1"><vh>@clean Tema 19 JSF y Primefaces.md</vh></v>
 <v t="vicent.20220910124138.1"><vh>@clean Tema 20 Jasper Reports.md</vh></v>
 </v>
@@ -430,14 +436,14 @@ Algunos de los principales parámetros (y su sintaxis) usados en los mensajes HT
     ✔ 14. Programación orientada a objetos. Herencia. Polimorfismo
     ✔ 15. Análisis y diseño orientado a objetos usando UML.
     ✔ 16. El entorno de desarrollo java. Arquitectura J2EE
-    17. Lenguaje de programación java: sintaxis ,tipos de datos, operadores, estructuras de control
-    18. Diseño web. HTML 5  y CSS3
+    ✔ 17. Lenguaje de programación java: sintaxis ,tipos de datos, operadores, estructuras de control
+    ✔ 18. Diseño web. HTML 5  y CSS3
     19. JSF. Primefaces
     20. Desarrollo de Informes con JasperReports
-    21. Creación y configuración de plantillas con FreeMarker
-    22. Arquitectura MVC. Spring Framework.
+    ✔ 21. Creación y configuración de plantillas con FreeMarker
+    ✔ 22. Arquitectura MVC. Spring Framework.
     23. Capa de persistencia de datos MyBatis
-    24. Spring Boot. Construcción empaquetado y despliegue de aplicaciones
+    ✔ 24. Spring Boot. Construcción empaquetado y despliegue de aplicaciones
     25. Servidores de Aplicaciones Tomcat. Despliegue de aplicaciones.
     26. PHP
     27. JSP
@@ -1729,7 +1735,7 @@ heredadas de su ancestro.
 
 También es significativo el concepto de **herencia**, que significa que algunas propiedades CSS heredan por defecto los 
 valores establecidos en el elemento padre, pero otras no. Esto también puede causar una respuesta diferente a la que 
-esperas.
+esperas. Por ejemplo, el color y el tamaño de fuente se heredan, pero la anchura, el margen, los bordes y el padding no.
 
 [Referencia](https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).</t>
 <t tx="vicent.20220509194811.1">## Selectores
@@ -1854,7 +1860,7 @@ En el layout hay tres aspectos que conviene conocer:
 - como flotar elementos
 
 Por defecto (`position: static`) los elementos de bloque se muestran de arriba a abajo en el orden en el que se crean en 
-el docuemnto HTML:
+el documento HTML:
 
 ~~~ html
 &lt;div&gt;
@@ -2969,7 +2975,11 @@ number).
 The main difference in representing literal values of char and String is the number of quotes that surrounds the 
 values.
 
-Arrays declaration type[] identifier = new type[length]; array indexes start at zero
+Arrays declaration:
+
+~~~ java
+type[] identifier = new type[length] // array indexes start at zero
+~~~
 
 The basic unit of a Java program is a Class.
 
@@ -2981,7 +2991,14 @@ Executable means it can be executed via the `java` command.
 
 [Baeldung](https://www.baeldung.com/java-primitives)
 
-The eight primitives defined in Java are int, byte, short, long, float, double, boolean and char. These aren't considered
+The eight primitives defined in Java are:
+
+- integers: byte, short, int, long
+- floating numbers: float, double
+- boolean: boolean
+- character: char
+
+These aren't considered
 objects and represent raw values. They're stored directly on the [stack](https://www.guru99.com/stack-vs-heap.html).
 
 The simplest primitive data type is boolean. It can contain only two values: true or false. It stores its value in a 
@@ -3003,6 +3020,7 @@ memory, allocated for our Java application.</t>
 <t tx="vicent.20220726085534.1">## Get Started with Java
 
 [Get started](https://www.baeldung.com/get-started-with-java-series)
+
 [Back to basics](https://www.baeldung.com/java-tutorial)
 
 Muy buena introducción al lenguaje Java.</t>
@@ -3024,7 +3042,14 @@ Before diving into when to use an abstract class, let's look at their most relev
 - A subclass class inherits the non-static protected and public members from the superclass class. In addition, the 
   members with default (package-private) access are inherited if the two classes are in the same package.
 - On the other hand, the private and static members of a class are not inherited.
-</t>
+
+Notas:
+
+- como las clases pueden ser abstractas o no, necesitamos el modificador `abstract` para distinguir unas de otras
+- lo mismo ocurre con los métodos
+- los métodos abstractos tienen que tener la firma completa (tipo de retorno, modificadores, parámetros)
+- cuando se hereda una clase, para saber que métodos se están heredando hay que tener en cuenta los modificadores de acceso de las 
+  clases y de los métodos (por ejemplo ni los métodos estáticos ni los privados se pueden heredar)</t>
 <t tx="vicent.20220729085936.1">## Clases abstractas vs Interfaces
 
 A veces es difícil decidir si usar una clase abstracta o una interface.
@@ -3192,6 +3217,15 @@ for (Shape shape : shapes) {
 ```{note} An interface inherits other interfaces by using the keyword *extends*. Classes use the keyword *implements* to
 inherit an interface. 
 ```
+
+Notas:
+
+- las interfaces son abstractas por definición, así que no necesitamos usar el modificador `abstract`
+- los métodos abstractos no tienen firma ni modificadores, solo valor de retorno y nombre
+- todos los métodos de una interface son abstractos, excepto los métodos `static` y los `default`
+- los métodos `static` tienen que estar implementados en la interface y funcionan como en las clases, por tanto
+  no se pueden sobreescribir
+- los métodos `default` tienen que estar implementados en la interface y no se pueden sobreescribir
 </t>
 <t tx="vicent.20220729124948.1">## Herencia de tipos
 
@@ -3301,7 +3335,7 @@ La JVM consta de:
     intermedios y otra para llamadas a métodos. Hay una de estas áreas para cada hilo de ejecución.
 - PC register: contiene la dirección de las instrucciones en ejecución
 - native method stacks (C stacks): Native methods are those which are written in languages other than Java. JVM provides capabilities 
-  to call these native methods. Whenever the native methods are compiled into machine codes [¹], they usually use a native method stack to
+  to call these native methods. Whenever the native methods are compiled into machine codes [^1], they usually use a native method stack to
   keep track of their state.
 - execution engine:
   - interpreter: once classloaders load and verify bytecode, the interpreter executes the bytecode line by line. This execution is 
@@ -3321,8 +3355,8 @@ La JVM consta de:
 
 
 
-[¹]: notice that `javac` compiles java programs into bytecodes that can be executed in any JVM. When a native method is compiled the
-result is native machine codes only can be executed in that especific platform.</t>
+[^1]: notice that `javac` compiles java programs into bytecodes that can be executed in any JVM. When a native method is compiled the
+result is native machine codes only can be executed in that especific platform/processor.</t>
 <t tx="vicent.20220801211535.1">## JEE
 
 [baeldung](https://www.baeldung.com/java-enterprise-evolution)
@@ -3983,8 +4017,8 @@ BufferedReader reader =
 [baeldung](https://www.baeldung.com/java-string-to-byte-array)
 
 A String is stored as an array of Unicode characters in Java. To convert it to a byte array, we translate the sequence of 
-characters into a sequence of bytes. For this translation, we use an instance of Charset. This class specifies a mapping between a 
-sequence of chars and a sequence of bytes.
+characters into a sequence of bytes. For this translation, we use an instance of Charset. **This class specifies a mapping between a 
+sequence of chars and a sequence of bytes**.
 
 We refer to the above process as encoding.
 
@@ -5250,5 +5284,173 @@ de:
   - monitorización: `jconsole`, `jstat`...
   - troubleshooting: experimental
 </t>
+<t tx="vicent.20221014131932.1">## Polimorfismo
+
+~~~ java
+public class Animal {
+  String name = "animal";
+  public String makeNoise {return "generic noise";}
+}
+
+public class Bird extends Animal {
+  String name = "bird";
+  public String makeNoise {return "sing";}
+}
+A animal = new Bird();
+A.name --&gt; animal
+A.makeNoise() --&gt; sing
+~~~
+
+El polimorfismo solo se aplica a métodos de la instancia pero *no* a variables.
+</t>
+<t tx="vicent.20221015122045.1">[Fundamentos](https://freemarker.apache.org/docs/dgui.html)
+
+[Guía básica para programadores](https://freemarker.apache.org/docs/pgui.html)
+
+[Manual](https://freemarker.apache.org/docs/index.html)
+
+[Chuleta](https://freemarker.apache.org/docs/dgui_template_exp.html#exp_cheatsheet)</t>
+<t tx="vicent.20221015122756.1">## Conceptos básicos
+
+
+Desde un punto de vista conceptual, útil para el diseñador de plantillas, el modelo de datos se puede ver como una estructura en árbol.
+
+Hay tres tipos de variables:
+
+- escalares: almacenan un valor de tipo string, number boolean o date-like (date-time/date/time)
+- hashes (diccionarios): almacenan una o más variables, cada una de ellas asociada a un nombre
+- secuencias: almacenan variables en una secuencia ordenada. Las variables se acceden con un índice numérico que empieza por 0.
+
+Las subvariables se acceden usando natural naming:
+
+- hashes: animal.python.length
+- sequences: fruits[3].name
+
+The simplest template is a plain HTML file (or whatever text file; FreeMarker is not confined to HTML). When the client visits that 
+page, FreeMarker will send that HTML to the client as is. However if you want that page to be more dynamic then you begin to put 
+special parts into the HTML which will be understood by FreeMarker:
+
+${...}: FreeMarker will replace it in the output with the actual value of the expression inside the curly brackets. They are called 
+**interpolations**.
+
+FTL tags (for FreeMarker Template Language tags): FTL tags are a bit similar to HTML tags, but they are instructions to FreeMarker and 
+will not be printed to the output. The name of these tags start with #.
+
+Comments: Comments are similar to HTML comments, but they are delimited by `&lt;#--` and `--&gt;`. Unlike HTML comments, FTL comments won't 
+get into the output (won't be visible in the page source for the visitor), because FreeMarker skips them.
+
+Anything not an FTL tag or an interpolation or comment is considered static text and will not be interpreted by FreeMarker; it is just 
+printed to the output as-is.
+
+</t>
+<t tx="vicent.20221015125237.1">## Directivas
+
+With FTL tags you refer to so-called directives. This is the same kind of relationship as between HTML tags (e.g.: `&lt;table&gt;` and 
+`&lt;/table&gt;`) and HTML elements (e.g., the `table` element) to which you refer to with the HTML tags. (If you don't understand this 
+difference then consider "FTL tag" and "directive" synonyms.)
+
+```{Important} *In general, unquoted words inside directives or interpolations are treated as references to variables*.
+
+A frequent mistake of users is the usage of interpolations in places where they needn't/shouldn't/can't be used. *Interpolations work 
+only in text sections (e.g. `&lt;h1&gt;Hello ${name}!&lt;/h1&gt;`) and in string literals (e.g. `&lt;#include "/footer/${company}.html"`&gt;)*. A typical 
+WRONG usage is `&lt;#if ${big}&gt;...&lt;/#if&gt;`, which will cause a syntactical error. You should simply write `&lt;#if big&gt;...&lt;/#if&gt;`. Also, 
+`&lt;#if "${big}"&gt;...&lt;/#if&gt;` is WRONG, since it converts the parameter value to string and the if directive wants a boolean value, so it 
+will cause a runtime error.
+```
+
+[Ejemplos](https://freemarker.apache.org/docs/dgui_quickstart_template.html)
+
+    &lt;h1&gt;
+      Welcome ${user}&lt;#if user == "Big Joe"&gt;, our beloved leader&lt;/#if&gt;!
+    &lt;/h1&gt;
+
+    &lt;#if animals.python.price &lt; animals.elephant.price&gt;
+      Pythons are cheaper than elephants today.
+    &lt;#elseif animals.elephant.price &lt; animals.python.price&gt;
+      Elephants are cheaper than pythons today.
+    &lt;#else&gt;
+      Elephants and pythons cost the same today.
+    &lt;/#if&gt;
+
+The generic form of the list directive is:
+
+    &lt;#list sequence as loopVariable&gt;
+        repeatThis
+    &lt;/#list&gt;
+
+or
+
+    &lt;#list sequence&gt;
+      &lt;#items as loopVariable&gt;
+        repeatThis
+      &lt;/#items&gt;
+      &lt;#else&gt;
+        Do this only once
+    &lt;/#list&gt;
+
+
+The `repeatThis` part will be repeated for 
+each item in the sequence that you have specified with `sequence`, one after the other, starting from the first item. In all repetitions 
+`loopVariable` will hold the value of the current item. This variable exists only between the `&lt;#list ...&gt;` and `&lt;/#list&gt;` tags.
+
+The sequence can be any kind of expression.
+
+A complete list example:
+
+    &lt;#list misc.fruits&gt;
+      &lt;p&gt;Fruits:
+      &lt;ul&gt;
+        &lt;#items as fruit&gt;
+          &lt;li&gt;${fruit}&lt;#sep&gt; and&lt;/#sep&gt;
+        &lt;/#items&gt;
+      &lt;/ul&gt;
+    &lt;#else&gt;
+      &lt;p&gt;We have no fruits.
+    &lt;/#list&gt;
+</t>
+<t tx="vicent.20221015182858.1">## Built-ins
+
+Los built-ins se aplican a variables y expresiones se invocan con un `?`:
+
+    expr?builtin_name
+
+The reason why built-ins are crucial is that normally (though it depends on configuration settings), FreeMarker doesn't expose the Java 
+API of the objects. So despite that Java's String has a `length()` method, it's hidden from the template, so you have to use 
+the built-in `path?length` instead.
+
+Examples with some of the most commonly used built-ins:
+
+- `user?upper_case` gives the upper case version of the value of user (like "JOHN DOE" instead of "John Doe")
+- `animal.name?cap_first` give the animal.name with its first letter converted to upper case (like "Mouse" instead of "mouse")
+- `user?length` gives the number of characters in the value of user (8 for "John Doe")
+- `animals?size` gives the number of items in the animals sequence (3 in our example data-model)
+
+If you are between `&lt;#list animals as animal&gt;` and the corresponding `&lt;/#list&gt;` tag:
+
+- `animal?index` gives the 0-based index of animal inside animals
+- `animal?counter` is like index, but gives the 1-based index
+- `animal?item_parity` gives the strings "odd" or "even", depending on the current counter parity. This is commonly used for coloring 
+  rows with alternating colors, like in `&lt;td class="${animal?item_parity}Row"&gt;`.
+
+Some built-ins require parameters to specify the behavior more, for example:
+
+- `animal.protected?string("Y", "N")` return the string "Y" or "N" depending on the boolean value of animal.protected.
+- `animal?item_cycle('lightRow', 'darkRow')` is the more generic variant of item_parity from earlier.
+- `fruits?join(", ")`: converts the list to a string by concatenating items, and inserting the parameter separator between each items 
+  (like "orange, banana")
+- `user?starts_with("J")` gives boolean true of false depending on if user starts with the letter "J" or not.
+- `animals?filter(it -&gt; it.protected)` gives the list of protected animals. To list protected animals only, you could use 
+  `&lt;#list animals?filter(it -&gt; it.protected) as animal&gt;...&lt;/#list&gt;`.
+
+Built-in applications can be chained, like `fruits?join(", ")?upper_case` will first convert the list a to a string, then converts it 
+to upper case. (This is just like you can chain .-s (dots) too.)
+
+Dealing with missing variables: a non-existent variable and a variable with null value is the same for FreeMarker. The "missing" term 
+used here covers both cases.
+
+- `user!"visitor"`: gives a default value to the `user` variable
+- `user??`: returns true if the variable is *not* missing
+
+Methods ara invoked with the `()` operator, passing the required parameters i.e. they are invoked like built-ins with parameters.</t>
 </tnodes>
 </leo_file>

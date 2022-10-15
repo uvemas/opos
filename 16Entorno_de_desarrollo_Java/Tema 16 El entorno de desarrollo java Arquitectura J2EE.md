@@ -22,7 +22,7 @@ La JVM consta de:
     intermedios y otra para llamadas a métodos. Hay una de estas áreas para cada hilo de ejecución.
 - PC register: contiene la dirección de las instrucciones en ejecución
 - native method stacks (C stacks): Native methods are those which are written in languages other than Java. JVM provides capabilities 
-  to call these native methods. Whenever the native methods are compiled into machine codes [¹], they usually use a native method stack to
+  to call these native methods. Whenever the native methods are compiled into machine codes [^1], they usually use a native method stack to
   keep track of their state.
 - execution engine:
   - interpreter: once classloaders load and verify bytecode, the interpreter executes the bytecode line by line. This execution is 
@@ -42,8 +42,8 @@ La JVM consta de:
 
 
 
-[¹]: notice that `javac` compiles java programs into bytecodes that can be executed in any JVM. When a native method is compiled the
-result is native machine codes only can be executed in that especific platform.
+[^1]: notice that `javac` compiles java programs into bytecodes that can be executed in any JVM. When a native method is compiled the
+result is native machine codes only can be executed in that especific platform/processor.
 ## JRE
 
 Core components of the JRE include:
