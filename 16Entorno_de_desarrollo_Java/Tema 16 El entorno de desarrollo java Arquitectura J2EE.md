@@ -2,6 +2,10 @@
 
 [baeldung](https://www.baeldung.com/jvm-vs-jre-vs-jdk)
 
+[Web Container](https://www.knowprogram.com/servlet/servlet-container/)
+
+[JEE architecture](https://www.youtube.com/watch?v=5CVbtcHoVxA)
+
 JVM es una máquina virtual capaz de ejecutar programas en Java.
 
 JRE es una implementación de la JVM.

@@ -84,8 +84,12 @@ said to be in particular normal form if it satisfies constraints.
 
 **First normal form, 1NF**
 
-A table is in 1NF if it contains only atomic (from the user point of view) values. To achieve this goal we must eliminate repeating 
-groups (groups with the same meaning, for instance address1 and address2).
+A table is in 1NF if it contains *only atomic values* i.e. if no value is itself a relation/table. 
+
+```{thumbnail} images/1NFviolation.png
+```
+
+To achieve this goal we must eliminate repeating groups (groups with the same meaning, for instance address1 and address2).
 
 Another way to look at the repeating groups problem is with a one-to-many relationship: do not put the one side and the many side in 
 the same table.
@@ -101,7 +105,7 @@ only need B to be fetched then D depends partially of the composite primary key 
 
 **Third normal form, 3NF**
 
-A table will be in 3NF if it is in 2NF and no transition dependency exists. It means that all non-key values on the table deppend on 
+A table will be in 3NF if it is in 2NF and no transitive dependency exists. It means that all non-key values on the table deppend on 
 **only** primary keys.
 
 

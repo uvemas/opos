@@ -23,7 +23,6 @@
 </v>
 <v t="vicent.20220401181802.1"><vh>Temas</vh>
 <v t="vicent.20220913111203.1"><vh>Notas</vh></v>
-<v t="vicent.20220831110352.1"><vh>TODO</vh></v>
 <v t="vicent.20220528090703.1"><vh>Sistemas Operativos</vh>
 <v t="vicent.20220528085051.1"><vh>Tema 1 Sistemas Operativos Windows</vh></v>
 <v t="vicent.20220528085100.1"><vh>Tema 2 Sistemas Operativos Linux</vh></v>
@@ -49,8 +48,8 @@
 <v t="vicent.20220528090539.1"><vh>@clean Tema 32 Gestion integrada del desarrollo Maven.md</vh>
 <v t="vicent.20220615181441.1"><vh>Maven</vh>
 <v t="vicent.20220618074740.1"><vh>Arquetipos</vh></v>
-<v t="vicent.20220615191428.1"><vh>Guía rápida</vh></v>
 <v t="vicent.20220615193810.1"><vh>Ciclo de vida del proyecto</vh></v>
+<v t="vicent.20220615191428.1"><vh>Guía rápida</vh></v>
 </v>
 </v>
 </v>
@@ -80,6 +79,7 @@
 </v>
 </v>
 <v t="vicent.20220528092009.1"><vh>Programación</vh>
+<v t="vicent.20221018183554.1"><vh>Otros lenguajes</vh>
 <v t="vicent.20220507204235.1"><vh>@clean Tema 18 Disenyo Web.md</vh>
 <v t="vicent.20220508085627.1"><vh>HTML5</vh>
 <v t="vicent.20220508093555.1"><vh>Elementos</vh></v>
@@ -99,6 +99,9 @@
 <v t="vicent.20220515095927.1"><vh>Grid layout</vh></v>
 </v>
 </v>
+<v t="vicent.20220528090343.1"><vh>Tema 26 PHP</vh></v>
+<v t="vicent.20220528090410.1"><vh>Tema 28 Desarrollo de aplicaciones con Ajax y Jquery</vh></v>
+</v>
 <v t="vicent.20220528091855.1"><vh>Programación Orientada a Objetos</vh>
 <v t="vicent.20220528085742.1"><vh>@clean Tema 13 Programación orientada a objetos: Clases y Objetos.md</vh>
 <v t="vicent.20220623195702.1"><vh>Top-level clases</vh></v>
@@ -114,7 +117,7 @@
 <v t="vicent.20220801184823.1"><vh>Herencia y composición</vh></v>
 <v t="vicent.20221014131932.1"><vh>Polimorfismo</vh></v>
 </v>
-<v t="vicent.20220528085855.1"><vh>Tema 15 Análisis y diseño orientado a objetos usando UML</vh></v>
+<v t="vicent.20221018183956.1"><vh>@clean Tema 15 UML.md</vh></v>
 </v>
 <v t="vicent.20220528092032.1"><vh>Java</vh>
 <v t="vicent.20220528085918.1"><vh>@clean Tema 16 El entorno de desarrollo java Arquitectura J2EE.md</vh>
@@ -144,18 +147,28 @@
 <v t="vicent.20220829094958.1"><vh>Java IO: Consola</vh></v>
 <v t="vicent.20220829114442.1"><vh>Java IO: files</vh></v>
 </v>
-<v t="vicent.20220528085957.1"><vh>Tema 19 JSF. Primefaces</vh></v>
-<v t="vicent.20220528090351.1"><vh>Tema 27 JSP</vh></v>
+<v t="vicent.20221017194318.1"><vh>@clean Tema 25 Apache Tomcat. Despliegue de aplicaciones.md</vh>
+<v t="vicent.20221017194749.1"><vh>Introduction</vh></v>
+<v t="vicent.20221018185935.1"><vh>Tomcat vs Applications Server</vh></v>
+<v t="vicent.20221017195053.1"><vh>First webapp</vh></v>
+</v>
 <v t="vicent.20220528090458.1"><vh>@clean Tema 30 Metodos de prueba del Software Junit.md</vh>
 <v t="vicent.20220613183309.1"><vh>Métodos de prueba</vh></v>
 <v t="vicent.20220613173035.1"><vh>JUnit</vh></v>
 </v>
 </v>
-<v t="vicent.20220528090343.1"><vh>Tema 26 PHP</vh></v>
-<v t="vicent.20220528090410.1"><vh>Tema 28 Desarrollo de aplicaciones con Ajax y Jquery</vh></v>
 </v>
 <v t="vicent.20220910124036.1"><vh>Frameworks</vh>
+<v t="vicent.20220910124126.1"><vh>@clean Tema 19 JSF y Primefaces.md</vh></v>
+<v t="vicent.20220910124138.1"><vh>@clean Tema 20 Jasper Reports.md</vh></v>
+<v t="vicent.20220910124337.1"><vh>@clean Tema 21 FreeMarker.md</vh>
+<v t="vicent.20221015122045.1"><vh>Introducción</vh></v>
+<v t="vicent.20221015122756.1"><vh>Conceptos básicos</vh></v>
+<v t="vicent.20221015125237.1"><vh>Directivas</vh></v>
+<v t="vicent.20221015182858.1"><vh>Built-ins</vh></v>
+</v>
 <v t="vicent.20220910124547.1"><vh>@clean Tema 22 Arquitectura MVC.md</vh></v>
+<v t="vicent.20220910124231.1"><vh>@clean Tema 23 MyBatis.md</vh></v>
 <v t="vicent.20220910124056.1"><vh>@clean Tema 24 Spring Boot.md</vh>
 <v t="vicent.20220911110903.1"><vh>SpringBoot</vh></v>
 <v t="vicent.20220911120722.1"><vh>Dependency injection and IoC</vh></v>
@@ -164,15 +177,7 @@
 <v t="vicent.20220911103833.1"><vh>Desarrollo del proyecto</vh></v>
 <v t="vicent.20220913111203.1"></v>
 </v>
-<v t="vicent.20220910124231.1"><vh>@clean Tema 23 MyBatis.md</vh></v>
-<v t="vicent.20220910124337.1"><vh>@clean Tema 21 FreeMarker.md</vh>
-<v t="vicent.20221015122045.1"><vh>Introducción</vh></v>
-<v t="vicent.20221015122756.1"><vh>Conceptos básicos</vh></v>
-<v t="vicent.20221015125237.1"><vh>Directivas</vh></v>
-<v t="vicent.20221015182858.1"><vh>Built-ins</vh></v>
-</v>
-<v t="vicent.20220910124126.1"><vh>@clean Tema 19 JSF y Primefaces.md</vh></v>
-<v t="vicent.20220910124138.1"><vh>@clean Tema 20 Jasper Reports.md</vh></v>
+<v t="vicent.20220528090351.1"><vh>Tema 27 JSP</vh></v>
 </v>
 <v t="vicent.20220528093019.1"><vh>Otros</vh>
 <v t="vicent.20220409080546.1"><vh>@clean Tema 5 Arquitectura SOA.md</vh>
@@ -235,7 +240,6 @@
 <v t="vicent.20221006201346.2"><vh>Software Libre</vh></v>
 <v t="vicent.20221006201346.46"><vh>Tipos de Licencia</vh></v>
 </v>
-<v t="vicent.20221007223142.1"><vh>@clean Tema 15 UML.md</vh></v>
 </v>
 </v>
 <v t="vicent.20220514125127.1"><vh>CSS3 layout samples</vh>
@@ -415,6 +419,7 @@ Algunos de los principales parámetros (y su sintaxis) usados en los mensajes HT
    22ArquitecturaMVC/Tema 22 Arquitectura MVC
    23PersistenciaConMyBatis/Tema 23 MyBatis
    24SpringBoot/Tema 24 Spring Boot
+   25ApacheTomcat/Tema 25 Apache Tomcat. Despliegue de aplicaciones
    29Scrum/Tema 29 Metodologías Ágiles de desarrollo. Scrum
    30PruebaDelSoftware/Tema 30 Metodos de prueba del Software Junit
    31ControlDeVersiones/Tema 31 Control de versiones Subversion GIT
@@ -444,12 +449,12 @@ Algunos de los principales parámetros (y su sintaxis) usados en los mensajes HT
     ✔ 22. Arquitectura MVC. Spring Framework.
     23. Capa de persistencia de datos MyBatis
     ✔ 24. Spring Boot. Construcción empaquetado y despliegue de aplicaciones
-    25. Servidores de Aplicaciones Tomcat. Despliegue de aplicaciones.
+    ✔ 25. Servidores de Aplicaciones Tomcat. Despliegue de aplicaciones.
     26. PHP
     27. JSP
     ✔ 28. Desarrollo de aplicaciones con Ajax y Jquery
     ✔ 29. Metodologías Ágiles de desarrollo. Scrum
-    30. Métodos de prueba del Software. Junit
+    --&gt; 30. Métodos de prueba del Software. Junit
     ✔ 31. Control de versiones. Subversion. GIT
     ✔ 32. Gestión integrada del desarrollo. Maven</t>
 <t tx="vicent.20220405191838.1">#### Métodos
@@ -2597,7 +2602,6 @@ El resultado es
 @language md
 @others
 </t>
-<t tx="vicent.20220528085855.1"></t>
 <t tx="vicent.20220528085918.1"># Tema 16 El entorno de desarrollo Java. Arquitectura JEE
 
 @path ./16Entorno_de_desarrollo_Java
@@ -2610,7 +2614,6 @@ El resultado es
 @language md
 @others
 </t>
-<t tx="vicent.20220528085957.1"></t>
 <t tx="vicent.20220528090343.1"></t>
 <t tx="vicent.20220528090351.1"></t>
 <t tx="vicent.20220528090410.1"></t>
@@ -2643,13 +2646,25 @@ El resultado es
 @others
 </t>
 <t tx="vicent.20220528090703.1"></t>
-<t tx="vicent.20220528090721.1"></t>
+<t tx="vicent.20220528090721.1">Tema 04 Sistemas de gestión de bases de datos
+Tema 10 Modelo conceptual de datos
+Tema 11 BBDD relacionales
+Tema 12 SQL y PL/SQL</t>
 <t tx="vicent.20220528090846.1"></t>
-<t tx="vicent.20220528091855.1"></t>
+<t tx="vicent.20220528091855.1">Tema 13 OOP: clases y objetos
+Tema 14 OOP: herencia y polimorfismo
+Tema 15 Diseño orientado a objetos usando UML</t>
 <t tx="vicent.20220528092009.1"></t>
-<t tx="vicent.20220528092032.1"></t>
-<t tx="vicent.20220528092851.1"></t>
-<t tx="vicent.20220528093019.1"></t>
+<t tx="vicent.20220528092032.1">Tema 16 Entorno de desarrollo Java. Arquitectura JEE
+Tema 25 Apache Tomcat. Despliegue de aplicaciones
+Tema 17 Lenguaje de programación Java
+Tema 30 Métodos de prueba. Junit
+</t>
+<t tx="vicent.20220528092851.1">Tema 29 Metodologías ágiles. Scrum
+Tema 31 Control de versiones. Subversion. Git
+Tema 32 Gestión integrada del desarrollo. Maven</t>
+<t tx="vicent.20220528093019.1">Tema 5 Arquitectura SOA. APIs JasperReports
+Tema 6 Software libre. Tipos de licencias</t>
 <t tx="vicent.20220613173035.1">## JUnit
 
 Es un framework para crear unidades de test en Java. Hay dos versiones JUnit4 y JUnit5, que es muy reciente.
@@ -2754,6 +2769,10 @@ Default locale: es_ES, platform encoding: UTF-8
 OS name: "linux", version: "5.15.0-37-generic", arch: "amd64", family: "unix"
 ~~~
 
+Uso del comando:
+
+    usage: mvn [options] [&lt;goal(s)&gt;] [&lt;phase(s)&gt;]
+
 Crear un proyecto:
 
 ~~~ bash
@@ -2831,6 +2850,8 @@ $ mvn install
 </t>
 <t tx="vicent.20220615193810.1">### Fases del ciclo de vida del proyecto
 
+[Baeldung](https://www.baeldung.com/maven-goals-phases)
+
 Although hardly a comprehensive list, these are the most common default lifecycle phases executed.
 
 - validate: validate the project is correct and all necessary information is available
@@ -2853,6 +2874,98 @@ Phases are actually mapped to underlying goals. The specific goals executed per 
 type of the project. For example, package executes `jar:jar` if the project type is a JAR, and `war:war` if the project 
 type is - you guessed it - a WAR.
 
+Plugins functionality is divided into goals. A goal is a build step, if you like. *The goals are registered to be executed during the 
+phases of the build. The goals perform the actual work, during the phases that come from the lifecycle of the project*.
+
+Para ver los goles que tiene un plugin usamos `mvn plugin-name:help`:
+
+    $ mvn spring-boot:help                          
+    [INFO] Scanning for projects...
+    [INFO] 
+    [INFO] ----------------------&lt; com.opos.vmas:freemarker &gt;----------------------
+    [INFO] Building freemarker 0.0.1-SNAPSHOT
+    [INFO] --------------------------------[ jar ]---------------------------------
+    [INFO] 
+    [INFO] --- spring-boot-maven-plugin:2.7.4:help (default-cli) @ freemarker ---
+    [INFO] Spring Boot Maven Plugin 2.7.4
+      
+
+    This plugin has 7 goals:
+
+    spring-boot:build-image
+      Package an application into an OCI image using a buildpack.
+
+    spring-boot:build-info
+      Generate a build-info.properties file based on the content of the current
+      MavenProject.
+
+    spring-boot:help
+      Display help information on spring-boot-maven-plugin.
+      Call mvn spring-boot:help -Ddetail=true -Dgoal=&lt;goal-name&gt; to display
+      parameter details.
+
+    spring-boot:repackage
+      Repackage existing JAR and WAR archives so that they can be executed from the
+      command line using java -jar. With layout=NONE can also be used simply to
+      package a JAR with nested dependencies (and no main class, so not executable).
+
+    spring-boot:run
+      Run an application in place.
+
+    spring-boot:start
+      Start a spring application. Contrary to the run goal, this does not block and
+      allows other goals to operate on the application. This goal is typically used
+      in integration test scenario where the application is started before a test
+      suite and stopped after.
+
+    spring-boot:stop
+      Stop an application that has been started by the 'start' goal. Typically
+      invoked once a test suite has completed.
+
+
+    [INFO] ------------------------------------------------------------------------
+    [INFO] BUILD SUCCESS
+    [INFO] ------------------------------------------------------------------------
+    [INFO] Total time:  0.471 s
+    [INFO] Finished at: 2022-10-16T22:34:19+02:00
+    [INFO] ------------------------------------------------------------------------
+
+o podemos usar `mvn help:describe -Dplugin=plugin-name`:
+
+    $ mvn help:describe -Dplugin=compiler
+
+    [INFO] Scanning for projects...
+    [INFO] 
+    [INFO] ----------------------&lt; com.opos.vmas:freemarker &gt;----------------------
+    [INFO] Building freemarker 0.0.1-SNAPSHOT
+    [INFO] --------------------------------[ jar ]---------------------------------
+    [INFO] 
+    [INFO] --- maven-compiler-plugin:3.8.1:help (default-cli) @ freemarker ---
+    [INFO] Apache Maven Compiler Plugin 3.8.1
+      The Compiler Plugin is used to compile the sources of your project.
+
+    This plugin has 3 goals:
+
+    compiler:compile
+      Compiles application sources
+
+    compiler:help
+      Display help information on maven-compiler-plugin.
+      Call mvn compiler:help -Ddetail=true -Dgoal=&lt;goal-name&gt; to display parameter
+      details.
+
+    compiler:testCompile
+      Compiles application test sources.
+
+
+    [INFO] ------------------------------------------------------------------------
+    [INFO] BUILD SUCCESS
+    [INFO] ------------------------------------------------------------------------
+    [INFO] Total time:  0.415 s
+    [INFO] Finished at: 2022-10-16T22:43:51+02:00
+    [INFO] ------------------------------------------------------------------------
+
+
 An interesting thing to note is that phases and goals may be executed in sequence.
 
 ~~~ bash
@@ -2868,18 +2981,33 @@ $ mvn site
 
 This phase generates a site based upon information on the project's pom. You can look at the documentation generated 
 under `target/site`.</t>
-<t tx="vicent.20220618074740.1">### Arquetipos
+<t tx="vicent.20220618074740.1">### Arquetipos y artefactos
 
 Por definición, un arquetipo es un patrón o modelo que se usa para alcanzar un objetivo siempre de la misma 
 manera. En Maven, *un arquetipo es una plantilla de proyecto* que, combinada con user input, genera un proyecto Maven 
 adaptado a las necesidades del usuario. El usuario decide, en función de las necesidades que tenga, que arquetipo 
-utilizar (los arquetipos se pueden combinar). *La estructura del proyecto depende del arquetipo que se haya utilizado para generar
-dicho proyecto*. La estructura del proyecto generada por los diferentes arquetipos puede
+utilizar (los arquetipos se pueden combinar) y las dependencias del proyecto. *La estructura del proyecto depende del arquetipo que se 
+haya utilizado para generar dicho proyecto*. La estructura del proyecto generada por los diferentes arquetipos puede
 verse en [este enlace](https://maven.apache.org/archetypes/index.html)
 
 Los arquetipos de Maven se agrupan en el toolkit Archetype. Cada arquetipo se identifica con un ArtifactID.
 
-Para crear un proyecto basado en un arquetipo tenemos que invocar `mvn archetype:generate`.</t>
+Para crear un proyecto basado en un arquetipo tenemos que invocar `mvn archetype:generate` y un artefacto, que será el que especifique
+lo que vamos a generar (un projecto, un plugin, una aplicación web, un site...). Por ejemplo:
+
+    $ mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DgroupId=com.mycompany.app -DartifactId=my-app -DinteractiveMode=false
+
+```{Importante}
+Cada artefacto Maven, ya sea arquetipo (como `maven-archetype-quickstart`), plugin (como `spring-boot-maven-plugin`) o 
+dependencia (como `spring-boot-starter-freemarker`) se almacena en Internet, en un repositorio central. Cuando se crea un proyecto 
+Maven, todos los artefactos que forman el `pom.xml` se descargan del repositorio central y se almacenan en un repositorio local, en el 
+directorio `~/.m2`, y así están disponibles para usos futuros.
+```
+
+Cada artefacto es parte de un grupo formado por uno o más artefactos. Por ejemplo, en el repositorio local podemos ver que en
+el grupo `org.springframework.boot` (que está en `~/m2/repository/org/springframework/boot/`) hay unos 30 artefactos, entre plugins
+y dependencias.
+</t>
 <t tx="vicent.20220623164829.1">## Modificadores de acceso
 
 [Reference](https://www.baeldung.com/java-access-modifiers)
@@ -4058,27 +4186,6 @@ assertEquals("Hello World!", string);
 ...
 ~~~
 </t>
-<t tx="vicent.20220831110352.1">API REST - Spring Boot
-Primefaces
-Junit
-SQL (lenguaje y teoría)
-Tomcat
-
-Guías SpringBoot
-
-x Building a RESTful Web Service
-x Consuming a RESTful Web Service
-x Handling Form Submission
-x Validating Form Input
-x Serving Web Content with Spring MVC
-- Consuming a RESTful Web Service with jQuery
-- Creating Asynchronous Methods
-x Accessing JPA Data with REST (also https://www.baeldung.com/spring-boot-bean-validation)
-x Accessing Data with JPA
-- Accessing data with MySQL
-x Producing a SOAP web service
-- Consuming a SOAP web service
-</t>
 <t tx="vicent.20220901104803.1">## GIT. Conceptos básicos
 
 [Tutoriales](https://linuxize.com/tags/git/)
@@ -4297,7 +4404,13 @@ Otro comando muy utilizado es `stash`:
 
 [stash](https://www.atlassian.com/es/git/tutorials/saving-changes/git-stash)
 </t>
-<t tx="vicent.20220910124036.1"></t>
+<t tx="vicent.20220910124036.1">Tema 19 JSF. Primefaces
+Tema 20 JasperReports
+Tema 21 FreeMarker
+Tema 22 Arquitectura MVC
+Tema 23 MyBatis
+Tema 24 SpringBoot
+Tema 27 JSP</t>
 <t tx="vicent.20220910124056.1"># Tema 24 Spring Boot
 
 @path ./24SpringBoot
@@ -4884,15 +4997,6 @@ The most permissive of software licenses, an open-source license puts software d
 retained to the work and anyone can use, change, distribute, and copyright their own adaptations—and even profit from their work. 
 `LibreOffice`, a free alternative to `Microsoft Office`, is an example of open-source software.
 </t>
-<t tx="vicent.20221007223142.1"># Tema 15 UML
-
-@path ./15UML
-@language md
-[Curso completo UML2.0](https://www.youtube.com/playlist?list=PLGLfVvz_LVvQ5G-LdJ8RLqe-ndo7QITYc)
-
-[Diagramas UML](https://www.teatroabadia.com/es/uploads/documentos/iagramas_del_uml.pdf)
-@others
-</t>
 <t tx="vicent.20221008124619.1">## Modelo conceptual de datos
 
 Un modelo conceptual de datos identifica las relaciones de más alto nivel entre las diferentes entidades.
@@ -5091,8 +5195,12 @@ said to be in particular normal form if it satisfies constraints.
 
 **First normal form, 1NF**
 
-A table is in 1NF if it contains only atomic (from the user point of view) values. To achieve this goal we must eliminate repeating 
-groups (groups with the same meaning, for instance address1 and address2).
+A table is in 1NF if it contains *only atomic values* i.e. if no value is itself a relation/table. 
+
+```{thumbnail} images/1NFviolation.png
+```
+
+To achieve this goal we must eliminate repeating groups (groups with the same meaning, for instance address1 and address2).
 
 Another way to look at the repeating groups problem is with a one-to-many relationship: do not put the one side and the many side in 
 the same table.
@@ -5108,7 +5216,7 @@ only need B to be fetched then D depends partially of the composite primary key 
 
 **Third normal form, 3NF**
 
-A table will be in 3NF if it is in 2NF and no transition dependency exists. It means that all non-key values on the table deppend on 
+A table will be in 3NF if it is in 2NF and no transitive dependency exists. It means that all non-key values on the table deppend on 
 **only** primary keys.
 
 
@@ -5247,6 +5355,10 @@ es parcial (porque hay ocurrencias de empleado que no pertenecen a ninguno de lo
 
 </t>
 <t tx="vicent.20221013165224.1">[baeldung](https://www.baeldung.com/jvm-vs-jre-vs-jdk)
+
+[Web Container](https://www.knowprogram.com/servlet/servlet-container/)
+
+[JEE architecture](https://www.youtube.com/watch?v=5CVbtcHoVxA)
 
 JVM es una máquina virtual capaz de ejecutar programas en Java.
 
@@ -5452,5 +5564,137 @@ used here covers both cases.
 - `user??`: returns true if the variable is *not* missing
 
 Methods ara invoked with the `()` operator, passing the required parameters i.e. they are invoked like built-ins with parameters.</t>
+<t tx="vicent.20221017194318.1"># Tema 25 Apache Tomcat. Despliegue de aplicaciones
+
+@path ./25ApacheTomcat
+@language md
+@others
+</t>
+<t tx="vicent.20221017194749.1">[Basic tutorial](https://www.tutorialkart.com/apache-tomcat/apache-tomcat-tutorial/)
+
+[Web Containers](https://www.knowprogram.com/servlet/servlet-container/)
+
+[Referencia](https://tomcat.apache.org/tomcat-10.1-doc/introduction.html)
+
+De la referencia hay que leer los apartados:
+
+1) Introduction
+2) First webapp
+
+## Introduction
+
+Throughout the documentation, there are references to the two following properties:
+
+- `CATALINA_HOME`: Represents the root of your Tomcat installation, for example /home/tomcat/apache-tomcat-9.0.10
+- `CATALINA_BASE`: Represents the root of a runtime configuration of a specific Tomcat instance. If you want to have multiple Tomcat 
+  instances on one machine, use the `CATALINA_BASE` property.
+
+If you set the properties to different locations, the `CATALINA_HOME` location contains static sources, such as .jar files, or binary 
+files. The `CATALINA_BASE` location contains configuration files, log files, deployed applications, and other runtime requirements.
+
+Before you start using `CATALINA_BASE`, first consider and create the directory tree used by `CATALINA_BASE`. Note that if you do not 
+create all the recommended directories, Tomcat creates the directories automatically. If it fails to create the necessary directory, 
+for example due to permission issues, Tomcat will either fail to start, or may not function correctly.
+
+Consider the following list of directories:
+
+- `/bin` directory with the setenv.sh, setenv.bat, and tomcat-juli.jar files, startup, shutdown, and other scripts.
+  Order of lookup: `CATALINA_BASE` is checked first; fallback is provided to `CATALINA_HOME`.
+- `/lib` directory with further resources to be added on classpath.
+  Order of lookup: `CATALINA_BASE` is checked first; `CATALINA_HOME` is loaded second.
+- `/logs` directory for instance-specific log files.
+- `/webapps` directory for automatically loaded web applications (this is where your webapps go).
+  Order of lookup: `CATALINA_BASE` only.
+- `/work` directory that contains temporary working directories for the deployed web applications.
+- `/temp` directory used by the JVM for temporary files.
+  We recommend you not to change the tomcat-juli.jar file. However, in case you require your own logging implementation, you can replace the tomcat-juli.jar file in a `CATALINA_BASE` location for the specific Tomcat instance.
+
+We also recommend you copy all configuration files from the `CATALINA_HOME/conf` directory into the `CATALINA_BASE/conf/` directory. In 
+case a configuration file is missing in `CATALINA_BASE`, there is no fallback to `CATALINA_HOME`. Consequently, this may cause failure.
+
+At minimum, `CATALINA_BASE` must contain:
+
+- `conf/server.xml`
+- `conf/web.xml`
+
+That includes the conf directory. Otherwise, Tomcat fails to start, or fails to function properly.
+For advanced configuration information, see the RUNNING.txt file. 
+</t>
+<t tx="vicent.20221017195053.1">## First webapp
+
+A web application is defined as a hierarchy of directories and files in a standard layout. Such a hierarchy can be accessed in its 
+"unpacked" form, where each directory and file exists in the filesystem separately, or in a "packed" form known as a **Web ARchive**, 
+or WAR file. The former format is more useful during development, while the latter is used when you distribute your application to be 
+installed.
+
+The top-level directory of your web application hierarchy is also the document root of your application. Here, you will place the HTML 
+files and JSP pages that comprise your application's user interface. When the system administrator deploys your application into a 
+particular server, they assign a context path to your application. 
+Thus, if the system administrator assigns your application to the context path /catalog, then a request URI referring to 
+/catalog/index.html will retrieve the index.html file from your document root.
+
+To facilitate creation of a Web Application Archive file in the required format, it is convenient to arrange the "executable" files of 
+your web application (that is, the files that Tomcat actually uses when executing your app) in the same organization as required by the 
+WAR format itself. To do this, you will end up with the following contents in your application's "document root" directory:
+
+- *.html, *.jsp, etc. - The HTML and JSP pages, along with other files that must be visible to the client browser (such as JavaScript, 
+  stylesheet files, and images) for your application. In larger applications you may choose to divide these files into a subdirectory 
+  hierarchy, but for smaller apps, it is generally much simpler to maintain only a single directory for these files.
+- /WEB-INF/web.xml - The Web Application Deployment Descriptor for your application. This is an XML file describing the servlets and 
+  other components that make up your application, along with any initialization parameters and container-managed security constraints 
+  that you want the server to enforce for you. This file is discussed in more detail in the following subsection.
+- /WEB-INF/classes/ - This directory contains any Java class files (and associated resources) required for your application, including 
+  both servlet and non-servlet classes, that are not combined into JAR files. If your classes are organized into Java packages, you 
+  must reflect this in the directory hierarchy under /WEB-INF/classes/. For example, a Java class named 
+  com.mycompany.mypackage.MyServlet would need to be stored in a file named /WEB-INF/classes/com/mycompany/mypackage/MyServlet.class.
+- /WEB-INF/lib/ - This directory contains JAR files that contain Java class files (and associated resources) required for your 
+  application, such as third party class libraries or JDBC drivers.
+  When you install an application into Tomcat (or any other 2.2 or later Servlet container), the classes in the WEB-INF/classes/ 
+  directory, as well as all classes in JAR files found in the WEB-INF/lib/ directory, are made visible to other classes within your 
+  particular web application. Thus, if you include all of the required library classes in one of these places (be sure to check 
+  licenses for redistribution rights for any third party libraries you utilize), you will simplify the installation of your web 
+  application -- no adjustment to the system class path (or installation of global library files in your server) will be necessary.
+
+Much of this information was extracted from Chapter 9 of the Servlet API Specification, version 2.3, which you should consult for more 
+details.
+
+```{thumbnail} images/Captura.PNG
+```
+</t>
+<t tx="vicent.20221018183554.1">Tema 18 Diseño web. HTML y CSS3
+Tema 26 PHP
+Tema 28 Desarrollo de aplicaciones con Ajax y JQuery</t>
+<t tx="vicent.20221018183956.1"># Tema 15 UML
+
+@path ./15UML
+@language md
+[Curso completo UML2.0](https://www.youtube.com/playlist?list=PLGLfVvz_LVvQ5G-LdJ8RLqe-ndo7QITYc)
+
+[Diagramas UML](https://www.teatroabadia.com/es/uploads/documentos/iagramas_del_uml.pdf)
+@others
+</t>
+<t tx="vicent.20221018185935.1">## Tomcat vs full application servers
+
+Desde un punto de vista lógico un servidor de aplicaciones tiene esta estructura:
+
+```{thumbnail} images/arquitectura.png
+```
+
+El Tomcat es una versión supersimplificada de un servidor de aplicaciones. Solo tiene la capa de web container. En Tomcat esa capa
+se llama Catalina.
+
+Un servidor "completo" como Wildfly proporciona muchos servicios:
+
+- tiene una capa de middleware con servicios como seguridad, inyección de dependencias, transacciones, pool de conexiones a BBDD...
+- puede ejecutar simultáneamente varias instancias de la misma aplicación
+- tiene un balanceador para repartir la carga entre las distintas instancias
+
+Tomcat no dispone de esas funcionalidades, simplemente sirve una instancia de cada una de las aplicaciones web que tiene alojadas.
+
+Las aplicaciones web en el fondo son servlets (server components) que sirven contenido dinámico (JSPs, JSFs, etc.), pero ya no se 
+desarrollan como cuando se creó esta tecnología.
+
+Al principio desarrollar servlets era muy complejo, se hacía usando directamente la clase Servlet y compañía. Hoy en día se utilizan
+frameworks como Spring y SpringBoot que hacen mucho más simple el desarrollo a base de enterrar los servlets bajo un montón de capas.</t>
 </tnodes>
 </leo_file>

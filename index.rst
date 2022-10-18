@@ -22,6 +22,7 @@
    22ArquitecturaMVC/Tema 22 Arquitectura MVC
    23PersistenciaConMyBatis/Tema 23 MyBatis
    24SpringBoot/Tema 24 Spring Boot
+   25ApacheTomcat/Tema 25 Apache Tomcat. Despliegue de aplicaciones
    29Scrum/Tema 29 Metodologías Ágiles de desarrollo. Scrum
    30PruebaDelSoftware/Tema 30 Metodos de prueba del Software Junit
    31ControlDeVersiones/Tema 31 Control de versiones Subversion GIT
