@@ -131,12 +131,18 @@
 <v t="vicent.20220726085534.1"><vh>Get Started</vh></v>
 <v t="vicent.20220725083209.1"><vh>Basic Syntax</vh></v>
 <v t="vicent.20220725085429.1"><vh>Java primitives</vh></v>
+<v t="vicent.20221027175316.1"><vh>Operators</vh></v>
+<v t="vicent.20221027173647.1"><vh>Exceptions handling</vh></v>
+<v t="vicent.20221028173010.1"><vh>Interfaces</vh></v>
+<v t="vicent.20221028175723.1"><vh>Functional Interfaces</vh></v>
+<v t="vicent.20221027232108.1"><vh>The for loop</vh></v>
 <v t="vicent.20220831101942.1"><vh>String - bytes conversion</vh></v>
 <v t="vicent.20220726084801.1"><vh>Java Inizialization</vh></v>
 <v t="vicent.20220806092453.1"><vh>Overloading vs Overrriding</vh></v>
 <v t="vicent.20220806115156.1"><vh>Modificador static</vh></v>
 <v t="vicent.20220806180544.1"><vh>Modificador final</vh></v>
 <v t="vicent.20220806180756.1"><vh>Enums</vh></v>
+<v t="vicent.20221027172449.1"><vh>Scanner</vh></v>
 <v t="vicent.20220827084532.1"><vh>Streams</vh>
 <v t="vicent.20220828080628.1"><vh>Pipeline</vh></v>
 </v>
@@ -3100,7 +3106,7 @@ Reference types are objects that contain references to values and/or other objec
 An identifier is a name of any length, consisting of letters, digits, underscore, and dollar sign (cannot start with a 
 number).
 
-The main difference in representing literal values of char and String is the number of quotes that surrounds the 
+The main difference *in representing literal values* of char and String is the number of quotes that surrounds the 
 values.
 
 Arrays declaration:
@@ -3121,13 +3127,20 @@ Executable means it can be executed via the `java` command.
 
 The eight primitives defined in Java are:
 
-- integers: byte, short, int, long
-- floating numbers: float, double
-- boolean: boolean
-- character: char
+- integers: byte, short, int, long. Default value: 0
+- floating numbers: float, double. Default value: 0.0
+- boolean: boolean (1 bit but padded to 8 bits): Default value: false
+- character: char (16 bits). Default value: '/u0000'
 
-These aren't considered
-objects and represent raw values. They're stored directly on the [stack](https://www.guru99.com/stack-vs-heap.html).
+Default type of floating numbers is `double` so
+
+~~~ java
+// trailing f is mandatory
+float pi = "3.14f"
+~~~
+
+Primitive types aren't considered objects and represent raw values. They're stored directly on the 
+[stack](https://www.guru99.com/stack-vs-heap.html).
 
 The simplest primitive data type is boolean. It can contain only two values: true or false. It stores its value in a 
 single bit. However, for convenience, Java pads the value and stores it in a single byte.
@@ -3144,14 +3157,16 @@ underflow, they return 0.0.
 [Baeldung](https://www.baeldung.com/java-initialization)
 
 All objects in Java are stored in our program's heap memory. In fact, the heap represents a large pool of unused 
-memory, allocated for our Java application.</t>
+memory, allocated for our Java application.
+</t>
 <t tx="vicent.20220726085534.1">## Get Started with Java
 
 [Get started](https://www.baeldung.com/get-started-with-java-series)
 
 [Back to basics](https://www.baeldung.com/java-tutorial)
 
-Muy buena introducción al lenguaje Java.</t>
+Muy buena introducción al lenguaje Java.
+</t>
 <t tx="vicent.20220728104604.1">## Clases abstractas
 
 [baeldung](https://www.baeldung.com/java-abstract-class)
@@ -3828,7 +3843,8 @@ List&lt;String&gt; result = givenList.stream()
 ~~~
 
 With the collect() method we can [non-mutable] reduction operations too using Collectors methods (`joining`, 
-`averagingInt`).</t>
+`averagingInt`).
+</t>
 <t tx="vicent.20220828080628.1">### Pipeline
 
 [pipeline](https://www.baeldung.com/java-8-streams#pipeline)
@@ -3859,7 +3875,8 @@ are applying to each element. So we need to keep methods such as `skip()`, `filt
 
 In most of the code samples shown in this article, we left the streams unconsumed (we didn't apply the `close()` method 
 or a terminal operation). In a real app, *don't leave an instantiated stream unconsumed, as that will lead to memory 
-leaks*.</t>
+leaks*.
+</t>
 <t tx="vicent.20220829094958.1">## Java IO: Consola
 
 [baeldung](https://www.baeldung.com/java-console-input-output)
@@ -4052,7 +4069,8 @@ scanner.close();
 
 Aún quedan cosas que ver: random access para I/O, creación de ficheros temporales, bloqueo de ficheros, NIO API...
 
-Un FileChannel es un canal de bytes conectado a un fichero. Un canal mantiene una posición (la posición actual) y permite cambiarla.</t>
+Un FileChannel es un canal de bytes conectado a un fichero. Un canal mantiene una posición (la posición actual) y permite cambiarla.
+</t>
 <t tx="vicent.20220830100950.1">## Java IO: concepts
 
 [baeldung](https://www.baeldung.com/java-outputstream)
@@ -5696,5 +5714,391 @@ desarrollan como cuando se creó esta tecnología.
 
 Al principio desarrollar servlets era muy complejo, se hacía usando directamente la clase Servlet y compañía. Hoy en día se utilizan
 frameworks como Spring y SpringBoot que hacen mucho más simple el desarrollo a base de enterrar los servlets bajo un montón de capas.</t>
+<t tx="vicent.20221027172449.1">## Scanner
+
+`Scanner` class reads *input stream into **tokens*** (not lines). The token delimiter defaults to white space.
+
+Constructor: `Scanner(input_stream)`
+
+where input_stream can be any kind of stream: a String, a file, a byte array, the standard input stream...
+
+- `Scanner("Some string")`
+- `Scanner(new File(filepath))` or `Scanner(FileInputStream(filepath))`
+- `Scanner(new ByteArrayInputStream(a_string.getBytes()))`
+- `Scanner(System.in)`
+
+Must know the `next()`, `nextInt()`, `nextDouble()` and `nextLine()` APIs:
+
+### next() consumes the line separator but not the token delimiter
+
+    AThis is the first line.\n
+    This is the second line_And\n
+    123Some more text\n
+    45,7
+
+`A` is the delimiter. From position (0,0) `next()` will return:
+
+    This is the first line.\n
+    This is the second line_
+
+### nextLine() is a kind of buffer.readLine(). It consumes both the line separator and the token delimiter delimiter
+
+and moves the current position of the Scanner to the next line.
+
+So from the current position `nextLine()` will return:
+
+    And\n
+
+Position is (2, 0) now.
+
+### nextInt() and nextDouble() will not consume the line separator nor the token delimiter.
+
+So from the current position `nextInt()` will return:
+
+    123
+
+Position is (2, 4) now.
+
+`nextLine()` will move cursor to position (3, 0). Finally `nextDouble()` will return:
+
+    45.7
+
+Also hasNext() for validating purposes.
+</t>
+<t tx="vicent.20221027173647.1">## Exceptions
+
+Exceptions can be:
+
+- checked/situational: is typically a way to say that something external to our code (on the network, filesystem, database...) failed
+- unchecked/runtime: some unexpected usage makes the code fail or something is wrong in the logic of the code
+
+`IOException` is a checked exception.
+
+`ArrayIndexOutOfBoundsException`, `ClassCastException`, `IllegalArgumentException`, `IllegalStateException`, `NullPointerException`,
+`NumberFormatException` are unchecked exceptions.
+
+We *must* handle the checked exceptions, and we *may* handle the unchecked ones.
+
+A **risky method** is a method that throws a checked exception. It is risky because as the method does not handle the exception by 
+itself,passing it up the call stack instead, then anyone that calls the method needs to handle it!
+
+
+~~~ java
+public int getPlayerScore(String playerFile)
+  throws FileNotFoundException {
+    Scanner contents = null;
+    try {
+        contents = new Scanner(new File(playerFile));
+        return Integer.parseInt(contents.nextLine());
+    } finally {
+        if (contents != null) {
+            contents.close();
+        }
+    }
+}
+~~~
+
+Because `FileNotFoundException` is a checked exception, we must handle it to satisfy the compiler (in this example it does mean that anyone that calls our method now needs to handle it too!)
+
+`parseInt` can throw a `NumberFormatException`, but because it is unchecked, we aren't required to handle it.
+
+Here, the `finally` block indicates what code we want Java to run regardless of what happens with trying to read the file.
+
+*Even if a `FileNotFoundException` is thrown up the call stack, Java will call the contents of `finally` before doing that.*
+</t>
+<t tx="vicent.20221027175316.1">## Operators
+
+[Reference](https://www.javatpoint.com/java-operator-precedence)
+
+Operators in Java can be grouping, array indexing, member selecting, arithmetic, bitwise, relational and logical.
+
+### Precedence
+
+Precedence is the priority for grouping different types of operators with their operands. It is meaningful only if an expression has 
+more than one operator with higher or lower precedence. The operators having higher precedence are evaluated first. If we want to 
+evaluate lower precedence operators first, we must group operands by using parentheses and then evaluate.
+
+### Associtivity
+
+We must follow associativity if an expression has more than two operators of the same precedence. In such a case, an expression can be 
+solved either left-to-right or right-to-left, accordingly.
+
+In Java all operators have left-to-right associativity except:
+
+- unary operators
+- assignment operators: =, +=, -=, *=, /=, %=
+
+### Arithmetic operators
+
+We can perform all standard arithmetic operations on ints. Just be aware that decimal values will be chopped off when performing these 
+on integers.
+
+For instance the `/` operator makes an integer division if both operands are integer and a floating point division if any of the 
+operands is a float number.
+
+### The increment/decrement operators
+
+The increment/decrement operators can be applied before (prefix) or after (postfix) the operand. The code `result++;` and `++result;` 
+will both end in `result` being incremented by one. The only difference is that the prefix version (`++result`) evaluates to the i
+ncremented value, whereas the postfix version (`result++`) evaluates to the original value. If you are just performing a simple 
+increment/decrement, it doesn't really matter which version you choose. But if you use this operator in part of a larger expression, 
+the one that you choose may make a significant difference.
+
+~~~ java
+int a = 3;
+int result = ++a; // result = 4 and a = 4
+result = a--; // result = 4 and a = 3
+~~~
+</t>
+<t tx="vicent.20221027232108.1">## The for loop
+
+Currently `for` loops come in three flavours.
+
+### Classic for
+
+~~~ java
+for (initialization; termination;
+     increment) {
+    statement(s)
+}
+~~~
+
+When using this version of the for statement, keep in mind that:
+
+- The initialization expression initializes the loop; it's executed only once, as the loop begins.
+- When the termination expression evaluates to false, the loop terminates.
+- The increment expression is invoked after each iteration through the loop; it is perfectly acceptable for this expression to 
+  increment or decrement a value.
+
+
+Notice how the code declares a variable within the initialization expression. The scope of this variable extends from its declaration 
+to the end of the block governed by the for statement, so it can be used in the termination and increment expressions as well. If the 
+variable that controls a for statement is not needed outside of the loop, it's best to declare the variable in the initialization 
+expression. The names i, j, and k are often used to control for loops; declaring them within the initialization expression limits their 
+life span and reduces errors.
+
+So this is a typical example:
+
+~~~ java
+for(int i=1; i&lt;11; i++){
+  System.out.println("Count is: " + i);
+}
+~~~
+
+Notice that `i` is initialised inside the loop so it is only visible in the loop block.
+
+But this is allowed too:
+
+~~~ java
+int i = 1;
+for(; i&lt;11; i++){
+  System.out.println("Count is: " + i);
+}
+~~~
+
+We will use this form when the `i` variable is needed out of the loop.
+
+However this will fail:
+
+~~~ java
+int i = 1;
+for(int i = 0; i&lt;11; i++){
+  System.out.println("Count is: " + i);
+}
+~~~
+
+because the outer `i` is visible inside the loop so the loop initialization is creating a variable that already exists.
+
+### Enhanced for loop
+
+Its use is recommended over the classic use because it has an easier syntax.
+
+~~~ java
+int[] numbers = 
+    {1,2,3,4,5,6,7,8,9,10};
+for (int item : numbers) {
+    System.out.println("Count is: " + item);
+}
+~~~
+
+### forEach loop
+
+Since Java 8, we can leverage for-each loops in a slightly different way. We now have a dedicated `forEach()` method in the `Iterable`
+interface that accepts a lambda expression representing an action we want to perform.
+
+~~~ java
+numbers.forEach(item -&gt; System.out.println("Count is: " + item));
+~~~
+</t>
+<t tx="vicent.20221028173010.1">## Interfaces
+
+[Baeldung](https://www.baeldung.com/java-interfaces)
+
+```{Note} In Java, an interface is an *abstract type* that contains a collection of methods and constant variables.
+```
+
+It is one of the core concepts in Java and is used to achieve abstraction, polymorphism and multiple inheritances.
+
+In an interface, we're allowed to use:
+
+- constants variables: interface variables are public, static, and final by definition; we're not allowed to change their visibility
+- abstract methods
+- static methods
+- default methods
+
+but
+
+- we can't use the `final` word in the interface definition, as it will result in a compiler error
+- all interface declarations should have the `public` or `default` access modifier; the `abstract` modifier will be added automatically 
+  by the compiler
+- an interface method can't be `protected` or `final`
+- 
+
+~~~ java
+public interface Electronic {  // no abstract modifier
+
+    // Constant variable final static public by definition
+    String LED = "LED";
+
+    // Abstract method but no abstract modifier
+    int getElectricityUse();
+
+    // Static method
+    static boolean isEnergyEfficient(String electtronicType) {
+        if (electtronicType.equals(LED)) {
+            return true;
+        }
+        return false;
+    }
+
+    //Default method is public 
+    default void printDescription() {
+        System.out.println("Electronic Description");
+    }
+}
+~~~
+
+Because interfaces are abstract by definition we dont need to use the `abstract` modifier.
+</t>
+<t tx="vicent.20221028175723.1">## Functional interfaces
+
+Any interface with a SAM (Single Abstract Method) is a functional interface.
+
+The problem: in Java there are many methods that need a function as a parameter or need to return a function. But Java is not a functional programming language so in
+these cases we should create a SAM interface and a class `A` a class implementing it and providing the required functionality. Then when a method needs that function 
+as a parameter we had to do:
+
+~~~ java
+interface SAM {
+  Integer func(String s);
+}
+
+class A implements SAM {
+  public Integer func(String s) {
+    return s.length();
+  }
+}
+
+System.out.println(new A().func("hola"));
+~~~
+
+It means a lot of boilerplate is needed just for using a function as a parameter.
+
+The solution: Java 8 fixes this situtation providing lambda expressions and many new functional interfaces. Let's see how they work.
+
+A lambda expression is an anonymous function that we can handle as a first-class language citizen. For instance, we can pass it to or return it from a method or assign 
+it to a variable.
+
+```{Note} 
+Functional interfaces implementation may be treated as lambda expressions i.e. *we can use lambda expressions instead of functional interfaces* (`Function`, 
+`BiFunction`, `Supplier`, `Consumer`, `Predicate`, `Operator`...).
+```
+
+As an example of functional interface we will use the `Function` interface which represents a function which takes in one argument and produces a result. Hence this functional interface takes in 2 generics namely as follows:
+
+    T: denotes the type of the input argument
+    R: denotes the return type of the function
+
+The abstract method of `Function` is `apply()` which eventually applies the given function on the argument.
+
+Let's see an example. The method `HashMap.computeIfAbsent` uses the `Function` functional interface as parameter:
+
+~~~ java
+public V 
+       computeIfAbsent(K key,
+             Function&lt;? super K, ? extends V&gt; remappingFunction)
+~~~
+
+So we need `remappingFunction` being a `Function`. And we need to implement the `Function.apply` abstract method. Since Java 8 we can achieve both goals at the same
+time as follows:
+
+~~~ java
+public Function&lt;String, Integer&gt; remappingFunction(String name) {
+  return name -&gt; name.length();
+}
+~~~
+
+as a result the returned lambda expression becomes the implementation of the `Function.apply` method:
+
+~~~ java
+public Integer apply(String name) {
+  return name.length();
+}
+~~~
+
+and we use it as follows:
+
+~~~ java
+Map&lt;String, Integer&gt; nameMap = new HashMap&lt;&gt;();
+Integer value = nameMap.computeIfAbsent("John", remappingFunction);
+~~~
+
+We can do it shorter:
+
+~~~ java
+Function&lt;String, Integer&gt; remappingFunction = s -&gt; s.length();
+Map&lt;String, Integer&gt; nameMap = new HashMap&lt;&gt;();
+Integer value = nameMap.computeIfAbsent("John", remappingFunction);
+~~~
+
+And even shorter as we can use directly a lambda expression:
+
+~~~ java
+Map&lt;String, Integer&gt; nameMap = new HashMap&lt;&gt;();
+Integer value = nameMap.computeIfAbsent("John", s -&gt; s.length());
+~~~
+
+or a reference to a method with the proper types of input and return values:
+
+~~~ Java
+Map&lt;String, Integer&gt; nameMap = new HashMap&lt;&gt;();
+Integer value = nameMap.computeIfAbsent("John", String::length);
+~~~
+
+But the most readable choice seems to be lambda expressions..
+
+Summary: thanks to functional interfaces and lambda expressions we can move from
+
+~~~ java
+interface SAM {
+  Integer func(String s);
+}
+
+class A implements SAM {
+  public Integer func(String s) {
+    return s.length();
+  }
+}
+
+System.out.println(new A().func("hola"));
+~~~
+
+to
+
+~~~ java
+Function&lt;String, Integer&gt; func = s -&gt; s.length()
+System.out.println(func.apply("hola"));
+~~~
+</t>
 </tnodes>
 </leo_file>
