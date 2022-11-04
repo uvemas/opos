@@ -73,9 +73,30 @@
 <v t="vicent.20221010124625.1"><vh>Introducción</vh></v>
 <v t="vicent.20221010123006.1"><vh>Normalización</vh></v>
 </v>
-<v t="vicent.20220528085656.1"><vh>@clean Tema 12 SQL y PL-SQL.md</vh>
+<v t="vicent.20220528085656.1"><vh>@rst Tema 12 SQL y PL-SQL.rst</vh>
 <v t="vicent.20221011164300.1"><vh>Introducción</vh></v>
+<v t="vicent.20221104192623.1"><vh>Consulta de datos</vh>
+<v t="vicent.20221103183313.1"><vh>Subqueries</vh>
+<v t="vicent.20221103191236.1"><vh>Subconsultas escalares</vh></v>
+<v t="vicent.20221103230534.1"><vh>@rst-no-head label</vh></v>
+<v t="vicent.20221103200224.1"><vh>Comparación de tuplas</vh></v>
+<v t="vicent.20221103223138.1"><vh>Subconsultas que devuelven un conjunto de tuplas</vh></v>
+<v t="vicent.20221104142311.1"><vh>Subconsultas en la cláusula FROM</vh></v>
+</v>
+</v>
+<v t="vicent.20221104192649.1"><vh>Creación, modificación y borrado de datos</vh>
+<v t="vicent.20221104180108.1"><vh>Creación de tablas</vh></v>
+<v t="vicent.20221104190445.1"><vh>Borrado de tablas</vh></v>
+<v t="vicent.20221104190527.1"><vh>Inserción de datos</vh></v>
+<v t="vicent.20221104191726.1"><vh>Modificación de datos</vh></v>
+<v t="vicent.20221104192242.1"><vh>Borrado de datos</vh></v>
 <v t="vicent.20221011192909.1"><vh>Datatypes</vh></v>
+</v>
+<v t="vicent.20221104200439.1"><vh>Tópicos avanzados</vh>
+<v t="vicent.20221104214417.1"><vh>Modificar la definición de una tabla</vh></v>
+<v t="vicent.20221104214430.1"><vh>Vistas</vh></v>
+<v t="vicent.20221104200449.1"><vh>Índices</vh></v>
+</v>
 </v>
 </v>
 <v t="vicent.20220528092009.1"><vh>Programación</vh>
@@ -131,11 +152,18 @@
 <v t="vicent.20220726085534.1"><vh>Get Started</vh></v>
 <v t="vicent.20220725083209.1"><vh>Basic Syntax</vh></v>
 <v t="vicent.20220725085429.1"><vh>Java primitives</vh></v>
+<v t="vicent.20221030101009.1"><vh>Autoboxing</vh></v>
 <v t="vicent.20221027175316.1"><vh>Operators</vh></v>
+<v t="vicent.20221027232108.1"><vh>The for loop</vh></v>
 <v t="vicent.20221027173647.1"><vh>Exceptions handling</vh></v>
 <v t="vicent.20221028173010.1"><vh>Interfaces</vh></v>
 <v t="vicent.20221028175723.1"><vh>Functional Interfaces</vh></v>
-<v t="vicent.20221027232108.1"><vh>The for loop</vh></v>
+<v t="vicent.20221030173701.1"><vh>Generics</vh></v>
+<v t="vicent.20221101080718.1"><vh>Collections</vh></v>
+<v t="vicent.20220827084532.1"><vh>Streams</vh>
+<v t="vicent.20220828080628.1"><vh>Pipeline</vh></v>
+</v>
+<v t="vicent.20220827121231.1"><vh>Collectors</vh></v>
 <v t="vicent.20220831101942.1"><vh>String - bytes conversion</vh></v>
 <v t="vicent.20220726084801.1"><vh>Java Inizialization</vh></v>
 <v t="vicent.20220806092453.1"><vh>Overloading vs Overrriding</vh></v>
@@ -143,10 +171,6 @@
 <v t="vicent.20220806180544.1"><vh>Modificador final</vh></v>
 <v t="vicent.20220806180756.1"><vh>Enums</vh></v>
 <v t="vicent.20221027172449.1"><vh>Scanner</vh></v>
-<v t="vicent.20220827084532.1"><vh>Streams</vh>
-<v t="vicent.20220828080628.1"><vh>Pipeline</vh></v>
-</v>
-<v t="vicent.20220827121231.1"><vh>Collectors</vh></v>
 <v t="vicent.20220830100950.1"><vh>Java IO: concepts</vh>
 <v t="vicent.20220830111952.1"><vh>Buffering</vh></v>
 </v>
@@ -294,7 +318,7 @@ if aList is None:
 #    path = g.os_path_finalize_join(g.app.loadDir,'..','doc','html')
 #    os.chdir(path)
 #    if len(aList) &gt; 1: g.execute_shell_commands('make clean',trace=trace)
-    path = '.'
+    path = '/home/vicent/Documentos/Treball/Opo_programador'
     # It's  crucial to change to the directory where the source file lives
     os.chdir(path)
     g.es('Current directory: ' + os.getcwd())
@@ -397,8 +421,7 @@ Algunos de los principales parámetros (y su sintaxis) usados en los mensajes HT
   Content-Language: es
   ~~~
 </t>
-<t tx="vicent.20220331172223.1">@path .
-</t>
+<t tx="vicent.20220331172223.1"></t>
 <t tx="vicent.20220331172223.3">@language rest
 @tabwidth -4
 
@@ -431,7 +454,9 @@ Algunos de los principales parámetros (y su sintaxis) usados en los mensajes HT
    31ControlDeVersiones/Tema 31 Control de versiones Subversion GIT
    32GestionProyectosMaven/Tema 32 Gestion integrada del desarrollo Maven
 </t>
-<t tx="vicent.20220401181802.1">    ✔ 1. Sistemas operativos. Windows
+<t tx="vicent.20220401181802.1">    @path .
+
+    ✔ 1. Sistemas operativos. Windows
     ✔ 2. Sistemas operativos. Linux
     ✔ 3. Sistemas operativos para dispositivos móviles.Android.iOS
     ✔ 4. Sistemas de gestión de bases de datos. Bases de datos relacionales
@@ -2590,12 +2615,11 @@ El resultado es
 @language md
 @others
 </t>
-<t tx="vicent.20220528085656.1"># Tema 12 Oracle. SQl. PL/SQL
+<t tx="vicent.20220528085656.1">===========================
+Tema 12 Oracle. SQl. PL/SQL
+===========================
 
-@path ./12PL-SQL
-@language md
-@others
-</t>
+@path ./12PL-SQL</t>
 <t tx="vicent.20220528085742.1"># Tema 13 OOP: Clases y Objetos 
 
 @path ./13OOP_Clases_y_Objetos
@@ -5238,7 +5262,8 @@ A table will be in 3NF if it is in 2NF and no transitive dependency exists. It m
 **only** primary keys.
 
 
-[^1]: But may depend also on other fields that are not primary keys.</t>
+[^1]: But may depend also on other fields that are not primary keys.
+</t>
 <t tx="vicent.20221010124625.1">Dr Edgar F. Codd, after his extensive research on the Relational Model of database systems, came up with twelve rules of his own, which 
 according to him, a database must obey in order to be regarded as a true relational database.
 
@@ -5301,13 +5326,12 @@ Regarding rule 5, the SQL statements are divided into three categories:
 - Data definition language (DDL): create, modify and destroy *DDBB objects* like schemas, tables, indexes and views. CREATE, ALTER, DROP
 - Data control language (DCL): authorize users to access data and DDBB objects. GRANT, REVOKE
 </t>
-<t tx="vicent.20221011164300.1">[Tutorial](https://www.oracletutorial.com/plsql-tutorial/what-is-plsql/)
+<t tx="vicent.20221011164300.1">`Tutorial &lt;https://www.oracletutorial.com/plsql-tutorial/what-is-plsql/&gt;`_
 
-[Apex workspace gratuito](https://apex.oracle.com)
+`Apex workspace gratuito &lt;https://apex.oracle.com&gt;`_
+
 </t>
-<t tx="vicent.20221011192909.1">## Datatypes
-
-PL/SQL has two kinds of data types: scalar and composite.
+<t tx="vicent.20221011192909.1">PL/SQL has two kinds of data types: scalar and composite.
 
 PL/SQL divides the scalar data types into four families:
 
@@ -5322,12 +5346,14 @@ Note that PL/SQL scalar data types include SQL data types and its own data type 
 
 - Boolean: three valued, TRUE, FALSE, NULL
 - PLS_INTEGER: uses hardware arithmetic. {NULL, natural numbers}
+
   - NATURAL: {NULL, enteros no negativos}
   - NATURALN: {enteros no negativos}
   - POSITIVE: {NULL, enteros positivos}
   - POSITIVEN: {enteros positivos}
   - SIGNTYPE: tree valued, {-1, 0, +1}
   - SIMPLE_INTEGER: {natural numbers}
+  
 - Character data types: CHAR, VARCHAR2, LONG, RAW, LONG RAW, ROWID, and UROWID
 - Datetime data types: DATE, TIMESTAMP, TIMESTAMP WITH TIME ZONE, TIMESTAMP WITH LOCAL TIME ZONE, INTERVAL YEAR TO MONTH, 
   and INTERVAL DAY TO SECOND
@@ -5828,6 +5854,9 @@ In Java all operators have left-to-right associativity except:
 - unary operators
 - assignment operators: =, +=, -=, *=, /=, %=
 
+From the `a` value point of view `++a` and `a++` are the same than `a += 1`. The same happens with `--a` and`a--` that are the same than
+`a -= 1`. That is why their associativity is right to left.
+
 ### Arithmetic operators
 
 We can perform all standard arithmetic operations on ints. Just be aware that decimal values will be chopped off when performing these 
@@ -6099,6 +6128,540 @@ to
 Function&lt;String, Integer&gt; func = s -&gt; s.length()
 System.out.println(func.apply("hola"));
 ~~~
+</t>
+<t tx="vicent.20221030101009.1">## Autoboxing
+
+**Autoboxing** (*automatic* boxing/wrapping) is the automatic conversion that the Java compiler makes between the primitive types and their corresponding object 
+wrapper classes. For example, converting an `int` to an `Integer`, a `double` to a `Double`, and so on. If the conversion goes the other way, this is called 
+**unboxing**.
+
+*Autoboxing is applied automatically by the compiler at runtime* when a primitive value is:
+
+- Passed as a parameter to a method that expects an object of the corresponding wrapper class.
+- Assigned to a variable of the corresponding wrapper class.
+
+
+For instance:
+
+~~~ Java
+Character c = 'A';
+Integer i = 3;
+
+List&lt;Integer&gt; li = new ArrayList&lt;&gt;();
+for (int i = 1; i &lt; 50; i += 2)
+  li.add(i);
+~~~
+
+Although you add `int` values to the list instead of `Integer` values the code works because the compiler at runtime applies autoboxing and converts the code into
+
+~~~ Java
+List&lt;Integer&gt; li = new ArrayList&lt;&gt;();
+for (int i = 1; i &lt; 50; i += 2)
+  li.add(Integer.valueOf(i));
+~~~
+
+Converting an object of a wrapper type (Integer) to its corresponding primitive (int) value is called unboxing. The Java compiler applies unboxing when an object of a 
+wrapper class is:
+
+- Passed as a parameter to a method that expects a value of the corresponding primitive type.
+- Assigned to a variable of the corresponding primitive type.
+
+~~~ Java
+public static int sumEven(List&lt;Integer&gt; li) {
+  int sum = 0;
+  for (Integer i: li)
+    if (i % 2 == 0)
+        sum += i;
+    return sum;
+}
+~~~
+
+The remainder (%) and unary plus (+=) operators do not apply to Integer objects. The compiler does not generate an error because it invokes the intValue method to 
+convert an Integer to an int at runtime:
+
+~~~ Java
+public static int sumEven(List&lt;Integer&gt; li) {
+  int sum = 0;
+  for (Integer i: li)
+    if (i.intValue() % 2 == 0)
+        sum += i.intValue();
+    return sum;
+~~~
+</t>
+<t tx="vicent.20221030173701.1">## Generics
+
+The problem:
+
+~~~ java
+List list = new LinkedList();
+list.add(new Integer(1)); 
+Integer i = list.iterator().next();
+~~~
+
+This code will not compile because nobody enforces in anyway that all the elements in the list are `Integer`s. So the compiler doesn't know what type is correct and
+it fails at the last line.
+
+It would be much easier if programmers could express their intention to use specific types and the compiler ensured the correctness of such types. This is the core 
+idea behind generics. *With generics the compiler can enforce the type at compile time*.
+
+### Generic variables
+
+~~~ java
+List&lt;Integer&gt; list = new LinkedList&lt;&gt;();
+~~~
+
+By adding the diamond operator &lt;&gt; containing the type, we narrow the specialization of this list to only Integer type. In other words, we specify the type held inside 
+the list. The compiler can enforce the type at compile time.
+
+In small programs, this might seem like a trivial addition. But in larger programs, this can add significant robustness and makes the program easier to read.
+
+### Generic methods
+
+We write generic methods with a single method declaration, and we can call them with arguments of different types. The compiler will ensure the correctness of 
+whichever type we use.
+
+These are some properties of generic methods:
+
+- Generic methods have a mandatory type parameter (the diamond operator enclosing the type) before the return type of the method declaration even if the method is
+  returning `void`.
+- Type parameters can be bounded.
+- Generic methods can have different type parameters separated by commas in the method signature.
+- Method body for a generic method is just like a normal method.
+
+~~~ java
+public &lt;T&gt; List&lt;T&gt; fromArrayToList(T[] a) {   
+    return Arrays.stream(a).collect(Collectors.toList());
+}
+~~~
+
+Here is how we would modify the above method to deal with type T and type G:
+
+~~~ java
+public static &lt;T, G&gt; List&lt;G&gt; fromArrayToList(T[] a, Function&lt;T, G&gt; mapperFunction) {
+    return Arrays.stream(a)
+      .map(mapperFunction)
+      .collect(Collectors.toList());
+}
+~~~
+
+In Java Collections, we use T for type, K for key and V for value.
+
+Remember that type parameters can be **bounded**. Bounded means “restricted,” and we can restrict the types that a method accepts.
+
+~~~ java
+public static &lt;T extends Number, G super String&gt; List&lt;G&gt; fromArrayToList(T[] a, Function&lt;T, G&gt; mapperFunction) {
+    return Arrays.stream(a)
+      .map(mapperFunction)
+      .collect(Collectors.toList());
+}
+~~~
+
+- T extends `Number`: `Number` is the upper bound type and T extends it i.e. `Number` is atop of the hierarchy of allowed types
+- G super `String`: `String` is the lower bound type and G is an ancestor type i.e. `String` is at the bottom of the hierarchy of allowed types
+
+Beware that `Object` is the supertype of all Java classes but it does *not* mean that a collection of Object is the supertype of *any* collection. 
+For instance `Object` is the supertype of `String` but `List&lt;Object&gt;` is *not* the supertype of `List&lt;String&gt;`. ***The same rule applies to any collection of a type and 
+its subtypes***. Consider this example:
+
+~~~ java
+public static void paintAllBuildings(List&lt;Building&gt; buildings) {
+    buildings.forEach(Building::paint);
+}
+~~~
+
+If we imagine a subtype of `Building`, such as a `House`, we can't use this method with a list of `House`, even though `House` is a subtype of `Building`.
+
+If we need to use this method with type `Building` and all its subtypes, the **bounded wildcard** can do the magic:
+
+~~~ java
+public static void paintAllBuildings(List&lt;? extends Building&gt; buildings) {
+    ...
+}
+~~~
+
+Now this method will work with type `Building` and all its subtypes. This is called an upper-bounded wildcard, where type `Building` is the upper bound.
+
+Generics are a compile-time feature, meaning the type parameter is erased and all generic types are implemented as type Object. Therefore, type parameters must be 
+convertible to Object. Since primitive types don't extend Object, we can't use them as type parameters.
+
+However, Java provides boxed types for primitives, along with autoboxing and unboxing to unwrap them.
+</t>
+<t tx="vicent.20221101080718.1">## Collections
+
+Arrays are pretty simple data structures. A more complex type of data structure are collections, which, compared to arrays, have a dynamic size.
+Collections make use of Generics and the diamond operator.
+
+The most important Collections are : ArrayList, LinkedList, HashMap and HashSet.
+
+### ArrayList
+
+List represents an ordered sequence of values where some value may occur more than one time.
+
+ArrayList is one of the List implementations built atop an array, which is able to dynamically grow and shrink as you add/remove elements. Elements could be easily 
+accessed by their indexes starting from zero.
+
+Creating an `ArrayList`:
+
+~~~ java
+List&lt;String&gt; list = new ArrayList&lt;&gt;();
+assertTrue(list.isEmpty());
+
+List&lt;String&gt; list = new ArrayList&lt;&gt;(20);
+
+List&lt;Long&gt; list = new ArrayList&lt;&gt;(Arrays.asList(1L, 2L, 3L));
+
+Collection&lt;Integer&gt; numbers 
+  = IntStream.range(0, 10).boxed().collect(Collectors.toSet());
+
+List&lt;Integer&gt; list = new ArrayList&lt;&gt;(numbers);
+assertEquals(10, list.size());
+assertTrue(numbers.containsAll(list));
+~~~
+
+Adding elements:
+
+~~~ java
+List&lt;Long&gt; list = new ArrayList&lt;&gt;();
+
+list.add(1L);
+list.add(2L);
+list.add(1, 3L);
+
+assertThat(Arrays.asList(1L, 3L, 2L), equalTo(list));
+
+List&lt;Long&gt; list = new ArrayList&lt;&gt;(Arrays.asList(1L, 2L, 3L));
+LongStream.range(4, 10).boxed()
+  .collect(collectingAndThen(Collectors.toCollection(ArrayList::new), ys -&gt; list.addAll(0, ys)));
+assertThat(Arrays.asList(4L, 5L, 6L, 7L, 8L, 9L, 1L, 2L, 3L), equalTo(list));
+~~~
+
+There are two types of iterators available: `Iterator` (traverses the list in one direction) and `ListIterator` (can traverse the list in both directions).
+
+In a `ListIterator(p)` starting at the specified position in the list, the specified index indicates the first element that would be returned by an initial call to 
+`next`. An initial call to `previous` would return the element with the specified index minus one. So the iteration direction depends on `next` or `previous` being
+called.
+
+It is also important to understand that a `ListIterator` has no current element; its cursor position always lies between the element that would be returned by a call 
+to `previous()` and the element that would be returned by a call to `next()`. An iterator for a list of length n has n+1 possible cursor positions, as illustrated by 
+the carets (^) below:
+
+                          Element(0)   Element(1)   Element(2)   ... Element(n-1)
+    cursor positions:  ^            ^            ^            ^                  ^
+
+~~~ java
+List&lt;Integer&gt; list = new ArrayList&lt;&gt;(
+  IntStream.range(0, 10).boxed().collect(toCollection(ArrayList::new))
+);
+ListIterator&lt;Integer&gt; it = list.listIterator(list.size());  // this iterator has 11 possible cursor positions
+List&lt;Integer&gt; result = new ArrayList&lt;&gt;(list.size());
+while (it.hasPrevious()) {
+    result.add(it.previous());
+}
+
+Collections.reverse(list);
+assertThat(result, equalTo(list));
+~~~
+
+Searching:
+
+~~~ java
+assertEquals(10, stringsToSearch.indexOf("a"));
+assertEquals(26, stringsToSearch.lastIndexOf("a"));
+
+Set&lt;String&gt; matchingStrings = new HashSet&lt;&gt;(Arrays.asList("a", "c", "9"));
+
+List&lt;String&gt; result = stringsToSearch
+  .stream()
+  .filter(matchingStrings::contains)
+  .collect(toCollection(ArrayList::new));
+
+assertEquals(6, result.size());
+
+Iterator&lt;String&gt; it = stringsToSearch.iterator();
+Set&lt;String&gt; matchingStrings = new HashSet&lt;&gt;(Arrays.asList("a", "c", "9"));
+
+List&lt;String&gt; result = new ArrayList&lt;&gt;();
+while (it.hasNext()) {
+    String s = it.next();
+    if (matchingStrings.contains(s)) {
+        result.add(s);
+    }
+}
+
+List&lt;String&gt; copy = new ArrayList&lt;&gt;(stringsToSearch);
+Collections.sort(copy);
+int index = Collections.binarySearch(copy, "f");
+assertThat(index, not(equalTo(-1)));
+~~~
+</t>
+<t tx="vicent.20221103183313.1">Una subconsulta es una consulta que aparece dentro de otra consulta.
+
+La subconsultas:
+
+- siempre deben escribirse entre paréntesis
+- pueden aparecer en casi cualquier parte de la consulta principal (en las cláusulas SELECT, FROM, WHERE y HAVING)
+- cuando aparecen en el WHERE o el HAVING la restricción solo se cumple si el resultado de su predicado es verdadero
+
+Atendiendo al número de filas y columnas que devuelven se pueden clasificar en:
+
+- devuelven una celda
+- devuelven una tupla con N columnas (N &lt;= número de columnas de la tabla)
+- devuelven una tabla MxN (N &lt;= número de columnas de la tabla)
+
+Las subconsultas aparecen en predicados de dos tipos::
+
+  expr operador (subconsulta)
+  (expr1, expr2,... exprN) operador (subconsulta)
+
+Las reglas que determinan si un predicado es verdadero o falso son sencillas, pero hay que prestar atención a los
+valores especiales NULL y () (o sea, subconsulta que no devuelve nada).
+::
+
+  NULL operador_comparacion (subconsulta) *siempre* evalúa a NULL
+  (expr1, expr2, ..., exprN) =,&lt;&gt; (subconsulta ) si la subconsulta contiene algún valor NULL entonces el predicado puede tener cualquiera de los valores posibles, depende del caso
+
+El punto más delicado son las subconsultas que no devuelven resultado. En ese caso el resultado depende del tipo de operador. *Un operador 
+de comparación siempre devuelve NULL, pero un operador especial siempre devuelve TRUE o FALSE*::
+
+  expr operador_comparación () -&gt; NULL
+  (expr1, expr2, ..., exprN) =,&lt;&gt; () -&gt; NULL 
+  expr IN () -&gt; FALSE
+  (expr1, expr2, ..., exprN) IN () -&gt; FALSE 
+  expr ANY () -&gt; FALSE
+  (expr1, expr2, ..., exprN) ANY () -&gt; FALSE 
+  expr ALL () -&gt; TRUE
+  (expr1, expr2, ..., exprN) ALL () -&gt; TRUE 
+  EXISTS () -&gt; FALSE
+</t>
+<t tx="vicent.20221103191236.1">Es el caso más sencillo. La subconsulta devuelve un escalar que se compara con una expresión escalar::
+
+  expr operador (valor)
+  NULL operador (valor) -&gt; NULL
+  expr operador (NULL) -&gt; NULL
+  expr operador () -&gt; NULL
+
+  operador: =, &lt;&gt;, &lt;, &gt;, &lt;=, &gt;=
+
+</t>
+<t tx="vicent.20221103200224.1">Cuando se comparan tuplas los únicos operadores que se pueden aplicar son =,&lt;&gt;::
+
+  (expr1, expr2, ..., exprN) operador (tupla de N elementos)
+  operador: =, &lt;&gt;
+
+O sea, comparar dos tuplas consiste en decir si son iguales o no. Todos los casos son fáciles de evaluar aplicando la lógica::
+
+  (6, 1) = (6, 1) -&gt; true
+  (6, 1) &lt;&gt; (6, 1) -&gt; false
+  (6, 1) = (6, 2) -&gt; false
+  (6, 1) &lt;&gt; (6, 2) -&gt; true
+  (6, 1) = (6, NULL) -&gt; NULL
+  (6, 1) &lt;&gt; (6, NULL) -&gt; NULL
+  (6, 1) = (7, NULL) -&gt; false porque 6 != 7 siempre con independencia de como se comparen los otros valores de la tupla
+  (6, 1) &lt;&gt; (7, NULL) -&gt; true
+  El resto de casos siempre es NULL (como en las subconsultas escalares):
+  (6, 1) = () -&gt; NULL
+  (6, 1) &lt;&gt; () -&gt; NULL
+</t>
+<t tx="vicent.20221103223138.1">Estas son las subconsultas más complejas. Utilizan los operadores especiales IN, ANY, ALL y EXISTS.
+
+Todos los operadores (menos EXISTS) admiten dos formas de funcionar: comparación de valores y comparación de filas.
+En la comparación de valores se combinan los operadores de comparación con los operadores ANY y ALL (pero no con IN), por ejemplo::
+  
+  expr &gt;= ANY (subconsulta)
+  expr IN (subconsulta)
+  EXISTS (subconsulta)
+
+En la comparación de filas se pueden usar los operadores =, &lt;&gt; con ANY y ALL (pero no con IN ni EXISTS)::
+  
+  (expr1, expr2, ..., exprN) &lt;&gt; ALL (subconsulta)
+  (expr1, expr2, ..., exprN) NOT IN (subconsulta)
+  EXISTS (subconsulta)
+
+La fila a la izquierda de los operadores se compara con cada fila devuelta por la subconsulta (ver :ref:`subconsultas-tuplas-label`) para ver si son iguales.
+
+Operador IN::
+
+  expr IN (columna) -&gt; TRUE si alguno de los valores de la columna es igual a expr
+  (expr1, expr2, ..., exprN) IN (subconsulta) -&gt; TRUE si la subconsulta devuelve alguna fila igual a (expr1, expr2, ..., exprN).
+
+Si la subconsulta devuelve algún valor NULL puede que el predicado evalúe a NULL y la restricción del WHERE o HAVING no se cumpla. Si queremos evitar este comportamiento
+podemos aplicar una restricción IS NOT NULL a la subconsulta, por ejemplo::
+
+  select v.codven, v.nombre
+  from
+  vendedores v
+  where v.codven not in ( select f.codven
+  from
+  facturas f
+  where f.codven is not null ) ;
+
+Operador ANY::
+
+  expr ANY (columna) -&gt; TRUE si alguno de los valores de la columna es expr
+  (expr1, expr2, ..., exprN) ANY (subconsulta) -&gt; TRUE si la subconsulta devuelve alguna fila igual a (expr1, expr2, ..., exprN).
+
+Operador ALL::
+
+  expr ALL (columna) -&gt; TRUE si todos los valores de la columna son iguales a expr
+  (expr1, expr2, ..., exprN) ALL (subconsulta) -&gt; TRUE si todas las filas devueltas por la subconsulta son iguales a (expr1, expr2, ..., exprN).
+
+Operador EXISTS::
+
+  EXISTS (subconsulta) -&gt; TRUE si la subconsulta devuelve un resultado
+
+EXISTS se suele utilizar en subconsultas correlacionadas. Las referencias externas actuaran como constantes durante la evaluación de la subconsulta.
+EXISTS no necesita terminar de ejecutar la subconsulta. En cuanto se recupere una fila termina la ejecución y el predicado evalúa  a TRUE. Por eso, para acelerar
+la ejecución de la subconsulta suele escribirse una constante en la cláusula SELECT::
+
+  select p.codpue, p.nombre
+  from
+  pueblos p
+  where exists( select '*'
+  from
+  clientes c
+  where c.codpue = p.codpue ) ;
+  </t>
+<t tx="vicent.20221103230534.1">.. _subconsultas-tuplas-label:</t>
+<t tx="vicent.20221104142311.1">En este caso no se utilizan para construir predicados (al contrario que en WHERE y HAVING) sino para extraer información de otras tablas. El resultado de la 
+subconsulta se ve como una tabla más de la que extraer información y usar en la consulta principal.
+
+En los SGBDR que no permiten utilizar funciones de columna  sobre funciones de grupo, como PostgreSQL, estas subconsultas son muy útiles::
+
+  SELECT max(count(*))
+  FROM facturas f 
+  GROUP BY f.codcli 
+  ;
+
+  SELECT max(t.nf)
+  FROM (SELECT count(*) nf
+  FROM facturas f
+  GROUP BY f.codcli) t
+  ;
+
+</t>
+<t tx="vicent.20221104180108.1">La sintaxis de la creación de tablas es un poco farragosa::
+
+  create table nombre_tabla (
+  definic_campo1 [, definic_campo2 [, ..., definic_campoN ]...]]
+  [, restriccion1 [, restriccion2, ... [ , restriccionM ] ...]]
+  );
+
+Vemos que tiene que haber al menos un campo y que todas las restricciones son opcionales.
+
+Los campos se definen obligatoriamente con nombre y tipo de datos. El resto de parámetros son opcionales::
+
+  nom_campo tipo [(dim [,tam])] [null | not null] [default valor]
+
+  municipio varchar(20) NOT NULL default 'Teruel'
+
+La sintaxis para las restricciones es::
+
+  constraint nombre tipo parametros
+
+donde tipo puede ser PRIMARY KEY, UNIQUE, FOREIGN KEY y CHECK::
+
+  primary key (campo1[, campo2, ... ] )
+
+  CONSTRAINT idx_16388_primary PRIMARY KEY (codart)
+
+  unique (campo1[, campo2, ... ] )
+
+  foreign key (campo1[, campo2, ... ] )
+  references tabla_referida [(campo1[, campo2, ... ] )]
+  on delete [ no action|set null|set default|cascade|restrict
+  ]
+  on update [ no action|set null|set default|cascade|restrict
+  ]
+
+  CONSTRAINT clientes_fk FOREIGN KEY (codpue) REFERENCES facturacion_stock.pueblos(codpue) ON DELETE CASCADE ON UPDATE CASCADE
+
+  check (condicion)
+
+La cláusula ON DELETE define lo que pasa en la tabla actual cuando en la tabla referenciada se intenta borrar una fila cuya clave primaria es la clave
+foránea de la tabla actual. Las opciones son:
+
+- no action: no hace nada en la tabla actual y borra la fila en la tabla referenciada
+- set null: en la tabla actual pone la clave ajena a NULL en todas las filas en que aparezca y después borra la fila en la tabla referenciada
+- set default: en la tabla actual pone la clave ajena a su valor por defecto en todas las filas en que aparezca y después borra la fila en la tabla referenciada
+- cascade: en la tabla actual se borran todas las filas en que aparezca la clave ajena y después borra la fila en la tabla referenciada
+- restrict: no permite borrar la fila en la tabla referenciada
+
+La cláusula ON UPDATE define lo que pasa en la tabla actual cuando en la tabla referenciada se intenta modificar una clave primaria que es la clave
+foránea de la tabla actual. Las opciones son las mismas:
+
+- cascade: en la tabla actual se actualiza en todas las filas en que aparezca la clave ajena al nuevo valor que tendrá la clave primaria y después se modifica la clave primaria en la tabla referenciada
+- restrict: no permite modificar la clave primaria en la tabla referenciada
+</t>
+<t tx="vicent.20221104190445.1">::
+
+  DROP TABLE nombre_tabla;
+</t>
+<t tx="vicent.20221104190527.1">::
+
+  INSERT INTO nombre_tabla (campo1, campo2, ..., campoN)
+  VALUES (valor1, valor2, ..., valorN)
+  ;
+
+Si no se especifican los campos (poco recomendable!), los valores deben tener la posición y tipo de datos correctos. Si se introducen menos valores que campos
+hay en la tabla a los valores que falta se les asigna el valor por defecto o NULL.
+
+Si los datos que se desea insertar se pueden obtener de un SELECT se puede usar la siguiente sintaxis::
+
+  insert into pedir_articulos ( fecha, codart, stock )
+  select sysdate, codart, stock
+  from articulos
+  where ( stock &lt; 50 ) and ( precio &lt; 1.0 )
+  ;
+
+</t>
+<t tx="vicent.20221104191726.1">Cuando no se desea insertar filas completas sino modificar datos existentes::
+
+  update nombre_tabla set columna1 = expr1 [, columna2 = expr2,
+  ...]
+  [ where condicion ] ;
+
+Por ejemplo::
+
+  update articulos set stock_min = stock / 2 ;
+</t>
+<t tx="vicent.20221104192242.1">::
+
+  delete from nombre_tabla [ where condicion ] ;
+
+Si no ponemos ninguna condición se borraran todos los datos de la tabla (pero no la tabla).
+
+Ejemplo::
+
+  delete from articulos
+  where stock = 0 ;
+</t>
+<t tx="vicent.20221104192623.1"></t>
+<t tx="vicent.20221104192649.1"></t>
+<t tx="vicent.20221104200439.1"></t>
+<t tx="vicent.20221104200449.1">Podemos pensar en un índice como en una versión resumida de la tabla a la que va asociado. Esa versión resumida contiene solo las columnas
+que aparecen en la definición del índice y una referencia a la fila correspondiente. Las columnas se denominan **claves de búsqueda**.
+
+La característica más importante de los índices, y la que permite optimizar el tiempo de acceso, es que sus filas están ordenadas, lo que 
+permite utilizar algoritmos de búsqueda muy eficientes.
+
+La sintaxis para su creación es::
+
+  create [ unique ] [ clustered ] index nombre_indice
+  on nombre_tabla ( column-name [ asc | desc ], ...)
+
+A Unique Index is placed on a column to guarantee there will be no duplicate values within that column. Each value in that column is guaranteed to be unique. 
+
+As I said earlier, this type of index is a great way to enforce uniqueness on a non Primary Key column.
+
+A clustered index is a B-Tree data structure that defines the physical storage order of data in a table. The data is ordered according
+to something called the clustered index key. The data is physically stored in this order on the hard disk.
+
+</t>
+<t tx="vicent.20221104214417.1"></t>
+<t tx="vicent.20221104214430.1">::
+
+  CREATE VIEW nombre_vista AS select_query
+
 </t>
 </tnodes>
 </leo_file>

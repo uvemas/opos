@@ -50,7 +50,7 @@ templates_path = ['_templates']
 source_suffix = {
   '.rst': 'rest',
   '.md': 'markdown',
-  '.html.txt': 'rest'
+  '.rst.txt': 'rest'
   }
 
 # The master toctree document.

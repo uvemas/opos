@@ -1,0 +1,344 @@
+.. rst3: filename: Tema 12 SQL y PL-SQL.rst
+
+===========================
+Tema 12 Oracle. SQl. PL/SQL
+===========================
+
+@path ./12PL-SQL
+
+Introducción
++++++++++++++
+
+`Tutorial <https://www.oracletutorial.com/plsql-tutorial/what-is-plsql/>`_
+
+`Apex workspace gratuito <https://apex.oracle.com>`_
+
+Consulta de datos
++++++++++++++++++
+
+Subqueries
+**********
+
+Una subconsulta es una consulta que aparece dentro de otra consulta.
+
+La subconsultas:
+
+- siempre deben escribirse entre paréntesis
+- pueden aparecer en casi cualquier parte de la consulta principal (en las cláusulas SELECT, FROM, WHERE y HAVING)
+- cuando aparecen en el WHERE o el HAVING la restricción solo se cumple si el resultado de su predicado es verdadero
+
+Atendiendo al número de filas y columnas que devuelven se pueden clasificar en:
+
+- devuelven una celda
+- devuelven una tupla con N columnas (N <= número de columnas de la tabla)
+- devuelven una tabla MxN (N <= número de columnas de la tabla)
+
+Las subconsultas aparecen en predicados de dos tipos::
+
+  expr operador (subconsulta)
+  (expr1, expr2,... exprN) operador (subconsulta)
+
+Las reglas que determinan si un predicado es verdadero o falso son sencillas, pero hay que prestar atención a los
+valores especiales NULL y () (o sea, subconsulta que no devuelve nada).
+::
+
+  NULL operador_comparacion (subconsulta) *siempre* evalúa a NULL
+  (expr1, expr2, ..., exprN) =,<> (subconsulta ) si la subconsulta contiene algún valor NULL entonces el predicado puede tener cualquiera de los valores posibles, depende del caso
+
+El punto más delicado son las subconsultas que no devuelven resultado. En ese caso el resultado depende del tipo de operador. *Un operador 
+de comparación siempre devuelve NULL, pero un operador especial siempre devuelve TRUE o FALSE*::
+
+  expr operador_comparación () -> NULL
+  (expr1, expr2, ..., exprN) =,<> () -> NULL 
+  expr IN () -> FALSE
+  (expr1, expr2, ..., exprN) IN () -> FALSE 
+  expr ANY () -> FALSE
+  (expr1, expr2, ..., exprN) ANY () -> FALSE 
+  expr ALL () -> TRUE
+  (expr1, expr2, ..., exprN) ALL () -> TRUE 
+  EXISTS () -> FALSE
+
+Subconsultas escalares
+^^^^^^^^^^^^^^^^^^^^^^
+
+Es el caso más sencillo. La subconsulta devuelve un escalar que se compara con una expresión escalar::
+
+  expr operador (valor)
+  NULL operador (valor) -> NULL
+  expr operador (NULL) -> NULL
+  expr operador () -> NULL
+
+  operador: =, <>, <, >, <=, >=
+
+.. _subconsultas-tuplas-label:
+
+Comparación de tuplas
+^^^^^^^^^^^^^^^^^^^^^^
+
+Cuando se comparan tuplas los únicos operadores que se pueden aplicar son =,<>::
+
+  (expr1, expr2, ..., exprN) operador (tupla de N elementos)
+  operador: =, <>
+
+O sea, comparar dos tuplas consiste en decir si son iguales o no. Todos los casos son fáciles de evaluar aplicando la lógica::
+
+  (6, 1) = (6, 1) -> true
+  (6, 1) <> (6, 1) -> false
+  (6, 1) = (6, 2) -> false
+  (6, 1) <> (6, 2) -> true
+  (6, 1) = (6, NULL) -> NULL
+  (6, 1) <> (6, NULL) -> NULL
+  (6, 1) = (7, NULL) -> false porque 6 != 7 siempre con independencia de como se comparen los otros valores de la tupla
+  (6, 1) <> (7, NULL) -> true
+  El resto de casos siempre es NULL (como en las subconsultas escalares):
+  (6, 1) = () -> NULL
+  (6, 1) <> () -> NULL
+
+Subconsultas que devuelven un conjunto de tuplas
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Estas son las subconsultas más complejas. Utilizan los operadores especiales IN, ANY, ALL y EXISTS.
+
+Todos los operadores (menos EXISTS) admiten dos formas de funcionar: comparación de valores y comparación de filas.
+En la comparación de valores se combinan los operadores de comparación con los operadores ANY y ALL (pero no con IN), por ejemplo::
+  
+  expr >= ANY (subconsulta)
+  expr IN (subconsulta)
+  EXISTS (subconsulta)
+
+En la comparación de filas se pueden usar los operadores =, <> con ANY y ALL (pero no con IN ni EXISTS)::
+  
+  (expr1, expr2, ..., exprN) <> ALL (subconsulta)
+  (expr1, expr2, ..., exprN) NOT IN (subconsulta)
+  EXISTS (subconsulta)
+
+La fila a la izquierda de los operadores se compara con cada fila devuelta por la subconsulta (ver :ref:`subconsultas-tuplas-label`) para ver si son iguales.
+
+Operador IN::
+
+  expr IN (columna) -> TRUE si alguno de los valores de la columna es igual a expr
+  (expr1, expr2, ..., exprN) IN (subconsulta) -> TRUE si la subconsulta devuelve alguna fila igual a (expr1, expr2, ..., exprN).
+
+Si la subconsulta devuelve algún valor NULL puede que el predicado evalúe a NULL y la restricción del WHERE o HAVING no se cumpla. Si queremos evitar este comportamiento
+podemos aplicar una restricción IS NOT NULL a la subconsulta, por ejemplo::
+
+  select v.codven, v.nombre
+  from
+  vendedores v
+  where v.codven not in ( select f.codven
+  from
+  facturas f
+  where f.codven is not null ) ;
+
+Operador ANY::
+
+  expr ANY (columna) -> TRUE si alguno de los valores de la columna es expr
+  (expr1, expr2, ..., exprN) ANY (subconsulta) -> TRUE si la subconsulta devuelve alguna fila igual a (expr1, expr2, ..., exprN).
+
+Operador ALL::
+
+  expr ALL (columna) -> TRUE si todos los valores de la columna son iguales a expr
+  (expr1, expr2, ..., exprN) ALL (subconsulta) -> TRUE si todas las filas devueltas por la subconsulta son iguales a (expr1, expr2, ..., exprN).
+
+Operador EXISTS::
+
+  EXISTS (subconsulta) -> TRUE si la subconsulta devuelve un resultado
+
+EXISTS se suele utilizar en subconsultas correlacionadas. Las referencias externas actuaran como constantes durante la evaluación de la subconsulta.
+EXISTS no necesita terminar de ejecutar la subconsulta. En cuanto se recupere una fila termina la ejecución y el predicado evalúa  a TRUE. Por eso, para acelerar
+la ejecución de la subconsulta suele escribirse una constante en la cláusula SELECT::
+
+  select p.codpue, p.nombre
+  from
+  pueblos p
+  where exists( select '*'
+  from
+  clientes c
+  where c.codpue = p.codpue ) ;
+
+Subconsultas en la cláusula FROM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+En este caso no se utilizan para construir predicados (al contrario que en WHERE y HAVING) sino para extraer información de otras tablas. El resultado de la 
+subconsulta se ve como una tabla más de la que extraer información y usar en la consulta principal.
+
+En los SGBDR que no permiten utilizar funciones de columna  sobre funciones de grupo, como PostgreSQL, estas subconsultas son muy útiles::
+
+  SELECT max(count(*))
+  FROM facturas f 
+  GROUP BY f.codcli 
+  ;
+
+  SELECT max(t.nf)
+  FROM (SELECT count(*) nf
+  FROM facturas f
+  GROUP BY f.codcli) t
+  ;
+
+Creación, modificación y borrado de datos
++++++++++++++++++++++++++++++++++++++++++++
+
+Creación de tablas
+*******************
+
+La sintaxis de la creación de tablas es un poco farragosa::
+
+  create table nombre_tabla (
+  definic_campo1 [, definic_campo2 [, ..., definic_campoN ]...]]
+  [, restriccion1 [, restriccion2, ... [ , restriccionM ] ...]]
+  );
+
+Vemos que tiene que haber al menos un campo y que todas las restricciones son opcionales.
+
+Los campos se definen obligatoriamente con nombre y tipo de datos. El resto de parámetros son opcionales::
+
+  nom_campo tipo [(dim [,tam])] [null | not null] [default valor]
+
+  municipio varchar(20) NOT NULL default 'Teruel'
+
+La sintaxis para las restricciones es::
+
+  constraint nombre tipo parametros
+
+donde tipo puede ser PRIMARY KEY, UNIQUE, FOREIGN KEY y CHECK::
+
+  primary key (campo1[, campo2, ... ] )
+
+  CONSTRAINT idx_16388_primary PRIMARY KEY (codart)
+
+  unique (campo1[, campo2, ... ] )
+
+  foreign key (campo1[, campo2, ... ] )
+  references tabla_referida [(campo1[, campo2, ... ] )]
+  on delete [ no action|set null|set default|cascade|restrict
+  ]
+  on update [ no action|set null|set default|cascade|restrict
+  ]
+
+  CONSTRAINT clientes_fk FOREIGN KEY (codpue) REFERENCES facturacion_stock.pueblos(codpue) ON DELETE CASCADE ON UPDATE CASCADE
+
+  check (condicion)
+
+La cláusula ON DELETE define lo que pasa en la tabla actual cuando en la tabla referenciada se intenta borrar una fila cuya clave primaria es la clave
+foránea de la tabla actual. Las opciones son:
+
+- no action: no hace nada en la tabla actual y borra la fila en la tabla referenciada
+- set null: en la tabla actual pone la clave ajena a NULL en todas las filas en que aparezca y después borra la fila en la tabla referenciada
+- set default: en la tabla actual pone la clave ajena a su valor por defecto en todas las filas en que aparezca y después borra la fila en la tabla referenciada
+- cascade: en la tabla actual se borran todas las filas en que aparezca la clave ajena y después borra la fila en la tabla referenciada
+- restrict: no permite borrar la fila en la tabla referenciada
+
+La cláusula ON UPDATE define lo que pasa en la tabla actual cuando en la tabla referenciada se intenta modificar una clave primaria que es la clave
+foránea de la tabla actual. Las opciones son las mismas:
+
+- cascade: en la tabla actual se actualiza en todas las filas en que aparezca la clave ajena al nuevo valor que tendrá la clave primaria y después se modifica la clave primaria en la tabla referenciada
+- restrict: no permite modificar la clave primaria en la tabla referenciada
+
+Borrado de tablas
+*****************
+
+::
+
+  DROP TABLE nombre_tabla;
+
+Inserción de datos
+*******************
+
+::
+
+  INSERT INTO nombre_tabla (campo1, campo2, ..., campoN)
+  VALUES (valor1, valor2, ..., valorN)
+  ;
+
+Si no se especifican los campos (poco recomendable!), los valores deben tener la posición y tipo de datos correctos. Si se introducen menos valores que campos
+hay en la tabla a los valores que falta se les asigna el valor por defecto o NULL.
+
+Si los datos que se desea insertar se pueden obtener de un SELECT se puede usar la siguiente sintaxis::
+
+  insert into pedir_articulos ( fecha, codart, stock )
+  select sysdate, codart, stock
+  from articulos
+  where ( stock < 50 ) and ( precio < 1.0 )
+  ;
+
+Modificación de datos
+**********************
+
+Cuando no se desea insertar filas completas sino modificar datos existentes::
+
+  update nombre_tabla set columna1 = expr1 [, columna2 = expr2,
+  ...]
+  [ where condicion ] ;
+
+Por ejemplo::
+
+  update articulos set stock_min = stock / 2 ;
+
+Borrado de datos
+****************
+
+::
+
+  delete from nombre_tabla [ where condicion ] ;
+
+Si no ponemos ninguna condición se borraran todos los datos de la tabla (pero no la tabla).
+
+Ejemplo::
+
+  delete from articulos
+  where stock = 0 ;
+
+Datatypes
+*********
+
+PL/SQL has two kinds of data types: scalar and composite.
+
+PL/SQL divides the scalar data types into four families:
+
+- Number
+- Boolean
+- Character
+- Datetime
+
+A scalar data type may have subtypes. A subtype is a data type that is a subset of another data type, which is its base type. 
+
+Note that PL/SQL scalar data types include SQL data types and its own data type such as Boolean:
+
+- Boolean: three valued, TRUE, FALSE, NULL
+- PLS_INTEGER: uses hardware arithmetic. {NULL, natural numbers}
+
+  - NATURAL: {NULL, enteros no negativos}
+  - NATURALN: {enteros no negativos}
+  - POSITIVE: {NULL, enteros positivos}
+  - POSITIVEN: {enteros positivos}
+  - SIGNTYPE: tree valued, {-1, 0, +1}
+  - SIMPLE_INTEGER: {natural numbers}
+  
+- Character data types: CHAR, VARCHAR2, LONG, RAW, LONG RAW, ROWID, and UROWID
+- Datetime data types: DATE, TIMESTAMP, TIMESTAMP WITH TIME ZONE, TIMESTAMP WITH LOCAL TIME ZONE, INTERVAL YEAR TO MONTH, 
+  and INTERVAL DAY TO SECOND
+
+Tópicos avanzados
+++++++++++++++++++
+
+Índices
+********
+
+Podemos pensar en un índice como en una versión resumida de la tabla a la que va asociado. Esa versión resumida contiene solo las columnas
+que aparecen en la definición del índice y una referencia a la fila correspondiente. Las columnas se denominan **claves de búsqueda**.
+
+La característica más importante de los índices, y la que permite optimizar el tiempo de acceso, es que sus filas están ordenadas, lo que 
+permite utilizar algoritmos de búsqueda muy eficientes.
+
+La sintaxis para su creación es::
+
+  create [ unique ] [ clustered ] index nombre_indice
+  on nombre_tabla ( column-name [ asc | desc ], ...)
+
+A Unique Index is placed on a column to guarantee there will be no duplicate values within that column. Each value in that column is guaranteed to be unique. 
+
+As I said earlier, this type of index is a great way to enforce uniqueness on a non Primary Key column.
+
+A clustered index is a B-Tree data structure that defines the physical storage order of data in a table. The data is ordered according
+to something called the clustered index key. The data is physically stored in this order on the hard disk.
+

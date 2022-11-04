@@ -62,6 +62,64 @@ and begins counting up from there. Floating point numbers overflow by returning 
 
 Underflow is the same issue except it involves storing a value smaller than the minimum value. When the numbers 
 underflow, they return 0.0.
+## Autoboxing
+
+**Autoboxing** (*automatic* boxing/wrapping) is the automatic conversion that the Java compiler makes between the primitive types and their corresponding object 
+wrapper classes. For example, converting an `int` to an `Integer`, a `double` to a `Double`, and so on. If the conversion goes the other way, this is called 
+**unboxing**.
+
+*Autoboxing is applied automatically by the compiler at runtime* when a primitive value is:
+
+- Passed as a parameter to a method that expects an object of the corresponding wrapper class.
+- Assigned to a variable of the corresponding wrapper class.
+
+
+For instance:
+
+~~~ Java
+Character c = 'A';
+Integer i = 3;
+
+List<Integer> li = new ArrayList<>();
+for (int i = 1; i < 50; i += 2)
+  li.add(i);
+~~~
+
+Although you add `int` values to the list instead of `Integer` values the code works because the compiler at runtime applies autoboxing and converts the code into
+
+~~~ Java
+List<Integer> li = new ArrayList<>();
+for (int i = 1; i < 50; i += 2)
+  li.add(Integer.valueOf(i));
+~~~
+
+Converting an object of a wrapper type (Integer) to its corresponding primitive (int) value is called unboxing. The Java compiler applies unboxing when an object of a 
+wrapper class is:
+
+- Passed as a parameter to a method that expects a value of the corresponding primitive type.
+- Assigned to a variable of the corresponding primitive type.
+
+~~~ Java
+public static int sumEven(List<Integer> li) {
+  int sum = 0;
+  for (Integer i: li)
+    if (i % 2 == 0)
+        sum += i;
+    return sum;
+}
+~~~
+
+The remainder (%) and unary plus (+=) operators do not apply to Integer objects. The compiler does not generate an error because it invokes the intValue method to 
+convert an Integer to an int at runtime:
+
+~~~ Java
+public static int sumEven(List<Integer> li) {
+  int sum = 0;
+  for (Integer i: li)
+    if (i.intValue() % 2 == 0)
+        sum += i.intValue();
+    return sum;
+~~~
 ## Operators
 
 [Reference](https://www.javatpoint.com/java-operator-precedence)
@@ -84,6 +142,9 @@ In Java all operators have left-to-right associativity except:
 - unary operators
 - assignment operators: =, +=, -=, *=, /=, %=
 
+From the `a` value point of view `++a` and `a++` are the same than `a += 1`. The same happens with `--a` and`a--` that are the same than
+`a -= 1`. That is why their associativity is right to left.
+
 ### Arithmetic operators
 
 We can perform all standard arithmetic operations on ints. Just be aware that decimal values will be chopped off when performing these 
@@ -104,6 +165,85 @@ the one that you choose may make a significant difference.
 int a = 3;
 int result = ++a; // result = 4 and a = 4
 result = a--; // result = 4 and a = 3
+~~~
+## The for loop
+
+Currently `for` loops come in three flavours.
+
+### Classic for
+
+~~~ java
+for (initialization; termination;
+     increment) {
+    statement(s)
+}
+~~~
+
+When using this version of the for statement, keep in mind that:
+
+- The initialization expression initializes the loop; it's executed only once, as the loop begins.
+- When the termination expression evaluates to false, the loop terminates.
+- The increment expression is invoked after each iteration through the loop; it is perfectly acceptable for this expression to 
+  increment or decrement a value.
+
+
+Notice how the code declares a variable within the initialization expression. The scope of this variable extends from its declaration 
+to the end of the block governed by the for statement, so it can be used in the termination and increment expressions as well. If the 
+variable that controls a for statement is not needed outside of the loop, it's best to declare the variable in the initialization 
+expression. The names i, j, and k are often used to control for loops; declaring them within the initialization expression limits their 
+life span and reduces errors.
+
+So this is a typical example:
+
+~~~ java
+for(int i=1; i<11; i++){
+  System.out.println("Count is: " + i);
+}
+~~~
+
+Notice that `i` is initialised inside the loop so it is only visible in the loop block.
+
+But this is allowed too:
+
+~~~ java
+int i = 1;
+for(; i<11; i++){
+  System.out.println("Count is: " + i);
+}
+~~~
+
+We will use this form when the `i` variable is needed out of the loop.
+
+However this will fail:
+
+~~~ java
+int i = 1;
+for(int i = 0; i<11; i++){
+  System.out.println("Count is: " + i);
+}
+~~~
+
+because the outer `i` is visible inside the loop so the loop initialization is creating a variable that already exists.
+
+### Enhanced for loop
+
+Its use is recommended over the classic use because it has an easier syntax.
+
+~~~ java
+int[] numbers = 
+    {1,2,3,4,5,6,7,8,9,10};
+for (int item : numbers) {
+    System.out.println("Count is: " + item);
+}
+~~~
+
+### forEach loop
+
+Since Java 8, we can leverage for-each loops in a slightly different way. We now have a dedicated `forEach()` method in the `Iterable`
+interface that accepts a lambda expression representing an action we want to perform.
+
+~~~ java
+numbers.forEach(item -> System.out.println("Count is: " + item));
 ~~~
 ## Exceptions
 
@@ -313,85 +453,373 @@ to
 Function<String, Integer> func = s -> s.length()
 System.out.println(func.apply("hola"));
 ~~~
-## The for loop
+## Generics
 
-Currently `for` loops come in three flavours.
-
-### Classic for
+The problem:
 
 ~~~ java
-for (initialization; termination;
-     increment) {
-    statement(s)
+List list = new LinkedList();
+list.add(new Integer(1)); 
+Integer i = list.iterator().next();
+~~~
+
+This code will not compile because nobody enforces in anyway that all the elements in the list are `Integer`s. So the compiler doesn't know what type is correct and
+it fails at the last line.
+
+It would be much easier if programmers could express their intention to use specific types and the compiler ensured the correctness of such types. This is the core 
+idea behind generics. *With generics the compiler can enforce the type at compile time*.
+
+### Generic variables
+
+~~~ java
+List<Integer> list = new LinkedList<>();
+~~~
+
+By adding the diamond operator <> containing the type, we narrow the specialization of this list to only Integer type. In other words, we specify the type held inside 
+the list. The compiler can enforce the type at compile time.
+
+In small programs, this might seem like a trivial addition. But in larger programs, this can add significant robustness and makes the program easier to read.
+
+### Generic methods
+
+We write generic methods with a single method declaration, and we can call them with arguments of different types. The compiler will ensure the correctness of 
+whichever type we use.
+
+These are some properties of generic methods:
+
+- Generic methods have a mandatory type parameter (the diamond operator enclosing the type) before the return type of the method declaration even if the method is
+  returning `void`.
+- Type parameters can be bounded.
+- Generic methods can have different type parameters separated by commas in the method signature.
+- Method body for a generic method is just like a normal method.
+
+~~~ java
+public <T> List<T> fromArrayToList(T[] a) {   
+    return Arrays.stream(a).collect(Collectors.toList());
 }
 ~~~
 
-When using this version of the for statement, keep in mind that:
-
-- The initialization expression initializes the loop; it's executed only once, as the loop begins.
-- When the termination expression evaluates to false, the loop terminates.
-- The increment expression is invoked after each iteration through the loop; it is perfectly acceptable for this expression to 
-  increment or decrement a value.
-
-
-Notice how the code declares a variable within the initialization expression. The scope of this variable extends from its declaration 
-to the end of the block governed by the for statement, so it can be used in the termination and increment expressions as well. If the 
-variable that controls a for statement is not needed outside of the loop, it's best to declare the variable in the initialization 
-expression. The names i, j, and k are often used to control for loops; declaring them within the initialization expression limits their 
-life span and reduces errors.
-
-So this is a typical example:
+Here is how we would modify the above method to deal with type T and type G:
 
 ~~~ java
-for(int i=1; i<11; i++){
-  System.out.println("Count is: " + i);
+public static <T, G> List<G> fromArrayToList(T[] a, Function<T, G> mapperFunction) {
+    return Arrays.stream(a)
+      .map(mapperFunction)
+      .collect(Collectors.toList());
 }
 ~~~
 
-Notice that `i` is initialised inside the loop so it is only visible in the loop block.
+In Java Collections, we use T for type, K for key and V for value.
 
-But this is allowed too:
+Remember that type parameters can be **bounded**. Bounded means “restricted,” and we can restrict the types that a method accepts.
 
 ~~~ java
-int i = 1;
-for(; i<11; i++){
-  System.out.println("Count is: " + i);
+public static <T extends Number, G super String> List<G> fromArrayToList(T[] a, Function<T, G> mapperFunction) {
+    return Arrays.stream(a)
+      .map(mapperFunction)
+      .collect(Collectors.toList());
 }
 ~~~
 
-We will use this form when the `i` variable is needed out of the loop.
+- T extends `Number`: `Number` is the upper bound type and T extends it i.e. `Number` is atop of the hierarchy of allowed types
+- G super `String`: `String` is the lower bound type and G is an ancestor type i.e. `String` is at the bottom of the hierarchy of allowed types
 
-However this will fail:
+Beware that `Object` is the supertype of all Java classes but it does *not* mean that a collection of Object is the supertype of *any* collection. 
+For instance `Object` is the supertype of `String` but `List<Object>` is *not* the supertype of `List<String>`. ***The same rule applies to any collection of a type and 
+its subtypes***. Consider this example:
 
 ~~~ java
-int i = 1;
-for(int i = 0; i<11; i++){
-  System.out.println("Count is: " + i);
+public static void paintAllBuildings(List<Building> buildings) {
+    buildings.forEach(Building::paint);
 }
 ~~~
 
-because the outer `i` is visible inside the loop so the loop initialization is creating a variable that already exists.
+If we imagine a subtype of `Building`, such as a `House`, we can't use this method with a list of `House`, even though `House` is a subtype of `Building`.
 
-### Enhanced for loop
-
-Its use is recommended over the classic use because it has an easier syntax.
+If we need to use this method with type `Building` and all its subtypes, the **bounded wildcard** can do the magic:
 
 ~~~ java
-int[] numbers = 
-    {1,2,3,4,5,6,7,8,9,10};
-for (int item : numbers) {
-    System.out.println("Count is: " + item);
+public static void paintAllBuildings(List<? extends Building> buildings) {
+    ...
 }
 ~~~
 
-### forEach loop
+Now this method will work with type `Building` and all its subtypes. This is called an upper-bounded wildcard, where type `Building` is the upper bound.
 
-Since Java 8, we can leverage for-each loops in a slightly different way. We now have a dedicated `forEach()` method in the `Iterable`
-interface that accepts a lambda expression representing an action we want to perform.
+Generics are a compile-time feature, meaning the type parameter is erased and all generic types are implemented as type Object. Therefore, type parameters must be 
+convertible to Object. Since primitive types don't extend Object, we can't use them as type parameters.
+
+However, Java provides boxed types for primitives, along with autoboxing and unboxing to unwrap them.
+## Collections
+
+Arrays are pretty simple data structures. A more complex type of data structure are collections, which, compared to arrays, have a dynamic size.
+Collections make use of Generics and the diamond operator.
+
+The most important Collections are : ArrayList, LinkedList, HashMap and HashSet.
+
+### ArrayList
+
+List represents an ordered sequence of values where some value may occur more than one time.
+
+ArrayList is one of the List implementations built atop an array, which is able to dynamically grow and shrink as you add/remove elements. Elements could be easily 
+accessed by their indexes starting from zero.
+
+Creating an `ArrayList`:
 
 ~~~ java
-numbers.forEach(item -> System.out.println("Count is: " + item));
+List<String> list = new ArrayList<>();
+assertTrue(list.isEmpty());
+
+List<String> list = new ArrayList<>(20);
+
+List<Long> list = new ArrayList<>(Arrays.asList(1L, 2L, 3L));
+
+Collection<Integer> numbers 
+  = IntStream.range(0, 10).boxed().collect(Collectors.toSet());
+
+List<Integer> list = new ArrayList<>(numbers);
+assertEquals(10, list.size());
+assertTrue(numbers.containsAll(list));
 ~~~
+
+Adding elements:
+
+~~~ java
+List<Long> list = new ArrayList<>();
+
+list.add(1L);
+list.add(2L);
+list.add(1, 3L);
+
+assertThat(Arrays.asList(1L, 3L, 2L), equalTo(list));
+
+List<Long> list = new ArrayList<>(Arrays.asList(1L, 2L, 3L));
+LongStream.range(4, 10).boxed()
+  .collect(collectingAndThen(Collectors.toCollection(ArrayList::new), ys -> list.addAll(0, ys)));
+assertThat(Arrays.asList(4L, 5L, 6L, 7L, 8L, 9L, 1L, 2L, 3L), equalTo(list));
+~~~
+
+There are two types of iterators available: `Iterator` (traverses the list in one direction) and `ListIterator` (can traverse the list in both directions).
+
+In a `ListIterator(p)` starting at the specified position in the list, the specified index indicates the first element that would be returned by an initial call to 
+`next`. An initial call to `previous` would return the element with the specified index minus one. So the iteration direction depends on `next` or `previous` being
+called.
+
+It is also important to understand that a `ListIterator` has no current element; its cursor position always lies between the element that would be returned by a call 
+to `previous()` and the element that would be returned by a call to `next()`. An iterator for a list of length n has n+1 possible cursor positions, as illustrated by 
+the carets (^) below:
+
+                          Element(0)   Element(1)   Element(2)   ... Element(n-1)
+    cursor positions:  ^            ^            ^            ^                  ^
+
+~~~ java
+List<Integer> list = new ArrayList<>(
+  IntStream.range(0, 10).boxed().collect(toCollection(ArrayList::new))
+);
+ListIterator<Integer> it = list.listIterator(list.size());  // this iterator has 11 possible cursor positions
+List<Integer> result = new ArrayList<>(list.size());
+while (it.hasPrevious()) {
+    result.add(it.previous());
+}
+
+Collections.reverse(list);
+assertThat(result, equalTo(list));
+~~~
+
+Searching:
+
+~~~ java
+assertEquals(10, stringsToSearch.indexOf("a"));
+assertEquals(26, stringsToSearch.lastIndexOf("a"));
+
+Set<String> matchingStrings = new HashSet<>(Arrays.asList("a", "c", "9"));
+
+List<String> result = stringsToSearch
+  .stream()
+  .filter(matchingStrings::contains)
+  .collect(toCollection(ArrayList::new));
+
+assertEquals(6, result.size());
+
+Iterator<String> it = stringsToSearch.iterator();
+Set<String> matchingStrings = new HashSet<>(Arrays.asList("a", "c", "9"));
+
+List<String> result = new ArrayList<>();
+while (it.hasNext()) {
+    String s = it.next();
+    if (matchingStrings.contains(s)) {
+        result.add(s);
+    }
+}
+
+List<String> copy = new ArrayList<>(stringsToSearch);
+Collections.sort(copy);
+int index = Collections.binarySearch(copy, "f");
+assertThat(index, not(equalTo(-1)));
+~~~
+## Streams
+
+[Streams](https://www.baeldung.com/java-8-streams-introduction)
+
+Los streams permiten trabajar con flujos/secuencias de elementos.
+
+Un stream se crea a partir de un data provider (normalmente un array o una colección).
+
+~~~ java
+String[] arr = new String[] {"hola", "adios"};
+Stream<String> stream = Arrays.stream(arr);  // Stream a partir de un array
+stream = list.stream();                      // Stream a partir de una colección
+stream = Stream.of("a", "b", "c");           // Stream a partir de un literal
+stream = Stream.empty();                     // crea un stream vacío
+~~~
+
+Las operaciones con streams se agrupan en:
+
+- intermedias: devuelven un Stream<T>, se pueden encadenar.
+- terminales: devuelven un resultado de un determinado tipo. Como no devuelven un stream no se pueden seguir encadenando
+  con operaciones intermedias.
+
+~~~ java
+long count = list.stream().distinct().count();
+~~~
+
+Los streams se pueden iterar con bucles for, foreach, while... pero tambien con métodos propios que ponen énfasis en
+la operación que se realiza sobre los elementos en cada iteración, obviando los detalles de como se realiza la 
+iteración (no hace falta usar índices, contadores...). Normalmente las operaciones sobre los elementos se hacen con
+expresiones lambda. Por ejemplo:
+
+~~~ java
+/* Matching */
+boolean isValid = list.stream().anyMatch(element -> element.contains("h")); // true
+boolean isValidOne = list.stream().allMatch(element -> element.contains("h")); // false
+boolean isValidTwo = list.stream().noneMatch(element -> element.contains("h")); // false
+
+/* Mapping */
+List<String> uris = new ArrayList<>();
+uris.add("C:\\My.txt");
+Stream<Path> stream = uris.stream().map(uri -> Paths.get(uri));      // convert Stream<String> to Stream<Path>
+
+List<Detail> details = new ArrayList<>();
+details.add(new Detail());
+Stream<String> stream
+  = details.stream().flatMap(detail -> detail.getParts().stream());
+
+/* Filtering */
+Stream<String> stream = list.stream().filter(element -> element.contains("d"));
+
+/* Reduction */
+List<Integer> integers = Arrays.asList(1, 1, 1);
+Integer reduced = integers.stream().reduce(23, (a, b) -> a + b);
+
+/* Collecting ??? */
+~~~
+
+Importante:
+
+- Java NIO class `Files` allows us to generate a `Stream<String>` of a text file through the `lines()` method. Every 
+line of the text becomes an element of the stream
+- We can instantiate a stream, and have an accessible reference to it, as long as only intermediate operations are 
+  called. Executing a terminal operation makes a stream inaccessible. This kind of behavior is logical. We designed 
+  streams to apply a finite sequence of operations to the source of elements in a functional style, not to store 
+  elements.
+
+
+
+
+### Pipeline
+
+[pipeline](https://www.baeldung.com/java-8-streams#pipeline)
+
+To perform a sequence of operations over the elements of the data source and aggregate their results, we need three 
+parts: the source, intermediate operation(s) and a terminal operation.
+
+Intermediate operations return a new modified stream. If we need more than one modification, we can chain intermediate 
+operations. 
+
+A stream by itself is worthless; the user is interested in the result of the terminal operation, which can be a value 
+of some type or an action applied to every element of the stream. We can only use one terminal operation per stream.
+
+The correct and most convenient way to use streams is by a stream pipeline, which is a chain of the stream source, 
+intermediate operations, and a terminal operation:
+
+~~~ java
+List<String> list = Arrays.asList("abc1", "abc2", "abc3");
+long size = list.stream().skip(1)
+  .map(element -> element.substring(0, 3)).sorted().count();
+~~~
+
+From the performance point of view, the right order is one of the most important aspects of chaining operations in the 
+stream pipeline: intermediate operations which reduce the size of the stream should be placed before operations which 
+are applying to each element. So we need to keep methods such as `skip()`, `filter()`, and `distinct()` at the 
+[vertical] top of our stream pipeline.
+
+
+In most of the code samples shown in this article, we left the streams unconsumed (we didn't apply the `close()` method 
+or a terminal operation). In a real app, *don't leave an instantiated stream unconsumed, as that will lead to memory 
+leaks*.
+## Collectors
+
+[Collectors](https://www.baeldung.com/java-8-collectors)
+
+[Definiciones útiles](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Reduction):
+
+- A reduction operation (also called a fold) takes a sequence of input elements and combines them into a single summary 
+  result by repeated application of a combining operation, such as finding the sum or maximum of a set of numbers. The 
+  streams classes have a general reduction operation, called `reduce()`, as well as multiple specialized reduction 
+  forms such as `sum()`, `max()`, or `count()`.
+- A mutable reduction operation accumulates input elements into a mutable result container, such as a Collection or 
+  StringBuilder, as it processes the elements in the stream. The streams classes have a general reduction operation, 
+  called `collect()`
+
+A collect operation requires three functions: a supplier function to construct new 
+instances of the result container, an accumulator function to incorporate an input element into a result container, 
+and a combining function to merge the contents of one result container into another. The three aspects of collect
+ -- supplier, accumulator, and combiner -- are tightly coupled. We can use the abstraction of a Collector to capture 
+ all three aspects.
+
+```{note} Un colector es un método que convierte un Stream en algún tipo de colección (List, Set, Map) y, 
+opcionalmente, realiza alguna operación sobre la colección.
+```
+
+All predefined implementations can be found in the Collectors class. It's common practice to use the following static 
+import with them to leverage increased readability:
+
+~~~ java
+import static java.util.stream.Collectors.*;
+//We can also use single import collectors of our choice:
+
+import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.toMap;
+import static java.util.stream.Collectors.toSet;
+~~~
+
+Ejemplos de uso:
+
+~~~ java
+List<String> result = givenList.stream()
+  .collect(toList());
+
+Set<String> result = givenList.stream()
+  .collect(toSet());
+
+Map<String, Integer> result = givenList.stream()
+  .collect(toMap(Function.identity(), String::length));
+~~~
+
+`Function.identity()` is just a shortcut for defining a function that accepts and returns the same value.
+
+`givenList.stream()` transforma una lista en un stream. `stream.collect(toList())` convierte el stream en una
+colección usando el colector `toList()`. When using the `toSet` and `toList` collectors, we can't make any assumptions 
+of their implementations. If we want to use a custom implementation, we'll need to use the toCollection collector with 
+a provided collection of our choice.
+
+~~~ java
+List<String> result = givenList.stream()
+  .collect(toCollection(LinkedList::new))
+~~~
+
+With the collect() method we can [non-mutable] reduction operations too using Collectors methods (`joining`, 
+`averagingInt`).
 ## String -bytes conversion
 
 [baeldung](https://www.baeldung.com/java-string-to-byte-array)
@@ -570,169 +998,6 @@ Position is (2, 4) now.
     45.7
 
 Also hasNext() for validating purposes.
-## Streams
-
-[Streams](https://www.baeldung.com/java-8-streams-introduction)
-
-Los streams permiten trabajar con flujos/secuencias de elementos.
-
-Un stream se crea a partir de un data provider (normalmente un array o una colección).
-
-~~~ java
-String[] arr = new String[] {"hola", "adios"};
-Stream<String> stream = Arrays.stream(arr);  // Stream a partir de un array
-stream = list.stream();                      // Stream a partir de una colección
-stream = Stream.of("a", "b", "c");           // Stream a partir de un literal
-stream = Stream.empty();                     // crea un stream vacío
-~~~
-
-Las operaciones con streams se agrupan en:
-
-- intermedias: devuelven un Stream<T>, se pueden encadenar.
-- terminales: devuelven un resultado de un determinado tipo. Como no devuelven un stream no se pueden seguir encadenando
-  con operaciones intermedias.
-
-~~~ java
-long count = list.stream().distinct().count();
-~~~
-
-Los streams se pueden iterar con bucles for, foreach, while... pero tambien con métodos propios que ponen énfasis en
-la operación que se realiza sobre los elementos en cada iteración, obviando los detalles de como se realiza la 
-iteración (no hace falta usar índices, contadores...). Normalmente las operaciones sobre los elementos se hacen con
-expresiones lambda. Por ejemplo:
-
-~~~ java
-/* Matching */
-boolean isValid = list.stream().anyMatch(element -> element.contains("h")); // true
-boolean isValidOne = list.stream().allMatch(element -> element.contains("h")); // false
-boolean isValidTwo = list.stream().noneMatch(element -> element.contains("h")); // false
-
-/* Mapping */
-List<String> uris = new ArrayList<>();
-uris.add("C:\\My.txt");
-Stream<Path> stream = uris.stream().map(uri -> Paths.get(uri));      // convert Stream<String> to Stream<Path>
-
-List<Detail> details = new ArrayList<>();
-details.add(new Detail());
-Stream<String> stream
-  = details.stream().flatMap(detail -> detail.getParts().stream());
-
-/* Filtering */
-Stream<String> stream = list.stream().filter(element -> element.contains("d"));
-
-/* Reduction */
-List<Integer> integers = Arrays.asList(1, 1, 1);
-Integer reduced = integers.stream().reduce(23, (a, b) -> a + b);
-
-/* Collecting ??? */
-~~~
-
-Importante:
-
-- Java NIO class `Files` allows us to generate a `Stream<String>` of a text file through the `lines()` method. Every 
-line of the text becomes an element of the stream
-- We can instantiate a stream, and have an accessible reference to it, as long as only intermediate operations are 
-  called. Executing a terminal operation makes a stream inaccessible. This kind of behavior is logical. We designed 
-  streams to apply a finite sequence of operations to the source of elements in a functional style, not to store 
-  elements.
-
-
-
-
-### Pipeline
-
-[pipeline](https://www.baeldung.com/java-8-streams#pipeline)
-
-To perform a sequence of operations over the elements of the data source and aggregate their results, we need three 
-parts: the source, intermediate operation(s) and a terminal operation.
-
-Intermediate operations return a new modified stream. If we need more than one modification, we can chain intermediate 
-operations. 
-
-A stream by itself is worthless; the user is interested in the result of the terminal operation, which can be a value 
-of some type or an action applied to every element of the stream. We can only use one terminal operation per stream.
-
-The correct and most convenient way to use streams is by a stream pipeline, which is a chain of the stream source, 
-intermediate operations, and a terminal operation:
-
-~~~ java
-List<String> list = Arrays.asList("abc1", "abc2", "abc3");
-long size = list.stream().skip(1)
-  .map(element -> element.substring(0, 3)).sorted().count();
-~~~
-
-From the performance point of view, the right order is one of the most important aspects of chaining operations in the 
-stream pipeline: intermediate operations which reduce the size of the stream should be placed before operations which 
-are applying to each element. So we need to keep methods such as `skip()`, `filter()`, and `distinct()` at the 
-[vertical] top of our stream pipeline.
-
-
-In most of the code samples shown in this article, we left the streams unconsumed (we didn't apply the `close()` method 
-or a terminal operation). In a real app, *don't leave an instantiated stream unconsumed, as that will lead to memory 
-leaks*.
-## Collectors
-
-[Collectors](https://www.baeldung.com/java-8-collectors)
-
-[Definiciones útiles](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Reduction):
-
-- A reduction operation (also called a fold) takes a sequence of input elements and combines them into a single summary 
-  result by repeated application of a combining operation, such as finding the sum or maximum of a set of numbers. The 
-  streams classes have a general reduction operation, called `reduce()`, as well as multiple specialized reduction 
-  forms such as `sum()`, `max()`, or `count()`.
-- A mutable reduction operation accumulates input elements into a mutable result container, such as a Collection or 
-  StringBuilder, as it processes the elements in the stream. The streams classes have a general reduction operation, 
-  called `collect()`
-
-A collect operation requires three functions: a supplier function to construct new 
-instances of the result container, an accumulator function to incorporate an input element into a result container, 
-and a combining function to merge the contents of one result container into another. The three aspects of collect
- -- supplier, accumulator, and combiner -- are tightly coupled. We can use the abstraction of a Collector to capture 
- all three aspects.
-
-```{note} Un colector es un método que convierte un Stream en algún tipo de colección (List, Set, Map) y, 
-opcionalmente, realiza alguna operación sobre la colección.
-```
-
-All predefined implementations can be found in the Collectors class. It's common practice to use the following static 
-import with them to leverage increased readability:
-
-~~~ java
-import static java.util.stream.Collectors.*;
-//We can also use single import collectors of our choice:
-
-import static java.util.stream.Collectors.toList;
-import static java.util.stream.Collectors.toMap;
-import static java.util.stream.Collectors.toSet;
-~~~
-
-Ejemplos de uso:
-
-~~~ java
-List<String> result = givenList.stream()
-  .collect(toList());
-
-Set<String> result = givenList.stream()
-  .collect(toSet());
-
-Map<String, Integer> result = givenList.stream()
-  .collect(toMap(Function.identity(), String::length));
-~~~
-
-`Function.identity()` is just a shortcut for defining a function that accepts and returns the same value.
-
-`givenList.stream()` transforma una lista en un stream. `stream.collect(toList())` convierte el stream en una
-colección usando el colector `toList()`. When using the `toSet` and `toList` collectors, we can't make any assumptions 
-of their implementations. If we want to use a custom implementation, we'll need to use the toCollection collector with 
-a provided collection of our choice.
-
-~~~ java
-List<String> result = givenList.stream()
-  .collect(toCollection(LinkedList::new))
-~~~
-
-With the collect() method we can [non-mutable] reduction operations too using Collectors methods (`joining`, 
-`averagingInt`).
 ## Java IO: concepts
 
 [baeldung](https://www.baeldung.com/java-outputstream)
