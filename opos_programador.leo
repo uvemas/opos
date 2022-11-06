@@ -90,12 +90,33 @@
 <v t="vicent.20221104190527.1"><vh>Inserción de datos</vh></v>
 <v t="vicent.20221104191726.1"><vh>Modificación de datos</vh></v>
 <v t="vicent.20221104192242.1"><vh>Borrado de datos</vh></v>
-<v t="vicent.20221011192909.1"><vh>Datatypes</vh></v>
 </v>
 <v t="vicent.20221104200439.1"><vh>Tópicos avanzados</vh>
 <v t="vicent.20221104214417.1"><vh>Modificar la definición de una tabla</vh></v>
 <v t="vicent.20221104214430.1"><vh>Vistas</vh></v>
 <v t="vicent.20221104200449.1"><vh>Índices</vh></v>
+</v>
+<v t="vicent.20221105073219.1"><vh>PL/SQL</vh>
+<v t="vicent.20221011192909.1"><vh>Datatypes</vh></v>
+<v t="vicent.20221105162102.1"><vh>Estructura del programa</vh></v>
+<v t="vicent.20221105164325.1"><vh>Declaración de variables</vh></v>
+<v t="vicent.20221105174532.1"><vh>Comentarios</vh></v>
+<v t="vicent.20221105193644.1"><vh>Sentencia NULL</vh></v>
+<v t="vicent.20221105194027.1"><vh>Control del flujo</vh>
+<v t="vicent.20221105175819.1"><vh>Sentencia IF</vh></v>
+<v t="vicent.20221105191417.1"><vh>Sentencia CASE</vh></v>
+</v>
+<v t="vicent.20221105194014.1"><vh>Bucles</vh>
+<v t="vicent.20221105194043.1"><vh>LOOP</vh></v>
+<v t="vicent.20221105194053.1"><vh>FOR LOOP</vh></v>
+<v t="vicent.20221105194104.1"><vh>WHILE LOOP</vh></v>
+</v>
+<v t="vicent.20221105204507.1"><vh>SELECT INTO</vh></v>
+<v t="vicent.20221105214636.1"><vh>@rst-no-head label</vh></v>
+<v t="vicent.20221106085145.1"><vh>Cursores</vh></v>
+<v t="vicent.20221105204521.1"><vh>Records</vh></v>
+<v t="vicent.20221105204530.1"><vh>Procedimientos</vh></v>
+<v t="vicent.20221105204537.1"><vh>Funciones</vh></v>
 </v>
 </v>
 </v>
@@ -5330,6 +5351,7 @@ Regarding rule 5, the SQL statements are divided into three categories:
 
 `Apex workspace gratuito &lt;https://apex.oracle.com&gt;`_
 
+`SQL Workshop Guide &lt;https://docs.oracle.com/en/database/oracle/application-express/21.2/aeutl/&gt;`_
 </t>
 <t tx="vicent.20221011192909.1">PL/SQL has two kinds of data types: scalar and composite.
 
@@ -5357,6 +5379,15 @@ Note that PL/SQL scalar data types include SQL data types and its own data type 
 - Character data types: CHAR, VARCHAR2, LONG, RAW, LONG RAW, ROWID, and UROWID
 - Datetime data types: DATE, TIMESTAMP, TIMESTAMP WITH TIME ZONE, TIMESTAMP WITH LOCAL TIME ZONE, INTERVAL YEAR TO MONTH, 
   and INTERVAL DAY TO SECOND
+
+En general los tipos escalares más utilizados son: number, char, varchar2, boolean y datetime. Ejemplos:
+
+- number(4) entero de cuatro dígitos
+- number(10, 2) decimal con 10 dígitos en la parte entera y dos decimales
+- char(10) cadena de longitud fija de 10 caracteres
+- varchar2(10) cadena de longitud variable de hasta 10 caracteres
+- boolean: puede ser TRUE, FALSE o NULL (este tipo no existe en SQL)
+- datetime
 </t>
 <t tx="vicent.20221012190834.1">### Jerarquías de generalización
 
@@ -6661,6 +6692,523 @@ to something called the clustered index key. The data is physically stored in th
 <t tx="vicent.20221104214430.1">::
 
   CREATE VIEW nombre_vista AS select_query
+
+</t>
+<t tx="vicent.20221105073219.1"></t>
+<t tx="vicent.20221105162102.1">La unidad básica es el bloque:
+
+.. image:: images/plsql-anonymous-block.png
+  :alt: Bloque anónimo
+  :align: center
+
+En la sección de declaración se declaran las variables, se reserva memoria para los cursores y se definen tipos de datos personalizados.
+
+En la sección de ejecución (la única obligatoria) se encuentran las sentencias ejecutables del bloque. No puede estar vacía. La
+sección ejecutables más sencilla posible es
+
+.. code-block:: sql
+
+  BEGIN
+    NULL;
+  END;
+
+La sección de gestión de excepciones (opcional) se incluye en el bloque de ejecución. Aquí es donde se capturan y gestionan las 
+excepciones lanzadas durante la ejecución del bloque.
+
+.. code-block:: sql
+
+      EXCEPTION 
+        WHEN ZERO_DIVIDE THEN
+        DBMS_OUTPUT.PUT_LINE(SQLERRM);
+        WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Excepción no identificada');
+
+.. tip::
+  El bloque de ejecución es el único que termina con END. Las secciones DECLARE y EXCEPTION no lo necesitan porque van en posiciones
+  fijas. DECLARE siempre termina inmediatamente antes que BEGIN y EXCEPTION siempre termina inmediatamente antes de END. El resto de construcciones del lenguaje que tienen forma de bloque (estructuras de 
+  control, bucles... ) utilizan END + calificativo. De lo contrario no se sabría si estamos cerrando el bloque de ejecución o otra construcción.
+
+</t>
+<t tx="vicent.20221105164325.1">Se hace en la sección DECLARE del bloque.
+
+La sintaxis *para la declaración* es:
+
+.. code:: sql
+
+  variable_name [CONSTANT] datatype [NOT NULL] [(:=|DEFAULT) initial_value];
+
+Las variables *siempre* deben tener nombre y tipo de datos. Opcionalmente se pueden añadir las restricciones ``NOT NULL`` (que no 
+permite que a la variable se asigne el valor ``NULL``) y ``CONSTANT`` (que no permite que se modifique el valor de la variable).
+Para inicializar una variable se utiliza el operador de asignación o la palabra reservada ``DEFAULT``.
+Si una variable se va a usar para contener el valor de una columna de una tabla es conveniente anclar el tipo de dato de la columna a 
+la variable para evitar errores.
+
+.. code:: sql
+
+  DECLARE
+    v_message varchar2(25) NOT NULL := 'Hello world';
+    v_result number(10,2) DEFAULT 15.34;
+    c_iva CONSTANT number(10,2) NOT NULL := 0.16;
+    v_city COUNTRIES.CAPITAL%TYPE;
+
+Las variables pueden ser locales al bloque o globales al programa.
+
+Convenciones útiles en la declaración de variables son:
+
+- distinguir entre variables y constantes con los prefijos ``v_`` y ``c_``
+- distinguir las variables que representan un record  (ver :ref:`records-label`) con el prefijo ``r_``
+- distinguir entre variables locales y globales con los prefijos ``l_`` y ``g_``
+</t>
+<t tx="vicent.20221105174532.1">Pueden ser de una línea o multilínea.
+
+.. code:: sql
+
+  BEGIN
+    -- single-line comment, another comment
+    NULL;
+    /* 
+        multi-line comment 
+        that has another single-line comment 
+    */
+  END;
+
+.. warning::
+  For a PL/SQL block that will be processed dynamically, you cannot use single-line comments. Because Oracle precompiler will ignore 
+  the end-of-line characters that cause the single-line comments extend to the end of the block. In this case, you can use multi-line 
+  comments instead.
+
+Por eso es recomendable siempre usar comentarios multilínea, especialmente en sesiones interactivas.
+</t>
+<t tx="vicent.20221105175819.1">Aquí tenemos un ejemplo completo del uso de la sentencia ``IF``
+
+.. code:: sql
+
+  BEGIN
+  ...
+    IF v_country != 'Andorra' THEN
+        htp.p('El pais no es Andorra!');
+    ELSIF v_population &gt; 100000 THEN
+        htp.p('La población es superior a 100,000 habitantes');
+    ELSE 
+        htp.p('Country: ' || v_country || ' Population: ' || v_population || ' Area: ' ||v_area);
+    END IF;
+  ...
+  END;
+
+La condición:
+
+- tiene que ser una expresión booleana (retorna ``TRUE``, ``FALSE`` o ``NULL``) y el bloque correspondiente solo se ejecuta si la condición es
+  ``TRUE``
+- no va entre paréntesis
+- siempre va seguida de la palabra reservada ``THEN``
+
+Los bloques no van encerrados entre llaves. La indentación no es obligatoria pero mejora la legibilidad.
+
+La sentencia termina con ``END IF;``.
+
+La cláusula ``ELSE`` es opcional, si no aparece el compilador no hace nada.
+</t>
+<t tx="vicent.20221105191417.1">Al igual que ``IF``, es una sentencia para el control del flujo del programa. Tiene dos variantes, la simple y la de búsqueda.
+
+Ejemplo de ``CASE`` simple:
+
+.. code:: sql
+
+  BEGIN
+    ...
+    CASE v_length
+      WHEN 5 THEN
+          NULL;
+      WHEN 10 THEN
+          DBMS_OUTPUT.PUT_LINE('Circle length is 10cm');
+      ELSE
+          DBMS_OUTPUT.PUT_LINE('Circle length is ' || v_length || 'cm');
+    END CASE;
+    ...
+  END;
+
+Si se cumple la condición se ejecuta el bloque correspondiente y se sale del ``CASE``. No hace falta ningún break como en otros lenguajes
+de programación.
+
+.. warning::
+  La cláusula ``ELSE`` es opcional, pero si no se utiliza el compilador implícitamente usa
+
+  .. code:: sql
+
+    ELSE 
+      RAISE CASE_NOT_FOUND;
+
+Ejemplo del ``CASE`` de búsqueda:
+
+.. code:: sql
+
+  BEGIN
+    ...
+    CASE
+        WHEN v_length &lt; 30 THEN
+            htp.p('Short circle!');
+        WHEN v_length &gt; 300 THEN
+            htp.p('Large circle');
+        ELSE
+            RAISE CASE_NOT_FOUND;
+    END CASE;
+    ...
+  END;
+
+As a rule of thumb, use a searched ``CASE`` statement when you want to execute a sequence of statements based on the results of multiple 
+Boolean expressions and use a simple ``CASE`` statement when you want to execute a sequence of statements based on the result of a single 
+expression.
+
+</t>
+<t tx="vicent.20221105193644.1">The ``NULL`` statement is a ``NULL`` keyword followed by a semicolon ( ;). The ``NULL`` statement does nothing except that it passes 
+control to the next statement.
+
+.. code:: sql
+
+  NULL;
+
+The ``NULL`` statement is useful to:
+
+- Improve code readability
+- Provide a target for a ``GOTO`` statement
+- Create placeholders for subprograms
+</t>
+<t tx="vicent.20221105194014.1"></t>
+<t tx="vicent.20221105194027.1"></t>
+<t tx="vicent.20221105194043.1">Es el bucle más sencillo. La sintaxis es:
+
+.. code:: sql
+
+  &lt;&lt;loop_label&gt;&gt; LOOP
+    statements;
+  END LOOP loop_label;
+
+La etiqueta es opcional, pero hace el código más legible cuando usamos bucles anidados. The ``LOOP`` statement executes the statements
+in its body and returns control to the top of the loop. Typically, the body of the loop contains at least one ``EXIT`` or 
+``EXIT WHEN`` statement for terminating the loop. Otherwise, the loop becomes an infinite loop.
+
+.. code::
+
+  BEGIN
+    ...
+    LOOP
+        v_jcounter := 0;
+        &lt;&lt;inner_loop&gt;&gt;
+        LOOP
+            DBMS_OUTPUT.PUT_LINE('Inside loop at element (i= ' || v_icounter || ', j= ' || v_jcounter || ') ');
+            v_jcounter := v_jcounter + 1;
+            EXIT inner_loop WHEN v_jcounter &gt; 3;
+        END LOOP;
+        v_icounter := v_icounter + 1;
+        EXIT WHEN v_icounter &gt; 4;
+    END LOOP;
+    ...
+  END;
+</t>
+<t tx="vicent.20221105194053.1">El bucle ``FOR LOOP`` es un poco peculiar si lo comparamos con la sentencia análoga en otros lenguajes de programación.
+Su sintaxis es:
+
+.. code::
+
+  FOR index IN [REVERSE] lower_bound .. upper_bound
+  LOOP
+    statements;
+  END LOOP;
+
+El contador es una variable implícita, local para el bucle y no se puede acceder a él desde fuera del bucle. El valor del contador
+no se puede cambiar, *solo se incrementa en pasos de uno*.
+
+``lower_bound`` y ``upper_bound`` solo se evalúan una vez, al inicio del bucle. Sus valores se almacenan como valores temporales de
+tipo ``PLS_INTEGER``. *Cualquier cambio de su valor dentro del bucle no tiene efecto alguno*.
+
+.. code::
+
+  BEGIN
+    ...
+    FOR l_index IN REVERSE 1..5
+    LOOP
+        DBMS_OUTPUT.PUT_LINE('index: ' || l_index);
+    END LOOP;
+    ...
+  END;
+
+</t>
+<t tx="vicent.20221105194104.1">Su sintaxis es:
+
+.. code::sql
+
+  WHILE condition
+  LOOP
+      statements;
+  END LOOP;
+
+El funcionamiento de este bucle es el típico. Aquí tenemos un ejemplo:
+
+.. code::
+
+  BEGIN
+    ...
+    WHILE v_icounter &gt; 0
+    LOOP
+        v_icounter := v_icounter - 1;
+        CONTINUE WHEN v_icounter = 2;
+        EXIT WHEN v_icounter = 1;
+        DBMS_OUTPUT.PUT_LINE('Counter is greater than 0: ' || v_icounter);
+    END LOOP;
+    ...
+  END;
+
+En el ejemplo se utiliza la sentencia ``CONTINUE`` para volver al principio del bucle e iniciar una nueva iteración y tambien se usa
+``EXIT WHEN``. Ambas sentencias se pueden usar en cualquier tipo de bucles.
+</t>
+<t tx="vicent.20221105204507.1">PL/SQL ``SELECT INTO`` statement is the simplest and fastest way to fetch a single row from a table into variables. The following 
+illustrates the syntax of the ``SELECT INTO`` statement:
+
+.. code:: SQL
+
+  SELECT
+    select_list
+  INTO
+    variable_list
+  FROM
+    table_name
+  WHERE
+    condition; 
+
+In this syntax, the number of columns in the `variable_list` must be the same as the number of variables (or the number of components of a record) in the `select_list`.  
+In addition, their corresponding data type must be compatible.
+
+Besides the WHERE clause, you can use other clauses in the SELECT statement such as INNER JOIN, GROUP BY, HAVING, and UNION.
+
+If the SELECT statement returns more than one row, Oracle will raise the TOO_MANY_ROWS exception. If the SELECT statement does not return any row, Oracle will raise 
+the NO_DATA_FOUND exception.
+
+Ejemplo:
+
+.. code:: SQL
+
+  DECLARE
+  l_customer_name customers.name%TYPE;
+  l_contact_first_name contacts.first_name%TYPE;
+  l_contact_last_name contacts.last_name%TYPE;
+  BEGIN
+    -- get customer and contact names
+    SELECT
+      name, 
+      first_name, 
+      last_name
+    INTO
+      l_customer_name, 
+      l_contact_first_name, 
+      l_contact_last_name
+    FROM
+      customers
+    INNER JOIN contacts USING( customer_id )
+    WHERE
+      customer_id = 100;
+    -- show the information  
+    dbms_output.put_line( 
+      l_customer_name || ', Contact Person: ' ||
+      l_contact_first_name || ' ' || l_contact_last_name );
+  END;
+
+El error más común con esta sentencia es que el número de variables en el bloque ``INTO`` no coincida con el número de columnas recuperadas
+por el ``SELECT`` o que los tipos de datos de las variables no coincidan con los de las columnas.
+</t>
+<t tx="vicent.20221105204521.1">Un record es una estructura de datos formada por varios campos, cada uno con un valor. Lo podemos representar como
+
+.. image:: images/plsql-record.png
+  :alt: Un record está compuesto por varios campos
+  :align: center
+
+... que se parece mucho a una fila de una tabla. Los records nos permiten pasar de operar a nivel de campo a operar a nivel de 
+conjunto de campos.
+
+Hay tres tipos de record: basados en tabla, basados en cursor y definidos por el programador.
+
+La declaración de un record basado en tabla es:
+
+.. code:: sql
+
+  DECLARE
+   rtb_name table_name%ROWTYPE;
+
+Aquí el record representa una fila de la tabla. Si no necesitamos la fila completa, sino solo un grupo de campos, usamos un record basado en cursor. Primero declaramos el cursor
+de manera explícita y luego declaramos el record:
+
+.. code:: sql
+
+  DECLARE
+    CURSOR c_contacts IS
+        SELECT first_name, last_name, phone
+        FROM contacts;
+    r_contact c_contacts%ROWTYPE;
+
+Si necesitamos un record que no esté basado en una estructura de datos existente tenemos que declarar nuestra propia estructura de datos
+de *tipo record* y después declarar el record:
+
+.. code:: sql
+
+  TYPE record_type IS RECORD (
+    field_name1 data_type1 [[NOT NULL] := | DEFAULT default_value],
+    field_name2 data_type2 [[NOT NULL] := | DEFAULT default_value],
+    ...
+  );
+  record_name record_type;
+
+Con los records podemos hacer las siguientes operaciones:
+
+- referenciar un campo del record
+
+  .. code:: sql
+
+    r_name.campo
+
+- asignar campos individuales
+
+  .. code:: sql
+
+    r_contact.first_name := 'John';
+
+- asignar un record a otro del mismo tipo
+
+  .. code:: sql
+
+    r_name1 := r_name2
+
+- no se pueden comparar records entre sí. Hay que comparar los campos uno a uno.
+
+- asignar un record completo o campos individuales con ``SELECT INTO``
+
+  .. code:: sql
+
+    SELECT
+    first_name, last_name, phone
+    INTO
+      r_contact
+    FROM
+      contacts
+    WHERE
+      contact_id = 100;
+
+- cuando usamos cursores en lugar de tablas el equivalente a ``SELECT INTO`` es ``FETCH INTO``
+
+  .. code:: sql
+
+    -- fetch a whole record
+    FETCH cur_contacts INTO r_contact;
+
+    -- fetch individual fields
+    FETCH
+      cur_contacts
+    INTO
+      r_contact.first_name, 
+      r_contact.last_name, 
+      r_contact.phone;
+
+- hacer INSERT/UPDATE
+- anidar records
+
+Ejemplo completo:
+
+.. code:: sql
+
+  DECLARE
+    /* Table-based record */
+    rtb_countries EBA_COUNTRIES%ROWTYPE;
+
+    /* Cursor-based record: first create the cursor, then declare the record */
+    CURSOR c_countries IS
+        SELECT name, nationality, capital, population
+        FROM EBA_COUNTRIES;
+    r_countries c_countries%ROWTYPE;
+
+    /* Cursor with parameters based record: first create the cursor, then declare the record */
+    CURSOR pc_countries(pais EBA_COUNTRIES.name%TYPE := 'Andorra') IS
+        SELECT name, nationality, capital, population
+        FROM EBA_COUNTRIES
+        WHERE name &lt; pais;
+    pr_countries pc_countries%ROWTYPE;
+
+    /* Programmer-defined record: TO BE DONE */
+  BEGIN
+      /* Fill the table-based record */
+      SELECT * INTO rtb_countries
+      FROM EBA_COUNTRIES
+      WHERE capital LIKE 'Paris';
+      
+      /* Fill the cursor-based record with the first retrieved row */
+      OPEN c_countries;
+      FETCH c_countries INTO r_countries;
+      htp.p('Country: ' || r_countries.name);
+
+      /* Fill the cursor-based record with the next retrieved row. This time we specify the record fields */
+      FETCH c_countries INTO
+      r_countries.name,
+      r_countries.nationality,
+      r_countries.capital,
+      r_countries.population;
+      htp.p('Country: ' || r_countries.name);    
+      CLOSE c_countries;
+
+      /* Iterate over the whole cursor with a FOR LOOP. No need to open/fetch/close the cursor */
+      FOR record IN c_countries
+      LOOP
+          htp.p(c_countries%ROWCOUNT || ' Country: ' || record.name);
+          EXIT WHEN record.name = 'Argentina';
+      END LOOP;
+
+      /* Iterate over the whole cursor with parameters with a FOR LOOP. No need to open/fetch/close the cursor */
+      FOR record IN pc_countries('Belgium')
+      LOOP
+          htp.p(pc_countries%ROWCOUNT || ' Country: ' || record.name);
+          EXIT WHEN record.name = 'Argentina';
+      END LOOP;
+
+      EXCEPTION WHEN OTHERS THEN
+      htp.p(SQLERRM);
+  END;
+</t>
+<t tx="vicent.20221105204530.1"></t>
+<t tx="vicent.20221105204537.1"></t>
+<t tx="vicent.20221105214636.1">.. _records-label:</t>
+<t tx="vicent.20221106085145.1">Un cursor es un puntero que apunta al resultado de una query.
+
+El ciclo de vida de un cursor se representa como:
+
+.. image:: images/plsql-cursor.png
+  :alt: Ciclo de vida de un cursor externo
+  :align: center
+
+Hay de dos tipos: implícitos y explícitos. Cada vez que se ejecuta una query, Oracle crea automáticamente un cursor implícito, gestiona su ciclo de vida y permite acceso
+solamente a información sobre el estado del cursor, pero sin dar acceso al propio cursor.
+
+Los cursores explícitos los crea explícitamente el programador y gestiona su ciclo de vida.
+La sintaxis para las diferentes etapas del ciclo de vida es:
+
+.. code:: sql
+
+  DECLARE
+    CURSOR c_name IS query
+  
+  BEGIN
+    OPEN c_name
+    ...
+    FETCH c_name INTO variables_list;
+    ...
+    CLOSE c_name
+    ...
+  END;
+
+En la declaración se crea el cursor, con OPEN se ejecuta la query y coloca el cursor apuntando a la primera fila del resultado, con FETCH INTO se recuperan las filas devueltas por la query una por
+una y con CLOSE se cierra el cursor y se libera la memoria que tenía reservada. Los cursores creados en un bloque anónimo, en una función
+o en un procedimiento no hace falta cerrarlos explícitamente.
+
+En cuanto al estado de un cursor explícito, se obtiene de los atributos %ISOPEN, %FOUND, %NOTFOUND y %ROWCOUNT con la sintaxis
+
+.. code:: sql
+
+  c_name%attribute
 
 </t>
 </tnodes>
