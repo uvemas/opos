@@ -1,6 +1,11 @@
-# Tema 30 Métodos de prueba del software. JUnit
+.. rst3: filename: Tema 30 Metodos de prueba del Software Junit.rst
 
-## Métodos de prueba
+=============================================
+Tema 30 Métodos de prueba del software. JUnit
+=============================================
+
+Métodos de prueba
+++++++++++++++++++
 
 Ver 16. MВtodos de prueba del software. JUnit.odt
 
@@ -33,9 +38,11 @@ Los testing frameworks permiten la ejecución automatizada de tests.
 Los tests automatizados y organizados en suites se pueden ejecutar en el servidor en el que se está desarrollando la
 aplicación (por ejemplo, github) permitiendo así la integración continua (los tests se ejecutan automáticamente cada
 vez que se sube una modificación de código al servidor) y la entrega continua.
-## JUnit
 
-Es un framework para crear unidades de test en Java. Hay dos versiones JUnit4 y JUnit5, que es muy reciente.
+JUnit
++++++
+
+Es un framework para crear unidades de test en Java. La versión actual es JUnit5.
 
 En las unidades de test se comprueba el correcto funcionamiento de los métodos de las clases.
 
@@ -52,10 +59,11 @@ Las unidades de test y los runners se pueden ejecutar por línea de comando o en
 una extensión para trabajar con JUnit que permite crear esqueletos de JUnits y ejecutar y depurar unidades de test,
 runners y suites.
 
-```{thumbnail} images/JUnit_en_VSCode.png
-```
+.. thumbnail:: images/JUnit_en_VSCode.png
+  :align: center
 
 En el árbol de unidades de test si nos colocamos sobre una unidad de test, podemos ejecutarla/depurarla con el botón
 derecho del ratón. Las carpetas son runners. Si ejecutamos una carpeta se ejecutarán todas las unidades de test que 
 contiene. En el código de `Ejercicio3_1Test.java` podemos ver como se define una suite, que se lanzará al ejecutar
 `Ejercicio3_1Test.java`. La suite ejecutará los tests de `Ejercicio3_1Test.java` y `Ejercicio2_1Test.java`.
+

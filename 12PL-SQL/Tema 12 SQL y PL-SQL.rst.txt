@@ -4,8 +4,6 @@
 Tema 12 Oracle. SQl. PL/SQL
 ===========================
 
-@path ./12PL-SQL
-
 Introducción
 +++++++++++++
 
@@ -371,7 +369,7 @@ Estructura del programa
 
 La unidad básica es el bloque:
 
-.. image:: images/plsql-anonymous-block.png
+.. thumbnail:: images/plsql-anonymous-block.png
   :alt: Bloque anónimo
   :align: center
 
@@ -722,11 +720,11 @@ por el ``SELECT`` o que los tipos de datos de las variables no coincidan con los
 Cursores
 ********
 
-Un cursor es un puntero que apunta al resultado de un query.
+Un cursor es un puntero que apunta al resultado de una query.
 
 El ciclo de vida de un cursor se representa como:
 
-.. image:: images/plsql-cursor.png
+.. thumbnail:: images/plsql-cursor.png
   :alt: Ciclo de vida de un cursor externo
   :align: center
 
@@ -754,12 +752,18 @@ En la declaración se crea el cursor, con OPEN se ejecuta la query y coloca el c
 una y con CLOSE se cierra el cursor y se libera la memoria que tenía reservada. Los cursores creados en un bloque anónimo, en una función
 o en un procedimiento no hace falta cerrarlos explícitamente.
 
+En cuanto al estado de un cursor explícito, se obtiene de los atributos %ISOPEN, %FOUND, %NOTFOUND y %ROWCOUNT con la sintaxis
+
+.. code:: sql
+
+  c_name%attribute
+
 Records
 *******
 
 Un record es una estructura de datos formada por varios campos, cada uno con un valor. Lo podemos representar como
 
-.. image:: images/plsql-record.png
+.. thumbnail:: images/plsql-record.png
   :alt: Un record está compuesto por varios campos
   :align: center
 

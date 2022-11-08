@@ -1,17 +1,26 @@
-# Tema 16 El entorno de desarrollo Java. Arquitectura JEE
+.. rst3: filename: Tema 16 El entorno de desarrollo java Arquitectura J2EE.rst
 
-[baeldung](https://www.baeldung.com/jvm-vs-jre-vs-jdk)
+=======================================================
+Tema 16 El entorno de desarrollo Java. Arquitectura JEE
+=======================================================
 
-[Web Container](https://www.knowprogram.com/servlet/servlet-container/)
+Introducción
++++++++++++++
 
-[JEE architecture](https://www.youtube.com/watch?v=5CVbtcHoVxA)
+ `JVMvsJREvsJDK <https://www.baeldung.com/jvm-vs-jre-vs-jdk>`_
+
+ `Web Container <https://www.knowprogram.com/servlet/servlet-container/>`_
+
+ `JEE architecture <https://www.youtube.com/watch?v=5CVbtcHoVxA>`_
 
 JVM es una máquina virtual capaz de ejecutar programas en Java.
 
 JRE es una implementación de la JVM.
 
 JDK es un entorno completo de desarrollo de aplicaciones Java.
-## JVM
+
+JVM
+++++
 
 Cuando compilamos un programa Java con `javac` el resultado es un fichero `.class` formado por bytecodes que puede ejecutarse en 
 cualquier JVM, o sea que es totalmente portable.
@@ -20,15 +29,18 @@ La JVM consta de:
 
 - un class loader: carga, verifica y linka los `.class`
 - run-time data areas: son las diferentes áreas de memoria que usa la JVM en tiempo de ejecución
+
   - method area (permanent generation space): es una memoria no contigüa de almacenamiento para código compilado
   - heap area: almacena objetos y arrays. El Garbage Collector libera memoria heap cuando destruye objetos
   - stack area: almacena frames (activation records) que constan de tres partes: una para variables locales, una para resultados 
     intermedios y otra para llamadas a métodos. Hay una de estas áreas para cada hilo de ejecución.
+
 - PC register: contiene la dirección de las instrucciones en ejecución
 - native method stacks (C stacks): Native methods are those which are written in languages other than Java. JVM provides capabilities 
   to call these native methods. Whenever the native methods are compiled into machine codes [^1], they usually use a native method stack to
   keep track of their state.
 - execution engine:
+
   - interpreter: once classloaders load and verify bytecode, the interpreter executes the bytecode line by line. This execution is 
     quite slow. The disadvantage of the interpreter is that when one method is called multiple times, every time new interpretation is 
     required.
@@ -39,7 +51,8 @@ La JVM consta de:
     separate JVM thread. As a result, it does not interrupt the execution of the current program. After compilation into machine code, 
     it runs faster.
   - Garbage Collector: It's a process of looking at heap memory, identifying which objects are in use and which are not, and finally 
-  deleting unused objects.
+    deleting unused objects.
+
 - Java Native Interface:
 - Native libraries: contain the implementation of native methods. Platform specific.
 
@@ -48,14 +61,18 @@ La JVM consta de:
 
 [^1]: notice that `javac` compiles java programs into bytecodes that can be executed in any JVM. When a native method is compiled the
 result is native machine codes only can be executed in that especific platform/processor.
-## JRE
+
+JRE
+++++
 
 Core components of the JRE include:
 
 - An implementation of a Java Virtual Machine (JVM)
 - Classes required to run the Java programs
 - Property Files
-## JDK
+
+JDK
+++++
 
 Java Development Kit (JDK) provides environment and tools for developing, compiling, debugging, and executing a Java program. Consta 
 de:
@@ -76,11 +93,13 @@ de:
     Java applications with a single click from the browser. Hence, there is no need to run any installation process.
   - monitorización: `jconsole`, `jstat`...
   - troubleshooting: experimental
-## JEE
 
-[baeldung](https://www.baeldung.com/java-enterprise-evolution)
+JEE
+++++
 
-[Referencia](https://www.educba.com/java-ee-interview-questions/)
+ `JEE evolution <https://www.baeldung.com/java-enterprise-evolution>`_
+
+ `Referencia <https://www.educba.com/java-ee-interview-questions/>`_
 
 JSE es para desarrollar aplicaciones standalone, de escritorio. Con JSE se aprende Java básico (objetos, herencia, polimorfismo...)
 JEE es para desarrollar aplicaciones web. Con JEE se aprenden tópicos avanzados como MVC, JSP, EJB...
@@ -102,5 +121,6 @@ component.
 
 JEE tiene una arquitectura multi-tier:
 
-```{thumbnail} images/arquitecturaJEE.jpg
-```
+.. thumbnail:: images/arquitecturaJEE.jpg
+  :align: center
+

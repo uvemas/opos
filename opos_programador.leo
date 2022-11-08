@@ -73,6 +73,7 @@
 <v t="vicent.20221010124625.1"><vh>Introducción</vh></v>
 <v t="vicent.20221010123006.1"><vh>Normalización</vh></v>
 </v>
+<v t="vicent.20221107174904.1"><vh>Tema 12 SQL y PL-SQL</vh>
 <v t="vicent.20220528085656.1"><vh>@rst Tema 12 SQL y PL-SQL.rst</vh>
 <v t="vicent.20221011164300.1"><vh>Introducción</vh></v>
 <v t="vicent.20221104192623.1"><vh>Consulta de datos</vh>
@@ -120,6 +121,7 @@
 </v>
 </v>
 </v>
+</v>
 <v t="vicent.20220528092009.1"><vh>Programación</vh>
 <v t="vicent.20221018183554.1"><vh>Otros lenguajes</vh>
 <v t="vicent.20220507204235.1"><vh>@clean Tema 18 Disenyo Web.md</vh>
@@ -162,25 +164,37 @@
 <v t="vicent.20221018183956.1"><vh>@clean Tema 15 UML.md</vh></v>
 </v>
 <v t="vicent.20220528092032.1"><vh>Java</vh>
-<v t="vicent.20220528085918.1"><vh>@clean Tema 16 El entorno de desarrollo java Arquitectura J2EE.md</vh>
+<v t="vicent.20221108175934.1"><vh>Tema 16 Entorno de desarrollo Java. Arquitectura JEE</vh>
+<v t="vicent.20220528085918.1"><vh>@rst Tema 16 El entorno de desarrollo java Arquitectura J2EE.rst</vh>
 <v t="vicent.20221013165224.1"><vh>Introducción</vh></v>
 <v t="vicent.20220801204841.1"><vh>JVM</vh></v>
 <v t="vicent.20221013172934.1"><vh>JRE</vh></v>
 <v t="vicent.20221013180127.1"><vh>JDK</vh></v>
 <v t="vicent.20220801211535.1"><vh>JEE</vh></v>
 </v>
-<v t="vicent.20220528085937.1"><vh>@clean Tema 17 Lenguaje de programacion Java.md</vh>
+</v>
+<v t="vicent.20221107175144.1"><vh>Tema 17 Lenguaje de programación Java</vh>
+<v t="vicent.20220528085937.1"><vh>@rst Tema 17 Lenguaje de programacion Java.rst</vh>
 <v t="vicent.20220726085534.1"><vh>Get Started</vh></v>
 <v t="vicent.20220725083209.1"><vh>Basic Syntax</vh></v>
 <v t="vicent.20220725085429.1"><vh>Java primitives</vh></v>
 <v t="vicent.20221030101009.1"><vh>Autoboxing</vh></v>
-<v t="vicent.20221027175316.1"><vh>Operators</vh></v>
-<v t="vicent.20221027232108.1"><vh>The for loop</vh></v>
+<v t="vicent.20221027175316.1"><vh>Operators</vh>
+<v t="vicent.20221107180610.1"><vh>Arithmetic operators</vh></v>
+<v t="vicent.20221107180651.1"><vh>Increment/decrement operators</vh></v>
+</v>
+<v t="vicent.20221027232108.1"><vh>The classic  for loop</vh></v>
+<v t="vicent.20221107181128.1"><vh>The enhanced for loop</vh></v>
+<v t="vicent.20221107181252.1"><vh>The forEach loop</vh></v>
 <v t="vicent.20221027173647.1"><vh>Exceptions handling</vh></v>
 <v t="vicent.20221028173010.1"><vh>Interfaces</vh></v>
 <v t="vicent.20221028175723.1"><vh>Functional Interfaces</vh></v>
 <v t="vicent.20221030173701.1"><vh>Generics</vh></v>
-<v t="vicent.20221101080718.1"><vh>Collections</vh></v>
+<v t="vicent.20221101080718.1"><vh>Collections</vh>
+<v t="vicent.20221107200538.1"><vh>ArrayList</vh></v>
+<v t="vicent.20221107200734.1"><vh>HashSet</vh></v>
+<v t="vicent.20221107204516.1"><vh>HasMap</vh></v>
+</v>
 <v t="vicent.20220827084532.1"><vh>Streams</vh>
 <v t="vicent.20220828080628.1"><vh>Pipeline</vh></v>
 </v>
@@ -198,14 +212,19 @@
 <v t="vicent.20220829094958.1"><vh>Java IO: Consola</vh></v>
 <v t="vicent.20220829114442.1"><vh>Java IO: files</vh></v>
 </v>
-<v t="vicent.20221017194318.1"><vh>@clean Tema 25 Apache Tomcat. Despliegue de aplicaciones.md</vh>
+</v>
+<v t="vicent.20221108190829.1"><vh>Tema 25 Apache Tomcat</vh>
+<v t="vicent.20221017194318.1"><vh>@rst Tema 25 Apache Tomcat. Despliegue de aplicaciones.rst</vh>
 <v t="vicent.20221017194749.1"><vh>Introduction</vh></v>
 <v t="vicent.20221018185935.1"><vh>Tomcat vs Applications Server</vh></v>
 <v t="vicent.20221017195053.1"><vh>First webapp</vh></v>
 </v>
-<v t="vicent.20220528090458.1"><vh>@clean Tema 30 Metodos de prueba del Software Junit.md</vh>
+</v>
+<v t="vicent.20221108193431.1"><vh>Tema 30 Métodos de prueba del software JUnit</vh>
+<v t="vicent.20220528090458.1"><vh>@rst Tema 30 Metodos de prueba del Software Junit.rst</vh>
 <v t="vicent.20220613183309.1"><vh>Métodos de prueba</vh></v>
 <v t="vicent.20220613173035.1"><vh>JUnit</vh></v>
+</v>
 </v>
 </v>
 </v>
@@ -2640,7 +2659,7 @@ El resultado es
 Tema 12 Oracle. SQl. PL/SQL
 ===========================
 
-@path ./12PL-SQL</t>
+</t>
 <t tx="vicent.20220528085742.1"># Tema 13 OOP: Clases y Objetos 
 
 @path ./13OOP_Clases_y_Objetos
@@ -2653,17 +2672,13 @@ Tema 12 Oracle. SQl. PL/SQL
 @language md
 @others
 </t>
-<t tx="vicent.20220528085918.1"># Tema 16 El entorno de desarrollo Java. Arquitectura JEE
-
-@path ./16Entorno_de_desarrollo_Java
-@language md
-@others
+<t tx="vicent.20220528085918.1">=======================================================
+Tema 16 El entorno de desarrollo Java. Arquitectura JEE
+=======================================================
 </t>
-<t tx="vicent.20220528085937.1"># Tema 17 Lenguaje de programación Java: sintaxis ,tipos de datos, operadores, estructuras de control
-
-@path ./17Lenguaje_Java
-@language md
-@others
+<t tx="vicent.20220528085937.1">===================================================================================================
+Tema 17 Lenguaje de programación Java: sintaxis ,tipos de datos, operadores, estructuras de control
+===================================================================================================
 </t>
 <t tx="vicent.20220528090343.1"></t>
 <t tx="vicent.20220528090351.1"></t>
@@ -2677,11 +2692,9 @@ Tema 12 Oracle. SQl. PL/SQL
 [Scrum](https://www.atlassian.com/es/agile/scrum)
 @others
 </t>
-<t tx="vicent.20220528090458.1"># Tema 30 Métodos de prueba del software. JUnit
-
-@path ./30PruebaDelSoftware
-@language md
-@others
+<t tx="vicent.20220528090458.1">=============================================
+Tema 30 Métodos de prueba del software. JUnit
+=============================================
 </t>
 <t tx="vicent.20220528090520.1"># Tema 31 Control de versiones. Subversion. GIT.
 
@@ -2716,9 +2729,7 @@ Tema 31 Control de versiones. Subversion. Git
 Tema 32 Gestión integrada del desarrollo. Maven</t>
 <t tx="vicent.20220528093019.1">Tema 5 Arquitectura SOA. APIs JasperReports
 Tema 6 Software libre. Tipos de licencias</t>
-<t tx="vicent.20220613173035.1">## JUnit
-
-Es un framework para crear unidades de test en Java. Hay dos versiones JUnit4 y JUnit5, que es muy reciente.
+<t tx="vicent.20220613173035.1">Es un framework para crear unidades de test en Java. La versión actual es JUnit5.
 
 En las unidades de test se comprueba el correcto funcionamiento de los métodos de las clases.
 
@@ -2735,17 +2746,15 @@ Las unidades de test y los runners se pueden ejecutar por línea de comando o en
 una extensión para trabajar con JUnit que permite crear esqueletos de JUnits y ejecutar y depurar unidades de test,
 runners y suites.
 
-```{thumbnail} images/JUnit_en_VSCode.png
-```
+.. thumbnail:: images/JUnit_en_VSCode.png
+  :align: center
 
 En el árbol de unidades de test si nos colocamos sobre una unidad de test, podemos ejecutarla/depurarla con el botón
 derecho del ratón. Las carpetas son runners. Si ejecutamos una carpeta se ejecutarán todas las unidades de test que 
 contiene. En el código de `Ejercicio3_1Test.java` podemos ver como se define una suite, que se lanzará al ejecutar
 `Ejercicio3_1Test.java`. La suite ejecutará los tests de `Ejercicio3_1Test.java` y `Ejercicio2_1Test.java`.
 </t>
-<t tx="vicent.20220613183309.1">## Métodos de prueba
-
-Ver 16. MВtodos de prueba del software. JUnit.odt
+<t tx="vicent.20220613183309.1">Ver 16. MВtodos de prueba del software. JUnit.odt
 
 En resumen, de nivel bajo a nivel alto:
 
@@ -3140,9 +3149,7 @@ Proporcionan información a la JVM acerca de una clase, método o variable. Hay 
   than Java.
   
 </t>
-<t tx="vicent.20220725083209.1">## Basic syntax
-
-[Baeldung](https://www.baeldung.com/java-syntax)
+<t tx="vicent.20220725083209.1">`Baeldung &lt;https://www.baeldung.com/java-syntax&gt;`_
 
 Primitive types are the basic data types that store simple data.
 
@@ -3156,9 +3163,10 @@ values.
 
 Arrays declaration:
 
-~~~ java
-type[] identifier = new type[length] // array indexes start at zero
-~~~
+.. code:: java
+
+  type[] identifier = new type[length] // array indexes start at zero
+
 
 The basic unit of a Java program is a Class.
 
@@ -3166,9 +3174,7 @@ For a Class to be executable, it must have a main method. The main method signif
 Executable means it can be executed via the `java` command.
 
 </t>
-<t tx="vicent.20220725085429.1">## Java primitives
-
-[Baeldung](https://www.baeldung.com/java-primitives)
+<t tx="vicent.20220725085429.1">`Baeldung &lt;https://www.baeldung.com/java-primitives&gt;`_
 
 The eight primitives defined in Java are:
 
@@ -3179,13 +3185,14 @@ The eight primitives defined in Java are:
 
 Default type of floating numbers is `double` so
 
-~~~ java
-// trailing f is mandatory
-float pi = "3.14f"
-~~~
+.. code:: java
+
+  // trailing f is mandatory
+  float pi = "3.14f"
+
 
 Primitive types aren't considered objects and represent raw values. They're stored directly on the 
-[stack](https://www.guru99.com/stack-vs-heap.html).
+`stack &lt;https://www.guru99.com/stack-vs-heap.html&gt;`_.
 
 The simplest primitive data type is boolean. It can contain only two values: true or false. It stores its value in a 
 single bit. However, for convenience, Java pads the value and stores it in a single byte.
@@ -3199,16 +3206,14 @@ underflow, they return 0.0.
 </t>
 <t tx="vicent.20220726084801.1">## Java initialization
 
-[Baeldung](https://www.baeldung.com/java-initialization)
+`Baeldung &lt;https://www.baeldung.com/java-initialization&gt;`_
 
 All objects in Java are stored in our program's heap memory. In fact, the heap represents a large pool of unused 
 memory, allocated for our Java application.
 </t>
-<t tx="vicent.20220726085534.1">## Get Started with Java
+<t tx="vicent.20220726085534.1">`Get started &lt;https://www.baeldung.com/get-started-with-java-series&gt;`_
 
-[Get started](https://www.baeldung.com/get-started-with-java-series)
-
-[Back to basics](https://www.baeldung.com/java-tutorial)
+`Back to basics &lt;https://www.baeldung.com/java-tutorial&gt;`_
 
 Muy buena introducción al lenguaje Java.
 </t>
@@ -3508,24 +3513,25 @@ public class Computer {
 Con tres implementaciones de cada interface (nueve implementaciones en total) puedo crear 27 modelos de ordenador usando la clase 
 `Computer`. Si no uso interfaces tendria que crear nueve clases para los componentes y 27 variantes de la clase `Computer`.
 </t>
-<t tx="vicent.20220801204841.1">## JVM
-
-Cuando compilamos un programa Java con `javac` el resultado es un fichero `.class` formado por bytecodes que puede ejecutarse en 
+<t tx="vicent.20220801204841.1">Cuando compilamos un programa Java con `javac` el resultado es un fichero `.class` formado por bytecodes que puede ejecutarse en 
 cualquier JVM, o sea que es totalmente portable.
 
 La JVM consta de:
 
 - un class loader: carga, verifica y linka los `.class`
 - run-time data areas: son las diferentes áreas de memoria que usa la JVM en tiempo de ejecución
+
   - method area (permanent generation space): es una memoria no contigüa de almacenamiento para código compilado
   - heap area: almacena objetos y arrays. El Garbage Collector libera memoria heap cuando destruye objetos
   - stack area: almacena frames (activation records) que constan de tres partes: una para variables locales, una para resultados 
     intermedios y otra para llamadas a métodos. Hay una de estas áreas para cada hilo de ejecución.
+
 - PC register: contiene la dirección de las instrucciones en ejecución
 - native method stacks (C stacks): Native methods are those which are written in languages other than Java. JVM provides capabilities 
   to call these native methods. Whenever the native methods are compiled into machine codes [^1], they usually use a native method stack to
   keep track of their state.
 - execution engine:
+
   - interpreter: once classloaders load and verify bytecode, the interpreter executes the bytecode line by line. This execution is 
     quite slow. The disadvantage of the interpreter is that when one method is called multiple times, every time new interpretation is 
     required.
@@ -3536,7 +3542,8 @@ La JVM consta de:
     separate JVM thread. As a result, it does not interrupt the execution of the current program. After compilation into machine code, 
     it runs faster.
   - Garbage Collector: It's a process of looking at heap memory, identifying which objects are in use and which are not, and finally 
-  deleting unused objects.
+    deleting unused objects.
+
 - Java Native Interface:
 - Native libraries: contain the implementation of native methods. Platform specific.
 
@@ -3545,11 +3552,9 @@ La JVM consta de:
 
 [^1]: notice that `javac` compiles java programs into bytecodes that can be executed in any JVM. When a native method is compiled the
 result is native machine codes only can be executed in that especific platform/processor.</t>
-<t tx="vicent.20220801211535.1">## JEE
+<t tx="vicent.20220801211535.1"> `JEE evolution &lt;https://www.baeldung.com/java-enterprise-evolution&gt;`_
 
-[baeldung](https://www.baeldung.com/java-enterprise-evolution)
-
-[Referencia](https://www.educba.com/java-ee-interview-questions/)
+ `Referencia &lt;https://www.educba.com/java-ee-interview-questions/&gt;`_
 
 JSE es para desarrollar aplicaciones standalone, de escritorio. Con JSE se aprende Java básico (objetos, herencia, polimorfismo...)
 JEE es para desarrollar aplicaciones web. Con JEE se aprenden tópicos avanzados como MVC, JSP, EJB...
@@ -3571,12 +3576,10 @@ component.
 
 JEE tiene una arquitectura multi-tier:
 
-```{thumbnail} images/arquitecturaJEE.jpg
-```
+.. thumbnail:: images/arquitecturaJEE.jpg
+  :align: center
 </t>
-<t tx="vicent.20220806092453.1">## Overloading vs Overriding
-
-[baeldung](https://www.baeldung.com/java-method-overload-override)
+<t tx="vicent.20220806092453.1">`baeldung &lt;https://www.baeldung.com/java-method-overload-override&gt;`_
 
 Overloading: dentro de la misma clase definimos varios métodos con el mismo nombre pero diferente firma:
 
@@ -3584,30 +3587,30 @@ Overloading: dentro de la misma clase definimos varios métodos con el mismo nom
 - mismo número de argumentos pero distinto tipo
 - no se permiten varios métodos que difieran solamente en el tipo del valor de retorno
 
-```{note} Promoción de tipos: si se invoca un método y el tipo de los parámetros no coincide con el de los argumentos
-entonces, si se puede, se hace promoción de tipos:
+.. note::
+  Promoción de tipos: si se invoca un método y el tipo de los parámetros no coincide con el de los argumentos
+  entonces, si se puede, se hace promoción de tipos:
 
     byte -&gt; short -&gt; int -&gt; long -&gt; float -&gt; double
     char -&gt; int -&gt; long -&gt; float -&gt; double
-```
 
 Un tipo puede promocionar a cualquiera de los tipos de su derecha, por ejemplo, si tengo un método:
 
-~~~~ java
-public String samplemethod(float index)
-~~~~
+.. code:: java
+
+  public String samplemethod(float index)
 
 lo puedo invocar como:
 
-~~~~ java
-samplemethod('f')
-~~~~
+.. code:: java
+
+  samplemethod('f')
 
 y el argumento de tipo `char` se convertirá automáticamente en `float`.
 
-```{note} Sustitución de tipos: el LSP (Liskov Substituion Principle) afirma que si una aplicación funciona correctamente con un tipo base también
-debe hacerlo con cualquiera de sus subtipos.
-```
+.. note::
+  Sustitución de tipos: el LSP (Liskov Substituion Principle) afirma que si una aplicación funciona correctamente con un tipo base también
+  debe hacerlo con cualquiera de sus subtipos.
 
 Overriding: un método implementado en un clase base se reimplementa *no necesariamente con la misma firma* en un 
 subclase para conseguir un comportamiento personalizado. *El overriding debe usarse con cuidado porque no siempre cumple
@@ -3622,28 +3625,26 @@ well, but with full adherence to these rules:
 - If a method in the base class returns a certain type, the overridden method should return the same type or a subtype (a.k.a. covariant return type)
 - If a method in the base class throws an exception, the overridden method must throw the same exception or a subtype of the base class exception
 
-```{note} Binding: el binding es la asociación de una llamada a un método con el cuerpo de dicho método. Se puede hacer
-de manera estática (en tiempo de compilación) o dinámica (en tiempo de ejecución).
-```
+.. note::
+  Binding: el binding es la asociación de una llamada a un método con el cuerpo de dicho método. Se puede hacer
+  de manera estática (en tiempo de compilación) o dinámica (en tiempo de ejecución).
 
 En el caso de sobrecarga de métodos el binding es estático. En el caso de sobreescritura, es dinámico, porqué implica
 herencia y una jerarquía de tipos y el compilador no es capaz de determinar en tiempo de compilación que método hay
 que llamar. Para saberlo el compilador tiene que comprobar el tipo del objeto que está invocando al método y esa
 comprobación se hace en tiempo de ejecución.
 </t>
-<t tx="vicent.20220806115156.1">## El modificador `static`
-
-[baeldung](https://www.baeldung.com/java-static)
+<t tx="vicent.20220806115156.1">`baeldung &lt;https://www.baeldung.com/java-static&gt;`_
 
 Dentro de una clase, un método no estático puede acceder *directamente* a cualquier variable/método de esa clase (ya sea 
 estático o no). Pero los métodos estáticos solo pueden acceder *directamente* a variables/métodos estáticos. *Si quieren
 acceder a miembros no estáticos tienen que hacerlo a través de una instancia de esa clase*.
 
 Los métodos estáticos no se pueden sobreescribir porque se resuelven en tiempo de compilación.
-</t>
-<t tx="vicent.20220806180544.1">## Modificador `final`
 
-[baeldung](https://www.baeldung.com/java-final)
+También se pueden hacer `import`s estáticos.
+</t>
+<t tx="vicent.20220806180544.1">`baeldung &lt;https://www.baeldung.com/java-final&gt;`_
 
 `final` se puede usar en:
 
@@ -3652,7 +3653,49 @@ Los métodos estáticos no se pueden sobreescribir porque se resuelven en tiempo
 - métodos
 - argumentos de métodos
 </t>
-<t tx="vicent.20220806180756.1">## Enums
+<t tx="vicent.20220806180756.1">Las enumeraciones son un tipo de datos especial que permite tratar grupos de constantes relacionadas (planetas,
+días de la semana, etc.) como si fueran una clase. Tienen constructores, miembros, métodos (que se pueden
+sobreescribir)...
+
+.. code:: java
+
+  public class Enumeracion {
+    enum Dia {
+      LUNES(1),
+      MARTES(2),
+      MIERCOLES(3),
+      JUEVES(4),
+      VIERNES(5),
+      SABADO(6),
+      DOMINGO(7);
+
+      private final int codigo;
+      /** Constructor 
+      * Se invoca al cargar la enum, para cada uno de sus miembros
+      * public static final LUNES = new Dia(1)
+      * ...
+      */
+      Dia(int codigo) {
+        this.codigo = codigo;
+        System.out.println("hola");
+      }
+
+      public boolean esFestivo(){
+        return this.codigo &gt; 5;
+      }
+
+      public boolean esLaborable(){
+        return this.codigo &lt; 6;
+      }
+
+    }
+
+    public void ejercicio() {
+      Dia dia = Dia.LUNES;
+      dia.esFestivo();
+    }
+
+  }
 
 </t>
 <t tx="vicent.20220821093743.1">## API
@@ -3756,21 +3799,19 @@ La arquitectura SOA tiene como objetivo descomponer/separar una aplicación en s
 separación se hace en base a la lógica de negocio, por eso se dice que SOA tiene enfoque de empresa.
 ```
 </t>
-<t tx="vicent.20220827084532.1">## Streams
-
-[Streams](https://www.baeldung.com/java-8-streams-introduction)
+<t tx="vicent.20220827084532.1">`Streams &lt;https://www.baeldung.com/java-8-streams-introduction&gt;`_
 
 Los streams permiten trabajar con flujos/secuencias de elementos.
 
 Un stream se crea a partir de un data provider (normalmente un array o una colección).
 
-~~~ java
-String[] arr = new String[] {"hola", "adios"};
-Stream&lt;String&gt; stream = Arrays.stream(arr);  // Stream a partir de un array
-stream = list.stream();                      // Stream a partir de una colección
-stream = Stream.of("a", "b", "c");           // Stream a partir de un literal
-stream = Stream.empty();                     // crea un stream vacío
-~~~
+.. code:: java
+
+  String[] arr = new String[] {"hola", "adios"};
+  Stream&lt;String&gt; stream = Arrays.stream(arr);  // Stream a partir de un array
+  stream = list.stream();                      // Stream a partir de una colección
+  stream = Stream.of("a", "b", "c");           // Stream a partir de un literal
+  stream = Stream.empty();                     // crea un stream vacío
 
 Las operaciones con streams se agrupan en:
 
@@ -3778,59 +3819,53 @@ Las operaciones con streams se agrupan en:
 - terminales: devuelven un resultado de un determinado tipo. Como no devuelven un stream no se pueden seguir encadenando
   con operaciones intermedias.
 
-~~~ java
-long count = list.stream().distinct().count();
-~~~
+.. code:: java
+
+  long count = list.stream().distinct().count();
 
 Los streams se pueden iterar con bucles for, foreach, while... pero tambien con métodos propios que ponen énfasis en
 la operación que se realiza sobre los elementos en cada iteración, obviando los detalles de como se realiza la 
 iteración (no hace falta usar índices, contadores...). Normalmente las operaciones sobre los elementos se hacen con
 expresiones lambda. Por ejemplo:
 
-~~~ java
-/* Matching */
-boolean isValid = list.stream().anyMatch(element -&gt; element.contains("h")); // true
-boolean isValidOne = list.stream().allMatch(element -&gt; element.contains("h")); // false
-boolean isValidTwo = list.stream().noneMatch(element -&gt; element.contains("h")); // false
+.. code:: java
 
-/* Mapping */
-List&lt;String&gt; uris = new ArrayList&lt;&gt;();
-uris.add("C:\\My.txt");
-Stream&lt;Path&gt; stream = uris.stream().map(uri -&gt; Paths.get(uri));      // convert Stream&lt;String&gt; to Stream&lt;Path&gt;
+  /* Matching */
+  boolean isValid = list.stream().anyMatch(element -&gt; element.contains("h")); // true
+  boolean isValidOne = list.stream().allMatch(element -&gt; element.contains("h")); // false
+  boolean isValidTwo = list.stream().noneMatch(element -&gt; element.contains("h")); // false
 
-List&lt;Detail&gt; details = new ArrayList&lt;&gt;();
-details.add(new Detail());
-Stream&lt;String&gt; stream
-  = details.stream().flatMap(detail -&gt; detail.getParts().stream());
+  /* Mapping */
+  List&lt;String&gt; uris = new ArrayList&lt;&gt;();
+  uris.add("C:\\My.txt");
+  Stream&lt;Path&gt; stream = uris.stream().map(uri -&gt; Paths.get(uri));      // convert Stream&lt;String&gt; to Stream&lt;Path&gt;
 
-/* Filtering */
-Stream&lt;String&gt; stream = list.stream().filter(element -&gt; element.contains("d"));
+  List&lt;Detail&gt; details = new ArrayList&lt;&gt;();
+  details.add(new Detail());
+  Stream&lt;String&gt; stream
+    = details.stream().flatMap(detail -&gt; detail.getParts().stream());
 
-/* Reduction */
-List&lt;Integer&gt; integers = Arrays.asList(1, 1, 1);
-Integer reduced = integers.stream().reduce(23, (a, b) -&gt; a + b);
+  /* Filtering */
+  Stream&lt;String&gt; stream = list.stream().filter(element -&gt; element.contains("d"));
 
-/* Collecting ??? */
-~~~
+  /* Reduction */
+  List&lt;Integer&gt; integers = Arrays.asList(1, 1, 1);
+  Integer reduced = integers.stream().reduce(23, (a, b) -&gt; a + b);
+
+  /* Collecting ??? */
 
 Importante:
 
 - Java NIO class `Files` allows us to generate a `Stream&lt;String&gt;` of a text file through the `lines()` method. Every 
-line of the text becomes an element of the stream
+  line of the text becomes an element of the stream
 - We can instantiate a stream, and have an accessible reference to it, as long as only intermediate operations are 
   called. Executing a terminal operation makes a stream inaccessible. This kind of behavior is logical. We designed 
   streams to apply a finite sequence of operations to the source of elements in a functional style, not to store 
   elements.
-
-
-
-
 </t>
-<t tx="vicent.20220827121231.1">## Collectors
+<t tx="vicent.20220827121231.1">`Collectors &lt;https://www.baeldung.com/java-8-collectors&gt;`_
 
-[Collectors](https://www.baeldung.com/java-8-collectors)
-
-[Definiciones útiles](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Reduction):
+`Definiciones útiles &lt;https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Reduction&gt;`_:
 
 - A reduction operation (also called a fold) takes a sequence of input elements and combines them into a single summary 
   result by repeated application of a combining operation, such as finding the sum or maximum of a set of numbers. The 
@@ -3843,37 +3878,37 @@ line of the text becomes an element of the stream
 A collect operation requires three functions: a supplier function to construct new 
 instances of the result container, an accumulator function to incorporate an input element into a result container, 
 and a combining function to merge the contents of one result container into another. The three aspects of collect
- -- supplier, accumulator, and combiner -- are tightly coupled. We can use the abstraction of a Collector to capture 
- all three aspects.
+(supplier, accumulator, and combiner) are tightly coupled. We can use the abstraction of a Collector to capture 
+all three aspects.
 
-```{note} Un colector es un método que convierte un Stream en algún tipo de colección (List, Set, Map) y, 
-opcionalmente, realiza alguna operación sobre la colección.
-```
+.. note::
+  Un colector es un método que convierte un Stream en algún tipo de colección (List, Set, Map) y, 
+  opcionalmente, realiza alguna operación sobre la colección.
 
 All predefined implementations can be found in the Collectors class. It's common practice to use the following static 
 import with them to leverage increased readability:
 
-~~~ java
-import static java.util.stream.Collectors.*;
-//We can also use single import collectors of our choice:
+.. code:: java
 
-import static java.util.stream.Collectors.toList;
-import static java.util.stream.Collectors.toMap;
-import static java.util.stream.Collectors.toSet;
-~~~
+  import static java.util.stream.Collectors.*;
+  //We can also use single import collectors of our choice:
+
+  import static java.util.stream.Collectors.toList;
+  import static java.util.stream.Collectors.toMap;
+  import static java.util.stream.Collectors.toSet;
 
 Ejemplos de uso:
 
-~~~ java
-List&lt;String&gt; result = givenList.stream()
-  .collect(toList());
+.. code:: java
 
-Set&lt;String&gt; result = givenList.stream()
-  .collect(toSet());
+  List&lt;String&gt; result = givenList.stream()
+    .collect(toList());
 
-Map&lt;String, Integer&gt; result = givenList.stream()
-  .collect(toMap(Function.identity(), String::length));
-~~~
+  Set&lt;String&gt; result = givenList.stream()
+    .collect(toSet());
+
+  Map&lt;String, Integer&gt; result = givenList.stream()
+    .collect(toMap(Function.identity(), String::length));
 
 `Function.identity()` is just a shortcut for defining a function that accepts and returns the same value.
 
@@ -3882,17 +3917,15 @@ colección usando el colector `toList()`. When using the `toSet` and `toList` co
 of their implementations. If we want to use a custom implementation, we'll need to use the toCollection collector with 
 a provided collection of our choice.
 
-~~~ java
-List&lt;String&gt; result = givenList.stream()
-  .collect(toCollection(LinkedList::new))
-~~~
+.. code:: java
+
+  List&lt;String&gt; result = givenList.stream()
+    .collect(toCollection(LinkedList::new))
 
 With the collect() method we can [non-mutable] reduction operations too using Collectors methods (`joining`, 
 `averagingInt`).
 </t>
-<t tx="vicent.20220828080628.1">### Pipeline
-
-[pipeline](https://www.baeldung.com/java-8-streams#pipeline)
+<t tx="vicent.20220828080628.1">`pipeline &lt;https://www.baeldung.com/java-8-streams#pipeline&gt;`_
 
 To perform a sequence of operations over the elements of the data source and aggregate their results, we need three 
 parts: the source, intermediate operation(s) and a terminal operation.
@@ -3906,11 +3939,11 @@ of some type or an action applied to every element of the stream. We can only us
 The correct and most convenient way to use streams is by a stream pipeline, which is a chain of the stream source, 
 intermediate operations, and a terminal operation:
 
-~~~ java
-List&lt;String&gt; list = Arrays.asList("abc1", "abc2", "abc3");
-long size = list.stream().skip(1)
-  .map(element -&gt; element.substring(0, 3)).sorted().count();
-~~~
+.. code:: java
+
+  List&lt;String&gt; list = Arrays.asList("abc1", "abc2", "abc3");
+  long size = list.stream().skip(1)
+    .map(element -&gt; element.substring(0, 3)).sorted().count();
 
 From the performance point of view, the right order is one of the most important aspects of chaining operations in the 
 stream pipeline: intermediate operations which reduce the size of the stream should be placed before operations which 
@@ -3922,9 +3955,7 @@ In most of the code samples shown in this article, we left the streams unconsume
 or a terminal operation). In a real app, *don't leave an instantiated stream unconsumed, as that will lead to memory 
 leaks*.
 </t>
-<t tx="vicent.20220829094958.1">## Java IO: Consola
-
-[baeldung](https://www.baeldung.com/java-console-input-output)
+<t tx="vicent.20220829094958.1">`baeldung &lt;https://www.baeldung.com/java-console-input-output&gt;`_
 
 La entrada estándar en Java es el stream System.in, y la salida estándar es el stream System.out. Por defecto, usamos el teclado para
 escribir datos en System.in y la pantalla para leer datos de System.out.
@@ -3935,48 +3966,50 @@ Para leer datos (que hemos introducido previamente con el teclado) de System.in 
 
 La idea es que entramos datos a System.in con el teclado y los recuperamos con la clase Scanner.
 
-~~~ java
-// Java program to read data of various types using Scanner class.
-import java.util.Scanner;
-public class ScannerDemo1
-{
-	public static void main(String[] args)
-	{
-		// Declare the object and initialize with
-		// predefined standard input object
-		Scanner sc = new Scanner(System.in);
+.. code:: java
+  
+  // Java program to read data of various types using Scanner class.
+  import java.util.Scanner;
+  public class ScannerDemo1
+  {
+    public static void main(String[] args)
+    {
+      // Declare the object and initialize with
+      // predefined standard input object
+      Scanner sc = new Scanner(System.in);
 
-		// String input
-		String name = sc.nextLine();
+      // String input
+      String name = sc.nextLine();
 
-		// Character input
-		char gender = sc.next().charAt(0);
+      // Character input
+      char gender = sc.next().charAt(0);
 
-		// Numerical data input
-		// byte, short and float can be read
-		// using similar-named functions.
-		int age = sc.nextInt();
-		long mobileNo = sc.nextLong();
-		double cgpa = sc.nextDouble();
+      // Numerical data input
+      // byte, short and float can be read
+      // using similar-named functions.
+      int age = sc.nextInt();
+      long mobileNo = sc.nextLong();
+      double cgpa = sc.nextDouble();
 
-		// Print the values to check if the input was correctly obtained.
-		System.out.println("Name: "+name);
-		System.out.println("Gender: "+gender);
-		System.out.println("Age: "+age);
-		System.out.println("Mobile Number: "+mobileNo);
-		System.out.println("CGPA: "+cgpa);
-    sc.close();
-	}
-}
-~~~
+      // Print the values to check if the input was correctly obtained.
+      System.out.println("Name: "+name);
+      System.out.println("Gender: "+gender);
+      System.out.println("Age: "+age);
+      System.out.println("Mobile Number: "+mobileNo);
+      System.out.println("CGPA: "+cgpa);
+      sc.close();
+    }
+  }
 
-Input correcto:
-John Doe
-Female 20 645645645 5.6 pepe
+Input correcto::
 
-Input erróneo:
-Pedro Picapiedra
-Female 20.1 645645645 60
+  John Doe
+  Female 20 645645645 5.6 pepe
+
+Input erróneo::
+
+  Pedro Picapiedra
+  Female 20.1 645645645 60
 
 Después de leer la primera línea necesitamos al menos cuatro tokens. Los podemos introducir todos en una línea (como hemos hecho 
 arriba) o usando varias líneas (cuatro líneas de un token, dos líneas de dos tokens, etc.).
@@ -3994,138 +4027,136 @@ Otra posibilidad es usar la clase System.Console.
 - Console.readPassword(msg)
 - Console.printf(msg)
 </t>
-<t tx="vicent.20220829114442.1">## Java IO: files
+<t tx="vicent.20220829114442.1">Podemos crear un fichero de muchas maneras:
 
-Podemos crear un fichero de muchas maneras:
+.. code:: java
 
-~~~ java
-private final String FILE_NAME = "src/test/resources/fileToCreate.txt";
+  private final String FILE_NAME = "src/test/resources/fileToCreate.txt";
 
-// Method 1 uses Java IO File objects
-File newFile = new File(FILE_NAME);
-boolean success = newFile.createNewFile();  //Devuelve false si el fichero ya existe
+  // Method 1 uses Java IO File objects
+  File newFile = new File(FILE_NAME);
+  boolean success = newFile.createNewFile();  //Devuelve false si el fichero ya existe
 
-// Method 2 uses Java NIO Files objects
-Path newFilePath = Paths.get(FILE_NAME);
-Files.createFile(newFilePath);  // FileAlreadyExistsException si el fichero ya existe
+  // Method 2 uses Java NIO Files objects
+  Path newFilePath = Paths.get(FILE_NAME);
+  Files.createFile(newFilePath);  // FileAlreadyExistsException si el fichero ya existe
 
-// Method 3 uses Stream objects
-try(FileOutputStream fileOutputStream = new FileOutputStream(FILE_NAME)){  // Si el fichero ya existe lo sobreescribe
-    }
-~~~
+  // Method 3 uses Stream objects
+  try(FileOutputStream fileOutputStream = new FileOutputStream(FILE_NAME)){  // Si el fichero ya existe lo sobreescribe
+      }
+
 
 El método 2 es el que mejor maneja las excepciones.
 
 Podemos leer y escribir un fichero de muchas maneras. Algunas de ellas son:
 
-[leer](https://www.baeldung.com/reading-file-in-java)
-[escribir](https://www.baeldung.com/java-write-to-file)
+`leer &lt;https://www.baeldung.com/reading-file-in-java&gt;`_
+`escribir &lt;https://www.baeldung.com/java-write-to-file&gt;`_
 
 
 Si queremos leer/escribir texto lo más sencillo es usar BufferedReader y BufferedWriter:
 
-~~~ java
-String file ="src/test/resources/fileTest.txt";
+.. code:: java
 
-BufferedReader reader = new BufferedReader(new FileReader(file, "UTF-8"));
-String currentLine = reader.readLine();
-reader.close();
+  String file ="src/test/resources/fileTest.txt";
 
-// write to a new file
-String str = "Hello";
-BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
-writer.write(str);
-writer.close();
+  BufferedReader reader = new BufferedReader(new FileReader(file, "UTF-8"));
+  String currentLine = reader.readLine();
+  reader.close();
 
-// write to an existing file
-String str = " world!";
-BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
-writer.append(str);
-writer.close();
-~~~
+  // write to a new file
+  String str = "Hello";
+  BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+  writer.write(str);
+  writer.close();
+
+  // write to an existing file
+  String str = " world!";
+  BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
+  writer.append(str);
+  writer.close();
 
 Si queremos escribir texto con formato usamos PrintWriter:
 
-~~~ java
-FileWriter fileWriter = new FileWriter(fileName);
-PrintWriter printWriter = new PrintWriter(fileWriter);  // can use FileWriter, BufferedWriter or System.out
-printWriter.print("Some String");
-printWriter.printf("Product name is %s and its price is %d $", "iPhone", 1000);
-printWriter.close();
-~~~
+.. code:: java
+
+  FileWriter fileWriter = new FileWriter(fileName);
+  PrintWriter printWriter = new PrintWriter(fileWriter);  // can use FileWriter, BufferedWriter or System.out
+  printWriter.print("Some String");
+  printWriter.printf("Product name is %s and its price is %d $", "iPhone", 1000);
+  printWriter.close();
 
 Si queremos leer/escribir secuencias de bytes (i.e. ficheros binarios, como una imagen), lo más sencillo es usar
 FileInputStream y FileOutputStream:
 
-~~~ java
-String str = "Hello";
-FileInputStream inputStream = new FileInputStream(fileName);
-int ch;
-while(ch = inputStream.read() != -1) {System.out.println(ch)}
-inputStream.close();
+.. code:: java
 
-String str = "Hello";
-FileOutputStream outputStream = new FileOutputStream(fileName);
-byte[] strToBytes = str.getBytes();
-outputStream.write(strToBytes);
-outputStream.close();
-~~~
+  String str = "Hello";
+  FileInputStream inputStream = new FileInputStream(fileName);
+  int ch;
+  while(ch = inputStream.read() != -1) {System.out.println(ch)}
+  inputStream.close();
+
+  String str = "Hello";
+  FileOutputStream outputStream = new FileOutputStream(fileName);
+  byte[] strToBytes = str.getBytes();
+  outputStream.write(strToBytes);
+  outputStream.close();
 
 Con Java NIO (fichero pequeño, lo guardamos entero en una variable):
 
-~~~ java
-Path path = Paths.get("src/test/resources/fileTest.txt");
+.. code:: java
 
-List&lt;String&gt; lines = Files.readAllLines(path);
-~~~
+  Path path = Paths.get("src/test/resources/fileTest.txt");
+
+  List&lt;String&gt; lines = Files.readAllLines(path);
 
 Con Java NIO (fichero grande, usamos un buffer):
 
-~~~ java
-Path path = Paths.get("src/test/resources/fileTest.txt");
+.. code:: java
 
-BufferedReader reader = Files.newBufferedReader(path);
-String line = reader.readLine();
-~~~
+  Path path = Paths.get("src/test/resources/fileTest.txt");
+
+  BufferedReader reader = Files.newBufferedReader(path);
+  String line = reader.readLine();
 
 Con Java NIO Files.lines():
 
-~~~ java
-Path path = Paths.get(getClass().getClassLoader()
-  .getResource("fileTest.txt").toURI());
-      
-Stream&lt;String&gt; lines = Files.lines(path);
-String data = lines.collect(Collectors.joining("\n"));
-lines.close();
-~~~
+.. code:: java
+
+  Path path = Paths.get(getClass().getClassLoader()
+    .getResource("fileTest.txt").toURI());
+        
+  Stream&lt;String&gt; lines = Files.lines(path);
+  String data = lines.collect(Collectors.joining("\n"));
+  lines.close();
 
 También podemos leer con una instancia de Scanner:
 
-~~~ java
-String file = "src/test/resources/fileTest.txt";
-Scanner scanner = new Scanner(new File(file));
-scanner.useDelimiter(" ");
-String word;
-while(scanner.hasNext()){
-  word = scanner.next();
-}
-scanner.close();
-~~~
+.. code:: java
+
+  String file = "src/test/resources/fileTest.txt";
+  Scanner scanner = new Scanner(new File(file));
+  scanner.useDelimiter(" ");
+  String word;
+  while(scanner.hasNext()){
+    word = scanner.next();
+  }
+  scanner.close();
+
 
 Aún quedan cosas que ver: random access para I/O, creación de ficheros temporales, bloqueo de ficheros, NIO API...
 
 Un FileChannel es un canal de bytes conectado a un fichero. Un canal mantiene una posición (la posición actual) y permite cambiarla.
 </t>
-<t tx="vicent.20220830100950.1">## Java IO: concepts
-
-[baeldung](https://www.baeldung.com/java-outputstream)
+<t tx="vicent.20220830100950.1">`baeldung &lt;https://www.baeldung.com/java-outputstream&gt;`_
 
 The Java IO API which defines classes required to perform I/O operations in Java. These are all packaged in the java.io namespace. This 
 is one of the core packages available in Java since version 1.0.
 
 Starting Java 1.4, we also have Java NIO packaged in the namespace java.nio which enables non-blocking input and output operations. 
 
-Details related to Java IO and Java NIO can be found [here](https://docs.oracle.com/javase/8/docs/technotes/guides/io/index.html).
+Details related to Java IO and Java NIO can be found `here &lt;https://docs.oracle.com/javase/8/docs/technotes/guides/io/index.html&gt;`_.
 
 *Java IO basically provides a mechanism to read data from a source and write data to a destination. Input represents the source while 
 output represents the destination here.*
@@ -4139,9 +4170,7 @@ Moreover, *connection to a source or a destination is what a stream represents*.
 respectively.
 
 </t>
-<t tx="vicent.20220830111952.1">### Buffering
-
-[Como funciona el buffering de escritura?](https://www.baeldung.com/java-outputstream#outputstream-buffering)
+<t tx="vicent.20220830111952.1">`Como funciona el buffering de escritura? &lt;https://www.baeldung.com/java-outputstream#outputstream-buffering&gt;`_
 
 Input and output operations typically involve relatively expensive operations like disk access, network activity, etc. Performing this 
 often can make a program less efficient.
@@ -4151,18 +4180,18 @@ flushed to the destination less often, when the buffer gets full (default buffer
 
 BufferedOutputStream extends FilterOutputStream discussed earlier and wraps an existing OutputStream to write to a destination:
 
-~~~ java
-public static void bufferedOutputStream(
-  String file, String ...data) throws IOException {
- 
-    try (BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(file))) {
-        for(String s : data) {
-            out.write(s.getBytes());
-            out.write(" ".getBytes());
-        }
-    }
-}
-~~~
+.. code:: java
+
+  public static void bufferedOutputStream(
+    String file, String ...data) throws IOException {
+  
+      try (BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(file))) {
+          for(String s : data) {
+              out.write(s.getBytes());
+              out.write(" ".getBytes());
+          }
+      }
+  }
 
 The critical point to note is that every call to write() for each data argument *only writes to the buffer* and does not result in a 
 potentially expensive call to the File.
@@ -4175,7 +4204,7 @@ This results in an output file with the following text:
 
 Hello World!
 
-[Como funciona el buffering de lectura?](https://www.baeldung.com/java-buffered-reader)
+`Como funciona el buffering de lectura? &lt;https://www.baeldung.com/java-buffered-reader&gt;`_
 
 In general, BufferedReader comes in handy if we want to read text from any kind of input source whether that be files, sockets, or 
 something else.
@@ -4189,23 +4218,21 @@ añade a Reader la capacidad de hacer buffering.
 
 Ejemplos de BufferedReader(Reader):
 
-~~~ java
-BufferedReader reader = 
-  new BufferedReader(new FileReader("src/main/resources/input.txt"));
+.. code:: java
 
-BufferedReader reader = 
-  new BufferedReader(new InputStreamReader(System.in));
+  BufferedReader reader = 
+    new BufferedReader(new FileReader("src/main/resources/input.txt"));
 
-BufferedReader reader = 
-           new BufferedReader(new StringReader("1__2__3__4__5"));
+  BufferedReader reader = 
+    new BufferedReader(new InputStreamReader(System.in));
 
-BufferedReader reader = 
-  Files.newBufferedReader(Paths.get("src/main/resources/input.txt"))
-~~~
+  BufferedReader reader = 
+            new BufferedReader(new StringReader("1__2__3__4__5"));
+
+  BufferedReader reader = 
+    Files.newBufferedReader(Paths.get("src/main/resources/input.txt"))
 </t>
-<t tx="vicent.20220831101942.1">## String -bytes conversion
-
-[baeldung](https://www.baeldung.com/java-string-to-byte-array)
+<t tx="vicent.20220831101942.1">`baeldung &lt;https://www.baeldung.com/java-string-to-byte-array&gt;`_
 
 A String is stored as an array of Unicode characters in Java. To convert it to a byte array, we translate the sequence of 
 characters into a sequence of bytes. For this translation, we use an instance of Charset. **This class specifies a mapping between a 
@@ -4213,41 +4240,41 @@ sequence of chars and a sequence of bytes**.
 
 We refer to the above process as encoding.
 
-~~~ java
-String inputString = "Hello World!";
-byte[] byteArrray = inputString.getBytes();   // use the default charset which is system-dependent
-byte[] byteArrray = inputString.getBytes("IBM01140");  // use a named charset
-byte[] byteArrray = inputString.getBytes(Charset.forName("ASCII"));  // use an instance of Charset
-byte[] byteArrray = inputString.getBytes(StandardCharsets.UTF_16);  // use a standard charset
+.. code:: java
 
-String inputString = "Hello ਸੰਸਾਰ!";
-Charset charset = StandardCharsets.US_ASCII;
-byte[] byteArrray = charset.encode(inputString).array();
+  String inputString = "Hello World!";
+  byte[] byteArrray = inputString.getBytes();   // use the default charset which is system-dependent
+  byte[] byteArrray = inputString.getBytes("IBM01140");  // use a named charset
+  byte[] byteArrray = inputString.getBytes(Charset.forName("ASCII"));  // use an instance of Charset
+  byte[] byteArrray = inputString.getBytes(StandardCharsets.UTF_16);  // use a standard charset
 
-CharsetEncoder encoder = StandardCharsets.US_ASCII.newEncoder();  // this provides fine-grained control over the encoding process
-encoder.onMalformedInput(CodingErrorAction.IGNORE)
-  .onUnmappableCharacter(CodingErrorAction.REPLACE)
-  .replaceWith(new byte[] { 0 });
+  String inputString = "Hello ਸੰਸਾਰ!";
+  Charset charset = StandardCharsets.US_ASCII;
+  byte[] byteArrray = charset.encode(inputString).array();
 
-byte[] byteArrray = encoder.encode(CharBuffer.wrap(inputString))
-                      .array();
-~~~
+  CharsetEncoder encoder = StandardCharsets.US_ASCII.newEncoder();  // this provides fine-grained control over the encoding process
+  encoder.onMalformedInput(CodingErrorAction.IGNORE)
+    .onUnmappableCharacter(CodingErrorAction.REPLACE)
+    .replaceWith(new byte[] { 0 });
+
+  byte[] byteArrray = encoder.encode(CharBuffer.wrap(inputString))
+                        .array();
 
 We refer to the process of converting a byte array to a String as decoding. Similar to encoding, this process requires a Charset.
 
 However, we can't just use any charset for decoding a byte array. In particular, we should use the charset that encoded the String 
 into the byte array.
 
-~~~ java
-String charsetName = "IBM01140";
-byte[] byteArrray = { -56, -123, -109, -109, -106, 64, -26, -106,
-  -103, -109, -124, 90 };
+.. code:: java
 
-String string = new String(byteArrray, charsetName);
-    
-assertEquals("Hello World!", string);
-...
-~~~
+  String charsetName = "IBM01140";
+  byte[] byteArrray = { -56, -123, -109, -109, -106, 64, -26, -106,
+    -103, -109, -124, 90 };
+
+  String string = new String(byteArrray, charsetName);
+      
+  assertEquals("Hello World!", string);
+  ...
 </t>
 <t tx="vicent.20220901104803.1">## GIT. Conceptos básicos
 
@@ -5429,11 +5456,11 @@ es parcial (porque hay ocurrencias de empleado que no pertenecen a ninguno de lo
 
 
 </t>
-<t tx="vicent.20221013165224.1">[baeldung](https://www.baeldung.com/jvm-vs-jre-vs-jdk)
+<t tx="vicent.20221013165224.1"> `JVMvsJREvsJDK &lt;https://www.baeldung.com/jvm-vs-jre-vs-jdk&gt;`_
 
-[Web Container](https://www.knowprogram.com/servlet/servlet-container/)
+ `Web Container &lt;https://www.knowprogram.com/servlet/servlet-container/&gt;`_
 
-[JEE architecture](https://www.youtube.com/watch?v=5CVbtcHoVxA)
+ `JEE architecture &lt;https://www.youtube.com/watch?v=5CVbtcHoVxA&gt;`_
 
 JVM es una máquina virtual capaz de ejecutar programas en Java.
 
@@ -5441,17 +5468,13 @@ JRE es una implementación de la JVM.
 
 JDK es un entorno completo de desarrollo de aplicaciones Java.
 </t>
-<t tx="vicent.20221013172934.1">## JRE
-
-Core components of the JRE include:
+<t tx="vicent.20221013172934.1">Core components of the JRE include:
 
 - An implementation of a Java Virtual Machine (JVM)
 - Classes required to run the Java programs
 - Property Files
 </t>
-<t tx="vicent.20221013180127.1">## JDK
-
-Java Development Kit (JDK) provides environment and tools for developing, compiling, debugging, and executing a Java program. Consta 
+<t tx="vicent.20221013180127.1">Java Development Kit (JDK) provides environment and tools for developing, compiling, debugging, and executing a Java program. Consta 
 de:
 
 - un JRE
@@ -5639,24 +5662,20 @@ used here covers both cases.
 - `user??`: returns true if the variable is *not* missing
 
 Methods ara invoked with the `()` operator, passing the required parameters i.e. they are invoked like built-ins with parameters.</t>
-<t tx="vicent.20221017194318.1"># Tema 25 Apache Tomcat. Despliegue de aplicaciones
-
-@path ./25ApacheTomcat
-@language md
-@others
+<t tx="vicent.20221017194318.1">=================================================
+Tema 25 Apache Tomcat. Despliegue de aplicaciones
+=================================================
 </t>
-<t tx="vicent.20221017194749.1">[Basic tutorial](https://www.tutorialkart.com/apache-tomcat/apache-tomcat-tutorial/)
+<t tx="vicent.20221017194749.1">`Basic tutorial &lt;https://www.tutorialkart.com/apache-tomcat/apache-tomcat-tutorial/&gt;`_
 
-[Web Containers](https://www.knowprogram.com/servlet/servlet-container/)
+`Web Containers &lt;https://www.knowprogram.com/servlet/servlet-container/&gt;`_
 
-[Referencia](https://tomcat.apache.org/tomcat-10.1-doc/introduction.html)
+`Tomcat Reference &lt;https://tomcat.apache.org/tomcat-10.1-doc/introduction.html&gt;`_
 
 De la referencia hay que leer los apartados:
 
 1) Introduction
 2) First webapp
-
-## Introduction
 
 Throughout the documentation, there are references to the two following properties:
 
@@ -5695,9 +5714,7 @@ At minimum, `CATALINA_BASE` must contain:
 That includes the conf directory. Otherwise, Tomcat fails to start, or fails to function properly.
 For advanced configuration information, see the RUNNING.txt file. 
 </t>
-<t tx="vicent.20221017195053.1">## First webapp
-
-A web application is defined as a hierarchy of directories and files in a standard layout. Such a hierarchy can be accessed in its 
+<t tx="vicent.20221017195053.1">A web application is defined as a hierarchy of directories and files in a standard layout. Such a hierarchy can be accessed in its 
 "unpacked" form, where each directory and file exists in the filesystem separately, or in a "packed" form known as a **Web ARchive**, 
 or WAR file. The former format is more useful during development, while the latter is used when you distribute your application to be 
 installed.
@@ -5712,7 +5729,7 @@ To facilitate creation of a Web Application Archive file in the required format,
 your web application (that is, the files that Tomcat actually uses when executing your app) in the same organization as required by the 
 WAR format itself. To do this, you will end up with the following contents in your application's "document root" directory:
 
-- *.html, *.jsp, etc. - The HTML and JSP pages, along with other files that must be visible to the client browser (such as JavaScript, 
+- \*.html, \*.jsp, etc. - The HTML and JSP pages, along with other files that must be visible to the client browser (such as JavaScript, 
   stylesheet files, and images) for your application. In larger applications you may choose to divide these files into a subdirectory 
   hierarchy, but for smaller apps, it is generally much simpler to maintain only a single directory for these files.
 - /WEB-INF/web.xml - The Web Application Deployment Descriptor for your application. This is an XML file describing the servlets and 
@@ -5733,8 +5750,8 @@ WAR format itself. To do this, you will end up with the following contents in yo
 Much of this information was extracted from Chapter 9 of the Servlet API Specification, version 2.3, which you should consult for more 
 details.
 
-```{thumbnail} images/Captura.PNG
-```
+.. thumbnail:: images/Captura.PNG
+  :align: center
 </t>
 <t tx="vicent.20221018183554.1">Tema 18 Diseño web. HTML y CSS3
 Tema 26 PHP
@@ -5748,12 +5765,11 @@ Tema 28 Desarrollo de aplicaciones con Ajax y JQuery</t>
 [Diagramas UML](https://www.teatroabadia.com/es/uploads/documentos/iagramas_del_uml.pdf)
 @others
 </t>
-<t tx="vicent.20221018185935.1">## Tomcat vs full application servers
+<t tx="vicent.20221018185935.1">Desde un punto de vista lógico un servidor de aplicaciones tiene esta estructura:
 
-Desde un punto de vista lógico un servidor de aplicaciones tiene esta estructura:
-
-```{thumbnail} images/arquitectura.png
-```
+.. thumbnail:: images/arquitectura.png
+  :align: center
+  :width: 50%
 
 El Tomcat es una versión supersimplificada de un servidor de aplicaciones. Solo tiene la capa de web container. En Tomcat esa capa
 se llama Catalina.
@@ -5771,9 +5787,7 @@ desarrollan como cuando se creó esta tecnología.
 
 Al principio desarrollar servlets era muy complejo, se hacía usando directamente la clase Servlet y compañía. Hoy en día se utilizan
 frameworks como Spring y SpringBoot que hacen mucho más simple el desarrollo a base de enterrar los servlets bajo un montón de capas.</t>
-<t tx="vicent.20221027172449.1">## Scanner
-
-`Scanner` class reads *input stream into **tokens*** (not lines). The token delimiter defaults to white space.
+<t tx="vicent.20221027172449.1">`Scanner` class reads *input stream into **tokens*** (not lines). The token delimiter defaults to white space.
 
 Constructor: `Scanner(input_stream)`
 
@@ -5786,45 +5800,42 @@ where input_stream can be any kind of stream: a String, a file, a byte array, th
 
 Must know the `next()`, `nextInt()`, `nextDouble()` and `nextLine()` APIs:
 
-### next() consumes the line separator but not the token delimiter
+*next() consumes the line separator but not the token delimiter*
+::
 
-    AThis is the first line.\n
-    This is the second line_And\n
-    123Some more text\n
-    45,7
+  AThis is the first line.\n
+  This is the second line_And\n
+  123Some more text\n
+  45,7
 
-`A` is the delimiter. From position (0,0) `next()` will return:
+`A` is the delimiter. From position (0,0) `next()` will return::
 
-    This is the first line.\n
-    This is the second line_
+  This is the first line.\n
+  This is the second line_
 
-### nextLine() is a kind of buffer.readLine(). It consumes both the line separator and the token delimiter delimiter
+*nextLine() is a kind of buffer.readLine(). It consumes both the line separator and the token delimiter delimiter*
 
-and moves the current position of the Scanner to the next line.
+and moves the current position of the Scanner to the next line. So from the current position `nextLine()` will return::
 
-So from the current position `nextLine()` will return:
-
-    And\n
+  And\n
 
 Position is (2, 0) now.
 
-### nextInt() and nextDouble() will not consume the line separator nor the token delimiter.
+*nextInt() and nextDouble() will not consume the line separator nor the token delimiter*.
 
-So from the current position `nextInt()` will return:
+So from the current position `nextInt()` will return::
 
-    123
+  123
 
 Position is (2, 4) now.
 
-`nextLine()` will move cursor to position (3, 0). Finally `nextDouble()` will return:
+`nextLine()` will move cursor to position (3, 0). Finally `nextDouble()` will return::
 
-    45.7
+  45.7
 
 Also hasNext() for validating purposes.
 </t>
-<t tx="vicent.20221027173647.1">## Exceptions
-
-Exceptions can be:
+<t tx="vicent.20221027173647.1">Exceptions can be:
 
 - checked/situational: is typically a way to say that something external to our code (on the network, filesystem, database...) failed
 - unchecked/runtime: some unexpected usage makes the code fail or something is wrong in the logic of the code
@@ -5840,20 +5851,20 @@ A **risky method** is a method that throws a checked exception. It is risky beca
 itself,passing it up the call stack instead, then anyone that calls the method needs to handle it!
 
 
-~~~ java
-public int getPlayerScore(String playerFile)
-  throws FileNotFoundException {
-    Scanner contents = null;
-    try {
-        contents = new Scanner(new File(playerFile));
-        return Integer.parseInt(contents.nextLine());
-    } finally {
-        if (contents != null) {
-            contents.close();
-        }
-    }
-}
-~~~
+.. code:: java
+
+  public int getPlayerScore(String playerFile)
+    throws FileNotFoundException {
+      Scanner contents = null;
+      try {
+          contents = new Scanner(new File(playerFile));
+          return Integer.parseInt(contents.nextLine());
+      } finally {
+          if (contents != null) {
+              contents.close();
+          }
+      }
+  }
 
 Because `FileNotFoundException` is a checked exception, we must handle it to satisfy the compiler (in this example it does mean that anyone that calls our method now needs to handle it too!)
 
@@ -5863,21 +5874,15 @@ Here, the `finally` block indicates what code we want Java to run regardless of 
 
 *Even if a `FileNotFoundException` is thrown up the call stack, Java will call the contents of `finally` before doing that.*
 </t>
-<t tx="vicent.20221027175316.1">## Operators
-
-[Reference](https://www.javatpoint.com/java-operator-precedence)
+<t tx="vicent.20221027175316.1">`Reference &lt;https://www.javatpoint.com/java-operator-precedence&gt;`_
 
 Operators in Java can be grouping, array indexing, member selecting, arithmetic, bitwise, relational and logical.
 
-### Precedence
-
-Precedence is the priority for grouping different types of operators with their operands. It is meaningful only if an expression has 
+*Precedence* is the priority for grouping different types of operators with their operands. It is meaningful only if an expression has 
 more than one operator with higher or lower precedence. The operators having higher precedence are evaluated first. If we want to 
 evaluate lower precedence operators first, we must group operands by using parentheses and then evaluate.
 
-### Associtivity
-
-We must follow associativity if an expression has more than two operators of the same precedence. In such a case, an expression can be 
+We must follow *associativity* if an expression has more than two operators of the same precedence. In such a case, an expression can be 
 solved either left-to-right or right-to-left, accordingly.
 
 In Java all operators have left-to-right associativity except:
@@ -5888,40 +5893,15 @@ In Java all operators have left-to-right associativity except:
 From the `a` value point of view `++a` and `a++` are the same than `a += 1`. The same happens with `--a` and`a--` that are the same than
 `a -= 1`. That is why their associativity is right to left.
 
-### Arithmetic operators
 
-We can perform all standard arithmetic operations on ints. Just be aware that decimal values will be chopped off when performing these 
-on integers.
-
-For instance the `/` operator makes an integer division if both operands are integer and a floating point division if any of the 
-operands is a float number.
-
-### The increment/decrement operators
-
-The increment/decrement operators can be applied before (prefix) or after (postfix) the operand. The code `result++;` and `++result;` 
-will both end in `result` being incremented by one. The only difference is that the prefix version (`++result`) evaluates to the i
-ncremented value, whereas the postfix version (`result++`) evaluates to the original value. If you are just performing a simple 
-increment/decrement, it doesn't really matter which version you choose. But if you use this operator in part of a larger expression, 
-the one that you choose may make a significant difference.
-
-~~~ java
-int a = 3;
-int result = ++a; // result = 4 and a = 4
-result = a--; // result = 4 and a = 3
-~~~
 </t>
-<t tx="vicent.20221027232108.1">## The for loop
+<t tx="vicent.20221027232108.1">.. code:: java
 
-Currently `for` loops come in three flavours.
+  for (initialization; termination;
+      increment) {
+      statement(s)
+  }
 
-### Classic for
-
-~~~ java
-for (initialization; termination;
-     increment) {
-    statement(s)
-}
-~~~
 
 When using this version of the for statement, keep in mind that:
 
@@ -5939,63 +5919,42 @@ life span and reduces errors.
 
 So this is a typical example:
 
-~~~ java
-for(int i=1; i&lt;11; i++){
-  System.out.println("Count is: " + i);
-}
-~~~
+.. code:: java
+
+  for(int i=1; i&lt;11; i++){
+    System.out.println("Count is: " + i);
+  }
 
 Notice that `i` is initialised inside the loop so it is only visible in the loop block.
 
 But this is allowed too:
 
-~~~ java
-int i = 1;
-for(; i&lt;11; i++){
-  System.out.println("Count is: " + i);
-}
-~~~
+.. code:: java
+
+  int i = 1;
+  for(; i&lt;11; i++){
+    System.out.println("Count is: " + i);
+  }
 
 We will use this form when the `i` variable is needed out of the loop.
 
 However this will fail:
 
-~~~ java
-int i = 1;
-for(int i = 0; i&lt;11; i++){
-  System.out.println("Count is: " + i);
-}
-~~~
+.. code:: java
+
+  int i = 1;
+  for(int i = 0; i&lt;11; i++){
+    System.out.println("Count is: " + i);
+  }
 
 because the outer `i` is visible inside the loop so the loop initialization is creating a variable that already exists.
 
-### Enhanced for loop
-
-Its use is recommended over the classic use because it has an easier syntax.
-
-~~~ java
-int[] numbers = 
-    {1,2,3,4,5,6,7,8,9,10};
-for (int item : numbers) {
-    System.out.println("Count is: " + item);
-}
-~~~
-
-### forEach loop
-
-Since Java 8, we can leverage for-each loops in a slightly different way. We now have a dedicated `forEach()` method in the `Iterable`
-interface that accepts a lambda expression representing an action we want to perform.
-
-~~~ java
-numbers.forEach(item -&gt; System.out.println("Count is: " + item));
-~~~
 </t>
-<t tx="vicent.20221028173010.1">## Interfaces
+<t tx="vicent.20221028173010.1">`Baeldung  &lt;https://www.baeldung.com/java-interfaces&gt;`_
 
-[Baeldung](https://www.baeldung.com/java-interfaces)
+.. note::
+  In Java, an interface is an *abstract type* that contains a collection of methods and constant variables.
 
-```{Note} In Java, an interface is an *abstract type* that contains a collection of methods and constant variables.
-```
 
 It is one of the core concepts in Java and is used to achieve abstraction, polymorphism and multiple inheritances.
 
@@ -6012,55 +5971,53 @@ but
 - all interface declarations should have the `public` or `default` access modifier; the `abstract` modifier will be added automatically 
   by the compiler
 - an interface method can't be `protected` or `final`
-- 
 
-~~~ java
-public interface Electronic {  // no abstract modifier
+.. code:: java
 
-    // Constant variable final static public by definition
-    String LED = "LED";
+  public interface Electronic {  // no abstract modifier
 
-    // Abstract method but no abstract modifier
-    int getElectricityUse();
+      // Constant variable final static public by definition
+      String LED = "LED";
 
-    // Static method
-    static boolean isEnergyEfficient(String electtronicType) {
-        if (electtronicType.equals(LED)) {
-            return true;
-        }
-        return false;
-    }
+      // Abstract method but no abstract modifier
+      int getElectricityUse();
 
-    //Default method is public 
-    default void printDescription() {
-        System.out.println("Electronic Description");
-    }
-}
-~~~
+      // Static method
+      static boolean isEnergyEfficient(String electtronicType) {
+          if (electtronicType.equals(LED)) {
+              return true;
+          }
+          return false;
+      }
+
+      //Default method is public 
+      default void printDescription() {
+          System.out.println("Electronic Description");
+      }
+  }
 
 Because interfaces are abstract by definition we dont need to use the `abstract` modifier.
 </t>
-<t tx="vicent.20221028175723.1">## Functional interfaces
-
-Any interface with a SAM (Single Abstract Method) is a functional interface.
+<t tx="vicent.20221028175723.1">Any interface with a SAM (Single Abstract Method) is a functional interface.
 
 The problem: in Java there are many methods that need a function as a parameter or need to return a function. But Java is not a functional programming language so in
 these cases we should create a SAM interface and a class `A` a class implementing it and providing the required functionality. Then when a method needs that function 
 as a parameter we had to do:
 
-~~~ java
-interface SAM {
-  Integer func(String s);
-}
+.. code:: java
 
-class A implements SAM {
-  public Integer func(String s) {
-    return s.length();
+  interface SAM {
+    Integer func(String s);
   }
-}
 
-System.out.println(new A().func("hola"));
-~~~
+  class A implements SAM {
+    public Integer func(String s) {
+      return s.length();
+    }
+  }
+
+  System.out.println(new A().func("hola"));
+
 
 It means a lot of boilerplate is needed just for using a function as a parameter.
 
@@ -6069,10 +6026,9 @@ The solution: Java 8 fixes this situtation providing lambda expressions and many
 A lambda expression is an anonymous function that we can handle as a first-class language citizen. For instance, we can pass it to or return it from a method or assign 
 it to a variable.
 
-```{Note} 
-Functional interfaces implementation may be treated as lambda expressions i.e. *we can use lambda expressions instead of functional interfaces* (`Function`, 
-`BiFunction`, `Supplier`, `Consumer`, `Predicate`, `Operator`...).
-```
+.. note:: 
+  Functional interfaces implementation may be treated as lambda expressions i.e. *we can use lambda expressions instead of functional interfaces* (`Function`, 
+  `BiFunction`, `Supplier`, `Consumer`, `Predicate`, `Operator`...).
 
 As an example of functional interface we will use the `Function` interface which represents a function which takes in one argument and produces a result. Hence this functional interface takes in 2 generics namely as follows:
 
@@ -6083,86 +6039,87 @@ The abstract method of `Function` is `apply()` which eventually applies the give
 
 Let's see an example. The method `HashMap.computeIfAbsent` uses the `Function` functional interface as parameter:
 
-~~~ java
-public V 
-       computeIfAbsent(K key,
-             Function&lt;? super K, ? extends V&gt; remappingFunction)
-~~~
+.. code:: java 
+
+  public V 
+        computeIfAbsent(K key,
+              Function&lt;? super K, ? extends V&gt; remappingFunction)
 
 So we need `remappingFunction` being a `Function`. And we need to implement the `Function.apply` abstract method. Since Java 8 we can achieve both goals at the same
 time as follows:
 
-~~~ java
-public Function&lt;String, Integer&gt; remappingFunction(String name) {
-  return name -&gt; name.length();
-}
-~~~
+.. code:: java 
+
+  public Function&lt;String, Integer&gt; remappingFunction(String name) {
+    return name -&gt; name.length();
+  }
 
 as a result the returned lambda expression becomes the implementation of the `Function.apply` method:
 
-~~~ java
-public Integer apply(String name) {
-  return name.length();
-}
-~~~
+.. code:: java 
+
+  public Integer apply(String name) {
+    return name.length();
+  }
 
 and we use it as follows:
 
-~~~ java
-Map&lt;String, Integer&gt; nameMap = new HashMap&lt;&gt;();
-Integer value = nameMap.computeIfAbsent("John", remappingFunction);
-~~~
+.. code:: java 
+
+  Map&lt;String, Integer&gt; nameMap = new HashMap&lt;&gt;();
+  Integer value = nameMap.computeIfAbsent("John", remappingFunction);
 
 We can do it shorter:
 
-~~~ java
-Function&lt;String, Integer&gt; remappingFunction = s -&gt; s.length();
-Map&lt;String, Integer&gt; nameMap = new HashMap&lt;&gt;();
-Integer value = nameMap.computeIfAbsent("John", remappingFunction);
-~~~
+.. code:: java 
+
+  Function&lt;String, Integer&gt; remappingFunction = s -&gt; s.length();
+  Map&lt;String, Integer&gt; nameMap = new HashMap&lt;&gt;();
+  Integer value = nameMap.computeIfAbsent("John", remappingFunction);
 
 And even shorter as we can use directly a lambda expression:
 
-~~~ java
-Map&lt;String, Integer&gt; nameMap = new HashMap&lt;&gt;();
-Integer value = nameMap.computeIfAbsent("John", s -&gt; s.length());
-~~~
+.. code:: java 
+
+  Map&lt;String, Integer&gt; nameMap = new HashMap&lt;&gt;();
+  Integer value = nameMap.computeIfAbsent("John", s -&gt; s.length());
+
 
 or a reference to a method with the proper types of input and return values:
 
-~~~ Java
-Map&lt;String, Integer&gt; nameMap = new HashMap&lt;&gt;();
-Integer value = nameMap.computeIfAbsent("John", String::length);
-~~~
+.. code:: java 
+
+  Map&lt;String, Integer&gt; nameMap = new HashMap&lt;&gt;();
+  Integer value = nameMap.computeIfAbsent("John", String::length);
+
 
 But the most readable choice seems to be lambda expressions..
 
 Summary: thanks to functional interfaces and lambda expressions we can move from
 
-~~~ java
-interface SAM {
-  Integer func(String s);
-}
+.. code:: java 
 
-class A implements SAM {
-  public Integer func(String s) {
-    return s.length();
+  interface SAM {
+    Integer func(String s);
   }
-}
 
-System.out.println(new A().func("hola"));
-~~~
+  class A implements SAM {
+    public Integer func(String s) {
+      return s.length();
+    }
+  }
+
+  System.out.println(new A().func("hola"));
+
 
 to
 
-~~~ java
-Function&lt;String, Integer&gt; func = s -&gt; s.length()
-System.out.println(func.apply("hola"));
-~~~
-</t>
-<t tx="vicent.20221030101009.1">## Autoboxing
+.. code:: java 
 
-**Autoboxing** (*automatic* boxing/wrapping) is the automatic conversion that the Java compiler makes between the primitive types and their corresponding object 
+  Function&lt;String, Integer&gt; func = s -&gt; s.length()
+  System.out.println(func.apply("hola"));
+</t>
+<t tx="vicent.20221030101009.1">**Autoboxing** (*automatic* boxing/wrapping) is the automatic conversion that the Java compiler makes between the primitive types and their corresponding object 
 wrapper classes. For example, converting an `int` to an `Integer`, a `double` to a `Double`, and so on. If the conversion goes the other way, this is called 
 **unboxing**.
 
@@ -6174,22 +6131,23 @@ wrapper classes. For example, converting an `int` to an `Integer`, a `double` to
 
 For instance:
 
-~~~ Java
-Character c = 'A';
-Integer i = 3;
+.. code:: java
 
-List&lt;Integer&gt; li = new ArrayList&lt;&gt;();
-for (int i = 1; i &lt; 50; i += 2)
-  li.add(i);
-~~~
+  Character c = 'A';
+  Integer i = 3;
+
+  List&lt;Integer&gt; li = new ArrayList&lt;&gt;();
+  for (int i = 1; i &lt; 50; i += 2)
+    li.add(i);
+
 
 Although you add `int` values to the list instead of `Integer` values the code works because the compiler at runtime applies autoboxing and converts the code into
 
-~~~ Java
-List&lt;Integer&gt; li = new ArrayList&lt;&gt;();
-for (int i = 1; i &lt; 50; i += 2)
-  li.add(Integer.valueOf(i));
-~~~
+.. code:: java
+
+  List&lt;Integer&gt; li = new ArrayList&lt;&gt;();
+  for (int i = 1; i &lt; 50; i += 2)
+    li.add(Integer.valueOf(i));
 
 Converting an object of a wrapper type (Integer) to its corresponding primitive (int) value is called unboxing. The Java compiler applies unboxing when an object of a 
 wrapper class is:
@@ -6197,37 +6155,36 @@ wrapper class is:
 - Passed as a parameter to a method that expects a value of the corresponding primitive type.
 - Assigned to a variable of the corresponding primitive type.
 
-~~~ Java
-public static int sumEven(List&lt;Integer&gt; li) {
-  int sum = 0;
-  for (Integer i: li)
-    if (i % 2 == 0)
-        sum += i;
-    return sum;
-}
-~~~
+.. code:: java
+
+  public static int sumEven(List&lt;Integer&gt; li) {
+    int sum = 0;
+    for (Integer i: li)
+      if (i % 2 == 0)
+          sum += i;
+      return sum;
+  }
 
 The remainder (%) and unary plus (+=) operators do not apply to Integer objects. The compiler does not generate an error because it invokes the intValue method to 
 convert an Integer to an int at runtime:
 
-~~~ Java
-public static int sumEven(List&lt;Integer&gt; li) {
-  int sum = 0;
-  for (Integer i: li)
-    if (i.intValue() % 2 == 0)
-        sum += i.intValue();
-    return sum;
-~~~
+.. code:: java
+
+  public static int sumEven(List&lt;Integer&gt; li) {
+    int sum = 0;
+    for (Integer i: li)
+      if (i.intValue() % 2 == 0)
+          sum += i.intValue();
+      return sum;
 </t>
-<t tx="vicent.20221030173701.1">## Generics
+<t tx="vicent.20221030173701.1">The problem:
 
-The problem:
+.. code:: java 
 
-~~~ java
-List list = new LinkedList();
-list.add(new Integer(1)); 
-Integer i = list.iterator().next();
-~~~
+  List list = new LinkedList();
+  list.add(new Integer(1)); 
+  Integer i = list.iterator().next();
+
 
 This code will not compile because nobody enforces in anyway that all the elements in the list are `Integer`s. So the compiler doesn't know what type is correct and
 it fails at the last line.
@@ -6237,9 +6194,9 @@ idea behind generics. *With generics the compiler can enforce the type at compil
 
 ### Generic variables
 
-~~~ java
-List&lt;Integer&gt; list = new LinkedList&lt;&gt;();
-~~~
+.. code:: java 
+
+  List&lt;Integer&gt; list = new LinkedList&lt;&gt;();
 
 By adding the diamond operator &lt;&gt; containing the type, we narrow the specialization of this list to only Integer type. In other words, we specify the type held inside 
 the list. The compiler can enforce the type at compile time.
@@ -6259,33 +6216,33 @@ These are some properties of generic methods:
 - Generic methods can have different type parameters separated by commas in the method signature.
 - Method body for a generic method is just like a normal method.
 
-~~~ java
-public &lt;T&gt; List&lt;T&gt; fromArrayToList(T[] a) {   
-    return Arrays.stream(a).collect(Collectors.toList());
-}
-~~~
+.. code:: java 
+
+  public &lt;T&gt; List&lt;T&gt; fromArrayToList(T[] a) {   
+      return Arrays.stream(a).collect(Collectors.toList());
+  }
 
 Here is how we would modify the above method to deal with type T and type G:
 
-~~~ java
-public static &lt;T, G&gt; List&lt;G&gt; fromArrayToList(T[] a, Function&lt;T, G&gt; mapperFunction) {
-    return Arrays.stream(a)
-      .map(mapperFunction)
-      .collect(Collectors.toList());
-}
-~~~
+.. code:: java 
+
+  public static &lt;T, G&gt; List&lt;G&gt; fromArrayToList(T[] a, Function&lt;T, G&gt; mapperFunction) {
+      return Arrays.stream(a)
+        .map(mapperFunction)
+        .collect(Collectors.toList());
+  }
 
 In Java Collections, we use T for type, K for key and V for value.
 
 Remember that type parameters can be **bounded**. Bounded means “restricted,” and we can restrict the types that a method accepts.
 
-~~~ java
-public static &lt;T extends Number, G super String&gt; List&lt;G&gt; fromArrayToList(T[] a, Function&lt;T, G&gt; mapperFunction) {
-    return Arrays.stream(a)
-      .map(mapperFunction)
-      .collect(Collectors.toList());
-}
-~~~
+.. code:: java 
+
+  public static &lt;T extends Number, G super String&gt; List&lt;G&gt; fromArrayToList(T[] a, Function&lt;T, G&gt; mapperFunction) {
+      return Arrays.stream(a)
+        .map(mapperFunction)
+        .collect(Collectors.toList());
+  }
 
 - T extends `Number`: `Number` is the upper bound type and T extends it i.e. `Number` is atop of the hierarchy of allowed types
 - G super `String`: `String` is the lower bound type and G is an ancestor type i.e. `String` is at the bottom of the hierarchy of allowed types
@@ -6294,21 +6251,22 @@ Beware that `Object` is the supertype of all Java classes but it does *not* mean
 For instance `Object` is the supertype of `String` but `List&lt;Object&gt;` is *not* the supertype of `List&lt;String&gt;`. ***The same rule applies to any collection of a type and 
 its subtypes***. Consider this example:
 
-~~~ java
-public static void paintAllBuildings(List&lt;Building&gt; buildings) {
-    buildings.forEach(Building::paint);
-}
-~~~
+.. code:: java 
+
+  public static void paintAllBuildings(List&lt;Building&gt; buildings) {
+      buildings.forEach(Building::paint);
+  }
 
 If we imagine a subtype of `Building`, such as a `House`, we can't use this method with a list of `House`, even though `House` is a subtype of `Building`.
 
 If we need to use this method with type `Building` and all its subtypes, the **bounded wildcard** can do the magic:
 
-~~~ java
-public static void paintAllBuildings(List&lt;? extends Building&gt; buildings) {
-    ...
-}
-~~~
+.. code:: java 
+
+  public static void paintAllBuildings(List&lt;? extends Building&gt; buildings) {
+      ...
+  }
+
 
 Now this method will work with type `Building` and all its subtypes. This is called an upper-bounded wildcard, where type `Building` is the upper bound.
 
@@ -6317,113 +6275,11 @@ convertible to Object. Since primitive types don't extend Object, we can't use t
 
 However, Java provides boxed types for primitives, along with autoboxing and unboxing to unwrap them.
 </t>
-<t tx="vicent.20221101080718.1">## Collections
-
-Arrays are pretty simple data structures. A more complex type of data structure are collections, which, compared to arrays, have a dynamic size.
+<t tx="vicent.20221101080718.1">Arrays are pretty simple data structures. A more complex type of data structure are collections, which, compared to arrays, have a dynamic size.
 Collections make use of Generics and the diamond operator.
 
 The most important Collections are : ArrayList, LinkedList, HashMap and HashSet.
 
-### ArrayList
-
-List represents an ordered sequence of values where some value may occur more than one time.
-
-ArrayList is one of the List implementations built atop an array, which is able to dynamically grow and shrink as you add/remove elements. Elements could be easily 
-accessed by their indexes starting from zero.
-
-Creating an `ArrayList`:
-
-~~~ java
-List&lt;String&gt; list = new ArrayList&lt;&gt;();
-assertTrue(list.isEmpty());
-
-List&lt;String&gt; list = new ArrayList&lt;&gt;(20);
-
-List&lt;Long&gt; list = new ArrayList&lt;&gt;(Arrays.asList(1L, 2L, 3L));
-
-Collection&lt;Integer&gt; numbers 
-  = IntStream.range(0, 10).boxed().collect(Collectors.toSet());
-
-List&lt;Integer&gt; list = new ArrayList&lt;&gt;(numbers);
-assertEquals(10, list.size());
-assertTrue(numbers.containsAll(list));
-~~~
-
-Adding elements:
-
-~~~ java
-List&lt;Long&gt; list = new ArrayList&lt;&gt;();
-
-list.add(1L);
-list.add(2L);
-list.add(1, 3L);
-
-assertThat(Arrays.asList(1L, 3L, 2L), equalTo(list));
-
-List&lt;Long&gt; list = new ArrayList&lt;&gt;(Arrays.asList(1L, 2L, 3L));
-LongStream.range(4, 10).boxed()
-  .collect(collectingAndThen(Collectors.toCollection(ArrayList::new), ys -&gt; list.addAll(0, ys)));
-assertThat(Arrays.asList(4L, 5L, 6L, 7L, 8L, 9L, 1L, 2L, 3L), equalTo(list));
-~~~
-
-There are two types of iterators available: `Iterator` (traverses the list in one direction) and `ListIterator` (can traverse the list in both directions).
-
-In a `ListIterator(p)` starting at the specified position in the list, the specified index indicates the first element that would be returned by an initial call to 
-`next`. An initial call to `previous` would return the element with the specified index minus one. So the iteration direction depends on `next` or `previous` being
-called.
-
-It is also important to understand that a `ListIterator` has no current element; its cursor position always lies between the element that would be returned by a call 
-to `previous()` and the element that would be returned by a call to `next()`. An iterator for a list of length n has n+1 possible cursor positions, as illustrated by 
-the carets (^) below:
-
-                          Element(0)   Element(1)   Element(2)   ... Element(n-1)
-    cursor positions:  ^            ^            ^            ^                  ^
-
-~~~ java
-List&lt;Integer&gt; list = new ArrayList&lt;&gt;(
-  IntStream.range(0, 10).boxed().collect(toCollection(ArrayList::new))
-);
-ListIterator&lt;Integer&gt; it = list.listIterator(list.size());  // this iterator has 11 possible cursor positions
-List&lt;Integer&gt; result = new ArrayList&lt;&gt;(list.size());
-while (it.hasPrevious()) {
-    result.add(it.previous());
-}
-
-Collections.reverse(list);
-assertThat(result, equalTo(list));
-~~~
-
-Searching:
-
-~~~ java
-assertEquals(10, stringsToSearch.indexOf("a"));
-assertEquals(26, stringsToSearch.lastIndexOf("a"));
-
-Set&lt;String&gt; matchingStrings = new HashSet&lt;&gt;(Arrays.asList("a", "c", "9"));
-
-List&lt;String&gt; result = stringsToSearch
-  .stream()
-  .filter(matchingStrings::contains)
-  .collect(toCollection(ArrayList::new));
-
-assertEquals(6, result.size());
-
-Iterator&lt;String&gt; it = stringsToSearch.iterator();
-Set&lt;String&gt; matchingStrings = new HashSet&lt;&gt;(Arrays.asList("a", "c", "9"));
-
-List&lt;String&gt; result = new ArrayList&lt;&gt;();
-while (it.hasNext()) {
-    String s = it.next();
-    if (matchingStrings.contains(s)) {
-        result.add(s);
-    }
-}
-
-List&lt;String&gt; copy = new ArrayList&lt;&gt;(stringsToSearch);
-Collections.sort(copy);
-int index = Collections.binarySearch(copy, "f");
-assertThat(index, not(equalTo(-1)));
-~~~
 </t>
 <t tx="vicent.20221103183313.1">Una subconsulta es una consulta que aparece dentro de otra consulta.
 
@@ -6697,7 +6553,7 @@ to something called the clustered index key. The data is physically stored in th
 <t tx="vicent.20221105073219.1"></t>
 <t tx="vicent.20221105162102.1">La unidad básica es el bloque:
 
-.. image:: images/plsql-anonymous-block.png
+.. thumbnail:: images/plsql-anonymous-block.png
   :alt: Bloque anónimo
   :align: center
 
@@ -7017,7 +6873,7 @@ por el ``SELECT`` o que los tipos de datos de las variables no coincidan con los
 </t>
 <t tx="vicent.20221105204521.1">Un record es una estructura de datos formada por varios campos, cada uno con un valor. Lo podemos representar como
 
-.. image:: images/plsql-record.png
+.. thumbnail:: images/plsql-record.png
   :alt: Un record está compuesto por varios campos
   :align: center
 
@@ -7176,7 +7032,7 @@ Ejemplo completo:
 
 El ciclo de vida de un cursor se representa como:
 
-.. image:: images/plsql-cursor.png
+.. thumbnail:: images/plsql-cursor.png
   :alt: Ciclo de vida de un cursor externo
   :align: center
 
@@ -7210,6 +7066,296 @@ En cuanto al estado de un cursor explícito, se obtiene de los atributos %ISOPEN
 
   c_name%attribute
 
+</t>
+<t tx="vicent.20221107174904.1">@path ./12PL-SQL
+@language rest
+@others</t>
+<t tx="vicent.20221107175144.1">@path ./17Lenguaje_Java
+@language rest
+@others
+</t>
+<t tx="vicent.20221107180610.1">We can perform all standard arithmetic operations on ints. Just be aware that decimal values will be chopped off when performing these 
+on integers.
+
+For instance the `/` operator makes an integer division if both operands are integer and a floating point division if any of the 
+operands is a float number.
+
+</t>
+<t tx="vicent.20221107180651.1">The increment/decrement operators can be applied before (prefix) or after (postfix) the operand. The code `result++;` and `++result;` 
+will both end in `result` being incremented by one. The only difference is that the prefix version (`++result`) evaluates to the i
+ncremented value, whereas the postfix version (`result++`) evaluates to the original value. If you are just performing a simple 
+increment/decrement, it doesn't really matter which version you choose. But if you use this operator in part of a larger expression, 
+the one that you choose may make a significant difference.
+
+.. code:: java
+
+  int a = 3;
+  int result = ++a; // result = 4 and a = 4
+  result = a--; // result = 4 and a = 3
+</t>
+<t tx="vicent.20221107181128.1">Its use is recommended over the classic use because it has an easier syntax.
+
+.. code:: java
+
+  int[] numbers = 
+      {1,2,3,4,5,6,7,8,9,10};
+  for (int item : numbers) {
+      System.out.println("Count is: " + item);
+  }
+
+
+
+</t>
+<t tx="vicent.20221107181252.1">Since Java 8, we can leverage for-each loops in a slightly different way. We now have a dedicated `forEach()` method in the `Iterable`
+interface that accepts a lambda expression representing an action we want to perform.
+
+.. code:: java
+
+  numbers.forEach(item -&gt; System.out.println("Count is: " + item));
+</t>
+<t tx="vicent.20221107200538.1">### ArrayList
+
+List represents an ordered sequence of values where some value may occur more than one time.
+
+ArrayList is one of the List implementations built atop an array, which is able to dynamically grow and shrink as you add/remove elements. Elements could be easily 
+accessed by their indexes starting from zero.
+
+Creating an `ArrayList`:
+
+.. code:: java
+
+  List&lt;String&gt; list = new ArrayList&lt;&gt;();
+  assertTrue(list.isEmpty());
+
+  List&lt;String&gt; list = new ArrayList&lt;&gt;(20);
+
+  List&lt;Long&gt; list = new ArrayList&lt;&gt;(Arrays.asList(1L, 2L, 3L));
+
+  Collection&lt;Integer&gt; numbers 
+    = IntStream.range(0, 10).boxed().collect(Collectors.toSet());
+
+  List&lt;Integer&gt; list = new ArrayList&lt;&gt;(numbers);
+  assertEquals(10, list.size());
+  assertTrue(numbers.containsAll(list));
+
+Adding elements:
+
+.. code:: java
+
+  List&lt;Long&gt; list = new ArrayList&lt;&gt;();
+
+  list.add(1L);
+  list.add(2L);
+  list.add(1, 3L);
+
+  assertThat(Arrays.asList(1L, 3L, 2L), equalTo(list));
+
+  List&lt;Long&gt; list = new ArrayList&lt;&gt;(Arrays.asList(1L, 2L, 3L));
+  LongStream.range(4, 10).boxed()
+    .collect(collectingAndThen(Collectors.toCollection(ArrayList::new), ys -&gt; list.addAll(0, ys)));
+  assertThat(Arrays.asList(4L, 5L, 6L, 7L, 8L, 9L, 1L, 2L, 3L), equalTo(list));
+
+There are two types of iterators available: `Iterator` (traverses the list in one direction) and `ListIterator` (can traverse the list in both directions).
+
+In a `ListIterator(p)` starting at the specified position in the list, the specified index indicates the first element that would be returned by an initial call to 
+`next`. An initial call to `previous` would return the element with the specified index minus one. So the iteration direction depends on `next` or `previous` being
+called.
+
+It is also important to understand that a `ListIterator` has no current element; its cursor position always lies between the element that would be returned by a call 
+to `previous()` and the element that would be returned by a call to `next()`. An iterator for a list of length n has n+1 possible cursor positions, as illustrated by 
+the carets (^) below::
+
+                          Element(0)   Element(1)   Element(2)   ... Element(n-1)
+    cursor positions:  ^            ^            ^            ^                  ^
+
+.. code:: java
+
+  List&lt;Integer&gt; list = new ArrayList&lt;&gt;(
+    IntStream.range(0, 10).boxed().collect(toCollection(ArrayList::new))
+  );
+  ListIterator&lt;Integer&gt; it = list.listIterator(list.size());  // this iterator has 11 possible cursor positions
+  List&lt;Integer&gt; result = new ArrayList&lt;&gt;(list.size());
+  while (it.hasPrevious()) {
+      result.add(it.previous());
+  }
+
+  Collections.reverse(list);
+  assertThat(result, equalTo(list));
+
+Searching:
+
+.. code:: java
+
+  assertEquals(10, stringsToSearch.indexOf("a"));
+  assertEquals(26, stringsToSearch.lastIndexOf("a"));
+
+  Set&lt;String&gt; matchingStrings = new HashSet&lt;&gt;(Arrays.asList("a", "c", "9"));
+
+  List&lt;String&gt; result = stringsToSearch
+    .stream()
+    .filter(matchingStrings::contains)
+    .collect(toCollection(ArrayList::new));
+
+  assertEquals(6, result.size());
+
+  Iterator&lt;String&gt; it = stringsToSearch.iterator();
+  Set&lt;String&gt; matchingStrings = new HashSet&lt;&gt;(Arrays.asList("a", "c", "9"));
+
+  List&lt;String&gt; result = new ArrayList&lt;&gt;();
+  while (it.hasNext()) {
+      String s = it.next();
+      if (matchingStrings.contains(s)) {
+          result.add(s);
+      }
+  }
+
+  List&lt;String&gt; copy = new ArrayList&lt;&gt;(stringsToSearch);
+  Collections.sort(copy);
+  int index = Collections.binarySearch(copy, "f");
+  assertThat(index, not(equalTo(-1)));
+</t>
+<t tx="vicent.20221107200734.1">A few important features of HashSet are: 
+
+- Implements Set Interface.
+- The underlying data structure for HashSet is Hashtable.
+- As it implements the Set Interface, duplicate values are not allowed.
+- Objects that you insert in HashSet are not guaranteed to be inserted in the same order. Objects are inserted based on their hash code.
+- NULL elements are allowed in HashSet.
+- HashSet also implements Serializable and Cloneable interfaces.
+
+Two important concepts are **initial capacity** and **load factor**.
+
+The initial capacity means the number of buckets when hashtable is created. The number of buckets will be automatically increased if the 
+current size gets full. 
+ 
+The load factor is a measure of how full the HashSet is allowed to get before its capacity is automatically increased. When the number 
+of entries in the hash table exceeds the product of the load factor and the current capacity, the hash table is rehashed (that is, 
+internal data structures are rebuilt) so that the hash table has approximately twice the number of buckets.
+::
+
+                  Number of stored elements in the table
+  Load Factor = -----------------------------------------
+                          Size of the hash table 
+
+So if internal capacity is 16 and the load factor is 0.75 then the number of buckets will automatically get increased when the table has 
+12 elements in it.
+
+.. note::
+  HashSet uses HashMap for storing its object internally. To enter a value in HashMap we need a key-value pair, but in HashSet, we are passing only one value! 
+  Actually *the value we insert in HashSet acts as a key to the HashMap Object and for its value, java uses a constant variable. So in the key-value pair, all the 
+  values will be the same*.
+
+HashSet checks whether there is an existing entry using hashCode() and equals() methods. So *HashSet does not store duplicate items*,  if you give two Objects that are 
+equal then it stores only the first one, here it is list1.
+
+HashSet has four constructors::
+
+  HashSet() -&gt; empty HashSet with initial capacity set to 16 and load factor set to 0.75
+  HashSet(int initialCapacity)
+  HashSet(int initialCapacity, float loadFactor)
+  HashSet(Collection) -&gt; build a HashSet object containing all the elements from the given collection
+
+Important operations are add(e), remove(e), contains(e) and iterating over the elements. We can see them in action in the following example:
+
+.. code:: java
+
+  import java.util.*;
+
+  class GFG {
+
+    public static void main(String[] args)
+    {
+
+      // Creating an empty HashSet
+      HashSet&lt;String&gt; h = new HashSet&lt;String&gt;();
+
+      // Adding elements into HashSet
+      // using add() method
+      h.add("India");
+      h.add("Australia");
+      h.add("South Africa");
+
+      // Adding duplicate elements
+      h.add("India");
+
+      // Displaying the HashSet
+      System.out.println(h);
+      System.out.println("List contains India or not:"
+              + h.contains("India"));
+
+      // Removing items from HashSet
+      // using remove() method
+      h.remove("Australia");
+      System.out.println("List after removing Australia:"
+              + h);
+
+      // Display message
+      System.out.println("Iterating over list:");
+
+      // Iterating over hashSet items
+      Iterator&lt;String&gt; i = h.iterator();
+
+      // Holds true till there is single element remaining
+      while (i.hasNext())
+
+        // Iterating over elements
+        // using next() method
+        System.out.println(i.next());
+    }
+  }
+
+In addition we have clear(), isEmpty(), size(), clone(), toArray(), toString(), addAll(collection), removeAll(collection), containsAll(collection).
+</t>
+<t tx="vicent.20221107204516.1">.. code:: java
+
+  // Java program to traversal a
+  // Java.util.HashMap
+
+  import java.util.HashMap;
+  import java.util.Map;
+
+  public class TraversalTheHashMap {
+    public static void main(String[] args)
+    {
+      // initialize a HashMap
+      HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
+
+      // Add elements using put method
+      map.put("vishal", 10);
+      map.put("sachin", 30);
+      map.put("vaibhav", 20);
+
+      // Iterate the map using
+      // for-each loop
+      for (Map.Entry&lt;String, Integer&gt; e : map.entrySet())
+        System.out.println("Key: " + e.getKey()
+                + " Value: " + e.getValue());
+    }
+  }
+
+Respecto a HashSet cambia:
+
+- la manera de iterar
+- add(e) -&gt; put(k, v)
+- contains(e) -&gt; e.getKey(), e.getValue()
+
+Nuevos métodos:
+
+- keySet(), values(), entrySet()
+- containsKey(K), containsValue(V)
+- compute(K, remappingFunction)
+</t>
+<t tx="vicent.20221108175934.1">@path ./16Entorno_de_desarrollo_Java
+@language rest
+@others
+</t>
+<t tx="vicent.20221108190829.1">@path ./25ApacheTomcat
+@language rest
+@others
+</t>
+<t tx="vicent.20221108193431.1">@path ./30PruebaDelSoftware
+@language rest
+@others
 </t>
 </tnodes>
 </leo_file>

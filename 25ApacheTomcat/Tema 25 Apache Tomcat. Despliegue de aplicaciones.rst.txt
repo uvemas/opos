@@ -1,17 +1,22 @@
-# Tema 25 Apache Tomcat. Despliegue de aplicaciones
+.. rst3: filename: Tema 25 Apache Tomcat. Despliegue de aplicaciones.rst
 
-[Basic tutorial](https://www.tutorialkart.com/apache-tomcat/apache-tomcat-tutorial/)
+=================================================
+Tema 25 Apache Tomcat. Despliegue de aplicaciones
+=================================================
 
-[Web Containers](https://www.knowprogram.com/servlet/servlet-container/)
+Introduction
+++++++++++++
 
-[Referencia](https://tomcat.apache.org/tomcat-10.1-doc/introduction.html)
+`Basic tutorial <https://www.tutorialkart.com/apache-tomcat/apache-tomcat-tutorial/>`_
+
+`Web Containers <https://www.knowprogram.com/servlet/servlet-container/>`_
+
+`Tomcat Reference <https://tomcat.apache.org/tomcat-10.1-doc/introduction.html>`_
 
 De la referencia hay que leer los apartados:
 
 1) Introduction
 2) First webapp
-
-## Introduction
 
 Throughout the documentation, there are references to the two following properties:
 
@@ -48,13 +53,16 @@ At minimum, `CATALINA_BASE` must contain:
 - `conf/web.xml`
 
 That includes the conf directory. Otherwise, Tomcat fails to start, or fails to function properly.
-For advanced configuration information, see the RUNNING.txt file. 
-## Tomcat vs full application servers
+For advanced configuration information, see the RUNNING.txt file.
+
+Tomcat vs Applications Server
++++++++++++++++++++++++++++++
 
 Desde un punto de vista lógico un servidor de aplicaciones tiene esta estructura:
 
-```{thumbnail} images/arquitectura.png
-```
+.. thumbnail:: images/arquitectura.png
+  :align: center
+  :width: 50%
 
 El Tomcat es una versión supersimplificada de un servidor de aplicaciones. Solo tiene la capa de web container. En Tomcat esa capa
 se llama Catalina.
@@ -72,7 +80,9 @@ desarrollan como cuando se creó esta tecnología.
 
 Al principio desarrollar servlets era muy complejo, se hacía usando directamente la clase Servlet y compañía. Hoy en día se utilizan
 frameworks como Spring y SpringBoot que hacen mucho más simple el desarrollo a base de enterrar los servlets bajo un montón de capas.
-## First webapp
+
+First webapp
+++++++++++++
 
 A web application is defined as a hierarchy of directories and files in a standard layout. Such a hierarchy can be accessed in its 
 "unpacked" form, where each directory and file exists in the filesystem separately, or in a "packed" form known as a **Web ARchive**, 
@@ -89,7 +99,7 @@ To facilitate creation of a Web Application Archive file in the required format,
 your web application (that is, the files that Tomcat actually uses when executing your app) in the same organization as required by the 
 WAR format itself. To do this, you will end up with the following contents in your application's "document root" directory:
 
-- *.html, *.jsp, etc. - The HTML and JSP pages, along with other files that must be visible to the client browser (such as JavaScript, 
+- \*.html, \*.jsp, etc. - The HTML and JSP pages, along with other files that must be visible to the client browser (such as JavaScript, 
   stylesheet files, and images) for your application. In larger applications you may choose to divide these files into a subdirectory 
   hierarchy, but for smaller apps, it is generally much simpler to maintain only a single directory for these files.
 - /WEB-INF/web.xml - The Web Application Deployment Descriptor for your application. This is an XML file describing the servlets and 
@@ -110,5 +120,6 @@ WAR format itself. To do this, you will end up with the following contents in yo
 Much of this information was extracted from Chapter 9 of the Servlet API Specification, version 2.3, which you should consult for more 
 details.
 
-```{thumbnail} images/Captura.PNG
-```
+.. thumbnail:: images/Captura.PNG
+  :align: center
+
