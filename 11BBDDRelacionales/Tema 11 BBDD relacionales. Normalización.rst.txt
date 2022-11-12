@@ -1,4 +1,11 @@
-# Tema 11 BBDD relacionales. Fundamentos. Normalización
+.. rst3: filename: Tema 11 BBDD relacionales. Normalización.rst
+
+=====================================================
+Tema 11 BBDD relacionales. Fundamentos. Normalización
+=====================================================
+
+Introducción
++++++++++++++
 
 Dr Edgar F. Codd, after his extensive research on the Relational Model of database systems, came up with twelve rules of his own, which 
 according to him, a database must obey in order to be regarded as a true relational database.
@@ -61,9 +68,11 @@ Regarding rule 5, the SQL statements are divided into three categories:
 - Data manipulation language (DML): target *data* stored in the DDBB.SELECT, INSERT, UPDATE, DELETE, BEGIN, COMMIT, ROLLBACK
 - Data definition language (DDL): create, modify and destroy *DDBB objects* like schemas, tables, indexes and views. CREATE, ALTER, DROP
 - Data control language (DCL): authorize users to access data and DDBB objects. GRANT, REVOKE
-## Normalization
 
-[Referencia](https://www.studytonight.com/dbms/database-normalization.php)
+Normalización
+++++++++++++++
+
+`Referencia <https://www.studytonight.com/dbms/database-normalization.php>`_
 
 Normalization is the process of organizing the data in the database. It consists of a series of guidelines that helps to guide you in 
 creating a good database structure.
@@ -86,8 +95,10 @@ said to be in particular normal form if it satisfies constraints.
 
 A table is in 1NF if it contains *only atomic values* i.e. if no value is itself a relation/table. 
 
-```{thumbnail} images/1NFviolation.png
-```
+.. thumbnail:: images/1NFviolation.png
+  :align: center
+  :width: 50%
+
 
 To achieve this goal we must eliminate repeating groups (groups with the same meaning, for instance address1 and address2).
 
@@ -96,7 +107,7 @@ the same table.
 
 **Second normal form, 2NF**
 
-A table will be in 2NF if it is in 1NF and all non-key values are fully functional dependent on the primary key [^1]. It means that
+A table will be in 2NF if it is in 1NF and all non-key values are fully functional dependent on the primary key [#]_. It means that
 all non-key values can be fetched using the full primary key (remember that primary key can be a composite key). 
 
 If the dependency is only partial the 2NF is not fulfiled. It means that there are values that can be fetched using only part of a 
@@ -108,5 +119,7 @@ only need B to be fetched then D depends partially of the composite primary key 
 A table will be in 3NF if it is in 2NF and no transitive dependency exists. It means that all non-key values on the table deppend on 
 **only** primary keys.
 
+.. rubric:: Footnotes
 
-[^1]: But may depend also on other fields that are not primary keys.
+.. [#] But may depend also on other fields that are not primary keys.
+

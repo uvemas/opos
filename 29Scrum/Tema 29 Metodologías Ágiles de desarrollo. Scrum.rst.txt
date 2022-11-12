@@ -1,9 +1,15 @@
-# Tema 29 Metodologías Ágiles de desarrollo. Scrum
+.. rst3: filename: Tema 29 Metodologías Ágiles de desarrollo. Scrum.rst
 
-[Scrum básico](https://www.atlassian.com/es/agile/scrum)
+=========================================
+Tema 29 Metodologías Ágiles de desarrollo
+=========================================
 
-[Scrum](https://www.atlassian.com/es/agile/scrum)
-## Metodologías ágiles
+`Scrum básico <https://www.atlassian.com/es/agile/scrum>`_
+
+`Scrum <https://www.atlassian.com/es/agile/scrum>`_
+
+Metodologías ágiles
++++++++++++++++++++++
 
 La metodología ágil (del inglés, agile methodology) es una forma de gestión de proyectos, basada en principios como la adaptabilidad y 
 la flexibilidad, cuyo objetivo final es ser capaz de responder rápidamente a las necesidades del mercado.
@@ -38,7 +44,9 @@ Principios del manifiesto ágil:
 - Reflexiones periódicas sobre cómo ser más eficaces
 
 Ejemplos de metodologías ágiles son Scrum, eXtreme Programming y Kanban.
-# Scrum
+
+Scrum
++++++
 
 Scrum es el marco ágil más utilizado entre las empresas para el desarrollo de software.  Fue creado por Jeff Sutherland y Ken Schwaber 
 (que también formaron parte de las trece personas que definieron el Manifiesto Ágil) y necesita de un equipo compuesto por:
@@ -55,3 +63,4 @@ Scrum es el marco ágil más utilizado entre las empresas para el desarrollo de 
   una reunión diaria (Daily scrum)
 - Cuando acaba el Sprint, se envía o revisa el trabajo completado y tras su revisión se cierra este sprint, para comenzar con el 
   siguiente.
+

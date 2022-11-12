@@ -1,4 +1,11 @@
-# Tema 10 Modelado de datos
+.. rst3: filename: Tema 10 Modelo conceptual de datos.rst
+
+=========================
+Tema 10 Modelado de datos
+=========================
+
+Introducción
++++++++++++++
 
 Los modelos de datos son entidades fundamentales para introducir abstracción en una base de datos.
 
@@ -21,7 +28,9 @@ Diseño conceptual -> Diseño lógico -> Diseño físico
 
 El lenguaje que se utiliza para concretar un diseño se llama modelo (lenguaje de modelado). El resultado de aplicar un lenguaje de
 modelado a un diseño es una representación gráfica de la BBDD llamada esquema.
-## Modelo conceptual de datos
+
+Modelo conceptual de datos
+++++++++++++++++++++++++++
 
 Un modelo conceptual de datos identifica las relaciones de más alto nivel entre las diferentes entidades.
 
@@ -33,8 +42,10 @@ Las características del modelo conceptual de datos incluyen:
 
 La siguiente figura es un ejemplo de un modelo conceptual de datos.
 
-```{thumbnail} images/conceptual.jpg
-```
+.. thumbnail:: images/conceptual.jpg
+  :align: center
+  :width: 50%
+  
 A diferencia de los modelos de datos lógicos y físicos, los modelos de datos conceptuales son independientes de la tecnología y la 
 aplicación. Esto significa que no están vinculados a la realidad y el contexto de los sistemas y procesos actualmente en vigor.
 
@@ -55,8 +66,10 @@ Los pasos para elaborar un modelo conceptual de datos son:
 - identificar relaciones
 - identificar entidades externas
 - describir las reglas de negocio (restricciones semánticas)
-## Modelos entidad-relación
- 
+
+Modelos entidad-relación
++++++++++++++++++++++++++
+
  Ver Tema6.pdf. Importante la diapositiva 11:
 
  - una relación es una correspondencia (en el sentido matemático) entre *dos o más entidades*.
@@ -73,12 +86,17 @@ En la relación `EMPLEADO -- lugar de nacimiento -- CIUDAD` la cardinalidad de `
 puede haber nacido solo en una ciudad, pero la cardinalidad de `CIUDAD` es (0,n) porque en una ciudad dada pueden 
 haber nacido entre cero y varios empleados.
 
-```{note} En una relación, la cardinalidad de las entidades participantes indica el par (min, max) de ocurrencias de una instancia[^1] 
-cualquiera de esas entidades.
-```
-[^1]: a veces se llama instancias a las filas de una entidad porque la relación entidad-fila es equivalente a la relación 
-clase-instancia.
-### Jerarquías de generalización
+.. Note:: 
+  En una relación, la cardinalidad de las entidades participantes indica el par (min, max) de ocurrencias de una instancia [#]_ 
+  cualquiera de esas entidades.
+
+.. rubric:: Footnote
+
+.. [#] A veces se llama instancias a las filas de una entidad porque la relación entidad-fila es equivalente a la relación 
+  clase-instancia.
+
+Jerarquías
+***********
 
 Las generalizaciones proporcionan un mecanismo de abstracción que permite especializar una entidad (que se denominará supertipo) en 
 subtipos, o lo que es lo mismo generalizar los subtipos en el supertipo. *Una generalización se identifica si encontramos una serie de 
@@ -94,26 +112,24 @@ la generalización es parcial.
 La generalización es exclusiva si no hay *ocurrencias* en el supertipo que pertenezcan a más de un subtipo. En caso contrario, la
 generalización es solapada.
 
-Por ejemplo, imaginemos una empresa de construcción. La generalización:
+Por ejemplo, imaginemos una empresa de construcción. La generalización::
 
-    empleado
-          |
-          +-- fijo
-          |
-          +-- temporal
+  empleado
+        |
+        +-- fijo
+        |
+        +-- temporal
 
 es total (todas las ocurrencias de empleado pertenecen a alguno de los subtipos) y exclusiva (no hay ninguna ocurrencia de empleado que
 pertenezca a más de un subtipo).
 
-En cambio, la generalización:
+En cambio, la generalización::
 
-    empleado
-          |
-          +-- arquitecto
-          |
-          +-- contable
+  empleado
+        |
+        +-- arquitecto
+        |
+        +-- contable
 
 es parcial (porque hay ocurrencias de empleado que no pertenecen a ninguno de los subtipos) y exclusiva.
-
-
 

@@ -1,9 +1,15 @@
-# Tema 31 Control de versiones. Subversion. GIT.
+.. rst3: filename: Tema 31 Control de versiones Subversion GIT.rst
 
-[gitkraken](https://www.gitkraken.com/learn/git)
-## GIT. Conceptos básicos
+====================================
+Tema 31 Control de versiones con GIT
+====================================
 
-[Tutoriales](https://linuxize.com/tags/git/)
+`gitkraken <https://www.gitkraken.com/learn/git>`_
+
+GIT: conceptos básicos
++++++++++++++++++++++++
+
+`Tutoriales <https://linuxize.com/tags/git/>`_
 
 El ciclo de trabajo básico en git es:
 
@@ -39,72 +45,77 @@ Cuando intercambiamos datos con un repositorio remoto:
 - hacer fetch: descargar commits desde el repositorio remoto
 - hacer pull: hacer fecth + merge
 
-## Remotos
+Remotos
++++++++
 
-[Remotos](https://linuxize.com/post/how-to-remove-git-remotes/)
+`Remotos <https://linuxize.com/post/how-to-remove-git-remotes/>`_
 
 Git remote is a pointer that refers to another copy of the repository that is usually hosted on a remote server.
 
-Every remote has an entry in `.git/config` file, for example:
+Every remote has an entry in `.git/config` file, for example::
 
-    [core]
-            repositoryformatversion = 0
-            filemode = true
-            bare = false
-            logallrefupdates = true
-    [remote "origin"]
-            url = https://github.com/leo-editor/leo-editor
-            fetch = +refs/heads/*:refs/remotes/origin/*
-    [branch "master"]
-            remote = origin
-            merge = refs/heads/master
-    [branch "devel"]
-            remote = origin
-            merge = refs/heads/devel
+  [core]
+          repositoryformatversion = 0
+          filemode = true
+          bare = false
+          logallrefupdates = true
+  [remote "origin"]
+          url = https://github.com/leo-editor/leo-editor
+          fetch = +refs/heads/*:refs/remotes/origin/*
+  [branch "master"]
+          remote = origin
+          merge = refs/heads/master
+  [branch "devel"]
+          remote = origin
+          merge = refs/heads/devel
 
 
 To add a remote use the command:
 
-~~~ bash
-$ git remote add short-name url
-~~~
+.. code:: bash
+
+  $ git remote add short-name url
+
 
 To list remotes use the command:
 
-~~~ bash
-$ git remote -v
-origin	ssh://git@github.com/uvemas/ViTables.git (fetch)
-origin	ssh://git@github.com/uvemas/ViTables.git (push)
-~~~
+.. code:: bash
+
+  $ git remote -v
+  origin	ssh://git@github.com/uvemas/ViTables.git (fetch)
+  origin	ssh://git@github.com/uvemas/ViTables.git (push)
 
 To remove a remote use the command:
 
-~~~ bash
-$ git remote rm short-name
-~~~
+.. code:: bash
+
+  $ git remote rm short-name
+
 
 What the `git remote rm` command does is to remove all references to the remote repository (removing the entries about the remote 
 repository from the `.git/config` file). *It does not remove the repository from the remote server*.
 
 To fetch the whole remote repository:
 
-    vicent@Perseus ➤ ~/leo-editor (master) 
-    $ git fetch --all 
-    Extrayendo origin
-    remote: Enumerating objects: 6051, done.
-    remote: Counting objects: 100% (5731/5731), done.
-    remote: Compressing objects: 100% (1154/1154), done.
-    remote: Total 5538 (delta 4701), reused 5204 (delta 4384), pack-reused 0
-    Recibiendo objetos: 100% (5538/5538), 994.91 KiB | 646.00 KiB/s, listo.
-    Resolviendo deltas: 100% (4701/4701), completado con 159 objetos locales.
-    Desde https://github.com/leo-editor/leo-editor
-      884b4bca3..5ad7423e2  master      -> origin/master
-    * [nueva rama]          6.6.4       -> origin/6.6.4
-      c8ff87e51..ee41a5dcb  devel       -> origin/devel
-    * [nueva rama]          ekr-clean4  -> origin/ekr-clean4
-    * [nueva rama]          ekr-typing2 -> origin/ekr-typing2
-    * [nuevo tag]           v6.6.4      -> v6.6.4
-    * [nuevo tag]           v6.6.5-devel -> v6.6.5-devel
+.. code:: bash
+  
+  vicent@Perseus ➤ ~/leo-editor (master) 
+  $ git fetch --all 
+  Extrayendo origin
+  remote: Enumerating objects: 6051, done.
+  remote: Counting objects: 100% (5731/5731), done.
+  remote: Compressing objects: 100% (1154/1154), done.
+  remote: Total 5538 (delta 4701), reused 5204 (delta 4384), pack-reused 0
+  Recibiendo objetos: 100% (5538/5538), 994.91 KiB | 646.00 KiB/s, listo.
+  Resolviendo deltas: 100% (4701/4701), completado con 159 objetos locales.
+  Desde https://github.com/leo-editor/leo-editor
+    884b4bca3..5ad7423e2  master      -> origin/master
+  * [nueva rama]          6.6.4       -> origin/6.6.4
+    c8ff87e51..ee41a5dcb  devel       -> origin/devel
+  * [nueva rama]          ekr-clean4  -> origin/ekr-clean4
+  * [nueva rama]          ekr-typing2 -> origin/ekr-typing2
+  * [nuevo tag]           v6.6.4      -> v6.6.4
+  * [nuevo tag]           v6.6.5-devel -> v6.6.5-devel
 
 While the git fetch command will fetch down all the changes on the server
 that you don't have yet, it will not modify your working directory at all. It will
@@ -112,11 +123,15 @@ simply get the data for you and let you merge it yourself.
 
 Por tanto, no se han añadidos ramas locales nuevas:
 
-    $ git branch -v
-      devel  c50915380 [detrás 1829] Merge pull request #2478 from tbpassin/devel-clean
-    * master 5ad7423e2 [detrás 655] Correct link
+.. code:: bash
+
+  $ git branch -v
+    devel  c50915380 [detrás 1829] Merge pull request #2478 from tbpassin/devel-clean
+  * master 5ad7423e2 [detrás 655] Correct link
 
 Ni ha cambiado el estado de las ramas existentes:
+
+.. code:: bash
 
     $ git status
     En la rama master
@@ -127,37 +142,43 @@ Ni ha cambiado el estado de las ramas existentes:
 
 Si queremos actualizar la rama en la que estamos tenemos que mezclarla explícitamente:
 
-    $ git pull
-    Actualizando 884b4bca3..5ad7423e2
-    Fast-forward
-    .mypy.ini                                      |   72 +-
-    PKG-INFO.TXT                                   |    2 +-
-    README.md                                      |   11 +-
-    leo/commands/abbrevCommands.py                 |    6 +-
-    leo/commands/bufferCommands.py                 |    6 +-
-    leo/commands/checkerCommands.py                |   10 +-
-    leo/commands/commanderEditCommands.py          |    3 +-
-    leo/commands/commanderFileCommands.py          |    7 +-
-    leo/commands/commanderOutlineCommands.py       |   29 +-
-    leo/commands/controlCommands.py                |    6 +-
-    leo/commands/convertCommands.py                | 1058 ++++++++++++-------------
-    leo/commands/editCommands.py                   |   26 +-
-    ...
+.. code:: bash
 
-    $ git status
-    En la rama master
-    Tu rama está actualizada con 'origin/master'.
+  $ git pull
+  Actualizando 884b4bca3..5ad7423e2
+  Fast-forward
+  .mypy.ini                                      |   72 +-
+  PKG-INFO.TXT                                   |    2 +-
+  README.md                                      |   11 +-
+  leo/commands/abbrevCommands.py                 |    6 +-
+  leo/commands/bufferCommands.py                 |    6 +-
+  leo/commands/checkerCommands.py                |   10 +-
+  leo/commands/commanderEditCommands.py          |    3 +-
+  leo/commands/commanderFileCommands.py          |    7 +-
+  leo/commands/commanderOutlineCommands.py       |   29 +-
+  leo/commands/controlCommands.py                |    6 +-
+  leo/commands/convertCommands.py                | 1058 ++++++++++++-------------
+  leo/commands/editCommands.py                   |   26 +-
+  ...
+
+  $ git status
+  En la rama master
+  Tu rama está actualizada con 'origin/master'.
 
 Y si queremos añadir ramas también tenemos que hacerlo explícitamente:
 
-    $ git checkout 6.6.4
-    Rama '6.6.4' configurada para hacer seguimiento a la rama remota '6.6.4' de 'origin'.
-    Cambiado a nueva rama '6.6.4'
+.. code:: bash
 
-## Fusión de ramas
+  $ git checkout 6.6.4
+  Rama '6.6.4' configurada para hacer seguimiento a la rama remota '6.6.4' de 'origin'.
+  Cambiado a nueva rama '6.6.4'
 
-(rebase)[https://www.atlassian.com/es/git/tutorials/rewriting-history/git-rebase]
-(rebase_grafico)[https://www.gitkraken.com/learn/git/git-rebase]
+Fusión de ramas
+++++++++++++++++
+
+`rebase <https://www.atlassian.com/es/git/tutorials/rewriting-history/git-rebase>`_
+
+`rebase_grafico <https://www.gitkraken.com/learn/git/git-rebase>`_
 
 La fusión de ramas puede hacerse por dos mecanismos:
 
@@ -175,7 +196,9 @@ merges them together.*
 Note that the snapshot pointed to by the final commit you end up with, whether it's the last of the rebased commits for a rebase or the 
 final merge commit after a merge, is the same snapshot - it's only the history that is different. Rebasing replays changes from one 
 line of work onto another in the order they were introduced, whereas merging takes the endpoints and merges them together.
-## Tags
+
+Tags
+++++
 
 Un tag es una etiqueta que se coloca en un determinado punto de la historia del repositorio (en un determinado commit). Su uso más
 habitual es marcar los commit en los que se ha hecho una nueva release del software.
@@ -187,37 +210,51 @@ Hay dos tipos de tags:
 
 Si acabamos de hacer un commit  queremos ponerle un tag ligero:
 
-    $ git tag v1.4
+.. code:: bash
+
+  $ git tag v1.4
 
 Si queremos ponerle un tag anotado:
 
-    $ git tag -a v1.4 -m "my tagging message"
+.. code:: bash
+
+  $ git tag -a v1.4 -m "my tagging message"
 
 Si queremos poner un tag a un commit en concreto:
 
-    $ git tag -a v1.4 commit_checksum
+.. code:: bash
+
+  $ git tag -a v1.4 commit_checksum
 
 Si queremos listar los tags:
 
-    $ git tag
+.. code:: bash
+
+  $ git tag
 
 Si queremos ver un tag en concreto:
 
-    $ git show v1.4
+.. code:: bash
 
-## Stash y bisect
+  $ git show v1.4
+
+Stash y bisect
+++++++++++++++
 
 Para encontrar bugs que no sabemos cuando se han introducido es muy útil la herramienta `bisect`:
 
-[bisect](https://apiumhub.com/es/tech-blog-barcelona/git-bisect/)
-[bisect](https://picodotdev.github.io/blog-bitix/2022/04/como-usar-el-comando-git-bisect-para-descubrir-el-primer-commit-con-un-error/)
+`bisect_1 <https://apiumhub.com/es/tech-blog-barcelona/git-bisect/>`_
+
+`bisect_2 <https://picodotdev.github.io/blog-bitix/2022/04/como-usar-el-comando-git-bisect-para-descubrir-el-primer-commit-con-un-error/>`_
 
 Otro comando muy utilizado es `stash`:
 
-[stash](https://www.atlassian.com/es/git/tutorials/saving-changes/git-stash)
-## Worktrees
+`stash <https://www.atlassian.com/es/git/tutorials/saving-changes/git-stash>`_
 
-[Worktrees](https://www.gitkraken.com/learn/git/git-worktree)
+Worktrees
++++++++++
+
+`Worktrees <https://www.gitkraken.com/learn/git/git-worktree>`_
 
 Un worktree permite trabajar simultáneamente con dos ramas.
 
@@ -231,5 +268,5 @@ estamos listos para hacer commit. En este caso tenemos dos opciones:
 - crear un worktree donde trabajar con la otra rama
 
 El worktree es mucho más cómodo. Nos permite trabajar con varias ramas simultáneamente. Cuando terminamos de trabajar en una rama
-hacemos commit y borramos su worktree. Los cambios no se pierden porque se han aññadido al repo al hacer el commit.
+hacemos commit y borramos su worktree. Los cambios no se pierden porque se han añadido al repo al hacer el commit.
 

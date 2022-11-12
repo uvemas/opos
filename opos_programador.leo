@@ -33,11 +33,14 @@
 <v t="vicent.20220528085500.1"><vh>Tema 9 Ofimática. LibreOffice Calc</vh></v>
 </v>
 <v t="vicent.20220528092851.1"><vh>Gestión del desarrollo</vh>
-<v t="vicent.20220528090429.1"><vh>@clean Tema 29 Metodologías Ágiles de desarrollo. Scrum.md</vh>
+<v t="vicent.20221109192120.1"><vh>Tema 29 Metodologias Agiles</vh>
+<v t="vicent.20220528090429.1"><vh>@rst Tema 29 Metodologías Ágiles de desarrollo. Scrum.rst</vh>
 <v t="vicent.20221006191345.1"><vh>Metodologías ágiles</vh></v>
 <v t="vicent.20221006193153.1"><vh>Scrum</vh></v>
 </v>
-<v t="vicent.20220528090520.1"><vh>@clean Tema 31 Control de versiones Subversion GIT.md</vh>
+</v>
+<v t="vicent.20221109193002.1"><vh>Tema 31 Control de versiones con GIT</vh>
+<v t="vicent.20220528090520.1"><vh>@rst Tema 31 Control de versiones Subversion GIT.rst</vh>
 <v t="vicent.20220901104803.1"><vh>GIT: conceptos básicos</vh></v>
 <v t="vicent.20220902132213.1"><vh>Remotos</vh></v>
 <v t="vicent.20220905143536.1"><vh>Fusión de ramas</vh></v>
@@ -45,7 +48,9 @@
 <v t="vicent.20220906183732.1"><vh>Stash y bisect</vh></v>
 <v t="vicent.20221005193256.1"><vh>Worktrees</vh></v>
 </v>
-<v t="vicent.20220528090539.1"><vh>@clean Tema 32 Gestion integrada del desarrollo Maven.md</vh>
+</v>
+<v t="vicent.20221111185832.1"><vh>Tema 32 Gestión integrada del desarrollo. Maven</vh>
+<v t="vicent.20220528090539.1"><vh>@rst Tema 32 Gestion integrada del desarrollo Maven.rst</vh>
 <v t="vicent.20220615181441.1"><vh>Maven</vh>
 <v t="vicent.20220618074740.1"><vh>Arquetipos</vh></v>
 <v t="vicent.20220615193810.1"><vh>Ciclo de vida del proyecto</vh></v>
@@ -53,8 +58,10 @@
 </v>
 </v>
 </v>
+</v>
 <v t="vicent.20220528090721.1"><vh>Bases de datos</vh>
-<v t="vicent.20220528085316.1"><vh>@clean Tema 4 Sistemas de gestión de bases de datos. Bases de datos relacionales.md</vh>
+<v t="vicent.20221112135025.1"><vh>Tema 4 Sistemas de gestión de BBDD.</vh>
+<v t="vicent.20220528085316.1"><vh>@rst Tema 4 Sistemas de gestión de bases de datos. Bases de datos relacionales.rst</vh>
 <v t="vicent.20221009092538.1"><vh>Introducción</vh></v>
 <v t="vicent.20221009113124.1"><vh>APIs</vh>
 <v t="vicent.20221009114839.1"><vh>ODBC</vh></v>
@@ -62,16 +69,21 @@
 </v>
 <v t="vicent.20221009113328.1"><vh>Languages</vh></v>
 </v>
-<v t="vicent.20220528085607.1"><vh>@clean Tema 10 Modelo conceptual de datos.md</vh>
+</v>
+<v t="vicent.20221112164151.1"><vh>Tema 10 Modelo conceptual de datos</vh>
+<v t="vicent.20220528085607.1"><vh>@rst Tema 10 Modelo conceptual de datos.rst</vh>
 <v t="vicent.20221008124658.1"><vh>Introducción</vh></v>
 <v t="vicent.20221008124619.1"><vh>Modelo conceptual de datos</vh></v>
 <v t="vicent.20221008193645.1"><vh>Modelos entidad-relación</vh>
 <v t="vicent.20221012190834.1"><vh>Jerarquías</vh></v>
 </v>
 </v>
-<v t="vicent.20220528085631.1"><vh>@clean Tema 11 BBDD relacionales. Normalización.md</vh>
+</v>
+<v t="vicent.20221112165250.1"><vh>Tema 11 BBDD relacionales. Fundamentos. Normalización</vh>
+<v t="vicent.20220528085631.1"><vh>@rst Tema 11 BBDD relacionales. Normalización.rst</vh>
 <v t="vicent.20221010124625.1"><vh>Introducción</vh></v>
 <v t="vicent.20221010123006.1"><vh>Normalización</vh></v>
+</v>
 </v>
 <v t="vicent.20221107174904.1"><vh>Tema 12 SQL y PL-SQL</vh>
 <v t="vicent.20220528085656.1"><vh>@rst Tema 12 SQL y PL-SQL.rst</vh>
@@ -2635,25 +2647,19 @@ El resultado es
 <t tx="vicent.20220528085051.1"></t>
 <t tx="vicent.20220528085100.1"></t>
 <t tx="vicent.20220528085120.1"></t>
-<t tx="vicent.20220528085316.1"># Tema 04 Sistemas de Gestión de Bases de Datos
-
-@path ./04SGBD
-@language md
-@others
+<t tx="vicent.20220528085316.1">=============================================
+Tema 04 Sistemas de Gestión de Bases de Datos
+=============================================
 </t>
 <t tx="vicent.20220528085448.1"></t>
 <t tx="vicent.20220528085500.1"></t>
-<t tx="vicent.20220528085607.1"># Tema 10 Modelado de datos
-
-@path ./10ModeladoDeDatos
-@language md
-@others
+<t tx="vicent.20220528085607.1">=========================
+Tema 10 Modelado de datos
+=========================
 </t>
-<t tx="vicent.20220528085631.1"># Tema 11 BBDD relacionales. Fundamentos. Normalización
-
-@path ./11BBDDRelacionales
-@language md
-@others
+<t tx="vicent.20220528085631.1">=====================================================
+Tema 11 BBDD relacionales. Fundamentos. Normalización
+=====================================================
 </t>
 <t tx="vicent.20220528085656.1">===========================
 Tema 12 Oracle. SQl. PL/SQL
@@ -2683,31 +2689,27 @@ Tema 17 Lenguaje de programación Java: sintaxis ,tipos de datos, operadores, es
 <t tx="vicent.20220528090343.1"></t>
 <t tx="vicent.20220528090351.1"></t>
 <t tx="vicent.20220528090410.1"></t>
-<t tx="vicent.20220528090429.1"># Tema 29 Metodologías Ágiles de desarrollo. Scrum
+<t tx="vicent.20220528090429.1">=========================================
+Tema 29 Metodologías Ágiles de desarrollo
+=========================================
 
-@path ./29Scrum
-@language md
-[Scrum básico](https://www.atlassian.com/es/agile/scrum)
+`Scrum básico &lt;https://www.atlassian.com/es/agile/scrum&gt;`_
 
-[Scrum](https://www.atlassian.com/es/agile/scrum)
-@others
+`Scrum &lt;https://www.atlassian.com/es/agile/scrum&gt;`_
 </t>
 <t tx="vicent.20220528090458.1">=============================================
 Tema 30 Métodos de prueba del software. JUnit
 =============================================
 </t>
-<t tx="vicent.20220528090520.1"># Tema 31 Control de versiones. Subversion. GIT.
+<t tx="vicent.20220528090520.1">====================================
+Tema 31 Control de versiones con GIT
+====================================
 
-@path ./31ControlDeVersiones
-@language md
-[gitkraken](https://www.gitkraken.com/learn/git)
-@others
+`gitkraken &lt;https://www.gitkraken.com/learn/git&gt;`_
 </t>
-<t tx="vicent.20220528090539.1"># Tema 32 Gestión Integrada del Desarrollo. Maven
-
-@path ./32GestionProyectosMaven
-@language md
-@others
+<t tx="vicent.20220528090539.1">============================================================
+Tema 32 Gestión integrada del desarrollo de proyectos. Maven
+============================================================
 </t>
 <t tx="vicent.20220528090703.1"></t>
 <t tx="vicent.20220528090721.1">Tema 04 Sistemas de gestión de bases de datos
@@ -2786,9 +2788,7 @@ Los tests automatizados y organizados en suites se pueden ejecutar en el servido
 aplicación (por ejemplo, github) permitiendo así la integración continua (los tests se ejecutan automáticamente cada
 vez que se sube una modificación de código al servidor) y la entrega continua.
 </t>
-<t tx="vicent.20220615181441.1">## Maven
-
-Maven es una herramienta para la gestión de desarrollo de proyectos de software. Utiliza patrones y promueve el uso de
+<t tx="vicent.20220615181441.1">Maven es una herramienta para la gestión de desarrollo de proyectos de software. Utiliza patrones y promueve el uso de
 buenas prácticas. Es muy utilizada en Java.
 
 Maven está basado en el Project Object Model. En un fichero pom.xml se declara todo lo que necesita Maven para gestionar
@@ -2797,9 +2797,11 @@ el proyecto.
 Maven permite gestionar:
 
 - builds
+
     - generar el proyecto con una estructura estándar (todos los proyectos Maven tienen la misma estructura)
     - reconstruirlo
     - compilarlo
+
 - documentation
 - reporting: obtener información de calidad sobre el proyecto (referencias cruzadas en el código, informes de unit tests,
   listas de correo...) en un sitio web o en PDF
@@ -2813,53 +2815,48 @@ Se puede usar por línea de comando pero la mayor parte de los IDEs lo soportan 
 
 La estructura de un proyecto Maven es:
 
-```{thumbnail} images/estructura.png
-```
+.. thumbnail:: images/estructura.png
 </t>
-<t tx="vicent.20220615191428.1">### Guía rápida (CLI)
+<t tx="vicent.20220615191428.1">Versión instalada:
 
-Versión instalada:
+.. code:: bash
 
-~~~ bash
-$ mvn --version
-Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
-Maven home: /opt/maven
-Java version: 11.0.15, vendor: Private Build, runtime: /usr/lib/jvm/java-11-openjdk-amd64
-Default locale: es_ES, platform encoding: UTF-8
-OS name: "linux", version: "5.15.0-37-generic", arch: "amd64", family: "unix"
-~~~
+  $ mvn --version
+  Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+  Maven home: /opt/maven
+  Java version: 11.0.15, vendor: Private Build, runtime: /usr/lib/jvm/java-11-openjdk-amd64
+  Default locale: es_ES, platform encoding: UTF-8
+  OS name: "linux", version: "5.15.0-37-generic", arch: "amd64", family: "unix"
 
-Uso del comando:
+Uso del comando::
 
-    usage: mvn [options] [&lt;goal(s)&gt;] [&lt;phase(s)&gt;]
+  usage: mvn [options] [&lt;goal(s)&gt;] [&lt;phase(s)&gt;]
 
 Crear un proyecto:
 
-~~~ bash
-$ mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart 
--DarchetypeVersion=1.4 -DinteractiveMode=false
-~~~
+.. code:: bash
+
+  $ mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart 
+  -DarchetypeVersion=1.4 -DinteractiveMode=false
 
 Esto usará el arquetipo estándar (disponible en el repositorio Maven) `maven-archetype-quickstart` para construir un
-proyecto llamado `my-app` cuyo paquete raíz es `com.mycompany.app`. La estructura del proyecto será:
+proyecto llamado `my-app` cuyo paquete raíz es `com.mycompany.app`. La estructura del proyecto será::
 
-~~~ bash
-my-app
-|-- pom.xml
-`-- src
-    |-- main
-    |   `-- java
-    |       `-- com
-    |           `-- mycompany
-    |               `-- app
-    |                   `-- App.java
-    `-- test
-        `-- java
-            `-- com
-                `-- mycompany
-                    `-- app
-                        `-- AppTest.java
-~~~
+  my-app
+  |-- pom.xml
+  `-- src
+      |-- main
+      |   `-- java
+      |       `-- com
+      |           `-- mycompany
+      |               `-- app
+      |                   `-- App.java
+      `-- test
+          `-- java
+              `-- com
+                  `-- mycompany
+                      `-- app
+                          `-- AppTest.java
 
 Vemos que `${basedir}/src/main/java` contiene el código fuente del proyecto, mientras que `${basedir}/src/test/java` 
 contiene las unidades de test. Al generar el proyecto se crean esqueletos tanto de la aplicación de entrada al proyecto 
@@ -2869,48 +2866,51 @@ En `${basedir}` se ha generado el `pom.xml` que es el corazón de la configuraci
 
 Compilar las fuentes de un proyecto:
 
-~~~ bash
-$ mvn compile
-~~~
+.. code:: bash
+
+  $ mvn compile
+
 
 Esto compila el proyecto y deja el resultado en la carpeta `myapp/target/classes`.
 
 Compilar *y ejecutar* los tests:
 
-~~~ bash
-$ mvn test
-~~~
+.. code:: bash
+
+  $ mvn test
+
 
 Compilar *pero no ejecutar* los tests:
 
-~~~ bash
-$ mvn test-compile
-~~~
+.. code:: bash
+
+  $ mvn test-compile
+
 
 Compilar y empaquetar:
 
-~~~ bash
-$ mvn package
-~~~
+.. code:: bash
+
+  $ mvn package
+
 
 Compila el proyecto y luego lo empaqueta en un `.jar` o un `.war` (si el proyecto es una aplicación web). El artefacto
 resultante (el `.jar`) se almacena en `${basedir}/target`.
 
 Ejecuta el proyecto empaquetado:
 
-~~~ bash
-$ java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
-~~~
+.. code:: bash
+
+  $ java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+
 
 Instalar el `.jar` en el repositorio local de artefactos `$HOME/.m2/repository`:
 
-~~~ bash
-$ mvn install
-~~~
-</t>
-<t tx="vicent.20220615193810.1">### Fases del ciclo de vida del proyecto
+.. code:: bash
 
-[Baeldung](https://www.baeldung.com/maven-goals-phases)
+  $ mvn install
+</t>
+<t tx="vicent.20220615193810.1">`Goals and phases &lt;https://www.baeldung.com/maven-goals-phases&gt;`_
 
 Although hardly a comprehensive list, these are the most common default lifecycle phases executed.
 
@@ -2937,132 +2937,127 @@ type is - you guessed it - a WAR.
 Plugins functionality is divided into goals. A goal is a build step, if you like. *The goals are registered to be executed during the 
 phases of the build. The goals perform the actual work, during the phases that come from the lifecycle of the project*.
 
-Para ver los goles que tiene un plugin usamos `mvn plugin-name:help`:
+Para ver los goles que tiene un plugin usamos `mvn plugin-name:help`::
 
-    $ mvn spring-boot:help                          
-    [INFO] Scanning for projects...
-    [INFO] 
-    [INFO] ----------------------&lt; com.opos.vmas:freemarker &gt;----------------------
-    [INFO] Building freemarker 0.0.1-SNAPSHOT
-    [INFO] --------------------------------[ jar ]---------------------------------
-    [INFO] 
-    [INFO] --- spring-boot-maven-plugin:2.7.4:help (default-cli) @ freemarker ---
-    [INFO] Spring Boot Maven Plugin 2.7.4
-      
+  $ mvn spring-boot:help                          
+  [INFO] Scanning for projects...
+  [INFO] 
+  [INFO] ----------------------&lt; com.opos.vmas:freemarker &gt;----------------------
+  [INFO] Building freemarker 0.0.1-SNAPSHOT
+  [INFO] --------------------------------[ jar ]---------------------------------
+  [INFO] 
+  [INFO] --- spring-boot-maven-plugin:2.7.4:help (default-cli) @ freemarker ---
+  [INFO] Spring Boot Maven Plugin 2.7.4
+    
+  This plugin has 7 goals:
 
-    This plugin has 7 goals:
+  spring-boot:build-image
+    Package an application into an OCI image using a buildpack.
 
-    spring-boot:build-image
-      Package an application into an OCI image using a buildpack.
+  spring-boot:build-info
+    Generate a build-info.properties file based on the content of the current
+    MavenProject.
 
-    spring-boot:build-info
-      Generate a build-info.properties file based on the content of the current
-      MavenProject.
+  spring-boot:help
+    Display help information on spring-boot-maven-plugin.
+    Call mvn spring-boot:help -Ddetail=true -Dgoal=&lt;goal-name&gt; to display
+    parameter details.
 
-    spring-boot:help
-      Display help information on spring-boot-maven-plugin.
-      Call mvn spring-boot:help -Ddetail=true -Dgoal=&lt;goal-name&gt; to display
-      parameter details.
+  spring-boot:repackage
+    Repackage existing JAR and WAR archives so that they can be executed from the
+    command line using java -jar. With layout=NONE can also be used simply to
+    package a JAR with nested dependencies (and no main class, so not executable).
 
-    spring-boot:repackage
-      Repackage existing JAR and WAR archives so that they can be executed from the
-      command line using java -jar. With layout=NONE can also be used simply to
-      package a JAR with nested dependencies (and no main class, so not executable).
+  spring-boot:run
+    Run an application in place.
 
-    spring-boot:run
-      Run an application in place.
+  spring-boot:start
+    Start a spring application. Contrary to the run goal, this does not block and
+    allows other goals to operate on the application. This goal is typically used
+    in integration test scenario where the application is started before a test
+    suite and stopped after.
 
-    spring-boot:start
-      Start a spring application. Contrary to the run goal, this does not block and
-      allows other goals to operate on the application. This goal is typically used
-      in integration test scenario where the application is started before a test
-      suite and stopped after.
+  spring-boot:stop
+    Stop an application that has been started by the 'start' goal. Typically
+    invoked once a test suite has completed.
 
-    spring-boot:stop
-      Stop an application that has been started by the 'start' goal. Typically
-      invoked once a test suite has completed.
+  [INFO] ------------------------------------------------------------------------
+  [INFO] BUILD SUCCESS
+  [INFO] ------------------------------------------------------------------------
+  [INFO] Total time:  0.471 s
+  [INFO] Finished at: 2022-10-16T22:34:19+02:00
+  [INFO] ------------------------------------------------------------------------
 
+o podemos usar `mvn help:describe -Dplugin=plugin-name`::
 
-    [INFO] ------------------------------------------------------------------------
-    [INFO] BUILD SUCCESS
-    [INFO] ------------------------------------------------------------------------
-    [INFO] Total time:  0.471 s
-    [INFO] Finished at: 2022-10-16T22:34:19+02:00
-    [INFO] ------------------------------------------------------------------------
+  $ mvn help:describe -Dplugin=compiler
 
-o podemos usar `mvn help:describe -Dplugin=plugin-name`:
+  [INFO] Scanning for projects...
+  [INFO] 
+  [INFO] ----------------------&lt; com.opos.vmas:freemarker &gt;----------------------
+  [INFO] Building freemarker 0.0.1-SNAPSHOT
+  [INFO] --------------------------------[ jar ]---------------------------------
+  [INFO] 
+  [INFO] --- maven-compiler-plugin:3.8.1:help (default-cli) @ freemarker ---
+  [INFO] Apache Maven Compiler Plugin 3.8.1
+    The Compiler Plugin is used to compile the sources of your project.
 
-    $ mvn help:describe -Dplugin=compiler
+  This plugin has 3 goals:
 
-    [INFO] Scanning for projects...
-    [INFO] 
-    [INFO] ----------------------&lt; com.opos.vmas:freemarker &gt;----------------------
-    [INFO] Building freemarker 0.0.1-SNAPSHOT
-    [INFO] --------------------------------[ jar ]---------------------------------
-    [INFO] 
-    [INFO] --- maven-compiler-plugin:3.8.1:help (default-cli) @ freemarker ---
-    [INFO] Apache Maven Compiler Plugin 3.8.1
-      The Compiler Plugin is used to compile the sources of your project.
+  compiler:compile
+    Compiles application sources
 
-    This plugin has 3 goals:
+  compiler:help
+    Display help information on maven-compiler-plugin.
+    Call mvn compiler:help -Ddetail=true -Dgoal=&lt;goal-name&gt; to display parameter
+    details.
 
-    compiler:compile
-      Compiles application sources
+  compiler:testCompile
+    Compiles application test sources.
 
-    compiler:help
-      Display help information on maven-compiler-plugin.
-      Call mvn compiler:help -Ddetail=true -Dgoal=&lt;goal-name&gt; to display parameter
-      details.
-
-    compiler:testCompile
-      Compiles application test sources.
-
-
-    [INFO] ------------------------------------------------------------------------
-    [INFO] BUILD SUCCESS
-    [INFO] ------------------------------------------------------------------------
-    [INFO] Total time:  0.415 s
-    [INFO] Finished at: 2022-10-16T22:43:51+02:00
-    [INFO] ------------------------------------------------------------------------
+  [INFO] ------------------------------------------------------------------------
+  [INFO] BUILD SUCCESS
+  [INFO] ------------------------------------------------------------------------
+  [INFO] Total time:  0.415 s
+  [INFO] Finished at: 2022-10-16T22:43:51+02:00
+  [INFO] ------------------------------------------------------------------------
 
 
 An interesting thing to note is that phases and goals may be executed in sequence.
 
-~~~ bash
-$ mvn clean dependency:copy-dependencies package
-~~~
+.. code:: bash
+
+  $ mvn clean dependency:copy-dependencies package
 
 This command will clean the project, copy dependencies, and package the project (executing all phases up to package, of 
 course).
 
-~~~ bash
-$ mvn site
-~~~
+.. code:: bash
+
+  $ mvn site
 
 This phase generates a site based upon information on the project's pom. You can look at the documentation generated 
-under `target/site`.</t>
-<t tx="vicent.20220618074740.1">### Arquetipos y artefactos
-
-Por definición, un arquetipo es un patrón o modelo que se usa para alcanzar un objetivo siempre de la misma 
+under `target/site`.
+</t>
+<t tx="vicent.20220618074740.1">Por definición, un arquetipo es un patrón o modelo que se usa para alcanzar un objetivo siempre de la misma 
 manera. En Maven, *un arquetipo es una plantilla de proyecto* que, combinada con user input, genera un proyecto Maven 
 adaptado a las necesidades del usuario. El usuario decide, en función de las necesidades que tenga, que arquetipo 
 utilizar (los arquetipos se pueden combinar) y las dependencias del proyecto. *La estructura del proyecto depende del arquetipo que se 
 haya utilizado para generar dicho proyecto*. La estructura del proyecto generada por los diferentes arquetipos puede
-verse en [este enlace](https://maven.apache.org/archetypes/index.html)
+verse en `este enlace &lt;https://maven.apache.org/archetypes/index.html&gt;`_
 
 Los arquetipos de Maven se agrupan en el toolkit Archetype. Cada arquetipo se identifica con un ArtifactID.
 
 Para crear un proyecto basado en un arquetipo tenemos que invocar `mvn archetype:generate` y un artefacto, que será el que especifique
-lo que vamos a generar (un projecto, un plugin, una aplicación web, un site...). Por ejemplo:
+lo que vamos a generar (un projecto, un plugin, una aplicación web, un site...). Por ejemplo::
 
-    $ mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DgroupId=com.mycompany.app -DartifactId=my-app -DinteractiveMode=false
+  $ mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DgroupId=com.mycompany.app -DartifactId=my-app -DinteractiveMode=false
 
-```{Importante}
-Cada artefacto Maven, ya sea arquetipo (como `maven-archetype-quickstart`), plugin (como `spring-boot-maven-plugin`) o 
-dependencia (como `spring-boot-starter-freemarker`) se almacena en Internet, en un repositorio central. Cuando se crea un proyecto 
-Maven, todos los artefactos que forman el `pom.xml` se descargan del repositorio central y se almacenan en un repositorio local, en el 
-directorio `~/.m2`, y así están disponibles para usos futuros.
-```
+.. Importante::
+  Cada artefacto Maven, ya sea arquetipo (como `maven-archetype-quickstart`), plugin (como `spring-boot-maven-plugin`) o 
+  dependencia (como `spring-boot-starter-freemarker`) se almacena en Internet, en un repositorio central. Cuando se crea un proyecto 
+  Maven, todos los artefactos que forman el `pom.xml` se descargan del repositorio central y se almacenan en un repositorio local, en el 
+  directorio `~/.m2`, y así están disponibles para usos futuros.
 
 Cada artefacto es parte de un grupo formado por uno o más artefactos. Por ejemplo, en el repositorio local podemos ver que en
 el grupo `org.springframework.boot` (que está en `~/m2/repository/org/springframework/boot/`) hay unos 30 artefactos, entre plugins
@@ -4276,9 +4271,7 @@ into the byte array.
   assertEquals("Hello World!", string);
   ...
 </t>
-<t tx="vicent.20220901104803.1">## GIT. Conceptos básicos
-
-[Tutoriales](https://linuxize.com/tags/git/)
+<t tx="vicent.20220901104803.1">`Tutoriales &lt;https://linuxize.com/tags/git/&gt;`_
 
 El ciclo de trabajo básico en git es:
 
@@ -4315,72 +4308,74 @@ Cuando intercambiamos datos con un repositorio remoto:
 - hacer pull: hacer fecth + merge
 
 </t>
-<t tx="vicent.20220902132213.1">## Remotos
-
-[Remotos](https://linuxize.com/post/how-to-remove-git-remotes/)
+<t tx="vicent.20220902132213.1">`Remotos &lt;https://linuxize.com/post/how-to-remove-git-remotes/&gt;`_
 
 Git remote is a pointer that refers to another copy of the repository that is usually hosted on a remote server.
 
-Every remote has an entry in `.git/config` file, for example:
+Every remote has an entry in `.git/config` file, for example::
 
-    [core]
-            repositoryformatversion = 0
-            filemode = true
-            bare = false
-            logallrefupdates = true
-    [remote "origin"]
-            url = https://github.com/leo-editor/leo-editor
-            fetch = +refs/heads/*:refs/remotes/origin/*
-    [branch "master"]
-            remote = origin
-            merge = refs/heads/master
-    [branch "devel"]
-            remote = origin
-            merge = refs/heads/devel
+  [core]
+          repositoryformatversion = 0
+          filemode = true
+          bare = false
+          logallrefupdates = true
+  [remote "origin"]
+          url = https://github.com/leo-editor/leo-editor
+          fetch = +refs/heads/*:refs/remotes/origin/*
+  [branch "master"]
+          remote = origin
+          merge = refs/heads/master
+  [branch "devel"]
+          remote = origin
+          merge = refs/heads/devel
 
 
 To add a remote use the command:
 
-~~~ bash
-$ git remote add short-name url
-~~~
+.. code:: bash
+
+  $ git remote add short-name url
+
 
 To list remotes use the command:
 
-~~~ bash
-$ git remote -v
-origin	ssh://git@github.com/uvemas/ViTables.git (fetch)
-origin	ssh://git@github.com/uvemas/ViTables.git (push)
-~~~
+.. code:: bash
+
+  $ git remote -v
+  origin	ssh://git@github.com/uvemas/ViTables.git (fetch)
+  origin	ssh://git@github.com/uvemas/ViTables.git (push)
 
 To remove a remote use the command:
 
-~~~ bash
-$ git remote rm short-name
-~~~
+.. code:: bash
+
+  $ git remote rm short-name
+
 
 What the `git remote rm` command does is to remove all references to the remote repository (removing the entries about the remote 
 repository from the `.git/config` file). *It does not remove the repository from the remote server*.
 
 To fetch the whole remote repository:
 
-    vicent@Perseus ➤ ~/leo-editor (master) 
-    $ git fetch --all 
-    Extrayendo origin
-    remote: Enumerating objects: 6051, done.
-    remote: Counting objects: 100% (5731/5731), done.
-    remote: Compressing objects: 100% (1154/1154), done.
-    remote: Total 5538 (delta 4701), reused 5204 (delta 4384), pack-reused 0
-    Recibiendo objetos: 100% (5538/5538), 994.91 KiB | 646.00 KiB/s, listo.
-    Resolviendo deltas: 100% (4701/4701), completado con 159 objetos locales.
-    Desde https://github.com/leo-editor/leo-editor
-      884b4bca3..5ad7423e2  master      -&gt; origin/master
-    * [nueva rama]          6.6.4       -&gt; origin/6.6.4
-      c8ff87e51..ee41a5dcb  devel       -&gt; origin/devel
-    * [nueva rama]          ekr-clean4  -&gt; origin/ekr-clean4
-    * [nueva rama]          ekr-typing2 -&gt; origin/ekr-typing2
-    * [nuevo tag]           v6.6.4      -&gt; v6.6.4
-    * [nuevo tag]           v6.6.5-devel -&gt; v6.6.5-devel
+.. code:: bash
+  
+  vicent@Perseus ➤ ~/leo-editor (master) 
+  $ git fetch --all 
+  Extrayendo origin
+  remote: Enumerating objects: 6051, done.
+  remote: Counting objects: 100% (5731/5731), done.
+  remote: Compressing objects: 100% (1154/1154), done.
+  remote: Total 5538 (delta 4701), reused 5204 (delta 4384), pack-reused 0
+  Recibiendo objetos: 100% (5538/5538), 994.91 KiB | 646.00 KiB/s, listo.
+  Resolviendo deltas: 100% (4701/4701), completado con 159 objetos locales.
+  Desde https://github.com/leo-editor/leo-editor
+    884b4bca3..5ad7423e2  master      -&gt; origin/master
+  * [nueva rama]          6.6.4       -&gt; origin/6.6.4
+    c8ff87e51..ee41a5dcb  devel       -&gt; origin/devel
+  * [nueva rama]          ekr-clean4  -&gt; origin/ekr-clean4
+  * [nueva rama]          ekr-typing2 -&gt; origin/ekr-typing2
+  * [nuevo tag]           v6.6.4      -&gt; v6.6.4
+  * [nuevo tag]           v6.6.5-devel -&gt; v6.6.5-devel
 
 While the git fetch command will fetch down all the changes on the server
 that you don't have yet, it will not modify your working directory at all. It will
@@ -4388,11 +4383,15 @@ simply get the data for you and let you merge it yourself.
 
 Por tanto, no se han añadidos ramas locales nuevas:
 
-    $ git branch -v
-      devel  c50915380 [detrás 1829] Merge pull request #2478 from tbpassin/devel-clean
-    * master 5ad7423e2 [detrás 655] Correct link
+.. code:: bash
+
+  $ git branch -v
+    devel  c50915380 [detrás 1829] Merge pull request #2478 from tbpassin/devel-clean
+  * master 5ad7423e2 [detrás 655] Correct link
 
 Ni ha cambiado el estado de las ramas existentes:
+
+.. code:: bash
 
     $ git status
     En la rama master
@@ -4403,37 +4402,38 @@ Ni ha cambiado el estado de las ramas existentes:
 
 Si queremos actualizar la rama en la que estamos tenemos que mezclarla explícitamente:
 
-    $ git pull
-    Actualizando 884b4bca3..5ad7423e2
-    Fast-forward
-    .mypy.ini                                      |   72 +-
-    PKG-INFO.TXT                                   |    2 +-
-    README.md                                      |   11 +-
-    leo/commands/abbrevCommands.py                 |    6 +-
-    leo/commands/bufferCommands.py                 |    6 +-
-    leo/commands/checkerCommands.py                |   10 +-
-    leo/commands/commanderEditCommands.py          |    3 +-
-    leo/commands/commanderFileCommands.py          |    7 +-
-    leo/commands/commanderOutlineCommands.py       |   29 +-
-    leo/commands/controlCommands.py                |    6 +-
-    leo/commands/convertCommands.py                | 1058 ++++++++++++-------------
-    leo/commands/editCommands.py                   |   26 +-
-    ...
+.. code:: bash
 
-    $ git status
-    En la rama master
-    Tu rama está actualizada con 'origin/master'.
+  $ git pull
+  Actualizando 884b4bca3..5ad7423e2
+  Fast-forward
+  .mypy.ini                                      |   72 +-
+  PKG-INFO.TXT                                   |    2 +-
+  README.md                                      |   11 +-
+  leo/commands/abbrevCommands.py                 |    6 +-
+  leo/commands/bufferCommands.py                 |    6 +-
+  leo/commands/checkerCommands.py                |   10 +-
+  leo/commands/commanderEditCommands.py          |    3 +-
+  leo/commands/commanderFileCommands.py          |    7 +-
+  leo/commands/commanderOutlineCommands.py       |   29 +-
+  leo/commands/controlCommands.py                |    6 +-
+  leo/commands/convertCommands.py                | 1058 ++++++++++++-------------
+  leo/commands/editCommands.py                   |   26 +-
+  ...
+
+  $ git status
+  En la rama master
+  Tu rama está actualizada con 'origin/master'.
 
 Y si queremos añadir ramas también tenemos que hacerlo explícitamente:
 
-    $ git checkout 6.6.4
-    Rama '6.6.4' configurada para hacer seguimiento a la rama remota '6.6.4' de 'origin'.
-    Cambiado a nueva rama '6.6.4'
+.. code:: bash
 
+  $ git checkout 6.6.4
+  Rama '6.6.4' configurada para hacer seguimiento a la rama remota '6.6.4' de 'origin'.
+  Cambiado a nueva rama '6.6.4'
 </t>
-<t tx="vicent.20220902135651.1">## Tags
-
-Un tag es una etiqueta que se coloca en un determinado punto de la historia del repositorio (en un determinado commit). Su uso más
+<t tx="vicent.20220902135651.1">Un tag es una etiqueta que se coloca en un determinado punto de la historia del repositorio (en un determinado commit). Su uso más
 habitual es marcar los commit en los que se ha hecho una nueva release del software.
 
 Hay dos tipos de tags:
@@ -4443,29 +4443,38 @@ Hay dos tipos de tags:
 
 Si acabamos de hacer un commit  queremos ponerle un tag ligero:
 
-    $ git tag v1.4
+.. code:: bash
+
+  $ git tag v1.4
 
 Si queremos ponerle un tag anotado:
 
-    $ git tag -a v1.4 -m "my tagging message"
+.. code:: bash
+
+  $ git tag -a v1.4 -m "my tagging message"
 
 Si queremos poner un tag a un commit en concreto:
 
-    $ git tag -a v1.4 commit_checksum
+.. code:: bash
+
+  $ git tag -a v1.4 commit_checksum
 
 Si queremos listar los tags:
 
-    $ git tag
+.. code:: bash
+
+  $ git tag
 
 Si queremos ver un tag en concreto:
 
-    $ git show v1.4
+.. code:: bash
+
+  $ git show v1.4
 
 </t>
-<t tx="vicent.20220905143536.1">## Fusión de ramas
+<t tx="vicent.20220905143536.1">`rebase &lt;https://www.atlassian.com/es/git/tutorials/rewriting-history/git-rebase&gt;`_
 
-(rebase)[https://www.atlassian.com/es/git/tutorials/rewriting-history/git-rebase]
-(rebase_grafico)[https://www.gitkraken.com/learn/git/git-rebase]
+`rebase_grafico &lt;https://www.gitkraken.com/learn/git/git-rebase&gt;`_
 
 La fusión de ramas puede hacerse por dos mecanismos:
 
@@ -4482,17 +4491,17 @@ merges them together.*
 
 Note that the snapshot pointed to by the final commit you end up with, whether it's the last of the rebased commits for a rebase or the 
 final merge commit after a merge, is the same snapshot - it's only the history that is different. Rebasing replays changes from one 
-line of work onto another in the order they were introduced, whereas merging takes the endpoints and merges them together.</t>
-<t tx="vicent.20220906183732.1">## Stash y bisect
+line of work onto another in the order they were introduced, whereas merging takes the endpoints and merges them together.
+</t>
+<t tx="vicent.20220906183732.1">Para encontrar bugs que no sabemos cuando se han introducido es muy útil la herramienta `bisect`:
 
-Para encontrar bugs que no sabemos cuando se han introducido es muy útil la herramienta `bisect`:
+`bisect_1 &lt;https://apiumhub.com/es/tech-blog-barcelona/git-bisect/&gt;`_
 
-[bisect](https://apiumhub.com/es/tech-blog-barcelona/git-bisect/)
-[bisect](https://picodotdev.github.io/blog-bitix/2022/04/como-usar-el-comando-git-bisect-para-descubrir-el-primer-commit-con-un-error/)
+`bisect_2 &lt;https://picodotdev.github.io/blog-bitix/2022/04/como-usar-el-comando-git-bisect-para-descubrir-el-primer-commit-con-un-error/&gt;`_
 
 Otro comando muy utilizado es `stash`:
 
-[stash](https://www.atlassian.com/es/git/tutorials/saving-changes/git-stash)
+`stash &lt;https://www.atlassian.com/es/git/tutorials/saving-changes/git-stash&gt;`_
 </t>
 <t tx="vicent.20220910124036.1">Tema 19 JSF. Primefaces
 Tema 20 JasperReports
@@ -4972,9 +4981,7 @@ register them in Spring's Application Context, and allow us to inject beans usin
 
 After enabling annotation injection, we can use autowiring on properties, setters, and constructors.
 </t>
-<t tx="vicent.20221005193256.1">## Worktrees
-
-[Worktrees](https://www.gitkraken.com/learn/git/git-worktree)
+<t tx="vicent.20221005193256.1">`Worktrees &lt;https://www.gitkraken.com/learn/git/git-worktree&gt;`_
 
 Un worktree permite trabajar simultáneamente con dos ramas.
 
@@ -4988,12 +4995,10 @@ estamos listos para hacer commit. En este caso tenemos dos opciones:
 - crear un worktree donde trabajar con la otra rama
 
 El worktree es mucho más cómodo. Nos permite trabajar con varias ramas simultáneamente. Cuando terminamos de trabajar en una rama
-hacemos commit y borramos su worktree. Los cambios no se pierden porque se han aññadido al repo al hacer el commit.
+hacemos commit y borramos su worktree. Los cambios no se pierden porque se han añadido al repo al hacer el commit.
 
 </t>
-<t tx="vicent.20221006191345.1">## Metodologías ágiles
-
-La metodología ágil (del inglés, agile methodology) es una forma de gestión de proyectos, basada en principios como la adaptabilidad y 
+<t tx="vicent.20221006191345.1">La metodología ágil (del inglés, agile methodology) es una forma de gestión de proyectos, basada en principios como la adaptabilidad y 
 la flexibilidad, cuyo objetivo final es ser capaz de responder rápidamente a las necesidades del mercado.
 
 Estas metodologías surgieron al entender que las metodologías tradicionales de desarrollo de software, como el “desarrollo en cascada 
@@ -5027,9 +5032,7 @@ Principios del manifiesto ágil:
 
 Ejemplos de metodologías ágiles son Scrum, eXtreme Programming y Kanban.
 </t>
-<t tx="vicent.20221006193153.1"># Scrum
-
-Scrum es el marco ágil más utilizado entre las empresas para el desarrollo de software.  Fue creado por Jeff Sutherland y Ken Schwaber 
+<t tx="vicent.20221006193153.1">Scrum es el marco ágil más utilizado entre las empresas para el desarrollo de software.  Fue creado por Jeff Sutherland y Ken Schwaber 
 (que también formaron parte de las trece personas que definieron el Manifiesto Ágil) y necesita de un equipo compuesto por:
 
 - **Jefe de producto**: Que representa al cliente y sus necesidades
@@ -5087,9 +5090,7 @@ The most permissive of software licenses, an open-source license puts software d
 retained to the work and anyone can use, change, distribute, and copyright their own adaptations—and even profit from their work. 
 `LibreOffice`, a free alternative to `Microsoft Office`, is an example of open-source software.
 </t>
-<t tx="vicent.20221008124619.1">## Modelo conceptual de datos
-
-Un modelo conceptual de datos identifica las relaciones de más alto nivel entre las diferentes entidades.
+<t tx="vicent.20221008124619.1">Un modelo conceptual de datos identifica las relaciones de más alto nivel entre las diferentes entidades.
 
 Las características del modelo conceptual de datos incluyen:
 
@@ -5099,8 +5100,10 @@ Las características del modelo conceptual de datos incluyen:
 
 La siguiente figura es un ejemplo de un modelo conceptual de datos.
 
-```{thumbnail} images/conceptual.jpg
-```
+.. thumbnail:: images/conceptual.jpg
+  :align: center
+  :width: 50%
+  
 A diferencia de los modelos de datos lógicos y físicos, los modelos de datos conceptuales son independientes de la tecnología y la 
 aplicación. Esto significa que no están vinculados a la realidad y el contexto de los sistemas y procesos actualmente en vigor.
 
@@ -5144,9 +5147,7 @@ Diseño conceptual -&gt; Diseño lógico -&gt; Diseño físico
 El lenguaje que se utiliza para concretar un diseño se llama modelo (lenguaje de modelado). El resultado de aplicar un lenguaje de
 modelado a un diseño es una representación gráfica de la BBDD llamada esquema.
 </t>
-<t tx="vicent.20221008193645.1">## Modelos entidad-relación
- 
- Ver Tema6.pdf. Importante la diapositiva 11:
+<t tx="vicent.20221008193645.1"> Ver Tema6.pdf. Importante la diapositiva 11:
 
  - una relación es una correspondencia (en el sentido matemático) entre *dos o más entidades*.
  - las relaciones se representan gráficamente por rombos con el nombre de la relación en el interior
@@ -5162,13 +5163,16 @@ En la relación `EMPLEADO -- lugar de nacimiento -- CIUDAD` la cardinalidad de `
 puede haber nacido solo en una ciudad, pero la cardinalidad de `CIUDAD` es (0,n) porque en una ciudad dada pueden 
 haber nacido entre cero y varios empleados.
 
-```{note} En una relación, la cardinalidad de las entidades participantes indica el par (min, max) de ocurrencias de una instancia[^1] 
-cualquiera de esas entidades.
-```
-[^1]: a veces se llama instancias a las filas de una entidad porque la relación entidad-fila es equivalente a la relación 
-clase-instancia.</t>
+.. Note:: 
+  En una relación, la cardinalidad de las entidades participantes indica el par (min, max) de ocurrencias de una instancia [#]_ 
+  cualquiera de esas entidades.
+
+.. rubric:: Footnote
+
+.. [#] A veces se llama instancias a las filas de una entidad porque la relación entidad-fila es equivalente a la relación 
+  clase-instancia.</t>
 <t tx="vicent.20221009092538.1">Connolly and Begg define database management system (DBMS) as a "software system that enables users to define, create, maintain and 
-control access to the database".[24] Examples of DBMS's include MySQL, PostgreSQL, Microsoft SQL Server, Oracle Database, and 
+control access to the database". Examples of DBMS's include MySQL, PostgreSQL, Microsoft SQL Server, Oracle Database, and 
 Microsoft Access.
 
 The DBMS acronym is sometimes extended to indicate the underlying database model, with RDBMS for the relational, OODBMS for the object 
@@ -5176,7 +5180,7 @@ The DBMS acronym is sometimes extended to indicate the underlying database model
 distributed database management systems.
 
 The functionality provided by a DBMS can vary enormously. The core functionality is the storage, retrieval and update of data. Codd 
-proposed the following functions and services a fully-fledged general purpose DBMS should provide:[25]
+proposed the following functions and services a fully-fledged general purpose DBMS should provide:
 
 - Data storage, retrieval and update
 - User accessible catalog or data dictionary describing the metadata
@@ -5187,7 +5191,7 @@ proposed the following functions and services a fully-fledged general purpose DB
 - Enforcing constraints to ensure data in the database abides by certain rules
 
 It is also generally to be expected the DBMS will provide a set of utilities for such purposes as may be necessary to administer the 
-database effectively, including import, export, monitoring, defragmentation and analysis utilities.[26] The core part of the DBMS 
+database effectively, including import, export, monitoring, defragmentation and analysis utilities. The core part of the DBMS 
 interacting between the database and the application interface sometimes referred to as the database engine.
 
 Often DBMSs will have configuration parameters that can be statically and dynamically tuned, for example the maximum amount of main 
@@ -5195,12 +5199,12 @@ memory on a server the database can use. The trend is to minimize the amount of 
 databases the need to target zero-administration is paramount.
 
 The large major enterprise DBMSs have tended to increase in size and functionality and can have involved thousands of human years of 
-development effort throughout their lifetime.[a]
+development effort throughout their lifetime.
 
 Early multi-user DBMS typically only allowed for the application to reside on the same computer with access via terminals or terminal 
 emulation software. The client-server architecture was a development where the application resided on a client desktop and the database 
 on a server allowing the processing to be distributed. This evolved into a multitier architecture incorporating application servers and 
-web servers with the end user interface via a web browser with the database only directly connected to the adjacent tier.[27]
+web servers with the end user interface via a web browser with the database only directly connected to the adjacent tier.
 
 A general-purpose DBMS will provide public application programming interfaces (API) and optionally a processor for database languages 
 such as SQL to allow applications to be written to interact with and manipulate the database. A special purpose DBMS may use a private 
@@ -5208,9 +5212,7 @@ API and be specifically customized and linked to a single application. For examp
 general-purpose DBMS such as message insertion, message deletion, attachment handling, blocklist lookup, associating messages an email 
 address and so forth however these functions are limited to what is required to handle email.
 </t>
-<t tx="vicent.20221009113124.1">## APIs
-
-External interaction with the database will be via an application program that interfaces with the DBMS.[28] This can range from a 
+<t tx="vicent.20221009113124.1">External interaction with the database will be via an application program that interfaces with the DBMS. This can range from a 
 database tool that allows users to execute SQL queries textually or graphically, to a website that happens to use a database to store 
 and search information.
 
@@ -5221,9 +5223,7 @@ include JDBC and ADO.NET.
 
 All those APIs are intended for accessing (i.e. connecting) to DBMSs.
 </t>
-<t tx="vicent.20221009113328.1">## Languages
-
-Database languages are *special-purpose languages*, which allow one or more of the following tasks, sometimes distinguished as 
+<t tx="vicent.20221009113328.1">Database languages are *special-purpose languages*, which allow one or more of the following tasks, sometimes distinguished as 
 sublanguages:
 
 - Data control language (DCL): controls access to data;
@@ -5237,9 +5237,7 @@ Database languages are specific to a particular data model. Notable examples inc
 - OQL
 - XQL
 </t>
-<t tx="vicent.20221009114839.1">### ODBC
-
-ODBC is aimed to be independent of the DBMS and OS. An application written using ODBC can be ported to other platforms, both on the 
+<t tx="vicent.20221009114839.1">ODBC is aimed to be independent of the DBMS and OS. An application written using ODBC can be ported to other platforms, both on the 
 client and server side, with few changes to the data access code.
  
 ODBC accomplishes DBMS independence by using an ODBC driver as a translation layer between the application and the DBMS. The 
@@ -5250,21 +5248,19 @@ Any ODBC-compliant application can access any DBMS for which a driver is install
 sources like address book systems and Microsoft Excel, and even for text or comma-separated values (CSV) files.
 
 Ejemplo: la aplicación DBeaver utiliza un driver ODBC para conectarse al DBMS MariaDB.</t>
-<t tx="vicent.20221009115303.1">### JDBC
-
-[JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity)
+<t tx="vicent.20221009115303.1">`JDBC &lt;https://en.wikipedia.org/wiki/Java_Database_Connectivity&gt;`_
 
 Java Database Connectivity (JDBC) is an application programming interface (API) for the programming language Java, which defines how a 
 client may access a database. It is a Java-based data access technology used for Java database connectivity. It is part of the 
-Java Standard Edition platform, from Oracle Corporation. [In addition to connectivity to the DBMS] It provides methods to query and 
-update data in a database [^1], and is oriented toward relational databases. A JDBC-to-ODBC bridge enables connections to any 
+Java Standard Edition platform, from Oracle Corporation. In addition to connectivity to the DBMS it provides methods to query and 
+update data in a database [#]_, and is oriented toward relational databases. A JDBC-to-ODBC bridge enables connections to any 
 ODBC-accessible data source in the Java virtual machine (JVM) host environment.
 
-[^1]: Lo que significa que un programa Java que use JDBC puede no solo conectarse a un SGBD sino atacar a la base de datos haciendo 
-queries y otras operaciones con la sintaxis proporcionada por JDBC.</t>
-<t tx="vicent.20221010123006.1">## Normalization
+.. rubric:: Footnotes
 
-[Referencia](https://www.studytonight.com/dbms/database-normalization.php)
+.. [#] Lo que significa que un programa Java que use JDBC puede no solo conectarse a un SGBD sino atacar a la base de datos haciendo 
+  queries y otras operaciones con la sintaxis proporcionada por JDBC.</t>
+<t tx="vicent.20221010123006.1">`Referencia &lt;https://www.studytonight.com/dbms/database-normalization.php&gt;`_
 
 Normalization is the process of organizing the data in the database. It consists of a series of guidelines that helps to guide you in 
 creating a good database structure.
@@ -5287,8 +5283,10 @@ said to be in particular normal form if it satisfies constraints.
 
 A table is in 1NF if it contains *only atomic values* i.e. if no value is itself a relation/table. 
 
-```{thumbnail} images/1NFviolation.png
-```
+.. thumbnail:: images/1NFviolation.png
+  :align: center
+  :width: 50%
+
 
 To achieve this goal we must eliminate repeating groups (groups with the same meaning, for instance address1 and address2).
 
@@ -5297,7 +5295,7 @@ the same table.
 
 **Second normal form, 2NF**
 
-A table will be in 2NF if it is in 1NF and all non-key values are fully functional dependent on the primary key [^1]. It means that
+A table will be in 2NF if it is in 1NF and all non-key values are fully functional dependent on the primary key [#]_. It means that
 all non-key values can be fetched using the full primary key (remember that primary key can be a composite key). 
 
 If the dependency is only partial the 2NF is not fulfiled. It means that there are values that can be fetched using only part of a 
@@ -5309,8 +5307,9 @@ only need B to be fetched then D depends partially of the composite primary key 
 A table will be in 3NF if it is in 2NF and no transitive dependency exists. It means that all non-key values on the table deppend on 
 **only** primary keys.
 
+.. rubric:: Footnotes
 
-[^1]: But may depend also on other fields that are not primary keys.
+.. [#] But may depend also on other fields that are not primary keys.
 </t>
 <t tx="vicent.20221010124625.1">Dr Edgar F. Codd, after his extensive research on the Relational Model of database systems, came up with twelve rules of his own, which 
 according to him, a database must obey in order to be regarded as a true relational database.
@@ -5416,9 +5415,7 @@ En general los tipos escalares más utilizados son: number, char, varchar2, bool
 - boolean: puede ser TRUE, FALSE o NULL (este tipo no existe en SQL)
 - datetime
 </t>
-<t tx="vicent.20221012190834.1">### Jerarquías de generalización
-
-Las generalizaciones proporcionan un mecanismo de abstracción que permite especializar una entidad (que se denominará supertipo) en 
+<t tx="vicent.20221012190834.1">Las generalizaciones proporcionan un mecanismo de abstracción que permite especializar una entidad (que se denominará supertipo) en 
 subtipos, o lo que es lo mismo generalizar los subtipos en el supertipo. *Una generalización se identifica si encontramos una serie de 
 atributos comunes a un conjunto de entidades, y unos atributos específicos que identificarán unas características*.
 
@@ -5432,29 +5429,26 @@ la generalización es parcial.
 La generalización es exclusiva si no hay *ocurrencias* en el supertipo que pertenezcan a más de un subtipo. En caso contrario, la
 generalización es solapada.
 
-Por ejemplo, imaginemos una empresa de construcción. La generalización:
+Por ejemplo, imaginemos una empresa de construcción. La generalización::
 
-    empleado
-          |
-          +-- fijo
-          |
-          +-- temporal
+  empleado
+        |
+        +-- fijo
+        |
+        +-- temporal
 
 es total (todas las ocurrencias de empleado pertenecen a alguno de los subtipos) y exclusiva (no hay ninguna ocurrencia de empleado que
 pertenezca a más de un subtipo).
 
-En cambio, la generalización:
+En cambio, la generalización::
 
-    empleado
-          |
-          +-- arquitecto
-          |
-          +-- contable
+  empleado
+        |
+        +-- arquitecto
+        |
+        +-- contable
 
 es parcial (porque hay ocurrencias de empleado que no pertenecen a ninguno de los subtipos) y exclusiva.
-
-
-
 </t>
 <t tx="vicent.20221013165224.1"> `JVMvsJREvsJDK &lt;https://www.baeldung.com/jvm-vs-jre-vs-jdk&gt;`_
 
@@ -7354,6 +7348,29 @@ Nuevos métodos:
 @others
 </t>
 <t tx="vicent.20221108193431.1">@path ./30PruebaDelSoftware
+@language rest
+@others
+</t>
+<t tx="vicent.20221109192120.1">@path ./29Scrum
+@language rest
+@others</t>
+<t tx="vicent.20221109193002.1">@path ./31ControlDeVersiones
+@language rest
+@others
+</t>
+<t tx="vicent.20221111185832.1">@path ./32GestionProyectosMaven
+@language rest
+@others
+</t>
+<t tx="vicent.20221112135025.1">@path ./04SGBD
+@language rest
+@others
+</t>
+<t tx="vicent.20221112164151.1">@path ./10ModeladoDeDatos
+@language rest
+@others
+</t>
+<t tx="vicent.20221112165250.1">@path ./11BBDDRelacionales
 @language rest
 @others
 </t>
