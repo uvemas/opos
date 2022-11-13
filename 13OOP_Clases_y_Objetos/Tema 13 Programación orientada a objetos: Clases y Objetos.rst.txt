@@ -1,22 +1,29 @@
-# Tema 13 OOP: Clases y Objetos 
+.. rst3: filename: Tema 13 Programación orientada a objetos: Clases y Objetos.rst
 
-## Top-level clases
+=============================
+Tema 13 OOP: Clases y Objetos 
+=============================
+
+Top-level clases
+++++++++++++++++
 
 Este término puede llevar a confusión, porque parece que haga referencia a la posición de una clase dentro de la
 jerarquía de clases, lo cual no es cierto.
 
-En [la especificación de Java](http://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html) se define una top-level
+En `la especificación de Java <http://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html>`_ se define una top-level
 class como aquella que no está anidada:
 
-> A top level class is a class that is not a nested class.
->
-> A nested class is any class whose declaration occurs within the body of another class or interface.
+  A top level class is a class that is not a nested class.
+  
+  A nested class is any class whose declaration occurs within the body of another class or interface.
 
 Por lo tanto el término top-level hace referencia a la posición de la clase en el código, *no* en la jerarquía de
-clases.#
-## Modificadores de acceso
+clases.
 
-[Reference](https://www.baeldung.com/java-access-modifiers)
+Modificadores de acceso
++++++++++++++++++++++++
+
+`Access modifiers <https://www.baeldung.com/java-access-modifiers>`_
 
 As the name suggests access modifiers in Java helps to restrict the scope of a class, constructor, variable or method,
 o sea, ayudan a encapsular el estado de un objeto. 
@@ -49,13 +56,15 @@ la clase.
 - `private`: el miembro solo es accesible desde dentro de la clase en que está definida
 
 Lógicamente si la clase es `default` los modificadores `public` o `protected` en un miembro no tienen sentido. En ese 
-caso se puede [usar una
-interfaz](https://stackoverflow.com/questions/18758317/how-do-i-access-a-public-method-of-a-default-class-outside-the-package)
+caso se puede `usar una
+interfaz <https://stackoverflow.com/questions/18758317/how-do-i-access-a-public-method-of-a-default-class-outside-the-package>`_
 
 En el caso de variables accesible significa que la variable se puede leer y modificar.
 
 En el caso de métodos accesible significa que el método se puede invocar.
-## Modificadores de no-acceso
+
+Modificadores de no-acceso
+++++++++++++++++++++++++++
 
 Proporcionan información a la JVM acerca de una clase, método o variable. Hay siete:
 
@@ -73,12 +82,13 @@ Proporcionan información a la JVM acerca de una clase, método o variable. Hay 
   applicable to a variable. 
 - transient: This needs prior knowledge of serialization in Java. You can refer to the following article for that:- 
   serialization in java. The transient keyword may be applied to member variables of a class to indicate that the 
-  member variable should not be serialized when the containing class instance is serialized. Serialization is the ​
-  process of converting an object into a byte stream. When we do not want to serialize the value of a variable, then we 
+  member variable should not be serialized when the containing class instance is serialized. Serialization is the process of converting an object into a byte stream. When we do not want to serialize the value of a variable, then we 
   declare it as transient.
 - native: The native keyword may be applied to a method to indicate that the method is implemented in a language other 
   than Java.
-  
-## Clases y objetos
 
-[baeldung](https://www.baeldung.com/java-classes-objects)
+Clases y objetos
+++++++++++++++++
+
+`Classes and objects <https://www.baeldung.com/java-classes-objects>`_
+

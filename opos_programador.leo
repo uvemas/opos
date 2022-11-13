@@ -159,13 +159,16 @@
 <v t="vicent.20220528090410.1"><vh>Tema 28 Desarrollo de aplicaciones con Ajax y Jquery</vh></v>
 </v>
 <v t="vicent.20220528091855.1"><vh>Programación Orientada a Objetos</vh>
-<v t="vicent.20220528085742.1"><vh>@clean Tema 13 Programación orientada a objetos: Clases y Objetos.md</vh>
+<v t="vicent.20221113090056.1"><vh>Tema 13 Programación orientada a objetos: clases y objetos</vh>
+<v t="vicent.20220528085742.1"><vh>@rst Tema 13 Programación orientada a objetos: Clases y Objetos.rst</vh>
 <v t="vicent.20220623195702.1"><vh>Top-level clases</vh></v>
 <v t="vicent.20220623164829.1"><vh>Modificadores de acceso</vh></v>
 <v t="vicent.20220623201230.1"><vh>Modificadores de no-acceso</vh></v>
 <v t="vicent.20220801182538.1"><vh>Clases y objetos</vh></v>
 </v>
-<v t="vicent.20220528085821.1"><vh>@clean Tema 14 Programación orientada a objetos Herencia Polimorfismo.md</vh>
+</v>
+<v t="vicent.20221113090139.1"><vh>Tema 14 Programación orientada a objetos. Herencia y polimorfismo</vh>
+<v t="vicent.20220528085821.1"><vh>@rst Tema 14 Programación orientada a objetos Herencia Polimorfismo.rst</vh>
 <v t="vicent.20220728104604.1"><vh>Clases abstractas</vh></v>
 <v t="vicent.20220729110533.1"><vh>Interfaces</vh></v>
 <v t="vicent.20220729085936.1"><vh>Clases abstractas vs Interfaces</vh></v>
@@ -173,7 +176,10 @@
 <v t="vicent.20220801184823.1"><vh>Herencia y composición</vh></v>
 <v t="vicent.20221014131932.1"><vh>Polimorfismo</vh></v>
 </v>
-<v t="vicent.20221018183956.1"><vh>@clean Tema 15 UML.md</vh></v>
+</v>
+<v t="vicent.20221113090205.1"><vh>Tema 15 UML</vh>
+<v t="vicent.20221018183956.1"><vh>@rst Tema 15 UML.rst</vh></v>
+</v>
 </v>
 <v t="vicent.20220528092032.1"><vh>Java</vh>
 <v t="vicent.20221108175934.1"><vh>Tema 16 Entorno de desarrollo Java. Arquitectura JEE</vh>
@@ -2666,17 +2672,13 @@ Tema 12 Oracle. SQl. PL/SQL
 ===========================
 
 </t>
-<t tx="vicent.20220528085742.1"># Tema 13 OOP: Clases y Objetos 
-
-@path ./13OOP_Clases_y_Objetos
-@language md
-@others
+<t tx="vicent.20220528085742.1">=============================
+Tema 13 OOP: Clases y Objetos 
+=============================
 </t>
-<t tx="vicent.20220528085821.1"># Tema 14 OOP: Herencia y Polimorfismo 
-
-@path ./14OOP_Herencia_y_Polimorfismo
-@language md
-@others
+<t tx="vicent.20220528085821.1">====================================
+Tema 14 OOP: Herencia y Polimorfismo 
+====================================
 </t>
 <t tx="vicent.20220528085918.1">=======================================================
 Tema 16 El entorno de desarrollo Java. Arquitectura JEE
@@ -3063,9 +3065,7 @@ Cada artefacto es parte de un grupo formado por uno o más artefactos. Por ejemp
 el grupo `org.springframework.boot` (que está en `~/m2/repository/org/springframework/boot/`) hay unos 30 artefactos, entre plugins
 y dependencias.
 </t>
-<t tx="vicent.20220623164829.1">## Modificadores de acceso
-
-[Reference](https://www.baeldung.com/java-access-modifiers)
+<t tx="vicent.20220623164829.1">`Access modifiers &lt;https://www.baeldung.com/java-access-modifiers&gt;`_
 
 As the name suggests access modifiers in Java helps to restrict the scope of a class, constructor, variable or method,
 o sea, ayudan a encapsular el estado de un objeto. 
@@ -3098,30 +3098,27 @@ la clase.
 - `private`: el miembro solo es accesible desde dentro de la clase en que está definida
 
 Lógicamente si la clase es `default` los modificadores `public` o `protected` en un miembro no tienen sentido. En ese 
-caso se puede [usar una
-interfaz](https://stackoverflow.com/questions/18758317/how-do-i-access-a-public-method-of-a-default-class-outside-the-package)
+caso se puede `usar una
+interfaz &lt;https://stackoverflow.com/questions/18758317/how-do-i-access-a-public-method-of-a-default-class-outside-the-package&gt;`_
 
 En el caso de variables accesible significa que la variable se puede leer y modificar.
 
-En el caso de métodos accesible significa que el método se puede invocar.</t>
-<t tx="vicent.20220623195702.1">## Top-level clases
-
-Este término puede llevar a confusión, porque parece que haga referencia a la posición de una clase dentro de la
+En el caso de métodos accesible significa que el método se puede invocar.
+</t>
+<t tx="vicent.20220623195702.1">Este término puede llevar a confusión, porque parece que haga referencia a la posición de una clase dentro de la
 jerarquía de clases, lo cual no es cierto.
 
-En [la especificación de Java](http://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html) se define una top-level
+En `la especificación de Java &lt;http://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html&gt;`_ se define una top-level
 class como aquella que no está anidada:
 
-&gt; A top level class is a class that is not a nested class.
-&gt;
-&gt; A nested class is any class whose declaration occurs within the body of another class or interface.
+  A top level class is a class that is not a nested class.
+  
+  A nested class is any class whose declaration occurs within the body of another class or interface.
 
 Por lo tanto el término top-level hace referencia a la posición de la clase en el código, *no* en la jerarquía de
-clases.#
+clases.
 </t>
-<t tx="vicent.20220623201230.1">## Modificadores de no-acceso
-
-Proporcionan información a la JVM acerca de una clase, método o variable. Hay siete:
+<t tx="vicent.20220623201230.1">Proporcionan información a la JVM acerca de una clase, método o variable. Hay siete:
 
 - final: it indicates that the specific class cannot be extended or a method cannot be overridden.
 - static: it means that the entity to which it is applied is available outside any particular instance of the class. 
@@ -3137,13 +3134,11 @@ Proporcionan información a la JVM acerca de una clase, método o variable. Hay 
   applicable to a variable. 
 - transient: This needs prior knowledge of serialization in Java. You can refer to the following article for that:- 
   serialization in java. The transient keyword may be applied to member variables of a class to indicate that the 
-  member variable should not be serialized when the containing class instance is serialized. Serialization is the ​
-  process of converting an object into a byte stream. When we do not want to serialize the value of a variable, then we 
+  member variable should not be serialized when the containing class instance is serialized. Serialization is the process of converting an object into a byte stream. When we do not want to serialize the value of a variable, then we 
   declare it as transient.
 - native: The native keyword may be applied to a method to indicate that the method is implemented in a language other 
   than Java.
-  
-</t>
+  </t>
 <t tx="vicent.20220725083209.1">`Baeldung &lt;https://www.baeldung.com/java-syntax&gt;`_
 
 Primitive types are the basic data types that store simple data.
@@ -3212,9 +3207,7 @@ memory, allocated for our Java application.
 
 Muy buena introducción al lenguaje Java.
 </t>
-<t tx="vicent.20220728104604.1">## Clases abstractas
-
-[baeldung](https://www.baeldung.com/java-abstract-class)
+<t tx="vicent.20220728104604.1">`Abstract class &lt;https://www.baeldung.com/java-abstract-class&gt;`_
 
 Before diving into when to use an abstract class, let's look at their most relevant characteristics:
 
@@ -3237,57 +3230,57 @@ Notas:
 - lo mismo ocurre con los métodos
 - los métodos abstractos tienen que tener la firma completa (tipo de retorno, modificadores, parámetros)
 - cuando se hereda una clase, para saber que métodos se están heredando hay que tener en cuenta los modificadores de acceso de las 
-  clases y de los métodos (por ejemplo ni los métodos estáticos ni los privados se pueden heredar)</t>
-<t tx="vicent.20220729085936.1">## Clases abstractas vs Interfaces
-
-A veces es difícil decidir si usar una clase abstracta o una interface.
+  clases y de los métodos (por ejemplo ni los métodos estáticos ni los privados se pueden heredar)
+</t>
+<t tx="vicent.20220729085936.1">A veces es difícil decidir si usar una clase abstracta o una interface.
 
 Como regla de oro podemos decir que usaremos una clase abstracta cuando hay funcionalidad que queremos heredar. Si lo
 que buscamos no es heredar sino implementar una determinada funcionalidad entonces usaremos interfaces.
 
 Por ejemplo:
 
-~~~ java
-public abstract class BaseFileReader {
-    protected Path filePath;
-    protected BaseFileReader(Path filePath) {
-        this.filePath = filePath;
-    }
-    
-    public Path getFilePath() {
-        return filePath;
-    }
+.. code:: java
 
-    public List&lt;String&gt; readFile() throws IOException {
-        return Files.lines(filePath)
-          .map(this::mapFileLine).collect(Collectors.toList());
-    }
+  public abstract class BaseFileReader {
+      protected Path filePath;
+      protected BaseFileReader(Path filePath) {
+          this.filePath = filePath;
+      }
+      
+      public Path getFilePath() {
+          return filePath;
+      }
 
-    protected abstract String mapFileLine(String line);
-}
-//
-public class LowercaseFileReader extends BaseFileReader {
-    public LowercaseFileReader(Path filePath) {
-        super(filePath);
-    }
+      public List&lt;String&gt; readFile() throws IOException {
+          return Files.lines(filePath)
+            .map(this::mapFileLine).collect(Collectors.toList());
+      }
 
-    @Override
-    public String mapFileLine(String line) {
-        return line.toLowerCase();
-    }   
-}
-//
-public class UppercaseFileReader extends BaseFileReader {
-    public UppercaseFileReader(Path filePath) {
-        super(filePath);
-    }
+      protected abstract String mapFileLine(String line);
+  }
+  //
+  public class LowercaseFileReader extends BaseFileReader {
+      public LowercaseFileReader(Path filePath) {
+          super(filePath);
+      }
 
-    @Override
-    public String mapFileLine(String line) {
-        return line.toUpperCase();
-    }
-}
-~~~
+      @Override
+      public String mapFileLine(String line) {
+          return line.toLowerCase();
+      }   
+  }
+  //
+  public class UppercaseFileReader extends BaseFileReader {
+      public UppercaseFileReader(Path filePath) {
+          super(filePath);
+      }
+
+      @Override
+      public String mapFileLine(String line) {
+          return line.toUpperCase();
+      }
+  }
+
 
 Vemos como las subclases heredan una determinada funcionalidad (métodos concretos de la clase base) y la extienden con 
 su propia implementación de los métodos abstractos.
@@ -3296,65 +3289,62 @@ En cambio con una interface podemos añadir un determinado comportamiento a clas
 (por lo que no heredan unas de otras y no tiene sentido usar clases abstractas). Por ejemplo, la interface
 `Comparator` la implementan los tipos `Integer` y `String` (entre otros) y podemos usarla en nuestros propios tipos:
 
-~~~ java
-public class Employee {
+.. code:: java
 
-    private double salary;
+  public class Employee {
 
-    public double getSalary() {
-        return salary;
-    }
+      private double salary;
 
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-}
-//
-public class EmployeeSalaryComparator implements Comparator&lt;Employee&gt; {
+      public double getSalary() {
+          return salary;
+      }
 
-    @Override
-    public int compare(Employee employeeA, Employee employeeB) {
-        if (employeeA.getSalary() &lt; employeeB.getSalary()) {
-            return -1;
-        } else if (employeeA.getSalary() &gt; employeeB.getSalary()) { 
-            return 1;
-        } else {
-            return 0;
-        }
-    }
-}
-~~~
+      public void setSalary(double salary) {
+          this.salary = salary;
+      }
+  }
+  //
+  public class EmployeeSalaryComparator implements Comparator&lt;Employee&gt; {
 
-
+      @Override
+      public int compare(Employee employeeA, Employee employeeB) {
+          if (employeeA.getSalary() &lt; employeeB.getSalary()) {
+              return -1;
+          } else if (employeeA.getSalary() &gt; employeeB.getSalary()) { 
+              return 1;
+          } else {
+              return 0;
+          }
+      }
+  }
 </t>
-<t tx="vicent.20220729110533.1">## Interfaces
-
-[baeldung](https://www.baeldung.com/java-interfaces)
+<t tx="vicent.20220729110533.1">`Interfaces &lt;https://www.baeldung.com/java-interfaces&gt;`_
 
 In Java, an interface is an *abstract type* that contains a collection of methods and constant variables.
 
-~~~ java
-public interface Electronic {
-    // Constant variable
-    String LED = "LED";
+.. code:: java
 
-    // Abstract method
-    int getElectricityUse();
+  public interface Electronic {
+      // Constant variable
+      String LED = "LED";
 
-    // Static method
-    static boolean isEnergyEfficient(String electtronicType) {
-        if (electtronicType.equals(LED)) {
-            return true;
-        }
-        return false;
-    }
+      // Abstract method
+      int getElectricityUse();
 
-    //Default method
-    default void printDescription() {
-        System.out.println("Electronic Description");
-    }
-}
-~~~
+      // Static method
+      static boolean isEnergyEfficient(String electtronicType) {
+          if (electtronicType.equals(LED)) {
+              return true;
+          }
+          return false;
+      }
+
+      //Default method
+      default void printDescription() {
+          System.out.println("Electronic Description");
+      }
+  }
+
 
 Una interface puede contener:
 
@@ -3373,15 +3363,16 @@ down the implementing classes.
 
 We can implement an interface in a Java class by using the `implements` keyword.
 
-~~~ java
-public class Computer implements Electronic {
+.. code:: java
 
-    @Override
-    public int getElectricityUse() {
-        return 1000;
-    }
-}
-~~~
+  public class Computer implements Electronic {
+
+      @Override
+      public int getElectricityUse() {
+          return 1000;
+      }
+  }
+
 
 Con interfaces podemos:
 
@@ -3389,22 +3380,23 @@ Con interfaces podemos:
 - conseguir herencia múltiple (implementando varias interfaces al mismo tiempo)
 - conseguir polimorfismo (recordemos que las interfaces *son tipos*)
 
-~~~ java
-List&lt;Shape&gt; shapes = new ArrayList&lt;&gt;();  // Shape es una interface
-Shape circleShape = new Circle();  // Circle es una clase que implementa Shape
-Shape squareShape = new Square();  // Square es una clase que implementa Shape
+.. code:: java
 
-shapes.add(circleShape);
-shapes.add(squareShape);
+  List&lt;Shape&gt; shapes = new ArrayList&lt;&gt;();  // Shape es una interface
+  Shape circleShape = new Circle();  // Circle es una clase que implementa Shape
+  Shape squareShape = new Square();  // Square es una clase que implementa Shape
 
-for (Shape shape : shapes) {
-    System.out.println(shape.name());  // BOOM! Polimorfismo en acción
-}
-~~~
+  shapes.add(circleShape);
+  shapes.add(squareShape);
 
-```{note} An interface inherits other interfaces by using the keyword *extends*. Classes use the keyword *implements* to
-inherit an interface. 
-```
+  for (Shape shape : shapes) {
+      System.out.println(shape.name());  // BOOM! Polimorfismo en acción
+  }
+
+
+.. note:: 
+  An interface inherits other interfaces by using the keyword *extends*. Classes use the keyword *implements* to
+  inherit an interface. 
 
 Notas:
 
@@ -3415,9 +3407,7 @@ Notas:
   no se pueden sobreescribir
 - los métodos `default` tienen que estar implementados en la interface y no se pueden sobreescribir
 </t>
-<t tx="vicent.20220729124948.1">## Herencia de tipos
-
-[baeldung](https://www.baeldung.com/java-inheritance)
+<t tx="vicent.20220729124948.1">`Inheritance &lt;https://www.baeldung.com/java-inheritance&gt;`_
 
 *When a class inherits another class or interfaces, apart from inheriting their members, it also inherits their type. 
 This also applies to an interface that inherits other interfaces.*
@@ -3428,58 +3418,54 @@ than programming to their implementations.
 For example, imagine a condition, where an organization maintains a list of the cars owned by its employees. Of course, 
 all employees might own different car models. So how can we refer to different car instances? Here's the solution:
 
-~~~ java
-public class Employee {
-    private String name;
-    private Car car;
-    
-    // standard constructor
-}
-~~~
+.. code:: java
+
+  public class Employee {
+      private String name;
+      private Car car;
+      
+      // standard constructor
+  }
 
 Because all derived classes of Car inherit the type Car, the derived class instances can be referred by using a variable of class Car:
 
-~~~ java
-Employee e1 = new Employee("Shreya", new ArmoredCar());
-Employee e2 = new Employee("Paul", new SpaceCar());
-Employee e3 = new Employee("Pavni", new BMW());
-~~~
-</t>
-<t tx="vicent.20220801182538.1">## Clases y objetos
+.. code:: java
 
-[baeldung](https://www.baeldung.com/java-classes-objects)
+  Employee e1 = new Employee("Shreya", new ArmoredCar());
+  Employee e2 = new Employee("Paul", new SpaceCar());
+  Employee e3 = new Employee("Pavni", new BMW());
 </t>
-<t tx="vicent.20220801184823.1">## Herencia, composición
-
-[baeldung](https://www.baeldung.com/java-inheritance-composition)
-[wikipedia](https://en.wikipedia.org/wiki/Dependency_injection)
+<t tx="vicent.20220801182538.1">`Classes and objects &lt;https://www.baeldung.com/java-classes-objects&gt;`_
+</t>
+<t tx="vicent.20220801184823.1">`Inheritance and composition &lt;https://www.baeldung.com/java-inheritance-composition&gt;`_
+`Dependency Injection &lt;https://en.wikipedia.org/wiki/Dependency_injection&gt;`_
 
 En general se prefiere la composición (has-a relationship) a la herencia (is-a relationship), pero hay casos típicos de uso donde la 
 herencia está recomendada.
 
 La herencia se basa en extender clases. La composición se basa en implementar interfaces.
 
-Usamos herencia con el patrón de capas (layer pattern): la clase base contiene el código común de sus subclases, por ejemplo:
+Usamos herencia con el patrón de capas (layer pattern): la clase base contiene el código común de sus subclases, por ejemplo::
 
-    Empleado
-           |
-           +-- Informatico
-                         |
-                         +-- Administrador
-                         |
-                         +-- Programador
+  Empleado
+          |
+          +-- Informatico
+                        |
+                        +-- Administrador
+                        |
+                        +-- Programador
 
 Aquí hemos definido tres capas, y la supercapa de cada subcapa contiene el código común a la supercapa y la subcapa. En cambio las 
 subcapas contienen código específico respecto a las supercapas.
 
 También usamos la herencia con el patrón de plantillas (template pattern): la superclase actúa como una plantilla y las subclases 
-personalizan esa plantilla sobreescribiendo sus métodos, por ejemplo:
+personalizan esa plantilla sobreescribiendo sus métodos, por ejemplo::
 
-    ComputerBuilder
-                  |
-                  +-- StandardComputerBuilder
-                  |
-                  +-- GamingComputerBuilder
+  ComputerBuilder
+                |
+                +-- StandardComputerBuilder
+                |
+                +-- GamingComputerBuilder
 
 In a nutshell, composition allows us to model objects that are made up of other objects, thus defining a “has-a” relationship between 
 them.
@@ -3490,20 +3476,20 @@ object are destroyed too when that object is destroyed.
 Por ejemplo, un ordenador tiene procesador, memoria y tarjeta de sonido. Si para cada componente creamos una interface, podemos 
 construir diferentes modelos de ordenador si usamos diferentes implementaciones de esas intefaces.
 
-~~~ java
-public class Computer {
+.. code:: java
 
-    private Processor processor;  // Interface
-    private Memory memory;  // Interface
-    private SoundCard soundCard;  // Interface
+  public class Computer {
 
-    // standard getters/setters/constructors
-    
-    public Optional&lt;SoundCard&gt; getSoundCard() {
-        return Optional.ofNullable(soundCard);
-    }
-}
-~~~
+      private Processor processor;  // Interface
+      private Memory memory;  // Interface
+      private SoundCard soundCard;  // Interface
+
+      // standard getters/setters/constructors
+      
+      public Optional&lt;SoundCard&gt; getSoundCard() {
+          return Optional.ofNullable(soundCard);
+      }
+  }
 
 Con tres implementaciones de cada interface (nueve implementaciones en total) puedo crear 27 modelos de ordenador usando la clase 
 `Computer`. Si no uso interfaces tendria que crear nueve clases para los componentes y 27 variantes de la clase `Computer`.
@@ -5488,22 +5474,20 @@ de:
   - monitorización: `jconsole`, `jstat`...
   - troubleshooting: experimental
 </t>
-<t tx="vicent.20221014131932.1">## Polimorfismo
+<t tx="vicent.20221014131932.1">.. code:: java
 
-~~~ java
-public class Animal {
-  String name = "animal";
-  public String makeNoise {return "generic noise";}
-}
+  public class Animal {
+    String name = "animal";
+    public String makeNoise {return "generic noise";}
+  }
 
-public class Bird extends Animal {
-  String name = "bird";
-  public String makeNoise {return "sing";}
-}
-A animal = new Bird();
-A.name --&gt; animal
-A.makeNoise() --&gt; sing
-~~~
+  public class Bird extends Animal {
+    String name = "bird";
+    public String makeNoise {return "sing";}
+  }
+  A animal = new Bird();
+  A.name --&gt; animal
+  A.makeNoise() --&gt; sing
 
 El polimorfismo solo se aplica a métodos de la instancia pero *no* a variables.
 </t>
@@ -5750,14 +5734,13 @@ details.
 <t tx="vicent.20221018183554.1">Tema 18 Diseño web. HTML y CSS3
 Tema 26 PHP
 Tema 28 Desarrollo de aplicaciones con Ajax y JQuery</t>
-<t tx="vicent.20221018183956.1"># Tema 15 UML
+<t tx="vicent.20221018183956.1">===========
+Tema 15 UML
+===========
 
-@path ./15UML
-@language md
 [Curso completo UML2.0](https://www.youtube.com/playlist?list=PLGLfVvz_LVvQ5G-LdJ8RLqe-ndo7QITYc)
 
 [Diagramas UML](https://www.teatroabadia.com/es/uploads/documentos/iagramas_del_uml.pdf)
-@others
 </t>
 <t tx="vicent.20221018185935.1">Desde un punto de vista lógico un servidor de aplicaciones tiene esta estructura:
 
@@ -7371,6 +7354,18 @@ Nuevos métodos:
 @others
 </t>
 <t tx="vicent.20221112165250.1">@path ./11BBDDRelacionales
+@language rest
+@others
+</t>
+<t tx="vicent.20221113090056.1">@path ./13OOP_Clases_y_Objetos
+@language rest
+@others
+</t>
+<t tx="vicent.20221113090139.1">@path ./14OOP_Herencia_y_Polimorfismo
+@language rest
+@others
+</t>
+<t tx="vicent.20221113090205.1">@path ./15UML
 @language rest
 @others
 </t>

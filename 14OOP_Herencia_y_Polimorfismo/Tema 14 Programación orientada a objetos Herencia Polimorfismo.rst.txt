@@ -1,8 +1,13 @@
-# Tema 14 OOP: Herencia y Polimorfismo 
+.. rst3: filename: Tema 14 Programación orientada a objetos Herencia Polimorfismo.rst
 
-## Clases abstractas
+====================================
+Tema 14 OOP: Herencia y Polimorfismo 
+====================================
 
-[baeldung](https://www.baeldung.com/java-abstract-class)
+Clases abstractas
++++++++++++++++++
+
+`Abstract class <https://www.baeldung.com/java-abstract-class>`_
 
 Before diving into when to use an abstract class, let's look at their most relevant characteristics:
 
@@ -26,34 +31,37 @@ Notas:
 - los métodos abstractos tienen que tener la firma completa (tipo de retorno, modificadores, parámetros)
 - cuando se hereda una clase, para saber que métodos se están heredando hay que tener en cuenta los modificadores de acceso de las 
   clases y de los métodos (por ejemplo ni los métodos estáticos ni los privados se pueden heredar)
-## Interfaces
 
-[baeldung](https://www.baeldung.com/java-interfaces)
+Interfaces
+++++++++++
+
+`Interfaces <https://www.baeldung.com/java-interfaces>`_
 
 In Java, an interface is an *abstract type* that contains a collection of methods and constant variables.
 
-~~~ java
-public interface Electronic {
-    // Constant variable
-    String LED = "LED";
+.. code:: java
 
-    // Abstract method
-    int getElectricityUse();
+  public interface Electronic {
+      // Constant variable
+      String LED = "LED";
 
-    // Static method
-    static boolean isEnergyEfficient(String electtronicType) {
-        if (electtronicType.equals(LED)) {
-            return true;
-        }
-        return false;
-    }
+      // Abstract method
+      int getElectricityUse();
 
-    //Default method
-    default void printDescription() {
-        System.out.println("Electronic Description");
-    }
-}
-~~~
+      // Static method
+      static boolean isEnergyEfficient(String electtronicType) {
+          if (electtronicType.equals(LED)) {
+              return true;
+          }
+          return false;
+      }
+
+      //Default method
+      default void printDescription() {
+          System.out.println("Electronic Description");
+      }
+  }
+
 
 Una interface puede contener:
 
@@ -72,15 +80,16 @@ down the implementing classes.
 
 We can implement an interface in a Java class by using the `implements` keyword.
 
-~~~ java
-public class Computer implements Electronic {
+.. code:: java
 
-    @Override
-    public int getElectricityUse() {
-        return 1000;
-    }
-}
-~~~
+  public class Computer implements Electronic {
+
+      @Override
+      public int getElectricityUse() {
+          return 1000;
+      }
+  }
+
 
 Con interfaces podemos:
 
@@ -88,22 +97,23 @@ Con interfaces podemos:
 - conseguir herencia múltiple (implementando varias interfaces al mismo tiempo)
 - conseguir polimorfismo (recordemos que las interfaces *son tipos*)
 
-~~~ java
-List<Shape> shapes = new ArrayList<>();  // Shape es una interface
-Shape circleShape = new Circle();  // Circle es una clase que implementa Shape
-Shape squareShape = new Square();  // Square es una clase que implementa Shape
+.. code:: java
 
-shapes.add(circleShape);
-shapes.add(squareShape);
+  List<Shape> shapes = new ArrayList<>();  // Shape es una interface
+  Shape circleShape = new Circle();  // Circle es una clase que implementa Shape
+  Shape squareShape = new Square();  // Square es una clase que implementa Shape
 
-for (Shape shape : shapes) {
-    System.out.println(shape.name());  // BOOM! Polimorfismo en acción
-}
-~~~
+  shapes.add(circleShape);
+  shapes.add(squareShape);
 
-```{note} An interface inherits other interfaces by using the keyword *extends*. Classes use the keyword *implements* to
-inherit an interface. 
-```
+  for (Shape shape : shapes) {
+      System.out.println(shape.name());  // BOOM! Polimorfismo en acción
+  }
+
+
+.. note:: 
+  An interface inherits other interfaces by using the keyword *extends*. Classes use the keyword *implements* to
+  inherit an interface. 
 
 Notas:
 
@@ -113,7 +123,9 @@ Notas:
 - los métodos `static` tienen que estar implementados en la interface y funcionan como en las clases, por tanto
   no se pueden sobreescribir
 - los métodos `default` tienen que estar implementados en la interface y no se pueden sobreescribir
-## Clases abstractas vs Interfaces
+
+Clases abstractas vs Interfaces
++++++++++++++++++++++++++++++++
 
 A veces es difícil decidir si usar una clase abstracta o una interface.
 
@@ -122,47 +134,48 @@ que buscamos no es heredar sino implementar una determinada funcionalidad entonc
 
 Por ejemplo:
 
-~~~ java
-public abstract class BaseFileReader {
-    protected Path filePath;
-    protected BaseFileReader(Path filePath) {
-        this.filePath = filePath;
-    }
-    
-    public Path getFilePath() {
-        return filePath;
-    }
+.. code:: java
 
-    public List<String> readFile() throws IOException {
-        return Files.lines(filePath)
-          .map(this::mapFileLine).collect(Collectors.toList());
-    }
+  public abstract class BaseFileReader {
+      protected Path filePath;
+      protected BaseFileReader(Path filePath) {
+          this.filePath = filePath;
+      }
+      
+      public Path getFilePath() {
+          return filePath;
+      }
 
-    protected abstract String mapFileLine(String line);
-}
-//
-public class LowercaseFileReader extends BaseFileReader {
-    public LowercaseFileReader(Path filePath) {
-        super(filePath);
-    }
+      public List<String> readFile() throws IOException {
+          return Files.lines(filePath)
+            .map(this::mapFileLine).collect(Collectors.toList());
+      }
 
-    @Override
-    public String mapFileLine(String line) {
-        return line.toLowerCase();
-    }   
-}
-//
-public class UppercaseFileReader extends BaseFileReader {
-    public UppercaseFileReader(Path filePath) {
-        super(filePath);
-    }
+      protected abstract String mapFileLine(String line);
+  }
+  //
+  public class LowercaseFileReader extends BaseFileReader {
+      public LowercaseFileReader(Path filePath) {
+          super(filePath);
+      }
 
-    @Override
-    public String mapFileLine(String line) {
-        return line.toUpperCase();
-    }
-}
-~~~
+      @Override
+      public String mapFileLine(String line) {
+          return line.toLowerCase();
+      }   
+  }
+  //
+  public class UppercaseFileReader extends BaseFileReader {
+      public UppercaseFileReader(Path filePath) {
+          super(filePath);
+      }
+
+      @Override
+      public String mapFileLine(String line) {
+          return line.toUpperCase();
+      }
+  }
+
 
 Vemos como las subclases heredan una determinada funcionalidad (métodos concretos de la clase base) y la extienden con 
 su propia implementación de los métodos abstractos.
@@ -171,39 +184,39 @@ En cambio con una interface podemos añadir un determinado comportamiento a clas
 (por lo que no heredan unas de otras y no tiene sentido usar clases abstractas). Por ejemplo, la interface
 `Comparator` la implementan los tipos `Integer` y `String` (entre otros) y podemos usarla en nuestros propios tipos:
 
-~~~ java
-public class Employee {
+.. code:: java
 
-    private double salary;
+  public class Employee {
 
-    public double getSalary() {
-        return salary;
-    }
+      private double salary;
 
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-}
-//
-public class EmployeeSalaryComparator implements Comparator<Employee> {
+      public double getSalary() {
+          return salary;
+      }
 
-    @Override
-    public int compare(Employee employeeA, Employee employeeB) {
-        if (employeeA.getSalary() < employeeB.getSalary()) {
-            return -1;
-        } else if (employeeA.getSalary() > employeeB.getSalary()) { 
-            return 1;
-        } else {
-            return 0;
-        }
-    }
-}
-~~~
+      public void setSalary(double salary) {
+          this.salary = salary;
+      }
+  }
+  //
+  public class EmployeeSalaryComparator implements Comparator<Employee> {
 
+      @Override
+      public int compare(Employee employeeA, Employee employeeB) {
+          if (employeeA.getSalary() < employeeB.getSalary()) {
+              return -1;
+          } else if (employeeA.getSalary() > employeeB.getSalary()) { 
+              return 1;
+          } else {
+              return 0;
+          }
+      }
+  }
 
-## Herencia de tipos
+Herencia de tipos
++++++++++++++++++
 
-[baeldung](https://www.baeldung.com/java-inheritance)
+`Inheritance <https://www.baeldung.com/java-inheritance>`_
 
 *When a class inherits another class or interfaces, apart from inheriting their members, it also inherits their type. 
 This also applies to an interface that inherits other interfaces.*
@@ -214,53 +227,55 @@ than programming to their implementations.
 For example, imagine a condition, where an organization maintains a list of the cars owned by its employees. Of course, 
 all employees might own different car models. So how can we refer to different car instances? Here's the solution:
 
-~~~ java
-public class Employee {
-    private String name;
-    private Car car;
-    
-    // standard constructor
-}
-~~~
+.. code:: java
+
+  public class Employee {
+      private String name;
+      private Car car;
+      
+      // standard constructor
+  }
 
 Because all derived classes of Car inherit the type Car, the derived class instances can be referred by using a variable of class Car:
 
-~~~ java
-Employee e1 = new Employee("Shreya", new ArmoredCar());
-Employee e2 = new Employee("Paul", new SpaceCar());
-Employee e3 = new Employee("Pavni", new BMW());
-~~~
-## Herencia, composición
+.. code:: java
 
-[baeldung](https://www.baeldung.com/java-inheritance-composition)
-[wikipedia](https://en.wikipedia.org/wiki/Dependency_injection)
+  Employee e1 = new Employee("Shreya", new ArmoredCar());
+  Employee e2 = new Employee("Paul", new SpaceCar());
+  Employee e3 = new Employee("Pavni", new BMW());
+
+Herencia y composición
++++++++++++++++++++++++
+
+`Inheritance and composition <https://www.baeldung.com/java-inheritance-composition>`_
+`Dependency Injection <https://en.wikipedia.org/wiki/Dependency_injection>`_
 
 En general se prefiere la composición (has-a relationship) a la herencia (is-a relationship), pero hay casos típicos de uso donde la 
 herencia está recomendada.
 
 La herencia se basa en extender clases. La composición se basa en implementar interfaces.
 
-Usamos herencia con el patrón de capas (layer pattern): la clase base contiene el código común de sus subclases, por ejemplo:
+Usamos herencia con el patrón de capas (layer pattern): la clase base contiene el código común de sus subclases, por ejemplo::
 
-    Empleado
-           |
-           +-- Informatico
-                         |
-                         +-- Administrador
-                         |
-                         +-- Programador
+  Empleado
+          |
+          +-- Informatico
+                        |
+                        +-- Administrador
+                        |
+                        +-- Programador
 
 Aquí hemos definido tres capas, y la supercapa de cada subcapa contiene el código común a la supercapa y la subcapa. En cambio las 
 subcapas contienen código específico respecto a las supercapas.
 
 También usamos la herencia con el patrón de plantillas (template pattern): la superclase actúa como una plantilla y las subclases 
-personalizan esa plantilla sobreescribiendo sus métodos, por ejemplo:
+personalizan esa plantilla sobreescribiendo sus métodos, por ejemplo::
 
-    ComputerBuilder
-                  |
-                  +-- StandardComputerBuilder
-                  |
-                  +-- GamingComputerBuilder
+  ComputerBuilder
+                |
+                +-- StandardComputerBuilder
+                |
+                +-- GamingComputerBuilder
 
 In a nutshell, composition allows us to model objects that are made up of other objects, thus defining a “has-a” relationship between 
 them.
@@ -271,38 +286,41 @@ object are destroyed too when that object is destroyed.
 Por ejemplo, un ordenador tiene procesador, memoria y tarjeta de sonido. Si para cada componente creamos una interface, podemos 
 construir diferentes modelos de ordenador si usamos diferentes implementaciones de esas intefaces.
 
-~~~ java
-public class Computer {
+.. code:: java
 
-    private Processor processor;  // Interface
-    private Memory memory;  // Interface
-    private SoundCard soundCard;  // Interface
+  public class Computer {
 
-    // standard getters/setters/constructors
-    
-    public Optional<SoundCard> getSoundCard() {
-        return Optional.ofNullable(soundCard);
-    }
-}
-~~~
+      private Processor processor;  // Interface
+      private Memory memory;  // Interface
+      private SoundCard soundCard;  // Interface
+
+      // standard getters/setters/constructors
+      
+      public Optional<SoundCard> getSoundCard() {
+          return Optional.ofNullable(soundCard);
+      }
+  }
 
 Con tres implementaciones de cada interface (nueve implementaciones en total) puedo crear 27 modelos de ordenador usando la clase 
 `Computer`. Si no uso interfaces tendria que crear nueve clases para los componentes y 27 variantes de la clase `Computer`.
-## Polimorfismo
 
-~~~ java
-public class Animal {
-  String name = "animal";
-  public String makeNoise {return "generic noise";}
-}
+Polimorfismo
+++++++++++++
 
-public class Bird extends Animal {
-  String name = "bird";
-  public String makeNoise {return "sing";}
-}
-A animal = new Bird();
-A.name --> animal
-A.makeNoise() --> sing
-~~~
+.. code:: java
+
+  public class Animal {
+    String name = "animal";
+    public String makeNoise {return "generic noise";}
+  }
+
+  public class Bird extends Animal {
+    String name = "bird";
+    public String makeNoise {return "sing";}
+  }
+  A animal = new Bird();
+  A.name --> animal
+  A.makeNoise() --> sing
 
 El polimorfismo solo se aplica a métodos de la instancia pero *no* a variables.
+
