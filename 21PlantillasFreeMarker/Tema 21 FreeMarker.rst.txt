@@ -1,14 +1,22 @@
-# Tema 21 Plantillas FreeMarker
+.. rst3: filename: Tema 21 FreeMarker.rst
 
-[Fundamentos](https://freemarker.apache.org/docs/dgui.html)
+=============================
+Tema 21 Plantillas FreeMarker
+=============================
 
-[Guía básica para programadores](https://freemarker.apache.org/docs/pgui.html)
+Introducción
++++++++++++++
 
-[Manual](https://freemarker.apache.org/docs/index.html)
+`Fundamentos <https://freemarker.apache.org/docs/dgui.html>`_
 
-[Chuleta](https://freemarker.apache.org/docs/dgui_template_exp.html#exp_cheatsheet)
-## Conceptos básicos
+`Guía básica para programadores <https://freemarker.apache.org/docs/pgui.html>`_
 
+`Manual <https://freemarker.apache.org/docs/index.html>`_
+
+`Chuleta <https://freemarker.apache.org/docs/dgui_template_exp.html#exp_cheatsheet>`_
+
+Conceptos básicos
+++++++++++++++++++
 
 Desde un punto de vista conceptual, útil para el diseñador de plantillas, el modelo de datos se puede ver como una estructura en árbol.
 
@@ -21,7 +29,7 @@ Hay tres tipos de variables:
 Las subvariables se acceden usando natural naming:
 
 - hashes: animal.python.length
-- sequences: fruits[3].name
+- sequences: `fruits[3].name`
 
 The simplest template is a plain HTML file (or whatever text file; FreeMarker is not confined to HTML). When the client visits that 
 page, FreeMarker will send that HTML to the client as is. However if you want that page to be more dynamic then you begin to put 
@@ -39,50 +47,53 @@ get into the output (won't be visible in the page source for the visitor), becau
 Anything not an FTL tag or an interpolation or comment is considered static text and will not be interpreted by FreeMarker; it is just 
 printed to the output as-is.
 
-## Directivas
+Directivas
+++++++++++
 
 With FTL tags you refer to so-called directives. This is the same kind of relationship as between HTML tags (e.g.: `<table>` and 
 `</table>`) and HTML elements (e.g., the `table` element) to which you refer to with the HTML tags. (If you don't understand this 
 difference then consider "FTL tag" and "directive" synonyms.)
 
-```{Important} *In general, unquoted words inside directives or interpolations are treated as references to variables*.
+.. Important::
+  *In general, unquoted words inside directives or interpolations are treated as references to variables*.
 
-A frequent mistake of users is the usage of interpolations in places where they needn't/shouldn't/can't be used. *Interpolations work 
-only in text sections (e.g. `<h1>Hello ${name}!</h1>`) and in string literals (e.g. `<#include "/footer/${company}.html"`>)*. A typical 
-WRONG usage is `<#if ${big}>...</#if>`, which will cause a syntactical error. You should simply write `<#if big>...</#if>`. Also, 
-`<#if "${big}">...</#if>` is WRONG, since it converts the parameter value to string and the if directive wants a boolean value, so it 
-will cause a runtime error.
-```
+  A frequent mistake of users is the usage of interpolations in places where they needn't/shouldn't/can't be used. *Interpolations work 
+  only in text sections (e.g. `<h1>Hello ${name}!</h1>`) and in string literals (e.g. `<#include "/footer/${company}.html"`>)*. A typical 
+  WRONG usage is `<#if ${big}>...</#if>`, which will cause a syntactical error. You should simply write `<#if big>...</#if>`. Also, 
+  `<#if "${big}">...</#if>` is WRONG, since it converts the parameter value to string and the if directive wants a boolean value, so it 
+  will cause a runtime error.
 
-[Ejemplos](https://freemarker.apache.org/docs/dgui_quickstart_template.html)
+`Ejemplos <https://freemarker.apache.org/docs/dgui_quickstart_template.html>`_
 
-    <h1>
-      Welcome ${user}<#if user == "Big Joe">, our beloved leader</#if>!
-    </h1>
+::
 
-    <#if animals.python.price < animals.elephant.price>
-      Pythons are cheaper than elephants today.
-    <#elseif animals.elephant.price < animals.python.price>
-      Elephants are cheaper than pythons today.
+  <h1>
+    Welcome ${user}<#if user == "Big Joe">, our beloved leader</#if>!
+  </h1>
+
+  <#if animals.python.price < animals.elephant.price>
+    Pythons are cheaper than elephants today.
+  <#elseif animals.elephant.price < animals.python.price>
+    Elephants are cheaper than pythons today.
+  <#else>
+    Elephants and pythons cost the same today.
+  </#if>
+
+The generic form of the list directive is::
+
+  <#list sequence as loopVariable>
+      repeatThis
+  </#list>
+
+or::
+
+  <#list sequence>
+    <#items as loopVariable>
+      repeatThis
+    </#items>
     <#else>
-      Elephants and pythons cost the same today.
-    </#if>
-
-The generic form of the list directive is:
-
-    <#list sequence as loopVariable>
-        repeatThis
-    </#list>
-
-or
-
-    <#list sequence>
-      <#items as loopVariable>
-        repeatThis
-      </#items>
-      <#else>
-        Do this only once
-    </#list>
+      Do this only once
+  </#list>
 
 
 The `repeatThis` part will be repeated for 
@@ -91,23 +102,25 @@ each item in the sequence that you have specified with `sequence`, one after the
 
 The sequence can be any kind of expression.
 
-A complete list example:
+A complete list example::
 
-    <#list misc.fruits>
-      <p>Fruits:
-      <ul>
-        <#items as fruit>
-          <li>${fruit}<#sep> and</#sep>
-        </#items>
-      </ul>
-    <#else>
-      <p>We have no fruits.
-    </#list>
-## Built-ins
+  <#list misc.fruits>
+    <p>Fruits:
+    <ul>
+      <#items as fruit>
+        <li>${fruit}<#sep> and</#sep>
+      </#items>
+    </ul>
+  <#else>
+    <p>We have no fruits.
+  </#list>
 
-Los built-ins se aplican a variables y expresiones se invocan con un `?`:
+Built-ins
++++++++++
 
-    expr?builtin_name
+Los built-ins se aplican a variables y expresiones se invocan con un `?`::
+
+  expr?builtin_name
 
 The reason why built-ins are crucial is that normally (though it depends on configuration settings), FreeMarker doesn't expose the Java 
 API of the objects. So despite that Java's String has a `length()` method, it's hidden from the template, so you have to use 
@@ -147,3 +160,4 @@ used here covers both cases.
 - `user??`: returns true if the variable is *not* missing
 
 Methods ara invoked with the `()` operator, passing the required parameters i.e. they are invoked like built-ins with parameters.
+

@@ -1,6 +1,11 @@
-# Tema 6 Software Libre
+.. rst3: filename: Tema 6 Software Libre.rst
 
-## Software Libre
+=====================
+Tema 6 Software Libre
+=====================
+
+Software Libre
+++++++++++++++
 
 Free software is software that gives you the user the freedom to share, study and modify it. We call this free software because the 
 user is free.
@@ -16,9 +21,11 @@ be caught and fined or put in jail. That's what's in the fine print of the licen
 The corporations behind proprietary software will often spy on your activities and restrict you from sharing with others. And because 
 our computers control much of our personal information and daily activities, proprietary software represents an unacceptable danger to 
 a free society.
-## Tipos de Licencia
 
-[Referencia](https://www.legalzoom.com/articles/copyleft-vs-copyright)
+Tipos de Licencia
++++++++++++++++++
+
+`Referencia <https://www.legalzoom.com/articles/copyleft-vs-copyright>`_
 
 Existen tres tipos de licencias libres: robustas (o de copyleft), permisivas y open-source
 
@@ -35,3 +42,4 @@ retained, meaning the software is not in the public domain. Ejemplos de estas li
 The most permissive of software licenses, an open-source license puts software directly into the public domain. No copyright is 
 retained to the work and anyone can use, change, distribute, and copyright their own adaptations—and even profit from their work. 
 `LibreOffice`, a free alternative to `Microsoft Office`, is an example of open-source software.
+

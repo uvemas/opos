@@ -247,16 +247,26 @@
 </v>
 </v>
 <v t="vicent.20220910124036.1"><vh>Frameworks</vh>
-<v t="vicent.20220910124126.1"><vh>@clean Tema 19 JSF y Primefaces.md</vh></v>
-<v t="vicent.20220910124138.1"><vh>@clean Tema 20 Jasper Reports.md</vh></v>
-<v t="vicent.20220910124337.1"><vh>@clean Tema 21 FreeMarker.md</vh>
+<v t="vicent.20221113124017.1"><vh>Tema 19 JSF and Primefaces</vh>
+<v t="vicent.20220910124126.1"><vh>@rst Tema 19 JSF y Primefaces.rst</vh></v>
+</v>
+<v t="vicent.20221113123655.1"><vh>Tema 20 JasperReports</vh>
+<v t="vicent.20220910124138.1"><vh>@rst Tema 20 Jasper Reports.rst</vh></v>
+</v>
+<v t="vicent.20221114183801.1"><vh>Tema 21 FreeMarker</vh>
+<v t="vicent.20220910124337.1"><vh>@rst Tema 21 FreeMarker.rst</vh>
 <v t="vicent.20221015122045.1"><vh>Introducción</vh></v>
 <v t="vicent.20221015122756.1"><vh>Conceptos básicos</vh></v>
 <v t="vicent.20221015125237.1"><vh>Directivas</vh></v>
 <v t="vicent.20221015182858.1"><vh>Built-ins</vh></v>
 </v>
-<v t="vicent.20220910124547.1"><vh>@clean Tema 22 Arquitectura MVC.md</vh></v>
-<v t="vicent.20220910124231.1"><vh>@clean Tema 23 MyBatis.md</vh></v>
+</v>
+<v t="vicent.20221114194730.1"><vh>Tema 22 Arquitectura MVC</vh>
+<v t="vicent.20220910124547.1"><vh>@rst Tema 22 Arquitectura MVC.rst</vh></v>
+</v>
+<v t="vicent.20221113124510.1"><vh>Tema 23 MyBatis</vh>
+<v t="vicent.20220910124231.1"><vh>@rst Tema 23 MyBatis.rst</vh></v>
+</v>
 <v t="vicent.20220910124056.1"><vh>@clean Tema 24 Spring Boot.md</vh>
 <v t="vicent.20220911110903.1"><vh>SpringBoot</vh></v>
 <v t="vicent.20220911120722.1"><vh>Dependency injection and IoC</vh></v>
@@ -268,9 +278,9 @@
 <v t="vicent.20220528090351.1"><vh>Tema 27 JSP</vh></v>
 </v>
 <v t="vicent.20220528093019.1"><vh>Otros</vh>
-<v t="vicent.20220409080546.1"><vh>@clean Tema 5 Arquitectura SOA.md</vh>
+<v t="vicent.20221115183054.1"><vh>Tema 5 Arquitectura SOA</vh>
+<v t="vicent.20220409080546.1"><vh>@rst Tema 5 Arquitectura SOA.rst</vh>
 <v t="vicent.20220314162642.1"><vh>HTTP</vh>
-<v t="vicent.20220330174620.1"><vh>Intro</vh></v>
 <v t="vicent.20220330182427.1"><vh>Parámetros</vh></v>
 <v t="vicent.20220314221255.1"><vh>Requests</vh>
 <v t="vicent.20220407190238.1"><vh>Formato</vh></v>
@@ -290,7 +300,6 @@
 <v t="vicent.20220407192703.1"><vh>OPTIONS</vh></v>
 <v t="vicent.20220407192824.1"><vh>TRACE</vh></v>
 </v>
-<v t="vicent.20220314221345.1"><vh>Headers</vh></v>
 <v t="vicent.20220409074849.1"><vh>Caching</vh></v>
 <v t="vicent.20220409074315.1"><vh>Seguridad</vh>
 <v t="vicent.20220410085819.1"><vh>Personal Information Leaking</vh></v>
@@ -299,7 +308,6 @@
 <v t="vicent.20220410092752.1"><vh>Authentication Credentials</vh></v>
 <v t="vicent.20220410092836.1"><vh>Proxies</vh></v>
 </v>
-<v t="vicent.20220314221515.1"><vh>Examples</vh></v>
 </v>
 <v t="vicent.20220822180035.1"><vh>Nota</vh></v>
 <v t="vicent.20220821093743.1"><vh>API</vh></v>
@@ -321,12 +329,14 @@
 <v t="vicent.20220424125057.1"><vh>Completo</vh></v>
 </v>
 </v>
-<v t="vicent.20220426185443.1"><vh>REST</vh></v>
 <v t="vicent.20220426185448.1"><vh>JSON</vh></v>
 </v>
-<v t="vicent.20221006201346.1"><vh>@clean Tema 6 Software Libre.md</vh>
+</v>
+<v t="vicent.20221113124914.1"><vh>Tema6 Software Libre</vh>
+<v t="vicent.20221006201346.1"><vh>@rst Tema 6 Software Libre.rst</vh>
 <v t="vicent.20221006201346.2"><vh>Software Libre</vh></v>
 <v t="vicent.20221006201346.46"><vh>Tipos de Licencia</vh></v>
+</v>
 </v>
 </v>
 </v>
@@ -387,21 +397,7 @@ if aList is None:
         # # Don't wait for this command to exit!
         # g.execute_shell_commands(['&amp;%s' % (fn)],trace=trace)
 </t>
-<t tx="vicent.20220314162642.1">## El protocolo HTTP
-
-</t>
-<t tx="vicent.20220314221255.1">### Peticiones
-</t>
-<t tx="vicent.20220314221307.1">### Respuestas
-</t>
-<t tx="vicent.20220314221345.1">(Headers)=
-### Headers
-
-To Be Done</t>
-<t tx="vicent.20220314221515.1"></t>
-<t tx="vicent.20220330174620.1">### Intro
-
-HTTP es un protocolo de la capa OSI de aplicación (conecta un cliente web con un servidor web) que se usa para 
+<t tx="vicent.20220314162642.1">HTTP es un protocolo de la capa OSI de aplicación (conecta un cliente web con un servidor web) que se usa para 
 intercambiar información entre sistemas conectados a una red. Es el fundamento de la WWW.
 
 Es un protocolo de comunicación basado en TCP/IP (la información se envía a través de una conexión TCP/IP) que, por 
@@ -440,10 +436,11 @@ La arquitectura básica es de tipo cliente/servidor.
   ~~~
 
   Las cabeceras pueden ser generales (aplicables a las peticiones y a las respuestas), de petición, de respuesta y de 
-  entidad (contienen información acerca del cuerpo o de la URI de la petición)</t>
-<t tx="vicent.20220330182427.1">### Parámetros
-
-Algunos de los principales parámetros (y su sintaxis) usados en los mensajes HTTP son:
+  entidad (contienen información acerca del cuerpo o de la URI de la petición)
+  </t>
+<t tx="vicent.20220314221255.1"></t>
+<t tx="vicent.20220314221307.1"></t>
+<t tx="vicent.20220330182427.1">Algunos de los principales parámetros (y su sintaxis) usados en los mensajes HTTP son:
 
 - versión del protocolo: HTTP/1.1
 - URIs: `"http:" "//" host [ ":" port ] [ abs_path [ "?" query ]]`
@@ -546,9 +543,7 @@ Algunos de los principales parámetros (y su sintaxis) usados en los mensajes HT
     --&gt; 30. Métodos de prueba del Software. Junit
     ✔ 31. Control de versiones. Subversion. GIT
     ✔ 32. Gestión integrada del desarrollo. Maven</t>
-<t tx="vicent.20220405191838.1">#### Métodos
-
-Los métodos que pueden aparecer en la primera línea de la petición (request-line) son:
+<t tx="vicent.20220405191838.1">Los métodos que pueden aparecer en la primera línea de la petición (request-line) son:
 
 - GET: obtiene información de un servidor usando una URI
 - HEAD: como GET, pero solo obtiene la línea de respuesta (status-line) y las cabeceras
@@ -559,9 +554,7 @@ Los métodos que pueden aparecer en la primera línea de la petición (request-l
 - OPTIONS: opciones de comunicación para el target resource
 - TRACE: realiza una traza de la petición
 </t>
-<t tx="vicent.20220405193412.1">#### URI
-
-La URI de la request-line se puede especificar de tres maneras:
+<t tx="vicent.20220405193412.1">La URI de la request-line se puede especificar de tres maneras:
 
 - `*`
 
@@ -584,9 +577,7 @@ La URI de la request-line se puede especificar de tres maneras:
   Se usa cuando la petición se envía directamente al servidor que contiene el recurso, no a un proxy. El path no puede
   estar vacío, debe contener al menos `/` (que representa el server root).
 </t>
-<t tx="vicent.20220405195812.1">#### Request headers
-
-Las cabeceras de petición permiten al cliente pasar al servidor información adicional sobre la petición y el propio 
+<t tx="vicent.20220405195812.1">Las cabeceras de petición permiten al cliente pasar al servidor información adicional sobre la petición y el propio 
 cliente.
 
 ```{note}
@@ -620,9 +611,7 @@ Las cabeceras de petición son:
 
 
 </t>
-<t tx="vicent.20220405201733.1">#### Ejemplos
-
-(peticionGET)=
+<t tx="vicent.20220405201733.1">(peticionGET)=
 Pedir el recurso hello.html al servidor web de tutorialspoint.com
 
 ~~~
@@ -692,9 +681,7 @@ Connection: Keep-Alive
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;string xmlns="http://clearforest.com/"&gt;string&lt;/string&gt;
 ~~~</t>
-<t tx="vicent.20220406202039.1">#### Status Codes
-
-Los significados de los códigos de estado son:
+<t tx="vicent.20220406202039.1">Los significados de los códigos de estado son:
 
 - 1XX: informativo
 
@@ -711,9 +698,7 @@ Los significados de los códigos de estado son:
 - 5XX: error en el servidor
 
   La petición es válida pero el servidor no la puede completar con éxito</t>
-<t tx="vicent.20220406202908.1">#### Cabeceras de respuesta
-
-Las más utilizadas son:
+<t tx="vicent.20220406202908.1">Las más utilizadas son:
 
 - Accept-Ranges
 - Age
@@ -725,9 +710,7 @@ Las más utilizadas son:
 - Vary
 - WWW-Authenticate
 </t>
-<t tx="vicent.20220406202935.1">#### Ejemplos
-
-Respuesta a {ref}`esta petición GET &lt;peticionGET&gt;`
+<t tx="vicent.20220406202935.1">Respuesta a {ref}`esta petición GET &lt;peticionGET&gt;`
 
 ~~~
 HTTP/1.1 200 OK
@@ -767,9 +750,7 @@ Connection: Closed
 &lt;/body&gt;
 &lt;/html&gt;
 ~~~</t>
-<t tx="vicent.20220407190134.1">#### Formato
-
-El formato genérico de las respuestas es
+<t tx="vicent.20220407190134.1">El formato genérico de las respuestas es
 
 ~~~
 protocol version + status/error code + Reason-Phrase
@@ -779,9 +760,7 @@ CRLF
 ~~~
 
 Vamos a ver ejemplos concretos.</t>
-<t tx="vicent.20220407190238.1">#### Formato
-
-El formato genérico de las peticiones es
+<t tx="vicent.20220407190238.1">El formato genérico de las peticiones es
 
 ~~~
 método + URI + protocol version
@@ -793,16 +772,12 @@ CRLF
 Vamos a ver ejemplos concretos.
 
 </t>
-<t tx="vicent.20220407190707.1">### Methods
-
-Ver detalles en [esta página](https://www.tutorialspoint.com/http/http_methods.htm).
+<t tx="vicent.20220407190707.1">Ver detalles en [esta página](https://www.tutorialspoint.com/http/http_methods.htm).
 
 
 
 </t>
-<t tx="vicent.20220407192703.1">#### OPTIONS
-
-```{note} En el siguiente ejemplo hemos asumido que previamente se ha establecido una conexión TCP entre el cliente y
+<t tx="vicent.20220407192703.1">```{note} En el siguiente ejemplo hemos asumido que previamente se ha establecido una conexión TCP entre el cliente y
 el servidor.
 ```
 
@@ -825,9 +800,7 @@ Allow: GET,HEAD,POST,OPTIONS,TRACE
 Content-Type: httpd/unix-directory
 ~~~
 </t>
-<t tx="vicent.20220407192824.1">#### TRACE
-
-The TRACE method is used to echo the contents of an HTTP Request back to the requester which can be used for debugging 
+<t tx="vicent.20220407192824.1">The TRACE method is used to echo the contents of an HTTP Request back to the requester which can be used for debugging 
 purpose at the time of development. The following example shows the usage of TRACE method:
 
 ~~~
@@ -850,9 +823,7 @@ TRACE / HTTP/1.1
 Host: www.tutorialspoint.com
 User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
 ~~~</t>
-<t tx="vicent.20220407193049.1">#### CONNECT
-
-The CONNECT method is used by the client to establish a network connection to a web server over HTTP. The following 
+<t tx="vicent.20220407193049.1">The CONNECT method is used by the client to establish a network connection to a web server over HTTP. The following 
 example requests a connection with a web server running on the host tutorialspoint.com:
 
 ~~~
@@ -867,17 +838,13 @@ HTTP/1.1 200 Connection established
 Date: Mon, 27 Jul 2009 12:28:53 GMT
 Server: Apache/2.2.14 (Win32)
 ~~~</t>
-<t tx="vicent.20220409074315.1">### Seguridad
-
-HTTP is used for communications over the internet, so application developers, information providers, and users should be 
+<t tx="vicent.20220409074315.1">HTTP is used for communications over the internet, so application developers, information providers, and users should be 
 aware of the security limitations in HTTP/1.1. This discussion does not include definitive solutions to the problems 
 mentioned here but it does make some suggestions for reducing security risks.
 
 
 </t>
-<t tx="vicent.20220409074849.1">### Caching
-
-HTTP is typically used for distributed information systems, where performance can be improved by the use of response 
+<t tx="vicent.20220409074849.1">HTTP is typically used for distributed information systems, where performance can be improved by the use of response 
 caches. The HTTP/1.1 protocol includes a number of elements intended to make caching work.
 
 The goal of caching in HTTP/1.1 is to eliminate the need to send requests in many cases, and to eliminate the need to 
@@ -949,19 +916,13 @@ The following cache response directives can be used by the server in its HTTP _r
 - s-maxage = seconds
   The maximum age specified by this directive overrides the maximum age specified by either the max-age directive or the 
   `Expires` header. The s-maxage directive is always ignored by a private cache.</t>
-<t tx="vicent.20220409074943.1">## El protocolo SOAP
-
-SOAP es el acrónimo de Simple Object Access Protocol. Es un protocolo de mensajería basado en XML que se usa para
+<t tx="vicent.20220409074943.1">SOAP es el acrónimo de Simple Object Access Protocol. Es un protocolo de mensajería basado en XML que se usa para
 intercambiar información entre ordenadores. Es una aplicación de la especificación XML.</t>
-<t tx="vicent.20220409080546.1"># Tema 5 Fundamentos de arquitectura SOA
-
-@path ./05ArquitecturaSOA
-@language md
-@others
+<t tx="vicent.20220409080546.1">======================================
+Tema 5 Fundamentos de arquitectura SOA
+======================================
 </t>
-<t tx="vicent.20220410085819.1">#### Personal Information Leakage
-
-HTTP clients are often privy to large amount of personal information such as the user's name, location, mail address, 
+<t tx="vicent.20220410085819.1">HTTP clients are often privy to large amount of personal information such as the user's name, location, mail address, 
 passwords, encryption keys, etc. So you should be very careful to prevent unintentional leakage of this information via 
 the HTTP protocol to other sources.
 
@@ -983,18 +944,14 @@ with a secure protocol.
 Authors of services that use the HTTP protocol should not use `GET` based forms for the submission of sensitive data, 
 because it will cause the data to be encoded in the `Request-URI`.
 </t>
-<t tx="vicent.20220410091157.1">#### File and Path Names Based Attack
-
-The document should be restricted to the documents returned by HTTP requests to be only those that were intended by the 
+<t tx="vicent.20220410091157.1">The document should be restricted to the documents returned by HTTP requests to be only those that were intended by the 
 server administrators.
 
 For example, UNIX, Microsoft Windows, and other operating systems use `..` as a path component to indicate a directory 
 level above the current one. On such a system, an HTTP server MUST disallow any such construct in the `Request-URI`, if it 
 would otherwise allow access to a resource outside those intended to be accessible via the HTTP server.
 </t>
-<t tx="vicent.20220410091543.1">#### DNS Spoofing
-
-Clients using HTTP rely heavily on the Domain Name Service, and are thus generally prone to security attacks based on the 
+<t tx="vicent.20220410091543.1">Clients using HTTP rely heavily on the Domain Name Service, and are thus generally prone to security attacks based on the 
 deliberate mis-association of IP addresses and DNS names. So clients need to be cautious in assuming the continuing 
 validity of an IP number/DNS name association.
 
@@ -1002,16 +959,14 @@ If HTTP clients cache the results of host name lookups in order to achieve a per
 the TTL information reported by the DNS. If HTTP clients do not observe this rule, they could be spoofed when a 
 previously-accessed server's IP address changes.
 
-#### Location Headers and Spoofing
+Location Headers and Spoofing
 
 If a single server supports multiple organizations that do not trust one another, then it MUST check the values of 
 `Location` and `Content-Location` headers in the responses that are generated under the control of said organizations to 
 make sure that they do not attempt to invalidate resources over which they have no authority.
 
 </t>
-<t tx="vicent.20220410092752.1">#### Authentication Credentials
-
-Existing HTTP clients and user agents typically retain authentication information indefinitely. HTTP/1.1 does not provide 
+<t tx="vicent.20220410092752.1">Existing HTTP clients and user agents typically retain authentication information indefinitely. HTTP/1.1 does not provide 
 a method for a server to direct clients to discard these cached credentials which is a big security risk.
 
 There are a number of work around to the parts of this problem, and so it is recommended to make the use of password 
@@ -1019,9 +974,7 @@ protection in screen savers, idle time-outs, and other methods that mitigate the
 problem.
 
 </t>
-<t tx="vicent.20220410092836.1">#### Proxies and Caching
-
-HTTP proxies are men-in-the-middle, and represent an opportunity for man-in-the-middle attacks. Proxies have access to 
+<t tx="vicent.20220410092836.1">HTTP proxies are men-in-the-middle, and represent an opportunity for man-in-the-middle attacks. Proxies have access to 
 security-related information, personal information about individual users and organizations, and proprietary information 
 belonging to users and content providers.
 
@@ -1030,9 +983,7 @@ transports sensitive information.
 
 Caching proxies provide additional potential vulnerabilities, since the contents of the cache represent an attractive 
 target for malicious exploitation. Therefore, cache contents should be protected as sensitive information.</t>
-<t tx="vicent.20220410114347.1">### Introducción
-
-Aspectos destacables son:
+<t tx="vicent.20220410114347.1">Aspectos destacables son:
 
 - SOAP is a communication protocol designed to communicate via Internet.
 - SOAP can extend HTTP for XML messaging.
@@ -1049,9 +1000,7 @@ The initial focus of SOAP is remote procedure calls transported via HTTP.
 ```{note} SOAP es un protocolo de mensajería mientras que HTTP es un protocolo de transporte.
 Los mensajes SOAP se transportan vía HTTP de un nodo de la red a otro utilizando conexiones TCP/IP.
 ```</t>
-<t tx="vicent.20220410123954.1">### Messages
-
-A SOAP message is an ordinary XML document containing the following elements:
+<t tx="vicent.20220410123954.1">A SOAP message is an ordinary XML document containing the following elements:
 
 - Envelope : Defines the start and the end of the message. It is a mandatory element.
 - Header: Contains any optional attributes of the message used in processing the message, either at an intermediary point 
@@ -1107,9 +1056,7 @@ Content-Length: nnnn
 mensaje.
 ```
 </t>
-<t tx="vicent.20220422105901.1">### Envelope
-
-En SOAP el sobre es un mecanismo de empaquetado de información. Indica donde empieza y donde termina el mensaje, de 
+<t tx="vicent.20220422105901.1">En SOAP el sobre es un mecanismo de empaquetado de información. Indica donde empieza y donde termina el mensaje, de 
 manera que el receptor sabe cuando puede empezar a procesar dicho mensaje.
 
 Puntos a tener en cuenta son:
@@ -1135,9 +1082,7 @@ Puntos a tener en cuenta son:
    ...
 &lt;/SOAP-ENV:Envelope&gt;
 ~~~</t>
-<t tx="vicent.20220422130215.1">### Header
-
-La cabecera SOAP permite añadir requerimientos específicos a nivel de aplicación, por ejemplo, una firma digital en un
+<t tx="vicent.20220422130215.1">La cabecera SOAP permite añadir requerimientos específicos a nivel de aplicación, por ejemplo, una firma digital en un
 servicio protegido por contraseña, o un número de cuenta en un servico de pago por uso.
 
 Puntos a tener en cuenta son:
@@ -1150,9 +1095,7 @@ Puntos a tener en cuenta son:
 - When multiple header children are defined, all immediate child elements of the SOAP header are interpreted as SOAP 
   `header blocks`.
 </t>
-<t tx="vicent.20220422222523.1">#### Header attributes
-
-Una cabecera SOAP puede tener solo dos atributos: `Actor` y `MustUnderstand`.
+<t tx="vicent.20220422222523.1">Una cabecera SOAP puede tener solo dos atributos: `Actor` y `MustUnderstand`.
 
 Con el atributo `Actor` el cliente puede especificar que nodo de {ref}`la ruta del mensaje &lt;ruta_mensaje&gt;` es el 
 destinatario de la cabecera y, por tanto, el encargado de procesarla.
@@ -1179,20 +1122,14 @@ Ejemplo de mensaje con una cabecera con un hijo:
 &lt;/SOAP-ENV:Envelope&gt;
 ~~~
 </t>
-<t tx="vicent.20220422230747.1">### Ejemplos
-
-</t>
-<t tx="vicent.20220422231148.1">### Cuerpo
-
-El cuerpo es un elemento obligatorio en los mensajes SOAP. Contiene los datos que se transmiten en el mensaje, destinados
+<t tx="vicent.20220422230747.1"></t>
+<t tx="vicent.20220422231148.1">El cuerpo es un elemento obligatorio en los mensajes SOAP. Contiene los datos que se transmiten en el mensaje, destinados
 al receptor final (el end-point, el último nodo de la ruta del mensaje).
 
 
 
 </t>
-<t tx="vicent.20220424105914.1">#### Ejemplo 1: cabecera
-
-Ejemplo completo con énfasis en la cabecera.
+<t tx="vicent.20220424105914.1">Ejemplo completo con énfasis en la cabecera.
 
 Petición:
 
@@ -1238,9 +1175,7 @@ Petición:
  &lt;/s:Envelope&gt;
  ~~~
 </t>
-<t tx="vicent.20220424110027.1">#### Ejemplo 2: cuerpo
-
-Ejemplo completo con énfasis en el cuerpo.
+<t tx="vicent.20220424110027.1">Ejemplo completo con énfasis en el cuerpo.
 
 Petición:
 
@@ -1277,9 +1212,7 @@ respuesta. En este ejemplo es `xmlns:m = "http://www.tp.com/Quotation"`.
 de la aplicación, **no son parte del estándar SOAP**.
 ```
 </t>
-<t tx="vicent.20220424113811.1">### Fallo
-
-Si al procesar la petición ocurre un error, la respuesta devuelta contendrá un elemento `Fault` en el cuerpo del mensaje.
+<t tx="vicent.20220424113811.1">Si al procesar la petición ocurre un error, la respuesta devuelta contendrá un elemento `Fault` en el cuerpo del mensaje.
 
 El mecanismo de fallo de SOAP devuelve información específica del error: código, descripción, dirección del nodo que 
 generó el error.
@@ -1327,9 +1260,7 @@ not support such a method. This represents a client request error, and the serve
 &lt;/SOAP-ENV:Envelope&gt;
 ~~~
 </t>
-<t tx="vicent.20220424120616.1">### Tipos de datos
-
-SOAP soporta la codificación de tipos de datos escalares (cadenas, booleanos, enteros, coma flotante, dobles...) y 
+<t tx="vicent.20220424120616.1">SOAP soporta la codificación de tipos de datos escalares (cadenas, booleanos, enteros, coma flotante, dobles...) y 
 compuestos (arrays y structs) a través de un conjunto de reglas internas. El estilo de la codificación se asigna en el 
 atributo `SOAP-ENV:encodingStyle`.
 
@@ -1409,9 +1340,7 @@ En este ejemplo se define un struct llamado `product` con cuatro pares clave-val
 `name` (cadena), `price` (doble), `description` (cadena) y `SKU` (cadena).
 
 </t>
-<t tx="vicent.20220424120628.1">### Transporte
-
-Los mensajes SOAP se pueden transportar con muchos protocolos (SMTP, FTP, MSMQ...) pero el más popular es HTTP.
+<t tx="vicent.20220424120628.1">Los mensajes SOAP se pueden transportar con muchos protocolos (SMTP, FTP, MSMQ...) pero el más popular es HTTP.
 
 Quite logically, SOAP requests are sent via an HTTP request and SOAP responses are returned within the content of the 
 HTTP response. While SOAP requests can be sent via an HTTP `GET`, the specification includes details on HTTP `POST` only.
@@ -1483,9 +1412,7 @@ SOAP responses delivered via HTTP are required to follow the same HTTP status co
 `200 OK` indicates a successful response. A status code of `500 Internal Server Error` indicates that there is a server 
 error and that the SOAP response includes a `Fault` element.
 </t>
-<t tx="vicent.20220424125057.1">#### Ejemplo completo
-
-In the example below, a `GetQuotation` request is sent to a SOAP Server over HTTP. The request has a `QuotationsName` 
+<t tx="vicent.20220424125057.1">In the example below, a `GetQuotation` request is sent to a SOAP Server over HTTP. The request has a `QuotationsName` 
 parameter, and a `Quotation` will be returned in the response.
 
 The namespace for the function is defined in http://www.xyz.org/quotation address.
@@ -1531,9 +1458,7 @@ Content-Length: nnn
 &lt;/SOAP-ENV:Envelope&gt;
 ~~~
 </t>
-<t tx="vicent.20220426184944.1">## Arquitectura SOA
-
-Service Oriented Architecture es una metodología de arquitectura de software. Permite especificar la separación de
+<t tx="vicent.20220426184944.1">Service Oriented Architecture es una metodología de arquitectura de software. Permite especificar la separación de
 responsabilidades en servicios independientes que se comunican entre sí usando APIs (a menudo, pero no siempre
 publicando eventos en un bus). La separación de responsabilidades en servicios se hace desde el punto de vista del 
 negocio, por eso se dice que SOA tiene un enfoque de empresa.
@@ -1567,10 +1492,7 @@ Antes del auge de SOA a finales de los años 90 la conexión entre dos aplicacio
 punto a punto muy compleja, que los desarrolladores debían crear, en mayor parte a medida, para cada proyecto. La 
 exposición de funcionalidad mediante SOA elimina la necesidad de recrear esa integración profunda cada vez.
 </t>
-<t tx="vicent.20220426185443.1"></t>
-<t tx="vicent.20220426185448.1">## JSON
-
-JSON (JavaScript Object Notation) es un formato de representación ligero, habitualmente utilizado para el intercambio de 
+<t tx="vicent.20220426185448.1">JSON (JavaScript Object Notation) es un formato de representación ligero, habitualmente utilizado para el intercambio de 
 datos.
 
 Está basado en un subconjunto del lenguaje de programación JavaScript (concretamente en el modo en que se construyen 
@@ -3679,9 +3601,7 @@ sobreescribir)...
   }
 
 </t>
-<t tx="vicent.20220821093743.1">## API
-
-Cuando se habla de APIs (Application Program Interface) se puede hacer en dos contextos diferentes: lenguajes de 
+<t tx="vicent.20220821093743.1">Cuando se habla de APIs (Application Program Interface) se puede hacer en dos contextos diferentes: lenguajes de 
 programación y comunicación entre ordenadores dentro de una red.
 
 Dentro de un lenguaje de programación, una API proporciona al lenguaje herramientas para obtener determinada 
@@ -3762,9 +3682,7 @@ include both endpoint information, such as HTTP port number, and binding informa
 payload is represented and which transport is used.
 
 </t>
-<t tx="vicent.20220822180035.1">## Lo que hay que entender de este tema
-
-```{note} Un web service (a.k.a. API web) es un componente de software accesible en una dirección web (llamada 
+<t tx="vicent.20220822180035.1">```{note} Un web service (a.k.a. API web) es un componente de software accesible en una dirección web (llamada 
 `endpoint`). Permite que dos sistemas conectados en red se comuniquen entre sí mediante el intercambio de mensajes. 
 Este intercambio se puede llevar a cabo usando protocolos estándar (normalmente SOAP) o con unas reglas menos estrictas 
 (como en las APIs REST).
@@ -4502,35 +4420,25 @@ Tema 27 JSP</t>
 @language md
 @others
 </t>
-<t tx="vicent.20220910124126.1"># Tema 19 JSF y Primefaces
-
-@path ./19Primefaces
-@language md
-@others
+<t tx="vicent.20220910124126.1">========================
+Tema 19 JSF y Primefaces
+========================
 </t>
-<t tx="vicent.20220910124138.1"># Tema 20 Informes con Jasper Reports
-
-@path ./20JasperReports
-@language md
-@others
+<t tx="vicent.20220910124138.1">===================================
+Tema 20 Informes con Jasper Reports
+===================================
 </t>
-<t tx="vicent.20220910124231.1"># Tema 23 Persistencia de datos con MyBatis
-
-@path ./23PersistenciaConMyBatis
-@language md
-@others
+<t tx="vicent.20220910124231.1">=========================================
+Tema 23 Persistencia de datos con MyBatis
+=========================================
 </t>
-<t tx="vicent.20220910124337.1"># Tema 21 Plantillas FreeMarker
-
-@path ./21PlantillasFreeMarker
-@language md
-@others
+<t tx="vicent.20220910124337.1">=============================
+Tema 21 Plantillas FreeMarker
+=============================
 </t>
-<t tx="vicent.20220910124547.1"># Tema 22 Arquitectura MVC
-
-@path ./22ArquitecturaMVC
-@language md
-@others
+<t tx="vicent.20220910124547.1">========================
+Tema 22 Arquitectura MVC
+========================
 </t>
 <t tx="vicent.20220910203232.1">## Crear un proyecto SpringBoot con VSCode
 
@@ -5034,15 +4942,11 @@ Ejemplos de metodologías ágiles son Scrum, eXtreme Programming y Kanban.
 - Cuando acaba el Sprint, se envía o revisa el trabajo completado y tras su revisión se cierra este sprint, para comenzar con el 
   siguiente.
 </t>
-<t tx="vicent.20221006201346.1"># Tema 6 Software Libre
-
-@path ./06SoftwareLibre
-@language md
-@others
+<t tx="vicent.20221006201346.1">=====================
+Tema 6 Software Libre
+=====================
 </t>
-<t tx="vicent.20221006201346.2">## Software Libre
-
-Free software is software that gives you the user the freedom to share, study and modify it. We call this free software because the 
+<t tx="vicent.20221006201346.2">Free software is software that gives you the user the freedom to share, study and modify it. We call this free software because the 
 user is free.
 
 To use free software is to make a political and ethical choice asserting the right to learn, and share what we learn with others. 
@@ -5055,10 +4959,9 @@ be caught and fined or put in jail. That's what's in the fine print of the licen
 
 The corporations behind proprietary software will often spy on your activities and restrict you from sharing with others. And because 
 our computers control much of our personal information and daily activities, proprietary software represents an unacceptable danger to 
-a free society.</t>
-<t tx="vicent.20221006201346.46">## Tipos de Licencia
-
-[Referencia](https://www.legalzoom.com/articles/copyleft-vs-copyright)
+a free society.
+</t>
+<t tx="vicent.20221006201346.46">`Referencia &lt;https://www.legalzoom.com/articles/copyleft-vs-copyright&gt;`_
 
 Existen tres tipos de licencias libres: robustas (o de copyleft), permisivas y open-source
 
@@ -5491,17 +5394,15 @@ de:
 
 El polimorfismo solo se aplica a métodos de la instancia pero *no* a variables.
 </t>
-<t tx="vicent.20221015122045.1">[Fundamentos](https://freemarker.apache.org/docs/dgui.html)
+<t tx="vicent.20221015122045.1">`Fundamentos &lt;https://freemarker.apache.org/docs/dgui.html&gt;`_
 
-[Guía básica para programadores](https://freemarker.apache.org/docs/pgui.html)
+`Guía básica para programadores &lt;https://freemarker.apache.org/docs/pgui.html&gt;`_
 
-[Manual](https://freemarker.apache.org/docs/index.html)
+`Manual &lt;https://freemarker.apache.org/docs/index.html&gt;`_
 
-[Chuleta](https://freemarker.apache.org/docs/dgui_template_exp.html#exp_cheatsheet)</t>
-<t tx="vicent.20221015122756.1">## Conceptos básicos
-
-
-Desde un punto de vista conceptual, útil para el diseñador de plantillas, el modelo de datos se puede ver como una estructura en árbol.
+`Chuleta &lt;https://freemarker.apache.org/docs/dgui_template_exp.html#exp_cheatsheet&gt;`_
+</t>
+<t tx="vicent.20221015122756.1">Desde un punto de vista conceptual, útil para el diseñador de plantillas, el modelo de datos se puede ver como una estructura en árbol.
 
 Hay tres tipos de variables:
 
@@ -5512,7 +5413,7 @@ Hay tres tipos de variables:
 Las subvariables se acceden usando natural naming:
 
 - hashes: animal.python.length
-- sequences: fruits[3].name
+- sequences: `fruits[3].name`
 
 The simplest template is a plain HTML file (or whatever text file; FreeMarker is not confined to HTML). When the client visits that 
 page, FreeMarker will send that HTML to the client as is. However if you want that page to be more dynamic then you begin to put 
@@ -5531,50 +5432,50 @@ Anything not an FTL tag or an interpolation or comment is considered static text
 printed to the output as-is.
 
 </t>
-<t tx="vicent.20221015125237.1">## Directivas
-
-With FTL tags you refer to so-called directives. This is the same kind of relationship as between HTML tags (e.g.: `&lt;table&gt;` and 
+<t tx="vicent.20221015125237.1">With FTL tags you refer to so-called directives. This is the same kind of relationship as between HTML tags (e.g.: `&lt;table&gt;` and 
 `&lt;/table&gt;`) and HTML elements (e.g., the `table` element) to which you refer to with the HTML tags. (If you don't understand this 
 difference then consider "FTL tag" and "directive" synonyms.)
 
-```{Important} *In general, unquoted words inside directives or interpolations are treated as references to variables*.
+.. Important::
+  *In general, unquoted words inside directives or interpolations are treated as references to variables*.
 
-A frequent mistake of users is the usage of interpolations in places where they needn't/shouldn't/can't be used. *Interpolations work 
-only in text sections (e.g. `&lt;h1&gt;Hello ${name}!&lt;/h1&gt;`) and in string literals (e.g. `&lt;#include "/footer/${company}.html"`&gt;)*. A typical 
-WRONG usage is `&lt;#if ${big}&gt;...&lt;/#if&gt;`, which will cause a syntactical error. You should simply write `&lt;#if big&gt;...&lt;/#if&gt;`. Also, 
-`&lt;#if "${big}"&gt;...&lt;/#if&gt;` is WRONG, since it converts the parameter value to string and the if directive wants a boolean value, so it 
-will cause a runtime error.
-```
+  A frequent mistake of users is the usage of interpolations in places where they needn't/shouldn't/can't be used. *Interpolations work 
+  only in text sections (e.g. `&lt;h1&gt;Hello ${name}!&lt;/h1&gt;`) and in string literals (e.g. `&lt;#include "/footer/${company}.html"`&gt;)*. A typical 
+  WRONG usage is `&lt;#if ${big}&gt;...&lt;/#if&gt;`, which will cause a syntactical error. You should simply write `&lt;#if big&gt;...&lt;/#if&gt;`. Also, 
+  `&lt;#if "${big}"&gt;...&lt;/#if&gt;` is WRONG, since it converts the parameter value to string and the if directive wants a boolean value, so it 
+  will cause a runtime error.
 
-[Ejemplos](https://freemarker.apache.org/docs/dgui_quickstart_template.html)
+`Ejemplos &lt;https://freemarker.apache.org/docs/dgui_quickstart_template.html&gt;`_
 
-    &lt;h1&gt;
-      Welcome ${user}&lt;#if user == "Big Joe"&gt;, our beloved leader&lt;/#if&gt;!
-    &lt;/h1&gt;
+::
 
-    &lt;#if animals.python.price &lt; animals.elephant.price&gt;
-      Pythons are cheaper than elephants today.
-    &lt;#elseif animals.elephant.price &lt; animals.python.price&gt;
-      Elephants are cheaper than pythons today.
+  &lt;h1&gt;
+    Welcome ${user}&lt;#if user == "Big Joe"&gt;, our beloved leader&lt;/#if&gt;!
+  &lt;/h1&gt;
+
+  &lt;#if animals.python.price &lt; animals.elephant.price&gt;
+    Pythons are cheaper than elephants today.
+  &lt;#elseif animals.elephant.price &lt; animals.python.price&gt;
+    Elephants are cheaper than pythons today.
+  &lt;#else&gt;
+    Elephants and pythons cost the same today.
+  &lt;/#if&gt;
+
+The generic form of the list directive is::
+
+  &lt;#list sequence as loopVariable&gt;
+      repeatThis
+  &lt;/#list&gt;
+
+or::
+
+  &lt;#list sequence&gt;
+    &lt;#items as loopVariable&gt;
+      repeatThis
+    &lt;/#items&gt;
     &lt;#else&gt;
-      Elephants and pythons cost the same today.
-    &lt;/#if&gt;
-
-The generic form of the list directive is:
-
-    &lt;#list sequence as loopVariable&gt;
-        repeatThis
-    &lt;/#list&gt;
-
-or
-
-    &lt;#list sequence&gt;
-      &lt;#items as loopVariable&gt;
-        repeatThis
-      &lt;/#items&gt;
-      &lt;#else&gt;
-        Do this only once
-    &lt;/#list&gt;
+      Do this only once
+  &lt;/#list&gt;
 
 
 The `repeatThis` part will be repeated for 
@@ -5583,24 +5484,22 @@ each item in the sequence that you have specified with `sequence`, one after the
 
 The sequence can be any kind of expression.
 
-A complete list example:
+A complete list example::
 
-    &lt;#list misc.fruits&gt;
-      &lt;p&gt;Fruits:
-      &lt;ul&gt;
-        &lt;#items as fruit&gt;
-          &lt;li&gt;${fruit}&lt;#sep&gt; and&lt;/#sep&gt;
-        &lt;/#items&gt;
-      &lt;/ul&gt;
-    &lt;#else&gt;
-      &lt;p&gt;We have no fruits.
-    &lt;/#list&gt;
+  &lt;#list misc.fruits&gt;
+    &lt;p&gt;Fruits:
+    &lt;ul&gt;
+      &lt;#items as fruit&gt;
+        &lt;li&gt;${fruit}&lt;#sep&gt; and&lt;/#sep&gt;
+      &lt;/#items&gt;
+    &lt;/ul&gt;
+  &lt;#else&gt;
+    &lt;p&gt;We have no fruits.
+  &lt;/#list&gt;
 </t>
-<t tx="vicent.20221015182858.1">## Built-ins
+<t tx="vicent.20221015182858.1">Los built-ins se aplican a variables y expresiones se invocan con un `?`::
 
-Los built-ins se aplican a variables y expresiones se invocan con un `?`:
-
-    expr?builtin_name
+  expr?builtin_name
 
 The reason why built-ins are crucial is that normally (though it depends on configuration settings), FreeMarker doesn't expose the Java 
 API of the objects. So despite that Java's String has a `length()` method, it's hidden from the template, so you have to use 
@@ -5738,9 +5637,9 @@ Tema 28 Desarrollo de aplicaciones con Ajax y JQuery</t>
 Tema 15 UML
 ===========
 
-[Curso completo UML2.0](https://www.youtube.com/playlist?list=PLGLfVvz_LVvQ5G-LdJ8RLqe-ndo7QITYc)
+`Curso completo UML2.0 &lt;https://www.youtube.com/playlist?list=PLGLfVvz_LVvQ5G-LdJ8RLqe-ndo7QITYc&gt;`_
 
-[Diagramas UML](https://www.teatroabadia.com/es/uploads/documentos/iagramas_del_uml.pdf)
+`Diagramas UML &lt;https://www.teatroabadia.com/es/uploads/documentos/iagramas_del_uml.pdf&gt;`_
 </t>
 <t tx="vicent.20221018185935.1">Desde un punto de vista lógico un servidor de aplicaciones tiene esta estructura:
 
@@ -7366,6 +7265,34 @@ Nuevos métodos:
 @others
 </t>
 <t tx="vicent.20221113090205.1">@path ./15UML
+@language rest
+@others
+</t>
+<t tx="vicent.20221113123655.1">@path ./20JasperReports
+@language rest
+@others
+</t>
+<t tx="vicent.20221113124017.1">@path ./19Primefaces
+@language rest
+@others
+</t>
+<t tx="vicent.20221113124510.1">@path ./23PersistenciaConMyBatis
+@language rest
+@others
+</t>
+<t tx="vicent.20221113124914.1">@path ./06SoftwareLibre
+@language rest
+@others
+</t>
+<t tx="vicent.20221114183801.1">@path ./21PlantillasFreeMarker
+@language rest
+@others
+</t>
+<t tx="vicent.20221114194730.1">@path ./22ArquitecturaMVC
+@language rest
+@others
+</t>
+<t tx="vicent.20221115183054.1">@path ./05ArquitecturaSOA
 @language rest
 @others
 </t>
